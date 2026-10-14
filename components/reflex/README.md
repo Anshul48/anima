@@ -57,5 +57,5 @@ passing. See the repo-root `TEST-REPORT.md` for the exact qualification scope.
 - Research/seed stage: model names, latency figures, and complexity claims in
   `ARCHITECTURE.md` are hypotheses to measure, not release commitments.
 - No cross-component wiring: reflex runs standalone.
-- License: none shipped in this directory (unlicensed as found — owner to
-  confirm). See the repo-root README license table.
+- License: Apache-2.0 ([LICENSE](LICENSE), added at publication).
+  See the repo-root README license table.

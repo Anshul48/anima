@@ -134,3 +134,27 @@ merge; no push performed (hard gate: awaiting REVIEW-APPROVED.md naming
 repo + candidate commit). Superseded staging commits exist only on the
 local quarantine branch (not published); empty remote, so no force-push
 and no previous published history.
+
+## Addendum 2026-10-14 — professional publication pass (on public `5cf1708`)
+
+Normal descendant of the public commit
+`5cf1708a1587caa6fd3b248071f0f384216b5e56`; documentation, licensing,
+metadata, images, community files, and CI only:
+
+- Root Apache-2.0 `LICENSE` (byte copy of the `components/substrate/LICENSE`
+  already in the tree, appendix included); identical copies added to
+  `components/sst/`, `components/entorhinal/`, `components/reflex/`
+  (`substrate`/`stc` already carried Apache-2.0). All six
+  `pyproject.toml` files (root + five components) declare Apache-2.0.
+  Third-party/data/model material keeps its own terms and notices.
+- Root README: capabilities table, quickstart, architecture and code-tour
+  links (`docs/ARCHITECTURE.md`, `docs/CODE-TOUR.md`), hero/architecture
+  SVGs under `assets/`, shortened scope paragraph pointing here.
+- New: `examples/quickstart.py`, `CONTRIBUTING.md`, `SECURITY.md`,
+  `CHANGELOG.md`, `CITATION.cff`, `.github/workflows/ci.yml`.
+- No component source, fixture, or dependency edits. In particular the
+  two public-safe synthetic fixture files from `5cf1708`
+  (`components/entorhinal/src/entorhinal/fixtures/golden.py`,
+  `components/entorhinal/tests/test_integration_security_and_failure.py`)
+  are byte-identical to `5cf1708`, and every file tracked at `5cf1708`
+  is still present (verification in `TEST-REPORT.md`).

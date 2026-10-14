@@ -59,3 +59,31 @@ masked by the shell pipeline).
 - Residue: fix-pass runs used `PYTHONDONTWRITEBYTECODE=1` and
   `-p no:cacheprovider`; no `__pycache__`/`.pytest_cache` left in-tree.
   Worktree clean at commit.
+
+## Professional publication pass on public `5cf1708` (2026-10-14)
+
+Documentation/licensing/metadata/CI-only descendant of
+`5cf1708a1587caa6fd3b248071f0f384216b5e56`; no component source, fixture,
+or dependency edits (one metadata exception: the placeholder
+`entorhinal` pyproject description replaced with a real one). Targeted
+verification in a fresh `uv venv --seed` (CPython 3.12), not the whole
+legacy suite:
+
+| Check (cwd: repo root) | Exit | Result |
+|---|---|---|
+| `pip install -e . -e components/substrate pytest` | 0 | root + substrate dists installed |
+| `python examples/quickstart.py` | 0 | availability report; relcheck `valid=True checked=2`; close/reopen byte-identical; `ANIMA quickstart OK` |
+| `python components/substrate/examples/quickstart.py` | 0 | `quickstart OK`, settle stranded=0 |
+| `pytest tests/ -p no:cacheprovider` | 0 | 4 passed, 4 skipped (skips = components not installed in this venv) |
+| `pytest components/substrate/tests/ -q -p no:cacheprovider` | 0 | 207 passed, 11 skipped (progress markers; quiet mode) |
+| all 6 `pyproject.toml` parse + license field | 0 | every file declares `Apache-2.0` |
+| `LICENSE` files | 0 | root/substrate/sst/entorhinal/reflex byte-identical Apache-2.0; stc keeps its upstream Apache-2.0 copy (`Copyright 2026 STC Contributors`) |
+| SVG parse (`assets/*.svg`) + relative-link check (README, `docs/ARCHITECTURE.md`, `docs/CODE-TOUR.md`) | 0 | well-formed; 0 bad links |
+| fixture byte-exactness vs `5cf1708` | 0 | `golden.py` blob `03431009…`, `test_integration_security_and_failure.py` blob `5c00892f…` — identical before/after |
+| no-deletion inventory vs `5cf1708` | 0 | `git diff --diff-filter=D` empty; every `5cf1708` tracked path present |
+| secret scan | 0 | filename scan clean (only `stc/.env.example`); no `sk_live_`/`sk_test_…` literals in `components/ src/ tests/ examples/` |
+
+Note: full all-components install/test was verified for the identical
+professional file set in the earlier (superseded-base) pass and runs in
+CI (`.github/workflows/ci.yml`); it was not repeated here per the
+targeted-verification scope.

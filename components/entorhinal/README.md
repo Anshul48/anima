@@ -69,5 +69,5 @@ qualification scope.
 - No private corpus, live stores, timelines, run logs, or credentials ship;
   consented fixtures are excluded (see `MANIFEST.md`).
 - No cross-component wiring: entorhinal runs standalone.
-- License: none shipped in this directory (unlicensed as found — owner to
-  confirm). See the repo-root README license table.
+- License: Apache-2.0 ([LICENSE](LICENSE), added at publication).
+  See the repo-root README license table.

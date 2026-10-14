@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: ANIMA
+version: 0.1.0
+date-released: 2026-10-14
+license: Apache-2.0
+repository-code: https://github.com/Anshul48/anima
+abstract: Reusable research components for attributable local computation.
+keywords:
+  - anima
+  - substrate
+  - heuristic-search
+  - spec-to-code
+  - temporal-context
+  - computer-use

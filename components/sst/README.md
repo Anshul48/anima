@@ -6,11 +6,11 @@
 [![uv](https://img.shields.io/badge/managed%20by-uv-purple.svg)](https://github.com/astral-sh/uv)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 [![Type Checked with mypy](https://img.shields.io/badge/mypy-strict-blue)](https://mypy.readthedocs.io/)
-![License status: unlicensed as shipped](https://img.shields.io/badge/License-unlicensed_as_shipped-lightgrey.svg)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-> License note: no `LICENSE` file ships in this directory, so the badge above
-> links nowhere. The component is unlicensed as found (owner to confirm);
-> see the repo-root README license table. No new license terms are granted here.
+> License note: this directory now ships an Apache-2.0 `LICENSE` (added at
+> publication; `pyproject.toml` already stated Apache-2.0). See the
+> repo-root README license table.
 
 ---
 

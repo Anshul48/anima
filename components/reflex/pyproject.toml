@@ -7,6 +7,7 @@ name = "reflex"
 version = "0.1.0"
 description = "Reflex Autonomous Computer-Use Engine"
 readme = "README.md"
+license = { text = "Apache-2.0" }
 requires-python = ">=3.12"
 dependencies = [
     "pillow>=10.0.0",

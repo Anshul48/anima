@@ -1,8 +1,9 @@
 [project]
 name = "entorhinal"
 version = "0.1.0"
-description = "Add your description here"
+description = "Entorhinal: local-first advisory temporal context (evidence, projections, user-controlled snapshots)"
 readme = "README.md"
+license = { text = "Apache-2.0" }
 authors = [
     { name = "Anshul48", email = "anshulraj48@gmail.com" }
 ]

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-labelledby="anima-arch-title anima-arch-desc">
+<title id="anima-arch-title">ANIMA repository architecture</title>
+<desc id="anima-arch-desc">The anima namespace package aliases five independent distributions; native imports are primary and there is no runtime integration between components.</desc>
+<rect width="1000" height="420" rx="16" fill="#f6f8fb"/>
+<text x="40" y="48" font-family="sans-serif" font-size="22" font-weight="700" fill="#1a2744">Repository architecture</text>
+<g font-family="sans-serif" font-size="13">
+<rect x="40" y="80" width="280" height="90" rx="10" fill="#ffffff" stroke="#1f6feb" stroke-width="2"/><text x="56" y="108" font-weight="700" fill="#1a2744">anima (alias package)</text><text x="56" y="130" fill="#4a5a75">src/anima/ · same-object</text><text x="56" y="148" fill="#4a5a75">convenience aliases only</text></g>
+<g fill="#ffffff" stroke="#d5dde9">
+<rect x="40" y="210" width="168" height="150" rx="10"/><rect x="224" y="210" width="168" height="150" rx="10"/><rect x="408" y="210" width="168" height="150" rx="10"/><rect x="592" y="210" width="168" height="150" rx="10"/><rect x="776" y="210" width="168" height="150" rx="10"/>
+</g>
+<g font-family="sans-serif" font-size="12">
+<text x="54" y="238" font-weight="700" fill="#1a2744">anima_substrate</text><text x="54" y="258" fill="#4a5a75">world host</text><text x="54" y="276" fill="#4a5a75">stdlib-only</text><text x="54" y="308" fill="#1f6feb">anima.substrate</text></g>
+<g font-family="sans-serif" font-size="12">
+<text x="238" y="238" font-weight="700" fill="#1a2744">sst</text><text x="238" y="258" fill="#4a5a75">MCTS search</text><text x="238" y="276" fill="#4a5a75">dialectic</text><text x="238" y="308" fill="#1f6feb">anima.sst</text></g>
+<g font-family="sans-serif" font-size="12">
+<text x="422" y="238" font-weight="700" fill="#1a2744">stc</text><text x="422" y="258" fill="#4a5a75">spec → code</text><text x="422" y="276" fill="#4a5a75">engine</text><text x="422" y="308" fill="#1f6feb">anima.stc</text></g>
+<g font-family="sans-serif" font-size="12">
+<text x="606" y="238" font-weight="700" fill="#1a2744">entorhinal</text><text x="606" y="258" fill="#4a5a75">temporal context</text><text x="606" y="276" fill="#4a5a75">advisory</text><text x="606" y="308" fill="#1f6feb">anima.entorhinal</text></g>
+<g font-family="sans-serif" font-size="12">
+<text x="790" y="238" font-weight="700" fill="#1a2744">reflex</text><text x="790" y="258" fill="#4a5a75">perception</text><text x="790" y="276" fill="#4a5a75">computer use</text><text x="790" y="308" fill="#1f6feb">anima.reflex</text></g>
+<g stroke="#9fb2cc" stroke-width="1.5">
+<line x1="180" y1="170" x2="124" y2="208"/><line x1="180" y1="170" x2="308" y2="208"/><line x1="180" y1="170" x2="492" y2="208"/><line x1="180" y1="170" x2="676" y2="208"/><line x1="180" y1="170" x2="860" y2="208"/>
+</g>
+<text x="40" y="394" font-family="sans-serif" font-size="12" fill="#4a5a75">Arrows are import aliases, not data flow. Use native imports for deep submodule access.</text>
+</svg>
