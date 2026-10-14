@@ -1,0 +1,11 @@
+[?] Ambiguity 0.80 >= 0.30 — OPERATOR DECISION REQUIRED.
+   Dilemma: Fault Tolerance & Error Recovery Strategy
+     (1) Archetype Alpha (Conservative / Fail-Closed): Strict validation, 
+immediate error propagation, synchronous verification, high security, zero stale
+data allowance.
+     (2) Archetype Beta (Resilient / High-Throughput): Grace windows, optimistic
+concurrency, asynchronous worker processing, fallback buffers, eventually 
+consistent state.
+   Cost of waiting: run paused before any model call; no spend incurred.
+   Recorded: /tmp/a123v-dryrun-bare/qa_log.json
+   Re-run with --choice 1|2 (relay) or --yes (option 1).

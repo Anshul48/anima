@@ -1,0 +1,28 @@
+{
+  "granted_scopes": [
+    "browser:interact",
+    "browser:navigate",
+    "browser:read"
+  ],
+  "disallowed_domains": [
+    "banking.example.com",
+    "*.internal",
+    "169.254.169.254"
+  ],
+  "require_human_confirmation_for": [
+    "ambiguous",
+    "destructive"
+  ],
+  "max_actions_per_session": 500,
+  "grants": [
+    {
+      "scope": "clipboard:read",
+      "granted_at_ms": 1755430000000.0,
+      "expires_at_ms": 1755433600000.0,
+      "requires_user_confirmation": true,
+      "metadata": {
+        "reason": "Temporary clipboard access for copy task"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+$ <workspace-root>/trace/.venv-linux/bin/python -m ruff check .
+<workspace-root>/trace/.venv-linux/bin/python: No module named ruff
+RC=1
+
+$ <workspace-root>/trace/.venv-linux/bin/python -m ruff format --check .
+<workspace-root>/trace/.venv-linux/bin/python: No module named ruff
+RC=1
+
+$ <workspace-root>/trace/.venv-linux/bin/python -m mypy --strict src tests
+<workspace-root>/trace/.venv-linux/bin/python: No module named mypy
+RC=1

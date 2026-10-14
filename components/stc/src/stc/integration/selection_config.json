@@ -1,0 +1,23 @@
+{
+  "_note": "ONE versioned selection-config data file (D-epsilon, section 5.2). Exact mandatory node IDs + M3 file paths with per-file node-count tripwire + owning-suite map revision. Contents frozen by ratification; additions/removals are contract amendments, never implementation discretion. Missing files or node IDs fail closed.",
+  "config_revision": "sel-1",
+  "m1_env_identity_pin": [
+    "tests/unit/test_integration_identity.py::test_record_shape_and_env_keys"
+  ],
+  "m2_lease_import_integrity": [
+    "tests/unit/test_integration_harness_worker.py::test_f3c_prompt_kit_import_resolves_to_pinned_tree",
+    "tests/unit/test_integration_harness_worker.py::test_fix_shape_gateway_prompt_preserves_real_diverge_bytes"
+  ],
+  "m3_custody_shape_pins": [
+    {
+      "path": "tests/unit/test_a3_patch_format.py",
+      "node_count": 20
+    },
+    {
+      "path": "tests/unit/test_gateway_marker_refusal.py",
+      "node_count": 17
+    }
+  ],
+  "m3_count_collector": "pytest --collect-only -q (pinned under pytest 9.1.1; parametrize expansion is version-stable across 8.x/9.x)",
+  "owning_suite_map_revision": "osm-1"
+}

@@ -1,0 +1,1 @@
+<workspace-root>/stc/docs/builds/stc-integration/evidence/P05/attempt-1/trial-timeout/p05-diverge-prompt.md

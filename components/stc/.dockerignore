@@ -1,0 +1,56 @@
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Testing & Coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mutmut-cache/
+
+# Static typing & linting
+.mypy_cache/
+.ruff_cache/
+
+# Local IDE configuration
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.local
+
+# Documentation & Worktrees
+worktrees/
+artifacts/receipts/*.json
+!artifacts/receipts/.gitkeep

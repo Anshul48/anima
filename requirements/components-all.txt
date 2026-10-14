@@ -1,0 +1,10 @@
+# Install every ANIMA component editable from the repo root:
+#   pip install -r requirements/components-all.txt
+# Or pick components individually, e.g. `pip install -e components/substrate`.
+# The `anima` namespace itself: `pip install -e .`
+-e .
+-e components/substrate
+-e components/sst
+-e components/stc
+-e components/entorhinal
+-e components/reflex

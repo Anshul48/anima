@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modal Dialog Fixture</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      width: 400px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .btn-danger { background-color: #dc3545; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; }
+    .btn-secondary { background-color: #6c757d; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Document Manager</h1>
+  <p>Main workspace area.</p>
+  <button id="bg_action_btn">Perform Background Action</button>
+
+  <div id="modal_overlay" class="backdrop">
+    <div id="delete_modal" class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal_title">
+      <h2 id="modal_title">Confirm Deletion</h2>
+      <p>Are you sure you want to permanently delete this project?</p>
+      <div class="actions">
+        <button id="confirm_delete_btn" class="btn-danger">Delete</button>
+        <button id="modal_cancel_btn" class="btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+tests/unit/test_integration_dialectic.py:176: error: Unused "type: ignore" comment  [unused-ignore]
+tests/unit/test_integration_dialectic.py:176: error: Incompatible types in assignment (expression has type "str", target has type "ProviderProfile")  [assignment]
+tests/unit/test_integration_dialectic.py:176: note: Error code "assignment" not covered by "type: ignore[dict-item]" comment
+tests/unit/test_integration_dialectic.py:577: error: Unused "type: ignore" comment  [unused-ignore]
+tests/unit/test_integration_dialectic.py:1170: error: Returning Any from function declared to return "str"  [no-any-return]
+tests/unit/test_integration_dialectic.py:1217: error: Returning Any from function declared to return "str"  [no-any-return]
+Found 5 errors in 1 file (checked 2 source files)

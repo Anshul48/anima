@@ -1,0 +1,8 @@
+{
+  "added_nodes": ["order_success_card"],
+  "removed_nodes": ["btn_submit_order"],
+  "modified_nodes": ["cart_counter"],
+  "pixel_change_ratio": 0.12,
+  "changed_bounding_boxes": [[100, 150, 700, 500]],
+  "outcome_class": "success"
+}

@@ -1,0 +1,15 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- <workspace-root>/trace/.venv-linux/bin/python
+rootdir: <workspace-root>/stc
+configfile: pyproject.toml
+plugins: anyio-4.14.2, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 5 items
+
+tests/integration/test_run_e2e.py::test_dry_run_zero_model_calls PASSED  [ 20%]
+tests/integration/test_run_e2e.py::test_dry_run_escalation_branch PASSED [ 40%]
+tests/integration/test_run_e2e.py::test_stc_flags_require_target PASSED  [ 60%]
+tests/integration/test_run_e2e.py::test_budget_validation PASSED         [ 80%]
+tests/integration/test_run_e2e.py::test_manual_mode_completes_fixture SKIPPED [100%]
+
+========================= 4 passed, 1 skipped in 3.60s =========================

@@ -1,0 +1,24 @@
+{
+  "scenario": "latency_budget_exhaustion",
+  "request": {
+    "request_id": "REQ-REFLEX-20260820-0007",
+    "consumer_id": "reflex.system2.planner",
+    "stated_purpose": "Task planning under strict sub-50ms budget",
+    "requested_scopes": [
+      "scope:workspace.active_project",
+      "scope:browser.recent_tabs"
+    ],
+    "timeout_budget_ms": 25.0,
+    "max_freshness_seconds": 300,
+    "token_or_size_budget": 1024
+  },
+  "simulated_server_delay_ms": 150.0,
+  "error": "TimeoutError",
+  "status_code": 504,
+  "detail": "Entorhinal context query timed out after 25.0 ms (simulated latency 150.0 ms)",
+  "fallback_action": "proceed_with_direct_observation_only",
+  "circuit_breaker_impact": {
+    "increment_consecutive_failures": true,
+    "trip_threshold": 3
+  }
+}

@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.venv-linux/
+.pytest_cache/
+.coverage
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# coordinator runtime state (reproducible; frozen copies live in evidence/)
+/run/

@@ -1,0 +1,44 @@
+services:
+  stc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: stc:latest
+    container_name: stc-app
+    restart: unless-stopped
+    environment:
+      - STC_ENVIRONMENT=production
+      - STC_LOG_LEVEL=INFO
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - ./artifacts:/app/artifacts
+    healthcheck:
+      test: ["CMD", "stc", "health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  stc-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: stc:dev
+    container_name: stc-dev
+    environment:
+      - STC_ENVIRONMENT=development
+      - STC_LOG_LEVEL=DEBUG
+    volumes:
+      - ./src:/app/src
+      - ./artifacts:/app/artifacts
+    command: ["info"]
+
+  stc-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: stc:test
+    container_name: stc-test
+    command: ["run-task", "--action", "ping", "--name", "docker-smoke-test"]

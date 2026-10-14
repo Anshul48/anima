@@ -1,0 +1,3 @@
+{"probe": "P0-H0a", "frame": "baseline", "model": "default", "reasoning": "max", "ok": true, "wall_seconds": 25.27, "out_bytes": 667, "exit": "0"}
+{"probe": "P1-H0b", "frame": "baseline", "model": "default", "reasoning": "max", "ok": false, "wall_seconds": 165.6, "out_bytes": 0, "exit": "124"}
+{"probe": "P2-H3a", "frame": "baseline", "model": "default", "reasoning": "medium", "ok": true, "wall_seconds": 56.66, "out_bytes": 4997, "exit": "0"}

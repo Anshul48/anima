@@ -1,0 +1,11 @@
+# Release bundle patch for @stc/dsh-plugin-stc.
+# Exactly ONE row: DSH's client-modules registry throws when a package
+# resolves from multiple active loader sources, so the bundle composes its
+# internal plugins (hello/tools/run/policy) inside src/index.ts instead of
+# mounting one row per module. The packaged install must be built first
+# (`pnpm install && pnpm build`); exports point at lib/index.js because
+# Node refuses to type-strip .ts under node_modules.
+
+- insert:
+    - id: stc-bundle
+      name: '@stc/dsh-plugin-stc'

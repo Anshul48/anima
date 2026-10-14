@@ -1,0 +1,3 @@
+['ruff', 'check'] rc= 1 ['Found 220 errors.']
+['ruff', 'check'] rc= 1 ['Found 219 errors.']
+['ruff', 'format'] rc= 2 []

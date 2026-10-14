@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shadow DOM Fixture</title>
+</head>
+<body>
+  <h1>Shadow DOM Host Page</h1>
+  <div id="light_container">
+    <button id="light_btn">Light Action</button>
+  </div>
+
+  <custom-widget id="widget_host"></custom-widget>
+
+  <script>
+    const host = document.getElementById('widget_host');
+    const shadowRoot = host.attachShadow({ mode: 'open' });
+    shadowRoot.innerHTML = `
+      <style>
+        .shadow-box { padding: 16px; background: #eef; border: 1px solid #99c; border-radius: 6px; }
+        button { background: #28a745; color: white; padding: 6px 12px; border: none; cursor: pointer; }
+      </style>
+      <div class="shadow-box">
+        <h3>Shadow Widget Header</h3>
+        <input type="text" id="shadow_search_input" placeholder="Search Shadow Components">
+        <button id="shadow_submit_btn">Shadow Submit</button>
+      </div>
+    `;
+  </script>
+</body>
+</html>

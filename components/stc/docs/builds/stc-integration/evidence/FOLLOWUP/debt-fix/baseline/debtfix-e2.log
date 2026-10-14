@@ -1,0 +1,133 @@
+.F.......FFFFF.....F...FF.                                               [100%]
+=================================== FAILURES ===================================
+_____________________ test_package_matches_pinned_artifact _____________________
+tests/unit/test_gateway_h1_context.py:87: in test_package_matches_pinned_artifact
+    artifact = _PACKAGE_ARTIFACT.read_bytes()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1050: in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/debtfix-lease-e2/docs/builds/stc-integration/evidence/FOLLOWUP/h1-prep/ctx-package.txt'
+_____________________ test_refuses_p2_winner_stdout_exact ______________________
+tests/unit/test_gateway_marker_refusal.py:111: in test_refuses_p2_winner_stdout_exact
+    raw = _P2_STDOUT.read_bytes()
+          ^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1050: in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/debtfix-lease-e2/docs/builds/stc-integration/evidence/FOLLOWUP/live-exp/attempt-1/P2-H3a/stdout.txt'
+_____________ test_refuses_trailer_legs_exact[events_path0-0-a2c0] _____________
+tests/unit/test_gateway_marker_refusal.py:123: in test_refuses_trailer_legs_exact
+    patch = _patch_diff(events_path, index, pin_key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_gateway_marker_refusal.py:44: in _patch_diff
+    events = json.loads(events_path.read_text(encoding="utf-8"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/debtfix-lease-e2/docs/builds/stc-integration/evidence/FOLLOWUP/accept-2/attempt-1/dossier/runs/TASK-P05_ACCEPTANCE-06f26d5e/events.json'
+_____________ test_refuses_trailer_legs_exact[events_path1-0-a3c0] _____________
+tests/unit/test_gateway_marker_refusal.py:123: in test_refuses_trailer_legs_exact
+    patch = _patch_diff(events_path, index, pin_key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_gateway_marker_refusal.py:44: in _patch_diff
+    events = json.loads(events_path.read_text(encoding="utf-8"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/debtfix-lease-e2/docs/builds/stc-integration/evidence/FOLLOWUP/accept-3/attempt-1/dossier/runs/TASK-P05_ACCEPTANCE-9f1632b8/events.json'
+_________ test_refuses_apply_patch_envelopes_exact[events_path0-0-a1] __________
+tests/unit/test_gateway_marker_refusal.py:133: in test_refuses_apply_patch_envelopes_exact
+    patch = _patch_diff(events_path, index, pin_key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_gateway_marker_refusal.py:44: in _patch_diff
+    events = json.loads(events_path.read_text(encoding="utf-8"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/debtfix-lease-e2/docs/builds/stc-integration/evidence/FOLLOWUP/accept/attempt-1/dossier/runs/TASK-P05_ACCEPTANCE-9a89f20e/events.json'
+________ test_refuses_apply_patch_envelopes_exact[events_path1-1-a2c1] _________
+tests/unit/test_gateway_marker_refusal.py:133: in test_refuses_apply_patch_envelopes_exact
+    patch = _patch_diff(events_path, index, pin_key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_gateway_marker_refusal.py:44: in _patch_diff
+    events = json.loads(events_path.read_text(encoding="utf-8"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/debtfix-lease-e2/docs/builds/stc-integration/evidence/FOLLOWUP/accept-2/attempt-1/dossier/runs/TASK-P05_ACCEPTANCE-06f26d5e/events.json'
+_______________________ test_admits_pin_held_a3c1_exact ________________________
+tests/unit/test_gateway_marker_refusal.py:182: in test_admits_pin_held_a3c1_exact
+    patch = _patch_diff(_A3_EVENTS, 1, "a3c1")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_gateway_marker_refusal.py:44: in _patch_diff
+    events = json.loads(events_path.read_text(encoding="utf-8"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/debtfix-lease-e2/docs/builds/stc-integration/evidence/FOLLOWUP/accept-3/attempt-1/dossier/runs/TASK-P05_ACCEPTANCE-9f1632b8/events.json'
+_____________ test_generate_refuses_with_honest_ledger_and_sidecar _____________
+tests/unit/test_gateway_marker_refusal.py:218: in test_generate_refuses_with_honest_ledger_and_sidecar
+    patch = _patch_diff(_A3_EVENTS, 0, "a3c0")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_gateway_marker_refusal.py:44: in _patch_diff
+    events = json.loads(events_path.read_text(encoding="utf-8"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/debtfix-lease-e2/docs/builds/stc-integration/evidence/FOLLOWUP/accept-3/attempt-1/dossier/runs/TASK-P05_ACCEPTANCE-9f1632b8/events.json'
+______________ test_generate_admits_clean_response_byte_identical ______________
+tests/unit/test_gateway_marker_refusal.py:252: in test_generate_admits_clean_response_byte_identical
+    patch = _patch_diff(_A3_EVENTS, 1, "a3c1")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_gateway_marker_refusal.py:44: in _patch_diff
+    events = json.loads(events_path.read_text(encoding="utf-8"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/debtfix-lease-e2/docs/builds/stc-integration/evidence/FOLLOWUP/accept-3/attempt-1/dossier/runs/TASK-P05_ACCEPTANCE-9f1632b8/events.json'
+=========================== short test summary info ============================
+FAILED tests/unit/test_gateway_h1_context.py::test_package_matches_pinned_artifact
+FAILED tests/unit/test_gateway_marker_refusal.py::test_refuses_p2_winner_stdout_exact
+FAILED tests/unit/test_gateway_marker_refusal.py::test_refuses_trailer_legs_exact[events_path0-0-a2c0]
+FAILED tests/unit/test_gateway_marker_refusal.py::test_refuses_trailer_legs_exact[events_path1-0-a3c0]
+FAILED tests/unit/test_gateway_marker_refusal.py::test_refuses_apply_patch_envelopes_exact[events_path0-0-a1]
+FAILED tests/unit/test_gateway_marker_refusal.py::test_refuses_apply_patch_envelopes_exact[events_path1-1-a2c1]
+FAILED tests/unit/test_gateway_marker_refusal.py::test_admits_pin_held_a3c1_exact
+FAILED tests/unit/test_gateway_marker_refusal.py::test_generate_refuses_with_honest_ledger_and_sidecar
+FAILED tests/unit/test_gateway_marker_refusal.py::test_generate_admits_clean_response_byte_identical
+9 failed, 17 passed in 7.03s

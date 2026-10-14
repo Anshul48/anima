@@ -1,0 +1,13 @@
+$ mypy --version
+mypy 2.3.0 (compiled: yes)
+$ mypy --strict --follow-imports=silent src/stc/cli.py
+src/stc/cli.py:237: error: Call to untyped function "safe_load" in typed context  [no-untyped-call]
+src/stc/cli.py:661: error: Call to untyped function "safe_load" in typed context  [no-untyped-call]
+src/stc/cli.py:664: error: Call to untyped function "safe_load" in typed context  [no-untyped-call]
+src/stc/cli.py:1361: error: Unused "type: ignore" comment  [unused-ignore]
+src/stc/cli.py:1368: error: Unused "type: ignore" comment  [unused-ignore]
+Found 5 errors in 1 file (checked 1 source file)
+rc=1
+$ mypy --strict --follow-imports=silent tests/unit/test_winner_carry.py
+Success: no issues found in 1 source file
+rc=0

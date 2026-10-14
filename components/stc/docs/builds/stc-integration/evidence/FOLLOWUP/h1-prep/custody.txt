@@ -1,0 +1,20 @@
+# H1 PATH-REVIEW phase-1 transcript: pristine custody apply in mirrored leases (0 live calls)
+# cmd: <real-gates python> /tmp/h1-path-replay.py phase1  (PYTHONPATH live-identical; leases via real mirror_source_tree)
+
+cand-1 bytes: len=4299 sha=a6c8f1d39c0e50da08ee21d0892c1cbd7527b2cbf31869ae8cae7fb5264e670b
+known-good diff: len=447 sha=ff8b3aa90b242ea4d16dea53b266519e44d316003f638ae41195ba25691e3815
+--- kg-lease: success=True patch_hash=ff8b3aa90b24...
+    error=''
+    applied_files=['tests/unit/test_integration_runner_pins.py']
+    file bytes=357 sha=e13408c86c9cd0d2b45253f7092f0213c5ab905a13ab724e1ddaba87bfd12394
+    git-apply-strict rc=1 stderr='error: tests/unit/test_integration_runner_pins.py: already exists in working directory'
+--- bad-lease: success=True patch_hash=a6c8f1d39c0e...
+    error=''
+    applied_files=['tests/unit/test_integration_runner_pins.py']
+    file bytes=4096 sha=2e6c187ab9d89b7cd212438022a7f14961734976c60465585ede5444f191a1b6
+    git-apply-strict rc=128 stderr='error: corrupt patch at line 128'
+
+# strict-path check on a PRISTINE repo (git apply --check alone, no SST fallback):
+$ git apply --check --whitespace=nowarn kg-lease.patch  -> rc=0
+$ git apply --check --whitespace=nowarn bad-lease.patch  -> rc=128 stderr: error: corrupt patch at line 128
+# (the kg rc=1 line inside phase-1 output is a post-apply re-check artifact: file already exists; pristine check is rc=0)

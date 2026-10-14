@@ -1,0 +1,10 @@
+Dry run: TASK-P05_ACCEPTANCE (0 model calls)
+  Spec: p05_acceptance | bundle: 3144 bytes
+  Goal: P05 acceptance: pin the P04 runner's untested defensive branches 
+(F-B3-3/F-B3-4)
+  Targets: tests/unit/test_integration_runner_pins.py
+  Source root: <workspace-root>/stc @ 
+edf5389873e4d4a2a4752ee0aa2159289398495e
+  Budgets: time=600s tokens=500000 usd=10.0
+  Policy: iters=10 branching=3 depth=4
+  Audit: with_codex=False (RT-08)

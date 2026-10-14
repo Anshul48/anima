@@ -1,0 +1,10 @@
+....................................................F                    [100%]
+=================================== FAILURES ===================================
+____________________________ test_cli_run_json_mode ____________________________
+tests/unit/test_cli.py:251: in test_cli_run_json_mode
+    assert res.exit_code == 0
+E   assert 1 == 0
+E    +  where 1 = <Result SystemExit(1)>.exit_code
+=========================== short test summary info ============================
+FAILED tests/unit/test_cli.py::test_cli_run_json_mode - assert 1 == 0
+1 failed, 52 passed in 352.88s (0:05:52)

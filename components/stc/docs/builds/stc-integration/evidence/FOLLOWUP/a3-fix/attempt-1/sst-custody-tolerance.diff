@@ -1,0 +1,139 @@
+diff --git a/src/sst/sandbox/custody.py b/src/sst/sandbox/custody.py
+index 02f4629..b1ef2cf 100755
+--- a/src/sst/sandbox/custody.py
++++ b/src/sst/sandbox/custody.py
+@@ -29,6 +29,108 @@ class PatchApplicationResult(BaseModel):
+     post_patch_digest: str = ""
+ 
+ 
++#: Codex apply_patch envelope markers (A3 follow-up: stripped/translated, never applied).
++_APPLY_PATCH_BEGIN = "*** Begin Patch"
++_APPLY_PATCH_END = "*** End Patch"
++_APPLY_PATCH_ADD_PREFIX = "*** Add File:"
++
++
++def _translate_apply_patch_add_only(lines: list[str]) -> str | None:
++    """Translate pure apply_patch Add-File payloads to a unified diff.
++
++    Returns the translated diff (exactly one trailing newline), or None
++    when the payload is not a translatable Add-only shape (mixed content,
++    unknown verbs, empty paths/sections, non-additive body lines).
++    """
++    start = 0
++    while start < len(lines) and not lines[start].strip():
++        start += 1
++    end = len(lines)
++    while end > start and not lines[end - 1].strip():
++        end -= 1
++    core = lines[start:end]
++    if len(core) < 3:
++        return None
++    if core[0].strip() != _APPLY_PATCH_BEGIN or not core[0].startswith("***"):
++        return None
++    if core[-1].strip() != _APPLY_PATCH_END or not core[-1].startswith("***"):
++        return None
++    inner = core[1:-1]
++    if any(line.startswith(("--- ", "+++ ", "@@", "diff --git")) for line in inner):
++        return None
++    sections: list[tuple[str, list[str]]] = []
++    section_path: str | None = None
++    section_body: list[str] = []
++    for line in inner:
++        if line.startswith("***"):
++            if not line.startswith(_APPLY_PATCH_ADD_PREFIX):
++                return None
++            if section_path is not None:
++                sections.append((section_path, section_body))
++            section_path = line[len(_APPLY_PATCH_ADD_PREFIX) :].strip()
++            if not section_path or section_path == "/dev/null":
++                return None
++            section_body = []
++        elif not line.startswith("+"):
++            return None
++        else:
++            if section_path is None:
++                return None
++            section_body.append(line)
++    if section_path is not None:
++        sections.append((section_path, section_body))
++    if not sections or any(len(body) == 0 for _, body in sections):
++        return None
++    chunks: list[str] = []
++    for path, body in sections:
++        chunks.append("--- /dev/null")
++        chunks.append(f"+++ b/{path}")
++        chunks.append(f"@@ -0,0 +1,{len(body)} @@")
++        chunks.extend(body)
++    return "\n".join(chunks) + "\n"
++
++
++def _normalize_patch_markers(diff_text: str) -> tuple[str, str | None]:
++    """Translate codex apply_patch markers, or refuse loudly (never garbage).
++
++    R0: no column-0 `***` line -> input returned unchanged (byte-identical).
++    R1: envelope-only markers (`*** Begin/End Patch`) are stripped and the
++        remainder re-enters normal dispatch (blank remainder -> refusal).
++    R2: pure apply_patch Add-File-only payloads translate to new-file
++        unified diffs (exact hunk counts, one trailing newline).
++    R3: any other marker-bearing shape -> (original, error); the caller
++        fails closed before any write, so marker payloads never reach the
++        verbatim direct-replacement path.
++    """
++    lines = diff_text.splitlines()
++    markers = [line for line in lines if line.startswith("***")]
++    if not markers:
++        return diff_text, None
++    if all(line.strip() in (_APPLY_PATCH_BEGIN, _APPLY_PATCH_END) for line in markers):
++        remainder_lines = [
++            line
++            for line in lines
++            if not (line.startswith("***") and line.strip() in (_APPLY_PATCH_BEGIN, _APPLY_PATCH_END))
++        ]
++        if not any(line.strip() for line in remainder_lines):
++            return diff_text, (
++                "Patch contains only codex apply_patch envelope markers with no "
++                "diff content; emit a pure unified diff with no '***' lines."
++            )
++        remainder = "\n".join(remainder_lines)
++        if diff_text.endswith("\n"):
++            remainder += "\n"
++        return remainder, None
++    translated = _translate_apply_patch_add_only(lines)
++    if translated is not None:
++        return translated, None
++    offender = next(line for line in markers if line.strip() not in (_APPLY_PATCH_BEGIN, _APPLY_PATCH_END))
++    return diff_text, (
++        "Patch uses codex apply_patch markers that custody cannot translate "
++        f"({offender.strip()[:80]!r}); emit a pure unified diff with no '***' lines."
++    )
++
++
+ class CandidateCustodyManager:
+     """Manages detached candidate worktrees and exact-patch verification sandboxes."""
+ 
+@@ -143,6 +245,16 @@ class CandidateCustodyManager:
+                     error_message=str(e),
+                 )
+ 
++        # 2b. Marker tolerance (A3 follow-up): translate codex apply_patch
++        # markers to a unified diff, or refuse loudly before any write.
++        raw_diff_text = diff_text
++        diff_text, marker_error = _normalize_patch_markers(diff_text)
++        if marker_error is not None:
++            return PatchApplicationResult(
++                success=False,
++                error_message=marker_error,
++            )
++
+         applied_files: list[str] = []
+ 
+         # 3. Apply Explicit File Operations (with containment validation on every operation)
+@@ -215,7 +327,7 @@ class CandidateCustodyManager:
+                         error_message="Target path required for raw code payload",
+                     )
+ 
+-        patch_hash = hashlib.sha256(diff_text.encode("utf-8")).hexdigest()
++        patch_hash = hashlib.sha256(raw_diff_text.encode("utf-8")).hexdigest()
+         post_digest = self._compute_workspace_digest(workspace_dir)
+ 
+         return PatchApplicationResult(

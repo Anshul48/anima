@@ -1,0 +1,43 @@
+{
+  "probe": "P1-H0b",
+  "frame": "baseline",
+  "frame_patched": false,
+  "model": "default",
+  "reasoning": "max",
+  "timeout_s": 150.0,
+  "sst_bytes": 4364,
+  "sst_sha256": "3154b3bb2ad5c25df584ca1c92a4e1d286d5c327f021c5ff5c75e1868f391b61",
+  "shaped_bytes": 5044,
+  "shaped_sha256": "3339af290a80e1d88f2ff57f8f5bd829f9f2bafd665e8a14775256893c227fe4",
+  "ok": false,
+  "wall_seconds": 165.6,
+  "error": "ProviderGatewayError: [harness_error] CLI harness 'codex' failed (exit 124): Harness timed out after 150.0s [full output in spend-ledger.failures.jsonl#979d4838ce57] (Profile: codex) \nRemediation: Check harness availability and retry.",
+  "looks_capacity": false,
+  "looks_timeout": true,
+  "codex_home_cleaned": true,
+  "tracked_identical": true,
+  "sst_clean_after": true,
+  "pins_after": {
+    "sst": "079f4de6fd43881c2f1b529f0612f1df64a62f32",
+    "prompt_kit": "4f442a6c829bc06b60f9979fdc8d7585e30bac9a",
+    "trace": "a24a937009fec41e6dcb6d2ca31d3c1783ac97f7"
+  },
+  "stdin_matches_precomputed": true,
+  "confinement_checks": {
+    "argv_codex_exec": true,
+    "argv_skip_git_check": true,
+    "argv_readonly": true,
+    "argv_ephemeral": true,
+    "argv_o_capture": true,
+    "argv_stdin_dash": true,
+    "argv_no_bypass": true,
+    "argv_model_flag_ok": true,
+    "cwd_is_gateway_scratch": true
+  },
+  "confined": true,
+  "timeout_partial_bytes": 0,
+  "sidecar_present": true,
+  "sidecar_records": 1,
+  "sidecar_stderr_chars": 30,
+  "sidecar_stdout_chars": 0
+}

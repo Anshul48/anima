@@ -1,0 +1,24 @@
+$ joint discrim
+PASS setup bytes staged
+PASS rewrite-to-medium whole-line x2
+PASS auth copied byte-exact
+PASS operator config untouched (before/after bytes)
+PASS operator auth untouched (before/after bytes)
+PASS second seed distinct home
+PASS second seed same rewrite
+PASS second home cleaned
+PASS seeded home cleaned
+DISCRIM-RESULT: PASS
+rc=0
+$ real-gates discrim
+PASS setup bytes staged
+PASS rewrite-to-medium whole-line x2
+PASS auth copied byte-exact
+PASS operator config untouched (before/after bytes)
+PASS operator auth untouched (before/after bytes)
+PASS second seed distinct home
+PASS second seed same rewrite
+PASS second home cleaned
+PASS seeded home cleaned
+DISCRIM-RESULT: PASS
+rc=0

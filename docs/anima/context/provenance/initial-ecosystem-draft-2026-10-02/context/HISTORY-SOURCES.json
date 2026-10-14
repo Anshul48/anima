@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "initial_verified_locations_not_completed_history_distillation",
+  "indexed_date": "2026-10-02",
+  "scope": "Current ecosystem conversation, its main A/B/eighteen-vector predecessor, and relevant reference chains/project records. Workspace metadata is discovery input; unrelated chats are not automatically in scope.",
+  "thread_metadata_path": "<codex-home>/state_5.sqlite",
+  "known_rollouts": [
+    {
+      "id": "01a0f883-6883-7533-abe7-46a05f627c19",
+      "role_in_history": "current_programme_conversation",
+      "path": "<codex-home>/sessions/2026/10/01/rollout-2026-10-01T22-59-16-01a0f883-6883-7533-abe7-46a05f627c19.jsonl",
+      "location_verified": true,
+      "coverage_note": "Live conversation may still be appended. Prior indexed programme preparation is not a complete preservation audit."
+    },
+    {
+      "id": "01a0f85a-6e14-7e93-8bc3-83af412e7eec",
+      "role_in_history": "main_A_B_eighteen_vector_discussion",
+      "path": "<codex-home>/sessions/2026/10/01/rollout-2026-10-01T22-14-31-01a0f85a-6e14-7e93-8bc3-83af412e7eec.jsonl",
+      "location_verified": true,
+      "coverage_note": "Previously inspected for direction. Large pasted messages contain mixed authorship; complete sourced distillation and correction audit remain pending."
+    },
+    {
+      "id": "01a0c6ea-6263-7be2-a05e-2230f9e4e805",
+      "role_in_history": "TL_architecture_boundary_reference",
+      "path": "<codex-home>/sessions/2026/09/22/rollout-2026-09-22T07-50-44-01a0c6ea-6263-7be2-a05e-2230f9e4e805.jsonl",
+      "location_verified": true,
+      "coverage_note": "Reference anchor; owning later records and scoped amendments must also be reconciled."
+    },
+    {
+      "id": "01a0e3f7-6c9b-7f73-99be-3a78d601237e",
+      "role_in_history": "TRACE_continuation_reference",
+      "path": "<codex-home>/sessions/2026/09/27/rollout-2026-09-27T23-13-58-01a0e3f7-6c9b-7f73-99be-3a78d601237e.jsonl",
+      "location_verified": true,
+      "coverage_note": "Reference anchor; newer completion-map tails and per-item dispositions matter."
+    }
+  ],
+  "document_seed_paths": [
+    "../../autonomous_runs/trace_ecosystem_20261002/CONTEXT.md",
+    "../../autonomous_runs/trace_ecosystem_20261002/CURRENT-DIRECTION.md",
+    "../../RESEARCH-DIRECTION-SYNTHESIS-2026-10-02.md",
+    "../ORGANIZATION.md"
+  ],
+  "next_step": "Curator inventories relevant predecessor chains, distinguishes inspection depth, and writes SOURCES.jsonl with precise claim/decision locators and coverage gaps."
+}

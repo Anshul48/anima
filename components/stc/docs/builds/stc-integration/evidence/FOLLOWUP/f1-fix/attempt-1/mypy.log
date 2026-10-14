@@ -1,0 +1,7 @@
+$ mypy --strict <owned product>
+Success: no issues found in 2 source files
+rc=0
+
+$ mypy --strict <owned test>
+Success: no issues found in 1 source file
+rc=0

@@ -1,0 +1,18 @@
+{
+  "snapshot_id": "snap_stale_001",
+  "timestamp_ms": 1699913600000.0,
+  "claims": [
+    {
+      "subject": "last_visited_tab",
+      "value": "settings",
+      "confidence": 0.3
+    }
+  ],
+  "confidence": 0.15,
+  "source": "entorhinal_fake_daemon",
+  "is_advisory": true,
+  "ttl_ms": 60000.0,
+  "metadata": {
+    "stale": true
+  }
+}

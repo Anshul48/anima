@@ -1,0 +1,15 @@
+# H1 PATH-REVIEW file-scoped gates, KNOWN-GOOD case (lease-faithful: full mirror incl. pyproject config; real-gates toolchain)
+# substrate-identical commands, file-scoped; mypy --follow-imports=silent attributes errors to the file (a3-fix precedent)
+
+===== kg-lease.ruff rc=0 dur=0.6362s =====
+All checks passed!
+
+===== kg-lease.ruff-fmt rc=0 dur=0.5815s =====
+1 file already formatted
+
+===== kg-lease.mypy rc=0 dur=33.3993s =====
+Success: no issues found in 1 source file
+
+===== kg-lease.pytest rc=0 dur=11.6477s =====
+.                                                                        [100%]
+1 passed in 1.99s

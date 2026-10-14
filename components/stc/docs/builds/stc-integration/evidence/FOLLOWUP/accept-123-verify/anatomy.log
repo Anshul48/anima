@@ -1,0 +1,76 @@
+== 1. byte sizes + marker anatomy ==
+accept cand-0: 3685B (expect 3685) OK | Begin=True End=True stars=3 at=False
+accept-2 cand-0: 5182B (expect 5182) OK | Begin=False End=True stars=1 at=True
+accept-2 cand-1: 3929B (expect 3929) OK | Begin=True End=True stars=3 at=False
+accept-3 cand-0: 5534B (expect 5534) OK | Begin=False End=True stars=1 at=True
+accept-3 cand-1: 4299B (expect 4299) OK | Begin=False End=False stars=0 at=True
+== 2. git-apply replays ==
+[accept-2 cand-0] git-apply rc=128 stderr='error: corrupt patch at line 169'
+  live stderr: "git apply failed: error: corrupt patch at line 169\n | fallback: Unrecognized diff line format in tests/unit/test_integration_runner_pins.py: '*** End Patch'"
+  git-err-in-live: True
+[accept-3 cand-0] git-apply rc=128 stderr='error: corrupt patch at line 187'
+  live stderr: "git apply failed: error: corrupt patch at line 187\n | fallback: Unrecognized diff line format in tests/unit/test_integration_runner_pins.py: '*** End Patch'"
+[accept-3 cand-1 strict-path] git-apply rc=128 stderr='error: corrupt patch at line 128'
+  (cand-1 strict git-apply expected to fail on hunk count; custody fallback carries it)
+== 3. pristine custody replays ==
+[accept-2 cand-0] custody success=False err="git apply failed: error: corrupt patch at line 169\n | fallback: Unrecognized diff line format in tests/unit/test_integration_runner_pins.py: '*** End Patch'"
+[accept-2 cand-0] target file ABSENT
+  byte-identical to live stderr: True
+  live==replay: True
+[accept-2 cand-1] custody success=True err=None
+[accept-2 cand-1] file bytes=3929 sha=0c7052d6bc37e6e7 head=b'*** Begin Patch\n*** Add File: tests/unit/test_integration_ru'
+[accept-2 cand-1] verbatim(file==payload): True
+[accept-3 cand-0] custody success=False err="git apply failed: error: corrupt patch at line 187\n | fallback: Unrecognized diff line format in tests/unit/test_integration_runner_pins.py: '*** End Patch'"
+[accept-3 cand-0] target file ABSENT
+  live==replay: True
+[accept-3 cand-1] custody success=True err=None
+[accept-3 cand-1] file bytes=4096 sha=2e6c187ab9d89b7c head=b'from __future__ import annotations\n\nimport json\nfrom pathlib'
+[accept-3 cand-1] verbatim(file==payload): False
+  live verdict gates-fail: 'STC substrate hard gates failed in lease TASK-P05_ACCEPTANCE__cand_TASK-P05_ACCEPTANCE-9f1632b8_1_0: stc_mypy, stc_pytest, stc_ruff, verifier_passed (reward 0.00)' | 'lease TASK-P05_ACCEPTANCE__cand_TASK-P05_ACCEPTANCE-9f1632b8_1_0: ruff=False mypy=False pytest=False reward=0.00'
+== 4. gates on accept-3 cand-1 custody output (wiring) ==
+ruff-check rc= 1 I001 [*] Import block is un-sorted or un-formatted
+  --> a123v-gates-qdqec9wb/tests/unit/test_integration_runner_pins.py:1:1
+   |
+ 1 | / from __future__ import annotations
+ 2 | |
+ 3 | | import json
+ 4 | | from pathlib import Path
+ 5 | | from types import SimpleNamespace
+ 6 | | from unittest.mock import AsyncMock
+ 7 | |
+ 8 | | import pytest
+ 9 | |
+10 | | from praxist.dialectic.errors import DialecticError
+11 | | from praxist.dialectic.models import NoChampionResult
+12 | | from praxist.dialectic.runner import DialecticRunner
+   | |____________________________________________________^
+help: Organ
+ruff-format rc= 1 unformatted: File would be reformatted
+   --> a123v-gates-qdqec9wb/tests/unit/test_integration_runner_pins.py:68:20
+    |
+67  |             _event("NODE_PROPOSED", node_id="champion", proposal=champion["proposal"]),
+    -             _event("SYNTHESIS_PROPOSED", node_id="champion", proposal=champion
+mypy rc= 1 tests/unit/test_integration_runner_pins.py:10: error: Cannot find implementation or library stub for module named "praxist.dialectic.errors"  [import-not-found]
+tests/unit/test_integration_runner_pins.py:10: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+tests/unit/test_integration_runner_pins.py:11: error: Cannot find implementation or library stub for module named "praxist.dialectic.models"  [import-not-found]
+tests/unit/test_integration_runner_pins.py:12: error: Cannot find implementation or library stub for module named "praxist.dialectic.runner"  [import-not-found]
+tests/unit/test_integration_runner_pins.py:19: error: Function is missing a type annotation  [no-untyped-def]
+tests/unit/test_integration_runner_pins.py:117: error: Function is missing a type annotation  [no-untyped-def]
+Found 5 errors in 1 file (checked 1 source file)
+
+pytest-collect rc= 2 alid Python names.
+Traceback:
+/home/<user>/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_integration_runner_pins.py:10: in <module>
+    from praxist.dialectic.errors import DialecticError
+E   ModuleNotFoundError: No module named 'praxist'
+=========================== short test summary info ============================
+ERROR tests/unit/test_integration_runner_pins.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+no tests collected, 1 error in 1.73s
+
+== 5. accept-1 proposal dispatch class (never reached apply live) ==
+starts-with Begin: True | has @@: False -> custody direct-replacement branch (verbatim write), same class as accept-2 cand-1
+DONE

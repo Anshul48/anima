@@ -1,0 +1,106 @@
+WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/liveexp-v_b2gcub"))
+OpenAI Codex v0.154.0
+--------
+workdir: /tmp/stc-gateway-yxpcehkj
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a0a063-b8d1-75f2-bb9d-a927a3a79701
+--------
+user
+STC GATEWAY EMITTER FRAME (role=gateway; text-emission contract).
+You are a JSON emitter, not an autonomous agent: you have no tools,
+no shell, no file access, and no network. Do not call tools, do not
+read or write files, do not browse the web, do not ask questions.
+Your ONLY action is to emit text: exactly one response message,
+no tool calls, no writes anywhere.
+Emit exactly one JSON document as your entire response message —
+no prose before or after it, no markdown fences, no commentary.
+
+--- SST PROMPT BEGIN (verbatim; do not edit, do not reorder) ---
+user: # SYSTEM INSTRUCTION: HIGH-ENTROPY EXPLORATION (ADHD EXPLORER)
+
+You are an unconstrained, highly creative senior systems architect and algorithm designer.
+Your mission is to generate 1 RADICALLY DIFFERENT, high-novelty architectural strategies to achieve the target goal.
+
+## CORE GOAL
+P05 acceptance: pin the P04 runner's untested defensive branches (F-B3-3/F-B3-4)
+
+## SYSTEM INVARIANTS
+- bundle:PIN-1 (F-B3-3, merge-apply failure)\: when the champion's proposal applies
+- bundle:cleanly at verify time but `apply_proposal` FAILS at merge time
+- bundle:(the dialectic-runner merge step), `DialecticRunner.run_async` must return a
+- bundle:TYPED `NoChampionResult` with reason exactly `merge-apply-failed`. It must
+- bundle:never raise and never crash. The partial evidence must be written
+- bundle:(`veto_log.json`, `synthesis.json`, `loss_ledger.json`, `result.json`) and no
+- bundle:`merged/` directory may exist. One workable approach is a custody double
+- bundle:whose `apply_proposal` succeeds on the verify call and fails on the merge
+- bundle:call; the search outcome may be driven by canned gateway payloads or by a
+- bundle:stubbed `execute_search` with seeded store events — worker's choice, but the
+- bundle:test must construct a REAL `DialecticRunner` (no runner double) and the
+- bundle:failure must flow through the real merge step.
+- bundle:PIN-2 (F-B3-3, reconstruction failure)\: when the controller's champion is
+- bundle:vetoed (fallback-critique taint) and the best untainted verified alternate
+- bundle:has NO proposal event (neither NODE_PROPOSED nor SYNTHESIS_PROPOSED, so
+- bundle:`_proposal_from_events` returns None), `run_async` must return a TYPED
+- bundle:`NoChampionResult` with reason exactly `reselect-reconstruction-failed`.
+- bundle:It must never raise. Seed the store events to shape this outcome; use a
+- bundle:REAL `DialecticRunner`.
+- bundle:PIN-3 (F-B3-4, audit-time with_codex rejection)\: the constructor half is
+- bundle:already tested (an auditor built with `with_codex=True` is rejected at
+- bundle:construction). Pin the AUDIT-TIME half\: a run that reaches the audit step
+- bundle:with an auditor whose `with_codex` is True at audit time must raise
+- bundle:`DialecticError` naming RT-08 (fail-closed, never a silent audited pass).
+- bundle:Flip the flag after construction or use a test double whose `with_codex`
+- bundle:reads True at audit time; drive a champion to the audit step with a REAL
+- bundle:`DialecticRunner` and assert `pytest.raises(DialecticError, match="RT-08")`.
+- bundle:F-B3-4, both code-read correct but without pinning tests). The pins must fail
+- bundle:Domain invariants (what the pins must assert)
+- bundle:Every pin must run in under 60 seconds, must be deterministic, must invoke
+- bundle:zero live models (stub all gateways/harnesses), and must carry no `live`
+- bundle:mark. The new module must be green under `ruff check`, `ruff format
+- bundle:The candidate patch MUST be a unified diff (raw code can never pass the
+- bundle:Failure resilience (negative cases that must hold)
+- bundle:exceptions or best-effort merges must fail the pins.
+- bundle:This task adds ONLY the new test module. It must NOT change
+- membrane:SubstrateRunnerProtocol
+- membrane:HormoneBusProtocol
+
+## ACTION SPACE CONSTRAINTS
+You may only propose modifications to target files: ['tests/unit/test_integration_runner_pins.py']. Do not introduce new external third-party dependencies without explicit interface declaration.
+
+## CONTEXT REPOSITORY FILES
+### File: tests/unit/test_integration_runner_pins.py
+```
+this definitely does not exist
+
+```
+
+## GENERATION RULES:
+1. Do NOT generate standard, average, or boring boilerplate if a novel or more optimal data structure/algorithm exists.
+2. Formulate 1 structurally distinct branches (e.g. Branch A: Lock-free ring buffer / extreme throughput; Branch B: Event-driven actor model / extreme isolation; Branch C: Cache-coherent zero-copy layout).
+3. Output each branch with an explicit rationale and complete functional code / patch.
+
+Output valid JSON matching this schema:
+{
+  "branches": [
+    {
+      "branch_index": 0,
+      "strategy_title": "<Short distinct strategy name>",
+      "hypothesis_or_rationale": "<Why this approach solves the problem in a novel or optimal way>",
+      "proposed_changes": "<Complete implementation code or diff>"
+    }
+  ]
+}
+
+--- SST PROMPT END ---
+
+Now emit exactly one JSON document satisfying the SST prompt above,
+and nothing else.
+codex
+{"branches":[{"branch_index":0,"strategy_title":"Custody Tripwire Matrix","hypothesis_or_rationale":"Use a deterministic three-case pin matrix with real DialecticRunner instances, an in-memory event store, and stateful fakes whose behavior changes only at the exact verify/merge or audit boundary. This directly proves defensive control-flow ownership while avoiding live gateways and runner doubles.","proposed_changes":"diff --git a/tests/unit/test_integration_runner_pins.py b/tests/unit/test_integration_runner_pins.py\nnew file mode 100644\nindex 0000000..7d8f2a1\n--- /dev/null\n+++ b/tests/unit/test_integration_runner_pins.py\n@@ -0,0 +1,191 @@\n+\"\"\"Pins for defensive DialecticRunner branches.\n+\n+All collaborators in this module are deterministic fakes.  The runner itself\n+is always the production DialecticRunner.\n+\"\"\"\n+\n+from __future__ import annotations\n+\n+import json\n+from pathlib import Path\n+\n+import pytest\n+\n+from stc_gateway.dialectic.errors import DialecticError\n+from stc_gateway.dialectic.results import NoChampionResult\n+from stc_gateway.dialectic.runner import DialecticRunner\n+\n+\n+class _Store:\n+    def __init__(self, root: Path, events: list[dict] | None = None) -> None:\n+        self.root = root\n+        self.events = list(events or [])\n+\n+    def append(self, event: dict) -> None:\n+        self.events.append(event)\n+\n+    def write_json(self, name: str, value: object) -> None:\n+        (self.root / name).write_text(json.dumps(value), encoding=\"utf-8\")\n+\n+\n+class _Gateway:\n+    def __init__(self, payload: dict) -> None:\n+        self.payload = payload\n+\n+    async def complete(self, *args, **kwargs):\n+        return self.payload\n+\n+\n+class _CustodyGateway:\n+    def __init__(self, proposal: str) -> None:\n+        self.proposal = proposal\n+        self.apply_calls = 0\n+\n+    async def complete(self, *args, **kwargs):\n+        return {\"proposal\": self.proposal}\n+\n+    def apply_proposal(self, proposal, *, verify=False, **kwargs):\n+        self.apply_calls += 1\n+        if not verify:\n+            raise RuntimeError(\"merge custody failure\")\n+        return {\"verified\": True, \"proposal\": proposal}\n+\n+\n+class _Auditor:\n+    def __init__(self) -> None:\n+        self.with_codex = False\n+\n+    async def audit(self, *args, **kwargs):\n+        return {\"accepted\": True}\n+\n+\n+def _runner(tmp_path: Path, *, store: _Store, gateway, auditor: _Auditor):\n+    return DialecticRunner(\n+        gateway=gateway,\n+        store=store,\n+        auditor=auditor,\n+        output_dir=tmp_path,\n+    )\n+\n+\n+def _read_json(tmp_path: Path, name: str) -> object:\n+    return json.loads((tmp_path / name).read_text(encoding=\"utf-8\"))\n+\n+\n+@pytest.mark.asyncio\n+async def test_merge_apply_failure_is_typed_and_preserves_partial_evidence(tmp_path):\n+    store = _Store(tmp_path)\n+    gateway = _CustodyGateway(\"champion-v1\")\n+    runner = _runner(tmp_path, store=store, gateway=gateway, auditor=_Auditor())\n+\n+    result = await runner.run_async(\"pin merge apply failure\")\n+\n+    assert isinstance(result, NoChampionResult)\n+    assert result.reason == \"merge-apply-failed\"\n+    assert gateway.apply_calls == 2\n+    for name in (\"veto_log.json\", \"synthesis.json\", \"loss_ledger.json\", \"result.json\"):\n+        assert (tmp_path / name).is_file()\n+    assert not (tmp_path / \"merged\").exists()\n+\n+\n+@pytest.mark.asyncio\n+async def test_vetoed_champion_without_reconstructable_alternate_is_typed(tmp_path):\n+    events = [\n+        {\"type\": \"NODE_PROPOSED\", \"node_id\": \"champion\", \"proposal\": \"bad\"},\n+        {\"type\": \"CHAMPION_SELECTED\", \"node_id\": \"champion\"},\n+        {\"type\": \"FALLBACK_CRITIQUE\", \"node_id\": \"champion\", \"veto\": True},\n+        {\"type\": \"VERIFIED\", \"node_id\": \"alternate\", \"untainted\": True},\n+    ]\n+    store = _Store(tmp_path, events)\n+    runner = _runner(\n+        tmp_path,\n+        store=store,\n+        gateway=_Gateway({\"proposal\": \"unused\"}),\n+        auditor=_Auditor(),\n+    )\n+\n+    result = await runner.run_async(\"pin reconstruction failure\")\n+\n+    assert isinstance(result, NoChampionResult)\n+    assert result.reason == \"reselect-reconstruction-failed\"\n+\n+\n+@pytest.mark.asyncio\n+async def test_audit_time_codex_flag_fails_closed_with_rt08(tmp_path):\n+    auditor = _Auditor()\n+    store = _Store(tmp_path)\n+    runner = _runner(\n+        tmp_path,\n+        store=store,\n+        gateway=_Gateway({\"proposal\": \"auditable\"}),\n+        auditor=auditor,\n+    )\n+\n+    original_audit = auditor.audit\n+\n+    async def taint_at_audit(*args, **kwargs):\n+        auditor.with_codex = True\n+        return await original_audit(*args, **kwargs)\n+\n+    auditor.audit = taint_at_audit\n+\n+    with pytest.raises(DialecticError, match=\"RT-08\"):\n+        await runner.run_async(\"pin audit-time rejection\")\n+\n*** End Patch"}]}
+tokens used
+8,200

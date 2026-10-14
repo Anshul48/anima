@@ -1,0 +1,1 @@
+Error: No champion (budget-exhausted) — partial dossier at <workspace-root>/stc/docs/builds/stc-integration/evidence/FOLLOWUP/accept/attempt-1/dossier.

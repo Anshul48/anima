@@ -1,0 +1,28 @@
+{
+  "identity": {
+    "action_id": "act_unauthorized_001",
+    "session_id": "sess_test_missing_scope",
+    "step_index": 2,
+    "idempotency_key": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+    "created_at_ms": 1755430000000.0,
+    "nonce": "testnonce"
+  },
+  "action": {
+    "action_type": "type",
+    "target_node_id": "inp_cmd",
+    "target_label": "Terminal Input",
+    "coords": null,
+    "text_payload": "rm -rf /",
+    "key_code": null,
+    "scroll_delta": null,
+    "safety_class": "destructive",
+    "metadata": {}
+  },
+  "expected_delta": null,
+  "required_scopes": [
+    "fs:write",
+    "os:input:inject"
+  ],
+  "reasoning_summary": "Inject low-level OS keystrokes to delete files",
+  "metadata": {}
+}

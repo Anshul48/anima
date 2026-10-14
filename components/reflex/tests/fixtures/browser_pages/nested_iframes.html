@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nested Iframes Fixture</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    iframe { width: 500px; height: 300px; border: 2px solid #007bff; }
+  </style>
+</head>
+<body>
+  <h1>Outer Page Title</h1>
+  <button id="outer_btn">Outer Button</button>
+  <div class="frame-wrapper">
+    <iframe id="child_frame" srcdoc="<!DOCTYPE html><html><body><h2>Inner Frame Content</h2><input id='inner_input' placeholder='Inner Frame Input'><button id='inner_submit_btn'>Inner Submit</button></body></html>"></iframe>
+  </div>
+</body>
+</html>

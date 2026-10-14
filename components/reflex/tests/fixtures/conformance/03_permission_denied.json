@@ -1,0 +1,12 @@
+{
+  "error": "PermissionDenied",
+  "status_code": 403,
+  "detail": "403 PermissionDenied: Unauthorized purpose 'Exfiltrate user credentials' or scopes ['scope:credentials.passwords'] for consumer 'reflex.system2.planner'.",
+  "request_id": "REQ-REFLEX-20260820-0003",
+  "consumer_id": "reflex.system2.planner",
+  "denied_scopes": [
+    "scope:credentials.passwords"
+  ],
+  "schema_version": "1.0.0",
+  "timestamp": "2026-08-20T08:00:00.000000Z"
+}

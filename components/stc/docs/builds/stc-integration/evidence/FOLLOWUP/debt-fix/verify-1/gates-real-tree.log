@@ -1,0 +1,11 @@
+$ <workspace-root>/learn-anything/.venv/bin/python -m ruff check .
+All checks passed!
+RC=0
+
+$ <workspace-root>/learn-anything/.venv/bin/python -m ruff format --check .
+106 files already formatted
+RC=0
+
+$ <workspace-root>/learn-anything/.venv/bin/python -m mypy --strict src tests
+Success: no issues found in 67 source files
+RC=0

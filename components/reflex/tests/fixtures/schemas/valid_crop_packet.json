@@ -1,0 +1,8 @@
+{
+  "bounding_box": [100, 200, 300, 250],
+  "crop_base64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+  "parent_label": "Order Confirmation Form",
+  "element_role": "button",
+  "screen_position_quadrant": "Bottom-Right",
+  "task_context": "Submit the payment form"
+}

@@ -1,0 +1,1 @@
+python -m stc run docs/builds/stc-integration/specs/p05-acceptance.md --target stc --budget time=600,tokens=500000,usd=10,iters=2,branching=1,depth=4 --choice 1

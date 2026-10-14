@@ -1,0 +1,38 @@
+{
+  "name": "@stc/dsh-plugin-stc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "STC execution + verification capabilities as a DeepSeek Harness plugin bundle (tools, policy gates, workspace cards).",
+  "keywords": [
+    "dsh-plugin"
+  ],
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/index.js.map",
+    "client.js",
+    "cordis.bundle.yml",
+    "scripts/stc_probe.py"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.bundle.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --target=es2024 --external:@deepseek-ai/* --sourcemap --outfile=lib/index.js --log-level=warning",
+    "test": "node --test tests/dossier-read.test.ts tests/stc-exec.test.ts tests/stc-run.test.ts tests/policy.test.ts tests/packaging.test.ts tests/stc-present.test.ts tests/client-smoke.test.ts"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

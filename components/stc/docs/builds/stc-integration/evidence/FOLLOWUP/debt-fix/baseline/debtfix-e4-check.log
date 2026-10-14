@@ -1,0 +1,9 @@
+src/stc/integration/adapters.py:170:1: I001 [*] Import block is un-sorted or un-formatted
+src/stc/integration/identity.py:41:11: RUF022 [*] `__all__` is not sorted
+src/stc/integration/memory.py:292:19: C416 Unnecessary list comprehension (rewrite using `list()`)
+tests/unit/test_integration_adapters.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+tests/unit/test_integration_adapters.py:226:42: RUF043 Pattern passed to `match=` contains metacharacters but is neither escaped nor raw
+tests/unit/test_integration_adapters.py:419:47: RUF043 Pattern passed to `match=` contains metacharacters but is neither escaped nor raw
+tests/unit/test_integration_identity.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+Found 7 errors.
+[*] 4 fixable with the `--fix` option (1 hidden fix can be enabled with the `--unsafe-fixes` option).

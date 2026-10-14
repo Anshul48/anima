@@ -1,0 +1,38 @@
+{
+  "transition_id": "tr_1234567890abcdef",
+  "episode_id": "ep_20260817_001",
+  "step_index": 1,
+  "timestamp_ms": 1755430000000.0,
+  "ui_state_hash": "a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90",
+  "goal_text": "Click submit order button",
+  "goal_embedding": [0.012, -0.045, 0.128, 0.089],
+  "visual_embedding": [0.033, 0.112, -0.056, 0.201],
+  "action": {
+    "action_type": "click",
+    "target_node_id": "btn_submit_order",
+    "target_label": "Submit Order",
+    "coords": {
+      "x": 0.52,
+      "y": 0.68
+    },
+    "text_payload": null,
+    "key_code": null,
+    "scroll_delta": null,
+    "safety_class": "reversible",
+    "metadata": {}
+  },
+  "next_ui_state_hash": "f90a1b2c3d4e5f60718293a4b5c6d7e8a1b2c3d4e5f60718293a4b5c6d7e8f90",
+  "delta": {
+    "added_nodes": ["div_confirmation_banner"],
+    "removed_nodes": [],
+    "modified_nodes": ["btn_submit_order"],
+    "pixel_change_ratio": 0.05,
+    "changed_bounding_boxes": [[200, 300, 600, 450]],
+    "outcome_class": "success"
+  },
+  "duration_ms": 23.4,
+  "surprise_score": 0.02,
+  "provenance": {
+    "source": "system1_cache"
+  }
+}

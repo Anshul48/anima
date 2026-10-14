@@ -1,0 +1,36 @@
+=== joint 3.12.3 ===
+interpreter: 3.12.3
+check0 PASS: symlink-to-dst spelling created
+check1 PASS: mirror terminated (dst-inside-src, depth 5)
+check2 PASS: exact 4-file bound, got ['.git/refs/HEAD', 'lease-marker.txt', 'pkg/data.bin', 'pkg/sub/core.py']
+check3 PASS: no nested sandbox copy under dst
+check4 PASS: marker appears exactly once
+check5 PASS: byte-faithfulness core.py
+check6 PASS: byte-faithfulness data.bin
+check7 PASS: byte-faithfulness .git/refs/HEAD
+check8 PASS: pre-existing marker preserved
+check9 PASS: nested .venv excluded at depth
+check10 PASS: symlink-to-dst not materialized as nested copy
+check11 PASS: symlinked dst spelling terminates with same 4-file set
+check12 PASS: src==dst raises DialecticError (refusing to mirror source into itself: src=/tmp/a1v1-discrim-ph26gz43/repo dst=/tmp/a1v1-discrim-ph26gz43/repo)
+check13 PASS: src-inside-dst raises DialecticError (refusing to mirror source into itself: src=/tmp/a1v1-discrim-ph26gz43/repo/pkg dst=/tmp/a1v1-discrim-ph26gz43/repo)
+ALL 13 CHECKS PASSED
+RC=0
+=== real-gates 3.11.15 ===
+interpreter: 3.11.15
+check0 PASS: symlink-to-dst spelling created
+check1 PASS: mirror terminated (dst-inside-src, depth 5)
+check2 PASS: exact 4-file bound, got ['.git/refs/HEAD', 'lease-marker.txt', 'pkg/data.bin', 'pkg/sub/core.py']
+check3 PASS: no nested sandbox copy under dst
+check4 PASS: marker appears exactly once
+check5 PASS: byte-faithfulness core.py
+check6 PASS: byte-faithfulness data.bin
+check7 PASS: byte-faithfulness .git/refs/HEAD
+check8 PASS: pre-existing marker preserved
+check9 PASS: nested .venv excluded at depth
+check10 PASS: symlink-to-dst not materialized as nested copy
+check11 PASS: symlinked dst spelling terminates with same 4-file set
+check12 PASS: src==dst raises DialecticError (refusing to mirror source into itself: src=/tmp/a1v1-discrim-83xonksl/repo dst=/tmp/a1v1-discrim-83xonksl/repo)
+check13 PASS: src-inside-dst raises DialecticError (refusing to mirror source into itself: src=/tmp/a1v1-discrim-83xonksl/repo/pkg dst=/tmp/a1v1-discrim-83xonksl/repo)
+ALL 13 CHECKS PASSED
+RC=0

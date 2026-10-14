@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Testing, Coverage & Mutation
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mutmut-cache/
+mutants/
+
+# Type Checking & Linting
+.mypy_cache/
+.ruff_cache/
+
+# Environment variables & Secrets
+.env
+.env.local
+.env.*.local
+
+# Ephemeral Worktrees, Leases & Sandboxes
+worktrees/
+.leases.json
+
+# Artifacts & Receipts
+artifacts/*
+!artifacts/.gitkeep
+
+# Databases & Local Trace Cache
+*.db
+*.sqlite
+*.sqlite3
+trace/
+
+# DSH plugin bundle (dev-only; see dsh-plugin-stc/README.md)
+node_modules/
+dsh-plugin-stc/cordis.dev.yml
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+# Workspace-local durable install (fallback when home writes are
+# unavailable; canonical layout is ~/dsh + ~/.local/share/stc).
+.durable/
+# Backend runtime output (dossier/qa_log written by `stc run`).
+/dossier/

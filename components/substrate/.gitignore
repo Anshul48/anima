@@ -1,0 +1,57 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Run/state (regenerable, machine-local)
+runs/
+.test-tmp/
+*.log
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets — never commit
+.git-credentials
+*.pem
+*.key
+.env
+
+# Publication curation: frozen research trees ship without
+# vendored third-party bytes, generated run state, or caches.
+# (Local trees stay intact; exclusion is publication-only.)
+prototype/**/vendor/
+prototype/**/runs/
+prototype/**/__pycache__/
+prototype/**/*.db
+prototype/**/.test-tmp/
+prototype/**/*.venv*/
+**/.venv*/
+prototype/evidence-20261004/
+prototype/**/logs/
+prototype/**/scratch/
+prototype/**/state/
+prototype/**/state-*/
+prototype/**/search-work/
+prototype/**/sst-work/
+
+# Sealed/frozen evidence with machine-absolute paths baked in (hash-pinned
+# or frozen; cannot be scrubbed without breaking integrity). Local only.
+prototype/programme-20261004/U-execute/frozen-pins.json
+prototype/programme-20261004/U-execute/sealed/revision-bundle/MANIFEST.json
+prototype/successor-001/REPRODUCE.md
+prototype/successor-005/vehicle/relcheck/MANIFEST.json
+prototype/successor-005/vehicle/relcheck-pins.json
+prototype/w1-harden/FREEZE.json
+prototype/w1-harden/REPRODUCE.md

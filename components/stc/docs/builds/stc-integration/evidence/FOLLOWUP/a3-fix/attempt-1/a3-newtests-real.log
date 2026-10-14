@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- <workspace-root>/learn-anything/.venv/bin/python
+rootdir: <workspace-root>/stc
+configfile: pyproject.toml
+plugins: anyio-4.14.2, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 18 items
+
+tests/unit/test_a3_patch_format.py::test_live_bytes_hash_pins PASSED     [  5%]
+tests/unit/test_a3_patch_format.py::test_embedded_bytes_match_dossier PASSED [ 11%]
+tests/unit/test_a3_patch_format.py::test_frame_pins_unified_diff_only PASSED [ 16%]
+tests/unit/test_a3_patch_format.py::test_frame_preserves_sst_bytes_verbatim_with_markers PASSED [ 22%]
+tests/unit/test_a3_patch_format.py::test_frame_introduces_no_marker_lines PASSED [ 27%]
+tests/unit/test_a3_patch_format.py::test_generate_shapes_with_pin PASSED [ 33%]
+tests/unit/test_a3_patch_format.py::test_sst_proposal_diff_applies_cleanly PASSED [ 38%]
+tests/unit/test_a3_patch_format.py::test_cand0_bytes_apply_succeeds_post_fix PASSED [ 44%]
+tests/unit/test_a3_patch_format.py::test_cand1_bytes_translate_to_valid_diff PASSED [ 50%]
+tests/unit/test_a3_patch_format.py::test_untranslatable_markers_refuse_loudly[delete-file] PASSED [ 55%]
+tests/unit/test_a3_patch_format.py::test_untranslatable_markers_refuse_loudly[empty-add-path] PASSED [ 61%]
+tests/unit/test_a3_patch_format.py::test_untranslatable_markers_refuse_loudly[empty-section] PASSED [ 66%]
+tests/unit/test_a3_patch_format.py::test_untranslatable_markers_refuse_loudly[markers-only] PASSED [ 72%]
+tests/unit/test_a3_patch_format.py::test_untranslatable_markers_refuse_loudly[mixed-unified-and-add] PASSED [ 77%]
+tests/unit/test_a3_patch_format.py::test_untranslatable_markers_refuse_loudly[move-to] PASSED [ 83%]
+tests/unit/test_a3_patch_format.py::test_untranslatable_markers_refuse_loudly[non-plus-body] PASSED [ 88%]
+tests/unit/test_a3_patch_format.py::test_untranslatable_markers_refuse_loudly[update-file] PASSED [ 94%]
+tests/unit/test_a3_patch_format.py::test_no_regression_clean_paths_byte_identical PASSED [100%]
+
+============================== 18 passed in 2.98s ==============================

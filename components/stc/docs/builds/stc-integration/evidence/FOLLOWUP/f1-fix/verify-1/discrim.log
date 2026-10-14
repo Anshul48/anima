@@ -1,0 +1,3 @@
+Shape A (worker crash, long err 676B): BYTE-EXACT OK; note=300 chars; sentinel recovered from sidecar
+Shape B (gateway exit-2, 578B stderr): BYTE-EXACT OK; raised error carries tail sentinel; profile=None recorded
+DISCRIMINATION CHECK: PASS (2/2 shapes, 0 CLI calls)

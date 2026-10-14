@@ -1,0 +1,27 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- <workspace-root>/learn-anything/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: <workspace-root>/stc
+configfile: pyproject.toml
+plugins: anyio-4.14.2, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 81 items / 65 deselected / 16 selected
+
+tests/unit/test_integration_harness_worker.py::test_crash_mid_run_still_logs PASSED [  6%]
+tests/unit/test_integration_harness_worker.py::test_ledger_exclusion_does_not_hide_siblings PASSED [ 12%]
+tests/unit/test_integration_harness_worker.py::test_native_argv_shapes PASSED [ 18%]
+tests/unit/test_integration_harness_worker.py::test_outer_write_moves_to_quarantine_with_record PASSED [ 25%]
+tests/unit/test_integration_harness_worker.py::test_gateway_generate_failure_logs_and_raises PASSED [ 31%]
+tests/unit/test_integration_harness_worker.py::test_fix_gateway_argv_pins_confined_codex_profile PASSED [ 37%]
+tests/unit/test_integration_harness_worker.py::test_fix_gateway_argv_passes_explicit_model PASSED [ 43%]
+tests/unit/test_integration_harness_worker.py::test_fix_worker_argv_unchanged_after_fix PASSED [ 50%]
+tests/unit/test_integration_harness_worker.py::test_fix_shape_gateway_prompt_preserves_sst_bytes PASSED [ 56%]
+tests/unit/test_integration_harness_worker.py::test_fix_shape_gateway_prompt_preserves_real_diverge_bytes PASSED [ 62%]
+tests/unit/test_integration_harness_worker.py::test_fix_gateway_generate_shapes_prompt_with_gateway_role PASSED [ 68%]
+tests/unit/test_integration_harness_worker.py::test_fix_gateway_confined_run_prefers_o_file PASSED [ 75%]
+tests/unit/test_integration_harness_worker.py::test_fix_gateway_confined_run_falls_back_to_stdout PASSED [ 81%]
+tests/unit/test_integration_harness_worker.py::test_fix_gateway_confinement_fails_closed_on_tracked_change PASSED [ 87%]
+tests/unit/test_integration_harness_worker.py::test_fix_gateway_confinement_passes_when_clean PASSED [ 93%]
+tests/unit/test_integration_harness_worker.py::test_fix_layout_names_dossier PASSED [100%]
+
+====================== 16 passed, 65 deselected in 8.25s =======================

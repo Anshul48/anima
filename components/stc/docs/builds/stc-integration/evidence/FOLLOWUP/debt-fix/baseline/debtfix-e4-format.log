@@ -1,0 +1,5 @@
+src/stc/integration/adapters.py:330:31: unformatted: File would be reformatted
+src/stc/integration/memory.py:215:16: unformatted: File would be reformatted
+tests/unit/test_integration_adapters.py:392:48: unformatted: File would be reformatted
+tests/unit/test_integration_memory.py:150:14: unformatted: File would be reformatted
+4 files would be reformatted, 102 files already formatted

@@ -1,0 +1,12 @@
+### git apply --check (sst base @ 079f4de6 + evidence diff)
+CHECK-OK
+APPLIED
+BYTE-IDENTICAL-TO-PROTOTYPE
+### ruff check + format --check (SST config)
+All checks passed!
+rc=0
+1 file already formatted
+rc=0
+### mypy --strict (SST config)
+Success: no issues found in 1 source file
+rc=0

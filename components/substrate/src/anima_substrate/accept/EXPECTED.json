@@ -1,0 +1,94 @@
+{
+  "S1": {
+    "central_bytes_ref": 655,
+    "direct_bytes_ref": 0,
+    "lane": "central",
+    "prefs_total": 4,
+    "quality": 4,
+    "valid": true
+  },
+  "S2": {
+    "central_bytes_ref": 310,
+    "direct_bytes_ref": 500,
+    "lane": "local",
+    "prefs_total": 4,
+    "quality": 4,
+    "valid": true
+  },
+  "S3": {
+    "central_bytes_ref": 685,
+    "child_killed": true,
+    "direct_bytes_ref": 500,
+    "lane": "local",
+    "prefs_total": 4,
+    "quality": 4,
+    "re_executed_invokes": 0,
+    "representation": "v2",
+    "revoked": "SC-L:sched.propose@1.0->SC-S",
+    "skipped_pre_kill": 3,
+    "valid": true
+  },
+  "S4-followup": {
+    "lane": "fused-reuse",
+    "lineage_ok": true,
+    "prefs_total": 5,
+    "quality": 5,
+    "valid": true,
+    "via": "SC-FUSED"
+  },
+  "S5": {
+    "lane": "quarantine-drill",
+    "probe_denied": true,
+    "standby": "SC-B",
+    "standby_completed": [
+      "sched.propose@propose",
+      "sched.verify@verify"
+    ],
+    "world": "SC-Q"
+  },
+  "S6-followup": {
+    "lane": "fission-reuse",
+    "prefs_total": 4,
+    "quality": 4,
+    "valid": true,
+    "via": [
+      "SC-L2",
+      "SC-S2"
+    ]
+  },
+  "SST": {
+    "champion_found": true,
+    "cost_usd": 0.0,
+    "envelope_keys": 8,
+    "pydantic": "2.13.5",
+    "snapshot_check": "MATCH"
+  },
+  "fission": {
+    "children": [
+      "SC-L2",
+      "SC-S2"
+    ],
+    "composite": "SC-FUSED",
+    "restored_mechanism": "direct-channel:SC-L2<->SC-S2"
+  },
+  "fusion": {
+    "fused_id": "SC-FUSED",
+    "parents": [
+      "SC-L",
+      "SC-S"
+    ],
+    "removed_mechanism": "direct-channel:SC-L<->SC-S"
+  },
+  "routing_decisions": 6,
+  "settle": {
+    "grant_settle_markers": 5,
+    "settled_terminals": [
+      "SC-FUSED",
+      "SC-L",
+      "SC-L2",
+      "SC-S",
+      "SC-S2"
+    ],
+    "stranded_zero": true
+  }
+}

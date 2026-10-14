@@ -1,0 +1,51 @@
+{
+  "probe": "P0-H0a",
+  "frame": "baseline",
+  "frame_patched": false,
+  "model": "default",
+  "reasoning": "max",
+  "timeout_s": 120.0,
+  "sst_bytes": 237,
+  "sst_sha256": "ca11dd3b589ff5a3753601b9585da37f6b0b07e4aa6dedad7b0e39b2a28e61bd",
+  "shaped_bytes": 917,
+  "shaped_sha256": "2eb53399f7729145f23e9271d2ac0a031959d56e31320f6d4aaf80e0c251aafc",
+  "ok": true,
+  "wall_seconds": 25.27,
+  "content_chars": 662,
+  "content_head": "{\"task\":\"pin three defensive branches of a dialectic runner with unit tests\",\"branches\":[{\"id\":\"handwritten-fakes\",\"implementation\":\"Add guards for missing input, malformed counterarguments, and exceeded iteration limits; cover each branch with focused unit tests using deterministic handwritten runner and responder fakes.\",\"test_double_strategy\":\"Handwritten fakes and stubs.\"},{\"id\":\"mock-driven\",\"implementation\":\"Add the same three guards\u2014missing input, malformed counterarguments, and exceeded ",
+  "resp_model": "default",
+  "resp_profile": "cli",
+  "json_top_keys": [
+    "branches",
+    "task"
+  ],
+  "branch_count": 2,
+  "b0_has_title": false,
+  "b0_has_rationale": false,
+  "b0_code_chars": 0,
+  "s2_branches_valid": false,
+  "s2_raw_fallback_nonempty": true,
+  "codex_home_cleaned": true,
+  "tracked_identical": true,
+  "sst_clean_after": true,
+  "pins_after": {
+    "sst": "079f4de6fd43881c2f1b529f0612f1df64a62f32",
+    "prompt_kit": "4f442a6c829bc06b60f9979fdc8d7585e30bac9a",
+    "trace": "a24a937009fec41e6dcb6d2ca31d3c1783ac97f7"
+  },
+  "stdin_matches_precomputed": true,
+  "confinement_checks": {
+    "argv_codex_exec": true,
+    "argv_skip_git_check": true,
+    "argv_readonly": true,
+    "argv_ephemeral": true,
+    "argv_o_capture": true,
+    "argv_stdin_dash": true,
+    "argv_no_bypass": true,
+    "argv_model_flag_ok": true,
+    "cwd_is_gateway_scratch": true
+  },
+  "confined": true,
+  "header_reasoning_line": "reasoning effort: max",
+  "sidecar_present": false
+}

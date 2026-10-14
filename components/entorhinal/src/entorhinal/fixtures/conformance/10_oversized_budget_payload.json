@@ -1,0 +1,88 @@
+{
+  "$schema": "https://entorhinal.local/schemas/v1/context_snapshot.schema.json",
+  "snapshot_id": "01915dfb-6981-7f89-9a67-9c60e42cb760",
+  "schema_version": "1.0.0",
+  "request_id": "REQ-REFLEX-20260820-0010",
+  "issued_at": "2026-08-20T08:00:00.000000Z",
+  "expires_at": "2026-08-20T08:05:00.000000Z",
+  "purpose_granted": "High-density multi-scope query with strict token budget compression",
+  "scope_granted": [
+    "scope:workspace",
+    "scope:browser",
+    "scope:terminal",
+    "scope:patterns"
+  ],
+  "active_facts": [
+    {
+      "fact_id": "01915dfb-6981-7f89-9a67-9c60e42cb761",
+      "schema_version": "1.0.0",
+      "entity_uri": "workspace:auth-service",
+      "attribute": "active_project_root",
+      "value": "/workspace/auth-service",
+      "confidence": 1.0,
+      "valid_from": "2026-08-20T07:50:00.000000Z",
+      "valid_to": null,
+      "supporting_evidence_ids": [
+        "01915dfb-6981-7f89-9a67-9c60e42cb762"
+      ],
+      "derived_by": "compiler.workspace_root",
+      "revision_id": 1
+    },
+    {
+      "fact_id": "01915dfb-6981-7f89-9a67-9c60e42cb763",
+      "schema_version": "1.0.0",
+      "entity_uri": "session:immediate_focus",
+      "attribute": "active_task",
+      "value": "Refactoring OAuth2 token validation handler",
+      "confidence": 0.95,
+      "valid_from": "2026-08-20T07:55:00.000000Z",
+      "valid_to": null,
+      "supporting_evidence_ids": [
+        "01915dfb-6981-7f89-9a67-9c60e42cb764"
+      ],
+      "derived_by": "compiler.session_focus",
+      "revision_id": 1
+    },
+    {
+      "fact_id": "01915dfb-6981-7f89-9a67-9c60e42cb765",
+      "schema_version": "1.0.0",
+      "entity_uri": "project:relation.service_dependency",
+      "attribute": "database_engine",
+      "value": "PostgreSQL 16 with asyncpg driver",
+      "confidence": 0.88,
+      "valid_from": "2026-08-20T07:40:00.000000Z",
+      "valid_to": null,
+      "supporting_evidence_ids": [
+        "01915dfb-6981-7f89-9a67-9c60e42cb766"
+      ],
+      "derived_by": "compiler.dependency_graph",
+      "revision_id": 1
+    }
+  ],
+  "active_hypotheses": [
+    {
+      "hypothesis_id": "01915dfb-6981-7f89-9a67-9c60e42cb767",
+      "proposed_intent": "User is preparing migration script for PostgreSQL 16 schema update",
+      "confidence_score": 0.82,
+      "candidate_evidence_ids": [
+        "01915dfb-6981-7f89-9a67-9c60e42cb766"
+      ],
+      "uncertainty_reasons": [
+        "Migration file not yet written to disk"
+      ],
+      "expires_at": "2026-08-20T08:10:00.000000Z",
+      "is_hypothesis": true
+    }
+  ],
+  "evidence_provenance_refs": [
+    "01915dfb-6981-7f89-9a67-9c60e42cb762",
+    "01915dfb-6981-7f89-9a67-9c60e42cb764",
+    "01915dfb-6981-7f89-9a67-9c60e42cb766"
+  ],
+  "redaction_manifest": [
+    "pruned_tier4_fact:01915dfb-6981-7f89-9a67-9c60e42cb770",
+    "pruned_low_confidence_hypothesis:01915dfb-6981-7f89-9a67-9c60e42cb771",
+    "pruned_low_confidence_hypothesis:01915dfb-6981-7f89-9a67-9c60e42cb772"
+  ],
+  "disclaimer": "ADVISORY ONLY. Direct user instruction and fresh observation take precedence."
+}

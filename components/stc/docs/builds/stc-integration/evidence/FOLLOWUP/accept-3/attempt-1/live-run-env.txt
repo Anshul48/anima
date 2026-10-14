@@ -1,0 +1,4 @@
+cwd=<workspace-root>/stc
+dossier=<workspace-root>/stc/docs/builds/stc-integration/evidence/FOLLOWUP/accept-3/attempt-1/dossier
+python=Python 3.11.15
+codex=codex-cli 0.154.0

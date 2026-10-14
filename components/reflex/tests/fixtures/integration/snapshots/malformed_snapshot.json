@@ -1,0 +1,17 @@
+{
+  "snapshot_id": "",
+  "timestamp_ms": -1.0,
+  "claims": [
+    {
+      "__corrupt__": true,
+      "unexpected_null": null
+    }
+  ],
+  "confidence": -1.0,
+  "source": "invalid_source",
+  "is_advisory": true,
+  "ttl_ms": -1.0,
+  "metadata": {
+    "corrupt": true
+  }
+}

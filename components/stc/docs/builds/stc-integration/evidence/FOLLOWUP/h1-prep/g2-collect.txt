@@ -1,0 +1,14 @@
+# G2 collection probe: bare substrate-gate pytest selection collects live-marked tests (--collect-only: collects, NEVER executes; 0 live calls)
+
+$ pytest tests/unit/test_integration_harness_worker.py --collect-only -q -p no:cacheprovider  (bare substrate-gate selection; collects, never executes)
+81 tests collected in 2.98s
+
+$ ... -m live  (live-marked subset of the same selection)
+tests/unit/test_integration_harness_worker.py::test_live_handshake_binaries_probe
+tests/unit/test_integration_harness_worker.py::test_live_codex_worker_writes_marker
+tests/unit/test_integration_harness_worker.py::test_live_codex_gateway_text
+tests/unit/test_integration_harness_worker.py::test_live_agy_gateway_text
+tests/unit/test_integration_harness_worker.py::test_live_gateway_confined_smoke
+
+$ ... -m "not live"  (D13 evidence selection)
+76/81 tests collected (5 deselected) in 2.99s

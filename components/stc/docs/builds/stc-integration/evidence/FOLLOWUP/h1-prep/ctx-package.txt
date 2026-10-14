@@ -1,0 +1,111 @@
+[H1-CTX/pinned] read-only source context (NOT a patch target)
+--- 1 test_integration_dialectic.py:21-22,24-26,28-29,33-55
+from sst.core.contracts import CandidateProposal, TaskPacket
+from sst.core.events import EventKind, SSTEvent
+from sst.gateway.gateway import ModelGateway
+from sst.sandbox.custody import CandidateCustodyManager
+from sst.search.policy import SearchPolicy
+from stc.integration.adapters import AdapterContext, Budgets
+from stc.integration.dialectic_runner import (
+    ChampionResult,
+    DialecticError,
+    DialecticRunner,
+    LossLedgerEntry,
+    NoChampionResult,
+    STCCustodyWrapper,
+    SynthesisReceipt,
+    count_mutmut_runs,
+    lease_id_for,
+    mirror_source_tree,
+    render_merged_diff,
+    sanitize_lease_segment,
+    scrape_tainted_scores,
+)
+from stc.integration.harness_worker import CritiqueProvenance
+from stc.judiciary.auditor import JudiciaryAuditor
+from stc.schemas.models import (
+    ExecutionReceipt,
+    FileTarget,
+    GateReport,
+    JudiciaryVerdict,
+    TaskBundle,
+)
+--- 2 dialectic_runner.py:127-128,199-200,204-211
+    "SynthesisReceipt",
+    "VetoRecord",
+
+    model_config = ConfigDict(frozen=True, extra="forbid")
+    rationale: str
+    rule: str  # veto rule name (see scrape_tainted_scores Rules 0-3)
+
+
+class SynthesisReceipt(BaseModel):
+    """Receipt for one colimit synthesis: parents + scores + verification."""
+
+    model_config = ConfigDict(frozen=True, extra="forbid")
+--- 3 dialectic_runner.py:747-758,777-778
+        except FileExistsError:
+            self.quarantine_lease(lease_id, "stale lease dir present at allocation")
+            lease_ws.mkdir(parents=True, exist_ok=False)
+        try:
+            mirror_source_tree(src, lease_ws)
+            # T2 custody: disposable git (sanitized mirror or fresh init),
+            # then the tripwire opens over the mirrored bytes.
+            try:
+                lease_mode = ensure_disposable_git(lease_ws)
+            except LeaseGitError as exc:
+                self.release_lease(lease_id)
+                return _non_pass(f"Lease {lease_id}: disposable git setup failed: {exc}")
+                        f"({drift[0]}; re-pin T0, never proceed)"
+                    )
+--- 4 test_integration_dialectic.py:817-829
+    runner = DialecticRunner(
+        ctx=_ctx(str(src), time_budget_seconds=time_budget_seconds),
+        gateway=ScriptGateway(handler),
+        substrate=substrate,
+        evidence_root=tmp_path / "ev",
+        policy=(
+            policy
+            if policy is not None
+            else SearchPolicy(max_iterations=1, max_depth=2, branching_factor=4)
+        ),
+        auditor=auditor,
+        **kwargs,
+    )
+--- 5 dialectic_runner.py:921-923,932,876,887,893-897
+                self.binding_diffs[proposal.candidate_id] = node_diff
+                self.import_proofs[proposal.candidate_id] = import_proof
+            self.release_lease(lease_id)
+    # L932:
+                )
+    # L876/L887/L893-897:
+            try:
+                candidate_content_digest=candidate_content_digest(scratch_sha, {}, node_diff),
+            record = SelectionRecord(
+                candidate_id=proposal.candidate_id,
+                intake_ref=intake.digest(),
+                config_revision=sel_verify["config_revision"],
+                mandatory_digest=sel_verify["mandatory_digest"],
+--- 6 auditor.py:91-96,189-194 + dialectic_runner.py:1030-1039
+    def __init__(
+        self,
+        runner: SubstrateRunnerProtocol | None = None,
+        with_codex: bool = False,
+        codex_bin: str | None = None,
+    ) -> None:
+    def audit_diff(
+        self,
+        diff_text: str,
+        bundle: TaskBundle,
+        receipt: ExecutionReceipt,
+    ) -> JudiciaryVerdict:
+        chunks.append(f"--- a/{target}\n+++ b/{target}\n")
+        chunks.extend(f"+{line}\n" for line in diff.splitlines())
+    return normalize_diff("".join(chunks))
+
+
+def _proposal_from_events(
+    node_id: str, tree_id: str, events: list[SSTEvent]
+) -> CandidateProposal | None:
+    """Reconstructs a verified proposal from its proposal event payload.
+

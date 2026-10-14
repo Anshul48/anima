@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- <workspace-root>/learn-anything/.venv/bin/python
+rootdir: <workspace-root>/stc
+configfile: pyproject.toml
+plugins: anyio-4.14.2, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 5 items / 1 deselected / 4 selected
+
+tests/integration/test_dialectic_fixture.py::test_fixture_full_scenario_real_gates PASSED [ 25%]
+tests/integration/test_dialectic_fixture.py::test_fixture_wiring_stub_substrate PASSED [ 50%]
+tests/integration/test_dialectic_fixture.py::test_mock_gateway_search_smoke PASSED [ 75%]
+tests/integration/test_dialectic_fixture.py::test_mutmut_once_on_champion PASSED [100%]
+
+================== 4 passed, 1 deselected in 79.57s (0:01:19) ==================

@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "status": "proposed_navigation_catalogue_no_runtime_or_source_migration",
+  "updated_date": "2026-10-02",
+  "path_base": "directory_containing_this_file",
+  "semantics": "Source locations and proposed roles are navigation metadata. A component can expose several capabilities and participate in several worlds. Runtime containment, state custody, lineage and candidate identity belong to actual composition/run records. Entries do not certify integration or override owning contracts.",
+  "entries": [
+    {
+      "id": "memory.tl",
+      "kind": "source_component_family",
+      "roles": ["attributable_source_organization", "retrieval", "incremental_maintenance"],
+      "source_paths": ["../trace-architecture/tl-candidate-batch", "../trace-architecture/tl-sys"],
+      "contract_paths": ["../trace-architecture/TL-FINISHED.md", "../trace-architecture/TL-COMPLETION-CHECKLIST.md", "../trace-architecture/decisions/DECISIONS.md"],
+      "proposed_source_home": "components/tl/",
+      "intended_owner": "tl-owner",
+      "status": "existing_selected_source_family_requires_exact_candidate_at_execution",
+      "qualification_note": "Historical per-document release and broader organization obligations have distinct scopes. No new qualification performed for this catalogue."
+    },
+    {
+      "id": "memory.trace",
+      "kind": "source_component_family",
+      "roles": ["episode_and_interpretation_memory", "historical_revision", "qualified_derived_conclusions"],
+      "source_paths": ["../trace-architecture/trace-build"],
+      "contract_paths": ["../trace-architecture/roadmap/trace-architecture/04-DECISIONS.md", "../trace-architecture/reviews/TL-TRACE-BOUNDARY-RECONCILIATION-2026-09-30.md"],
+      "proposed_source_home": "components/trace/",
+      "intended_owner": "trace-owner",
+      "status": "existing_product_landing_requires_exact_candidate_at_execution",
+      "qualification_note": "Actual TL consumption, remaining conformance, and inference/activation grants retain their particular requirements."
+    },
+    {
+      "id": "search.sst",
+      "kind": "source_component",
+      "roles": ["bounded_candidate_search", "formulation_exploration", "search_outcome_feedback"],
+      "source_paths": ["../sst"],
+      "contract_paths": ["../sst/README.md", "../sst/docs/03_DATA_CONTRACTS.md"],
+      "proposed_source_home": "components/sst/",
+      "intended_owner": "sst-owner",
+      "status": "existing_repository_real_caller_qualification_pending_in_programme",
+      "qualification_note": "Search reuse does not transfer domain evaluation or custody authority."
+    },
+    {
+      "id": "construction.stc",
+      "kind": "source_component_and_world_implementation",
+      "roles": ["construction_world", "workspace_execution", "context_preparation", "candidate_workflow_learning"],
+      "source_paths": ["../stc"],
+      "contract_paths": ["../stc/docs/STC-COORDINATOR-PROMPT.md", "../stc/01_PLAN_BROAD_STROKES.md", "../stc/docs/STC-DSH-RECORD.md"],
+      "proposed_source_home": "components/stc/",
+      "proposed_world_home": "worlds/construction/",
+      "intended_owner": "stc-owner",
+      "status": "existing_mixed_implementation_with_early_learning_planned",
+      "qualification_note": "The construction world is a composition using STC and other capabilities. Generic mechanisms can be extracted after actual reuse establishes their contracts."
+    },
+    {
+      "id": "hosting.substrate",
+      "kind": "design_and_future_implementation_home",
+      "roles": ["world_hosting", "lifecycle_and_resources", "composition", "controlled_organizational_change"],
+      "source_paths": ["../substrate"],
+      "contract_paths": ["../substrate/docs/SUBSTRATE-DIRECTION.md", "../substrate/docs/WORLD-BOUNDARIES.md"],
+      "proposed_source_home": "substrate/",
+      "intended_owner": "substrate-owner",
+      "status": "design_proposal_no_new_runtime_or_selected_permanent_host",
+      "qualification_note": "Distinct from STC's mechanical package named substrate. Actual structural change and composite reuse require their own evidence."
+    },
+    {
+      "id": "learning.experience",
+      "kind": "incubating_capability",
+      "roles": ["experience_attribution", "conditional_procedure_reuse", "prediction_correction", "workflow_revision_and_selection"],
+      "source_paths": ["../stc/src/stc/integration", "../stc/src/stc/genome", "../stc/dsh-plugin-stc/policy"],
+      "contract_paths": ["../autonomous_runs/trace_ecosystem_20261002/CURRENT-DIRECTION.md", "../autonomous_runs/trace_ecosystem_20261002/dag.json"],
+      "incubates_in": "construction.stc",
+      "proposed_shared_home": "components/experience-learning/",
+      "intended_owner": "stc-owner",
+      "status": "existing_insertion_points_STC3_E4_planned_not_implemented_by_catalogue",
+      "qualification_note": "These paths provide seams and retained artifacts, not proof of an adaptive learner. A separate shared package is prospective."
+    },
+    {
+      "id": "programme.trace-ecosystem",
+      "kind": "prepared_programme",
+      "roles": ["direction", "milestone_dag", "coordination", "integrated_acceptance"],
+      "source_paths": ["../autonomous_runs/trace_ecosystem_20261002"],
+      "contract_paths": ["../autonomous_runs/trace_ecosystem_20261002/PROGRAMME.md", "../autonomous_runs/trace_ecosystem_20261002/RUN-STATE.md"],
+      "proposed_home": "programmes/trace-ecosystem/",
+      "intended_owner": "programme-coordinator",
+      "status": "launch_kit_prepared_no_product_execution_by_preparation_task",
+      "qualification_note": "Current canonical DAG/state remain at the referenced location until deliberately relocated."
+    }
+  ],
+  "other_implementations_to_keep_distinct": [
+    {"id": "memory.trace-existing-sibling", "source_path": "../trace", "note": "Separate existing project. Do not infer current programme candidate identity or inherit its queues from its name."},
+    {"id": "memory.trace-lite-sibling", "source_path": "../trace-lite", "note": "Separate query-native implementation; distinct from the selected delivered TL family."}
+  ],
+  "planned_worlds": [
+    {"id": "world.construction", "definition_status": "proposed", "implementation_refs": ["construction.stc"], "prospective_capability_refs": ["memory.tl", "memory.trace", "search.sst", "learning.experience"]},
+    {"id": "world.research", "definition_status": "proposed_second_environment", "implementation_refs": [], "prospective_capability_refs": ["memory.tl", "memory.trace", "search.sst"]}
+  ]
+}

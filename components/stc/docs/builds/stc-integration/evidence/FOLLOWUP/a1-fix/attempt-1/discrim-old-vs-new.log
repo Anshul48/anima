@@ -1,0 +1,3 @@
+OLD: cap 200 exceeded (copytree=201 copy2=0) -- unbounded, as diagnosed. PASS
+NEW: 3 shutil ops (copy2=3), files=['.git/objects/pack', 'pre-existing.txt', 'src/pkg/mod.py', 'tests/test_mod.py'] -- PASS
+DISCRIMINATION: PASS (old unbounded, new bounded+faithful)

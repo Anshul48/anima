@@ -1,0 +1,1 @@
+DIVERGE (diagnostic smoke): propose exactly 2 implementation branches for the task "pin three defensive branches of a dialectic runner with unit tests". Branches must differ in test-double strategy. Emit your answer as the required JSON.

@@ -1,0 +1,16 @@
+ M src/stc/cli.py
+ M src/stc/orchestrator/dispatch.py
+?? docs/builds/stc-integration/evidence/FOLLOWUP/
+?? docs/builds/stc-integration/evidence/P04/attempt-1/P04-EVIDENCE-c33a56a3/store.db-shm
+?? docs/builds/stc-integration/evidence/P04/attempt-1/P04-EVIDENCE-c33a56a3/store.db-wal
+?? docs/builds/stc-integration/memory/
+?? docs/builds/stc-integration/specs/
+?? src/stc/integration/
+?? tests/integration/test_dialectic_fixture.py
+?? tests/integration/test_run_e2e.py
+?? tests/unit/test_integration_adapters.py
+?? tests/unit/test_integration_dialectic.py
+?? tests/unit/test_integration_harness_worker.py
+?? tests/unit/test_integration_identity.py
+?? tests/unit/test_integration_memory.py
+?? tests/unit/test_winner_carry.py

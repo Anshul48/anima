@@ -1,0 +1,8 @@
+$ mypy --strict --follow-imports=silent src/stc/cli.py  [PRE-HUNK baseline; file = B1 hash 33476f34..124bb]
+src/stc/cli.py:237: error: Call to untyped function "safe_load" in typed context  [no-untyped-call]
+src/stc/cli.py:661: error: Call to untyped function "safe_load" in typed context  [no-untyped-call]
+src/stc/cli.py:664: error: Call to untyped function "safe_load" in typed context  [no-untyped-call]
+src/stc/cli.py:1343: error: Unused "type: ignore" comment  [unused-ignore]
+src/stc/cli.py:1350: error: Unused "type: ignore" comment  [unused-ignore]
+Found 5 errors in 1 file (checked 1 source file)
+rc=1

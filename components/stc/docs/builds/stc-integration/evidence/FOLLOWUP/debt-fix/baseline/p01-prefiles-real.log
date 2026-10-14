@@ -1,0 +1,12 @@
+........................................................................ [ 62%]
+..................F........................                              [100%]
+=================================== FAILURES ===================================
+________________________ test_record_shape_and_env_keys ________________________
+tests/unit/test_integration_identity.py:110: in test_record_shape_and_env_keys
+    assert record["env"]["python_version"].startswith("3.12.")
+E   AssertionError: assert False
+E    +  where False = <built-in method startswith of str object at 0x764426cd56f0>('3.12.')
+E    +    where <built-in method startswith of str object at 0x764426cd56f0> = '3.11.15'.startswith
+=========================== short test summary info ============================
+FAILED tests/unit/test_integration_identity.py::test_record_shape_and_env_keys
+1 failed, 114 passed in 34.34s

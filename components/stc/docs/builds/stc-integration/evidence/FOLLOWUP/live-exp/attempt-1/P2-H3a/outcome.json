@@ -1,0 +1,50 @@
+{
+  "probe": "P2-H3a",
+  "frame": "baseline",
+  "frame_patched": false,
+  "model": "default",
+  "reasoning": "medium",
+  "timeout_s": 180.0,
+  "sst_bytes": 4364,
+  "sst_sha256": "3154b3bb2ad5c25df584ca1c92a4e1d286d5c327f021c5ff5c75e1868f391b61",
+  "shaped_bytes": 5044,
+  "shaped_sha256": "3339af290a80e1d88f2ff57f8f5bd829f9f2bafd665e8a14775256893c227fe4",
+  "ok": true,
+  "wall_seconds": 56.66,
+  "content_chars": 4996,
+  "content_head": "{\"branches\":[{\"branch_index\":0,\"strategy_title\":\"Custody Tripwire Matrix\",\"hypothesis_or_rationale\":\"Use a deterministic three-case pin matrix with real DialecticRunner instances, an in-memory event store, and stateful fakes whose behavior changes only at the exact verify/merge or audit boundary. This directly proves defensive control-flow ownership while avoiding live gateways and runner doubles.\",\"proposed_changes\":\"diff --git a/tests/unit/test_integration_runner_pins.py b/tests/unit/test_inte",
+  "resp_model": "default",
+  "resp_profile": "cli",
+  "json_top_keys": [
+    "branches"
+  ],
+  "branch_count": 1,
+  "b0_has_title": true,
+  "b0_has_rationale": true,
+  "b0_code_chars": 4338,
+  "s2_branches_valid": true,
+  "s2_raw_fallback_nonempty": true,
+  "codex_home_cleaned": true,
+  "tracked_identical": true,
+  "sst_clean_after": true,
+  "pins_after": {
+    "sst": "079f4de6fd43881c2f1b529f0612f1df64a62f32",
+    "prompt_kit": "4f442a6c829bc06b60f9979fdc8d7585e30bac9a",
+    "trace": "a24a937009fec41e6dcb6d2ca31d3c1783ac97f7"
+  },
+  "stdin_matches_precomputed": true,
+  "confinement_checks": {
+    "argv_codex_exec": true,
+    "argv_skip_git_check": true,
+    "argv_readonly": true,
+    "argv_ephemeral": true,
+    "argv_o_capture": true,
+    "argv_stdin_dash": true,
+    "argv_no_bypass": true,
+    "argv_model_flag_ok": true,
+    "cwd_is_gateway_scratch": true
+  },
+  "confined": true,
+  "header_reasoning_line": "reasoning effort: medium",
+  "sidecar_present": false
+}

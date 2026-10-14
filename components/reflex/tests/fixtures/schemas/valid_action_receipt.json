@@ -1,0 +1,14 @@
+{
+  "lease_id": "lease_7a8b9c0d1e2f3456",
+  "action_id": "act_8f7b2c9d1e3a4567",
+  "adapter_name": "cdp_browser_adapter",
+  "dispatch_timestamp_ms": 1755430000100.0,
+  "duration_ms": 23.4,
+  "raw_adapter_response": {
+    "node_id": "btn_submit_order",
+    "backend_node_id": 142,
+    "event_fired": "click"
+  },
+  "status": "dispatched",
+  "error": null
+}

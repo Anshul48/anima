@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "anima"
+version = "0.1.0"
+description = "ANIMA mono-repo namespace: import map (anima.substrate, anima.sst, ...) over independently installable components"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["anima", "substrate", "sst", "stc", "entorhinal", "reflex"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/anima"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

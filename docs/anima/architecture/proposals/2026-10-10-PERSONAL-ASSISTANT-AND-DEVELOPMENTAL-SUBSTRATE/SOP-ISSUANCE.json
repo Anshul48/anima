@@ -1,0 +1,205 @@
+{
+  "version": "ANIMA-SOP-2026-10-10-v0.1",
+  "status": "proposed_owner_adoption",
+  "delivery_owner": "ANIMA documentary coordinator",
+  "runtime_programme_ownership": "unchanged",
+  "recipients": [
+    {
+      "key": "tl",
+      "staged_path": "ANIMA/coordination/2026-10-10-documentary-completion/project-map/handoff-drafts/ANIMA-TL-ARCHITECTURE-CHANNEL-HANDOFF-2026-10-10.md",
+      "final_path": "trace-architecture/handoffs/ANIMA-TL-ARCHITECTURE-CHANNEL-HANDOFF-2026-10-10.md",
+      "response_path": "trace-architecture/handoffs/ANIMA-TL-ARCHITECTURE-RESPONSE-2026-10-10.md",
+      "recipient_role": "TL architect and Codex delivery lead; coordinate execution questions through the established Muse execution coordinator",
+      "owner_sources": [
+        "trace-architecture/START_HERE.md",
+        "trace-architecture/docs/FILING-POLICY-AND-INVENTORY.md",
+        "trace-architecture/docs/CONTEXT-CONTRACT.md",
+        "trace-architecture/handoffs/TL-COMPLETION-RECORD.md",
+        "trace-architecture/handoffs/TL-EXPORT-CONTRACT-0.2.md",
+        "trace-architecture/decisions/DECISIONS.md",
+        "trace-architecture/coordination/c2-work-20261006T1925Z/workspace-organization/INTAKE-CODEX.md"
+      ],
+      "delivery_status": "delivered_by_user_authorized_directory_note",
+      "delivered_at_utc": "2026-10-10T15:51:45.918555+00:00",
+      "delivered_sha256": "f746ddd169b55ba5e5d0d28231eede748095deefde9662ecaf418a4b3b57ad3d",
+      "session_acknowledgement": "unverified",
+      "local_mapping": "unverified",
+      "adoption": "unverified"
+    },
+    {
+      "key": "trace",
+      "staged_path": "ANIMA/coordination/2026-10-10-documentary-completion/project-map/handoff-drafts/ANIMA-TRACE-ARCHITECTURE-CHANNEL-HANDOFF-2026-10-10.md",
+      "final_path": "trace-architecture/handoffs/ANIMA-TRACE-ARCHITECTURE-CHANNEL-HANDOFF-2026-10-10.md",
+      "response_path": "trace-architecture/handoffs/ANIMA-TRACE-ARCHITECTURE-RESPONSE-2026-10-10.md",
+      "recipient_role": "TRACE architecture owner and TRACE build/completion coordinator",
+      "owner_sources": [
+        "trace-architecture/START_HERE.md",
+        "trace-architecture/roadmap/trace-architecture/04-DECISIONS.md",
+        "trace-architecture/roadmap/trace-architecture/coordination/LEDGER.md",
+        "trace-architecture/roadmap/trace-architecture/coordination/CONSISTENCY.md",
+        "trace-architecture/roadmap/trace-architecture/coordination/COMPLETION-MAP.md",
+        "trace-architecture/handoffs/TRACE-RELEASE2-2026-10-05.md",
+        "trace-architecture/docs/FILING-POLICY-AND-INVENTORY.md"
+      ],
+      "delivery_status": "delivered_by_user_authorized_directory_note",
+      "delivered_at_utc": "2026-10-10T15:51:45.918555+00:00",
+      "delivered_sha256": "28bb41fa8dd5a9d2f80c7948518073e164b5ae71e8e1d2a46b42c60d54f58628",
+      "session_acknowledgement": "unverified",
+      "local_mapping": "unverified",
+      "adoption": "unverified"
+    },
+    {
+      "key": "stc",
+      "staged_path": "ANIMA/coordination/2026-10-10-documentary-completion/project-map/handoff-drafts/STC-ANIMA-ARCHITECTURE-CHANNEL-HANDOFF-2026-10-10.md",
+      "final_path": "stc/docs/ANIMA-ARCHITECTURE-CHANNEL-HANDOFF-2026-10-10.md",
+      "response_path": "stc/docs/ANIMA-ARCHITECTURE-RESPONSE-2026-10-10.md",
+      "recipient_role": "STC architect and the owning DSH construction coordinator",
+      "owner_sources": [
+        "stc/docs/STC-DSH-RECORD.md",
+        "stc/docs/STC-DSH-RELEASE.md",
+        "stc/docs/STC-SST-CALLER-CONTRACT.md",
+        "stc/docs/STC-COORDINATOR-PROMPT.md",
+        "stc/docs/STC-COORDINATOR-PROMPT-WINDOWS-2026-10-03.md",
+        "stc/ARCHITECTURE.md",
+        "stc/01_PLAN_BROAD_STROKES.md"
+      ],
+      "delivery_status": "delivered_by_user_authorized_directory_note",
+      "delivered_at_utc": "2026-10-10T15:51:45.918555+00:00",
+      "delivered_sha256": "8b42fb27511adff183e104e265264ffc59479f825802d57e8c3f88c2dd88776a",
+      "session_acknowledgement": "unverified",
+      "local_mapping": "unverified",
+      "adoption": "unverified"
+    },
+    {
+      "key": "sst",
+      "staged_path": "ANIMA/coordination/2026-10-10-documentary-completion/project-map/handoff-drafts/SST-ANIMA-ARCHITECTURE-CHANNEL-HANDOFF-2026-10-10.md",
+      "final_path": "sst/docs/ANIMA-ARCHITECTURE-CHANNEL-HANDOFF-2026-10-10.md",
+      "response_path": "sst/docs/ANIMA-ARCHITECTURE-RESPONSE-2026-10-10.md",
+      "recipient_role": "SST architect and owning search coordinator",
+      "owner_sources": [
+        "sst/README.md",
+        "sst/docs/01_PLAN_BROAD_STROKES.md",
+        "sst/docs/03_DATA_CONTRACTS.md",
+        "sst/docs/SST-PROGRESS.md",
+        "sst/docs/STC-HANDOFF.md",
+        "sst/docs/FREEZE-MANIFEST.md",
+        "sst/docs/RECOVERY-LIMITS.md",
+        "sst/.delivery/budget-review-20261008/REVIEW.md"
+      ],
+      "delivery_status": "delivered_by_user_authorized_directory_note",
+      "delivered_at_utc": "2026-10-10T15:51:45.918555+00:00",
+      "delivered_sha256": "5fc6e174fd0834cff1c1f0c755f7885b4cfb49a6864b9dc95e9a6f06c0d183e6",
+      "session_acknowledgement": "unverified",
+      "local_mapping": "unverified",
+      "adoption": "unverified"
+    },
+    {
+      "key": "substrate",
+      "staged_path": "ANIMA/coordination/2026-10-10-documentary-completion/project-map/handoff-drafts/SUBSTRATE-ANIMA-ARCHITECTURE-CHANNEL-HANDOFF-2026-10-10.md",
+      "final_path": "substrate/docs/ANIMA-ARCHITECTURE-CHANNEL-HANDOFF-2026-10-10.md",
+      "response_path": "substrate/docs/ANIMA-ARCHITECTURE-RESPONSE-2026-10-10.md",
+      "recipient_role": "broad substrate architect and owning substrate coordinator/integrator",
+      "owner_sources": [
+        "substrate/README.md",
+        "substrate/CANONICAL-RECORD.md",
+        "substrate/docs/ARCHITECTURE.md",
+        "substrate/docs/CONSUMER.md",
+        "substrate/docs/CONTRACTS.md",
+        "substrate/docs/ROADMAP.md",
+        "substrate/prototype/programme-20261004/CONTINUING-PROGRAMME.md",
+        "substrate/prototype/programme-20261004/STC-548615a-ASSESSMENT.md"
+      ],
+      "delivery_status": "delivered_by_user_authorized_directory_note",
+      "delivered_at_utc": "2026-10-10T15:51:45.918555+00:00",
+      "delivered_sha256": "167a91aab3466af14fd4da05f03169d7415136b18d030adc5f840580771b7c29",
+      "session_acknowledgement": "unverified",
+      "local_mapping": "unverified",
+      "adoption": "unverified"
+    },
+    {
+      "key": "entorhinal",
+      "staged_path": "ANIMA/coordination/2026-10-10-documentary-completion/project-map/handoff-drafts/ENTORHINAL-ANIMA-EXPLORATORY-PARTICIPATION-HANDOFF-2026-10-10.md",
+      "final_path": "entorhinal/docs/ANIMA-EXPLORATORY-PARTICIPATION-HANDOFF-2026-10-10.md",
+      "response_path": "entorhinal/docs/ANIMA-EXPLORATORY-PARTICIPATION-RESPONSE-2026-10-10.md",
+      "recipient_role": "Entorhinal architect and the owner of EAP-20261004-v0.2 local coordinator records",
+      "owner_sources": [
+        "entorhinal/README.md",
+        "entorhinal/ENTORHINAL_SUBAGENT_CONTEXT.md",
+        "entorhinal/docs/BUILDER-AUTHORITY-BOUNDARY.md",
+        "entorhinal/docs/plans/README.md",
+        "entorhinal/docs/plans/detailed/README.md",
+        "entorhinal/docs/progress_logs/COORDINATOR-STATUS.md",
+        "autonomous_runs/reflex_entorhinal_architecture_20261004/entorhinal-architect/README.md",
+        "entorhinal/docs/plans/07-REFLEX-ENTORHINAL-MASTER-TRAJECTORY-HANDOFF.md"
+      ],
+      "delivery_status": "delivered_by_user_authorized_directory_note",
+      "delivered_at_utc": "2026-10-10T15:51:45.918555+00:00",
+      "delivered_sha256": "096961f02368c93b1469c83e84fe28a35cefef8df3b525ddb3efd2077944d5a1",
+      "session_acknowledgement": "unverified",
+      "local_mapping": "unverified",
+      "adoption": "unverified"
+    },
+    {
+      "key": "reflex",
+      "staged_path": "ANIMA/coordination/2026-10-10-documentary-completion/project-map/handoff-drafts/REFLEX-ANIMA-EXPLORATORY-PARTICIPATION-HANDOFF-2026-10-10.md",
+      "final_path": "relfex/docs/ANIMA-EXPLORATORY-PARTICIPATION-HANDOFF-2026-10-10.md",
+      "response_path": "relfex/docs/ANIMA-EXPLORATORY-PARTICIPATION-RESPONSE-2026-10-10.md",
+      "recipient_role": "Reflex architect and owning Reflex coordinator; project folder spelling is relfex",
+      "owner_sources": [
+        "relfex/README.md",
+        "relfex/SUBAGENT_GLOBAL_CONTEXT.md",
+        "relfex/docs/subagents/README.md",
+        "relfex/docs/subagents/00-program-coordination.md",
+        "relfex/docs/progress_logs/README.md",
+        "relfex/docs/plans/ecosystem/00-SHARED-ENTORHINAL-REFLEX-CONTEXT.md",
+        "relfex/docs/plans/07-REFLEX-ENTORHINAL-MASTER-TRAJECTORY.md",
+        "autonomous_runs/reflex_entorhinal_architecture_20261004/reflex-architect/README.md"
+      ],
+      "delivery_status": "delivered_by_user_authorized_directory_note",
+      "delivered_at_utc": "2026-10-10T15:51:45.918555+00:00",
+      "delivered_sha256": "4fcd9326b207b2dc218543a299d0d21cea219d4ed9b3816ca9438a005d8924d9",
+      "session_acknowledgement": "unverified",
+      "local_mapping": "unverified",
+      "adoption": "unverified"
+    },
+    {
+      "key": "programme_trace_ecosystem",
+      "staged_path": "ANIMA/coordination/2026-10-10-documentary-completion/project-map/handoff-drafts/PROGRAMME-TRACE-ECOSYSTEM-ANIMA-DOCUMENTARY-HANDOFF-2026-10-10.md",
+      "final_path": "autonomous_runs/trace_ecosystem_20261002/ANIMA-DOCUMENTARY-HANDOFF-2026-10-10.md",
+      "response_path": "autonomous_runs/trace_ecosystem_20261002/ANIMA-DOCUMENTARY-RESPONSE-2026-10-10.md",
+      "recipient_role": "the established programme owner/coordinator, when active; current live recipient is unverified",
+      "owner_sources": [
+        "autonomous_runs/trace_ecosystem_20261002/README.md",
+        "autonomous_runs/trace_ecosystem_20261002/PROGRAMME.md",
+        "autonomous_runs/trace_ecosystem_20261002/CURRENT-DIRECTION.md",
+        "autonomous_runs/trace_ecosystem_20261002/RUN-STATE.md",
+        "autonomous_runs/trace_ecosystem_20261002/AUTONOMY.md"
+      ],
+      "delivery_status": "delivered_by_user_authorized_directory_note",
+      "delivered_at_utc": "2026-10-10T15:51:45.918555+00:00",
+      "delivered_sha256": "1b172e180fecc6d388ceaa328232ca790f4daa1b270c46db43242eac95e1789a",
+      "session_acknowledgement": "unverified",
+      "local_mapping": "unverified",
+      "adoption": "unverified"
+    },
+    {
+      "key": "programme_reflex_entorhinal",
+      "staged_path": "ANIMA/coordination/2026-10-10-documentary-completion/project-map/handoff-drafts/PROGRAMME-REFLEX-ENTORHINAL-ANIMA-DOCUMENTARY-HANDOFF-2026-10-10.md",
+      "final_path": "autonomous_runs/reflex_entorhinal_architecture_20261004/ANIMA-DOCUMENTARY-HANDOFF-2026-10-10.md",
+      "response_path": "autonomous_runs/reflex_entorhinal_architecture_20261004/ANIMA-DOCUMENTARY-RESPONSE-2026-10-10.md",
+      "recipient_role": "the established Reflex/Entorhinal meta-architecture owner and the two local architects/coordinators; present sessions are unverified",
+      "owner_sources": [
+        "autonomous_runs/reflex_entorhinal_architecture_20261004/README.md",
+        "autonomous_runs/reflex_entorhinal_architecture_20261004/SHARED-DIRECTION.md",
+        "autonomous_runs/reflex_entorhinal_architecture_20261004/entorhinal-architect/README.md",
+        "autonomous_runs/reflex_entorhinal_architecture_20261004/reflex-architect/README.md"
+      ],
+      "delivery_status": "delivered_by_user_authorized_directory_note",
+      "delivered_at_utc": "2026-10-10T15:51:45.918555+00:00",
+      "delivered_sha256": "3ee053920597a3f1f0084c1f1cf1cac8aec38e5415679032eecb23a800734b1d",
+      "session_acknowledgement": "unverified",
+      "local_mapping": "unverified",
+      "adoption": "unverified"
+    }
+  ]
+}

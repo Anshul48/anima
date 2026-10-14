@@ -1,0 +1,22 @@
+pin diff: len=437 sha=72d24031dd495ea6ba4f72a79fc7cc20548230f2bd0e07cd55443e6be321424b
+pin body: len=354 sha=84d2058f4527776bc76ebea72c7d3233a7928e9110de24b30a5ccde5ae5313ee
+mirror: ok (pyproject present, .git mirrored)
+strict git-apply: rc=0 stderr=''
+custody: success=True file=354B sha=84d2058f4527
+gate ruff-check: rc=0 dur=0.3822s
+gate ruff-format: rc=0 dur=0.367s
+gate mypy: rc=0 dur=7.3613s
+gate pytest-targeted: rc=0 dur=6.2687s
+gate pytest-collect: rc=0 dur=13.8444s
+collect tail: 534 tests collected in 9.04s
+receipt: id=rcpt_393377ec8e19 is_passing=True ruff=0 mypy=0 pytest=0 mutmut=0 sig=6af7b731ac37...
+receipt HMAC self-verify: True
+score: passed=True reward=1.00 hard={'verifier_passed': True, 'stc_ruff': True, 'stc_mypy': True, 'stc_pytest': True}
+judiciary: status=APPROVED findings=0
+merge: applied ok; post-merge receipt passing; re-audit APPROVED
+champion mutmut: count=0 disposition='not-run: disabled-by-config (mutmut-once covered by dedicated test)'
+dossier merged.diff: 437B sha=72d24031dd495ea6ba4f72a79fc7cc20548230f2bd0e07cd55443e6be321424b
+dossier execution_receipt.json: 1886B sha=354d0d3b5e7cdb21e4156229ab4788ad3c687177ee4394e8a8779c646171dd83
+dossier judiciary_verdict.json: 219B sha=e1b7633ec8e1784ef7629cc42d1cbd98cefba9cd072e2dc85f2d72e5addea8df
+dossier champion.json: 3242B sha=1de55203c96316329761bcccef48b676dc81e131acc1eaebf830947d2aeb5c58
+DIAGNOSTIC COMPLETE: custody->gates->judiciary->champion->dossier green

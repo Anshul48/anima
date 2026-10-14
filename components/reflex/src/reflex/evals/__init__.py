@@ -1,0 +1,117 @@
+"""Reflex Evaluations, Benchmark Portfolios & Adversarial Safety Engine."""
+
+from reflex.evals.adapters.browsergym_adapter import (
+    BrowserGymAdapter,
+    FakeBrowserGymEnv,
+)
+from reflex.evals.portfolio import (
+    DeterministicBenchmarkProposalGenerator,
+    MockTaskObservationPort,
+    create_task_eval_01,
+    create_task_eval_02,
+    create_task_eval_03,
+    create_task_eval_04,
+    create_task_eval_05,
+    create_task_eval_06,
+    create_task_eval_07,
+    create_task_eval_08,
+    create_task_eval_09,
+    create_task_eval_10,
+    create_task_eval_11,
+    create_task_eval_12,
+    get_standard_portfolio_tasks,
+    get_tier_tasks,
+)
+from reflex.evals.real_browser_suite import (
+    TASK_REAL_01_ID,
+    TASK_REAL_02_ID,
+    TASK_REAL_03_ID,
+    TASK_REAL_04_ID,
+    TASK_REAL_05_ID,
+    TASK_REAL_06_ID,
+    TASK_REAL_07_ID,
+    LocalBenchmarkServer,
+    RealBenchmarkProposalGenerator,
+    RealBrowserArtifactManager,
+    RealBrowserEvaluationRunner,
+    RealBrowserScorecard,
+    create_task_real_01,
+    create_task_real_02,
+    create_task_real_03,
+    create_task_real_04,
+    create_task_real_05,
+    create_task_real_06,
+    create_task_real_07,
+    get_real_browser_portfolio_tasks,
+)
+from reflex.evals.reporting.scorecard import (
+    BenchmarkReporter,
+    EvaluationScorecard,
+    TaskBenchmarkResult,
+    get_system_hardware_specs,
+)
+from reflex.evals.runner import (
+    EvalLane,
+    EvaluationReport,
+    EvaluationRunner,
+    EvaluationTask,
+    TaskTier,
+)
+from reflex.evals.safety.adversarial_suite import AdversarialSecuritySuite
+
+__all__ = [
+    # Runner
+    "EvaluationRunner",
+    "EvaluationTask",
+    "EvaluationReport",
+    "TaskTier",
+    "EvalLane",
+    # Reporting
+    "EvaluationScorecard",
+    "BenchmarkReporter",
+    "TaskBenchmarkResult",
+    "get_system_hardware_specs",
+    # Adapters
+    "BrowserGymAdapter",
+    "FakeBrowserGymEnv",
+    # Safety
+    "AdversarialSecuritySuite",
+    # Portfolio
+    "get_standard_portfolio_tasks",
+    "get_tier_tasks",
+    "create_task_eval_01",
+    "create_task_eval_02",
+    "create_task_eval_03",
+    "create_task_eval_04",
+    "create_task_eval_05",
+    "create_task_eval_06",
+    "create_task_eval_07",
+    "create_task_eval_08",
+    "create_task_eval_09",
+    "create_task_eval_10",
+    "create_task_eval_11",
+    "create_task_eval_12",
+    "MockTaskObservationPort",
+    "DeterministicBenchmarkProposalGenerator",
+    # Real Browser Suite (Workstream R7)
+    "LocalBenchmarkServer",
+    "RealBrowserEvaluationRunner",
+    "RealBrowserArtifactManager",
+    "RealBrowserScorecard",
+    "RealBenchmarkProposalGenerator",
+    "TASK_REAL_01_ID",
+    "TASK_REAL_02_ID",
+    "TASK_REAL_03_ID",
+    "TASK_REAL_04_ID",
+    "TASK_REAL_05_ID",
+    "TASK_REAL_06_ID",
+    "TASK_REAL_07_ID",
+    "create_task_real_01",
+    "create_task_real_02",
+    "create_task_real_03",
+    "create_task_real_04",
+    "create_task_real_05",
+    "create_task_real_06",
+    "create_task_real_07",
+    "get_real_browser_portfolio_tasks",
+]

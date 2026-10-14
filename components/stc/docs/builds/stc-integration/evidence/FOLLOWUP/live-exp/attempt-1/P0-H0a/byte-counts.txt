@@ -1,0 +1,1 @@
+stdin=917 stdout=667 stderr=2042

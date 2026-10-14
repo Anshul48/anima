@@ -1,0 +1,128 @@
+/* AuDHD State Space Tree Visualizer Stylesheet */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+}
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+#sidebar {
+    width: 380px;
+    background: #161b22;
+    border-right: 1px solid #30363d;
+    display: flex;
+    flex-direction: column;
+}
+#header {
+    padding: 16px;
+    border-bottom: 1px solid #30363d;
+    background: #21262d;
+}
+#header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+#header h1 {
+    font-size: 1.1rem;
+    color: #58a6ff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#header p {
+    font-size: 0.8rem;
+    color: #8b949e;
+}
+#live-indicator {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #3fb950;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.badge-adhd { background: #ff7b7233; color: #ff7b72; border: 1px solid #ff7b72; }
+.badge-asd { background: #79c0ff33; color: #79c0ff; border: 1px solid #79c0ff; }
+.badge-cortex { background: #d2a8ff33; color: #d2a8ff; border: 1px solid #d2a8ff; }
+.badge-pass { background: #3fb95033; color: #3fb950; border: 1px solid #3fb950; }
+.badge-pruned { background: #f8514933; color: #f85149; border: 1px solid #f85149; }
+#stats {
+    padding: 12px 16px;
+    border-bottom: 1px solid #30363d;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    font-size: 0.75rem;
+    text-align: center;
+}
+.stat-box {
+    background: #0d1117;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+}
+.stat-val {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #f0f6fc;
+}
+#details {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    font-size: 0.85rem;
+}
+.detail-row { margin-bottom: 12px; }
+.detail-label {
+    color: #8b949e;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.code-box {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.75rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #7ee787;
+    max-height: 250px;
+}
+#cy { flex: 1; height: 100%; }
+.controls {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+.btn {
+    background: #21262d;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.btn:hover { background: #30363d; color: #58a6ff; }

@@ -1,0 +1,8 @@
+{
+  "action_id": "act_8f7b2c9d1e3a4567",
+  "session_id": "sess_20260817_test",
+  "step_index": 1,
+  "idempotency_key": "8f7b2c9d1e3a456789abcdef0123456789abcdef0123456789abcdef01234567",
+  "created_at_ms": 1755430000000.0,
+  "nonce": "a1b2c3d4e5f6"
+}

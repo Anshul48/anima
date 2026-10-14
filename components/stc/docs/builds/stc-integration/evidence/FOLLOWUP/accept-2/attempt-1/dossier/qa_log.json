@@ -1,0 +1,40 @@
+{
+  "ambiguity_score": 0.8,
+  "diffs": [
+    {
+      "concern_dimension": "failure_resilience",
+      "core_dilemma": "Fault Tolerance & Error Recovery Strategy",
+      "diff_id": "diff_p05_acceptance_a2703b56",
+      "option_a": {
+        "invariants_to_lock": [
+          "System MUST fail-closed with immediate error propagation and zero stale state."
+        ],
+        "option_id": "option_a",
+        "title": "Archetype Alpha (Conservative / Fail-Closed)",
+        "tradeoff_con": "Lower throughput under transient faults, operations fail immediately on first error.",
+        "tradeoff_pro": "Strict validation, immediate error propagation, synchronous verification, high security, zero stale data allowance."
+      },
+      "option_b": {
+        "invariants_to_lock": [
+          "System MUST allow optimistic execution with 30s grace windows and asynchronous fallback buffers."
+        ],
+        "option_id": "option_b",
+        "title": "Archetype Beta (Resilient / High-Throughput)",
+        "tradeoff_con": "Potential temporary state divergence and delayed consistency resolution.",
+        "tradeoff_pro": "Grace windows, optimistic concurrency, asynchronous worker processing, fallback buffers, eventually consistent state."
+      }
+    }
+  ],
+  "locked_invariants": [
+    "System MUST fail-closed with immediate error propagation and zero stale state."
+  ],
+  "locked_invariants_path": "docs/builds/stc-integration/evidence/FOLLOWUP/accept-2/attempt-1/dossier/P05_ACCEPTANCE_INVARIANTS.md",
+  "note": "choice recorded via --choice/--yes",
+  "selected_choices": [
+    1
+  ],
+  "spec_id": "p05_acceptance",
+  "status": "choice-recorded",
+  "tau": 0.3,
+  "triggered": true
+}

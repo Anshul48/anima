@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "status": "source_catalogue_no_frozen_releases_or_consumer_pins_selected",
+  "indexed_date": "2026-10-03",
+  "path_base": "Utilities workspace root (the parent of ANIMA)",
+  "semantics": "This catalogue records logical identities, current source paths, responsibilities, and status. A source path is mutable and is not a release, version pin, runtime deployment, or proof of integration. Source location, runtime placement, state custody, ownership, access, and execution placement are separate.",
+  "entries": [
+    {
+      "id": "memory.tl",
+      "kind": "source_component_family",
+      "selected_source_identity": ["trace-architecture/tl-candidate-batch", "trace-architecture/tl-sys"],
+      "historical_candidate_pin": {
+        "repository_path": "trace-architecture/tl-candidate-batch/candidate",
+        "candidate_revision": "2382f878",
+        "committer_file_sha256": "2382f878050badff894d4ef719a6c0e75b6007d4dbc97829c6161e1f8eeba42d",
+        "approval_revision": "d18a1676",
+        "approval_file_sha256": "d18a16765b2065010d86f654c7d61ae9e7383209a319880efe01cc8fa9acd87a",
+        "sha256_scope": "candidate-shasums.txt hashes committer.py and approval.py individually; these are not Git commit hashes or whole-tree/package hashes",
+        "status": "historical_selected_candidate_revision_and_file_hashes; not a new ANIMA consumer pin"
+      },
+      "tl_sys_adapter": {
+        "source_path": "trace-architecture/tl-sys",
+        "status": "selected family member; current adapter tree remains mutable",
+        "post_release_repair": "ATOM_SCHEME=tlsys-v1-occurrence with identity.py, ingest.py, and index.py changes recorded in ORGANIZATION-CONFORMANCE.md"
+      },
+      "separate_sibling_implementations": ["trace-lite"],
+      "roles": ["attributable_source_organization", "retrieval", "incremental_maintenance"],
+      "contract_paths": ["trace-architecture/TL-FINISHED.md", "trace-architecture/TL-COMPLETION-CHECKLIST.md", "trace-architecture/decisions/DECISIONS.md", "trace-architecture/tl-eval/PRODUCT-PATH.md"],
+      "release_status": "historical_per_document_narrow_baseline_reported; broader_organization_obligations_continue; exact_current_artifact_not_frozen_by_ANIMA",
+      "consumer_pin_status": "unselected",
+      "qualification": "Keep the historical per-document release scope distinct from broader S-01/S-02/S-03/S-04 obligations and any expanded release."
+    },
+    {
+      "id": "memory.trace",
+      "kind": "source_component",
+      "source_path": "trace-architecture/trace-build",
+      "roles": ["episode_and_interpretation_memory", "history_and_revision", "qualified_derived_conclusions"],
+      "contract_paths": ["trace-architecture/roadmap/trace-architecture/04-DECISIONS.md", "trace-architecture/reviews/TL-TRACE-BOUNDARY-RECONCILIATION-2026-09-30.md"],
+      "release_status": "product_landing_identified; exact_current_artifact_and_release_pin_unresolved",
+      "consumer_pin_status": "unselected",
+      "qualification": "TRACE’s actual evidence, history, inference, activation, and remaining conformance conditions stay scoped to its owning records. An initial release may explicitly defer SST integration; that does not erase later obligations."
+    },
+    {
+      "id": "construction.stc",
+      "kind": "source_component_and_world_implementation",
+      "source_path": "stc",
+      "roles": ["construction_environment", "workspace_execution", "verification_and_recovery", "experience_and_workflow_learning_candidate"],
+      "contract_paths": ["stc/docs/STC-COORDINATOR-PROMPT.md", "stc/01_PLAN_BROAD_STROKES.md", "stc/docs/STC-DSH-RECORD.md"],
+      "release_status": "current_mixed_implementation; exact_ANIMA_release_candidate_unselected",
+      "consumer_pin_status": "unselected",
+      "qualification": "Early experience-learning insertion points are not evidence of a qualified adaptive learner. STC’s package named substrate is mechanical and distinct from hosting.substrate."
+    },
+    {
+      "id": "search.sst",
+      "kind": "source_component",
+      "source_path": "sst",
+      "roles": ["bounded_candidate_search", "formulation_exploration", "search_outcome_feedback"],
+      "contract_paths": ["sst/README.md", "sst/docs/03_DATA_CONTRACTS.md"],
+      "release_status": "implementation_exists; actual_caller_qualification_pending_in_active_programme",
+      "consumer_pin_status": "unselected",
+      "qualification": "Search reuse does not transfer domain evaluation or custody authority. Mock-only integration evidence does not establish a real caller.",
+      "historical_integration_evidence": {
+        "consumer": "STC M1 integration",
+        "contract_revision": "INT-2026-09-13.2",
+        "sst_candidate_revision_prefix": "079f4de",
+        "sst_git_commit": "079f4de6fd43881c2f1b529f0612f1df64a62f32",
+        "evidence_scope": "historical P03 pinned/read-only controller compatibility; not a current HEAD pin or live-model qualification",
+        "status": "retain as historical evidence only"
+      }
+    },
+    {
+      "id": "hosting.substrate",
+      "kind": "design_and_future_implementation_home",
+      "source_path": "substrate",
+      "roles": ["world_hosting", "lifecycle_and_resources", "composition", "controlled_organizational_change"],
+      "contract_paths": ["substrate/docs/SUBSTRATE-DIRECTION.md", "substrate/docs/WORLD-BOUNDARIES.md"],
+      "release_status": "design_proposal; permanent_host_and_qualified_runtime_unselected",
+      "consumer_pin_status": "not_applicable_until_release_selected",
+      "qualification": "Future work must demonstrate a real state, responsibility, ownership, lifecycle, or internal-machinery change and subsequent reuse. Folder organization and messaging are not that evidence."
+    },
+    {
+      "id": "learning.experience",
+      "kind": "incubating_capability_not_separate_release",
+      "source_paths": ["stc/src/stc/integration", "stc/src/stc/genome", "stc/dsh-plugin-stc/policy"],
+      "incubates_in": "construction.stc",
+      "release_status": "insertion_points_and_DAG_work_definition_exist; adaptive_capability_not_yet_qualified",
+      "consumer_pin_status": "not_applicable_until_separate_owner_and_release_contract_exist",
+      "qualification": "Distinguish prediction discrepancies, explicit requirement/preference corrections, check failures, comparative workflow advantages, and evaluator defects."
+    },
+    {
+      "id": "programme.trace-ecosystem",
+      "kind": "prepared_programme",
+      "source_path": "autonomous_runs/trace_ecosystem_20261002",
+      "roles": ["direction", "milestone_DAG", "coordination", "integrated_acceptance"],
+      "canonical_owner": "autonomous_runs/trace_ecosystem_20261002",
+      "status": "launch_kit_prepared; product_execution_not_started_by_organization_assignment",
+      "transfer_status": "not_transferred_to_ANIMA"
+    }
+  ],
+  "worlds": [
+    {"id": "world.construction", "status": "proposed", "implementation_refs": ["construction.stc"], "prospective_capability_refs": ["memory.tl", "memory.trace", "search.sst", "learning.experience"]},
+    {"id": "world.research", "status": "proposed_distinct_environment", "implementation_refs": [], "prospective_capability_refs": ["memory.tl", "memory.trace", "search.sst"]}
+  ],
+  "not_selected": [
+    "No new ANIMA module release versions, consumer pins, dependency locks, or runtime deployments are selected by this catalogue. Historical candidate identities cited above are evidence references, not current ANIMA pins.",
+    "No physical source repository is moved or copied into ANIMA."
+  ]
+}

@@ -1,0 +1,3 @@
+Running dialectic loop: TASK-P05_ACCEPTANCE
+[!] No champion (no-verified-candidate) — partial NEEDS_REPAIR dossier at 
+docs/builds/stc-integration/evidence/FOLLOWUP/accept-2/attempt-1/dossier

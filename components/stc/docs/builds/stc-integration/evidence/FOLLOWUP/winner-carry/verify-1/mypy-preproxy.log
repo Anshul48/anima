@@ -1,0 +1,10 @@
+$ splice verification (product untouched):
+2ddfd6cbced44cf205aa061364c3681f52d4f28311294d008bfd3b41e50d82f1  src/stc/cli.py
+$ mypy --strict --follow-imports=silent /tmp/wc-pre-proxy/cli.py [SAME flags+MYPYPATH, proxy cache]
+/tmp/wc-pre-proxy/cli.py:237: error: Call to untyped function "safe_load" in typed context  [no-untyped-call]
+/tmp/wc-pre-proxy/cli.py:661: error: Call to untyped function "safe_load" in typed context  [no-untyped-call]
+/tmp/wc-pre-proxy/cli.py:664: error: Call to untyped function "safe_load" in typed context  [no-untyped-call]
+/tmp/wc-pre-proxy/cli.py:1345: error: Unused "type: ignore" comment  [unused-ignore]
+/tmp/wc-pre-proxy/cli.py:1352: error: Unused "type: ignore" comment  [unused-ignore]
+Found 5 errors in 1 file (checked 1 source file)
+rc=1

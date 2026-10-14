@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "attempt": 1,
+      "channel": "gateway",
+      "duration_s": 43.123,
+      "exit_code": 0,
+      "harness": "codex",
+      "lease_id": "",
+      "model": "default",
+      "note": "",
+      "ok": true,
+      "out_bytes": 4368,
+      "task_id": "gateway",
+      "timed_out": false,
+      "ts": "2026-09-14T15:20:00.041984+00:00"
+    }
+  ],
+  "totals": {
+    "gateway_calls": 1,
+    "gateway_ok": 1,
+    "rows": 1,
+    "tokens": null,
+    "tokens_note": "unobservable from CLI harnesses (P03 precedent); spend tracked in ledger rows",
+    "usd_metered": 0.0,
+    "worker_calls": 0,
+    "worker_ok": 0
+  }
+}

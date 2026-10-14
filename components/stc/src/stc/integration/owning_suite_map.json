@@ -1,0 +1,33 @@
+{
+  "_note": "Versioned owning-suite map data file (D-epsilon, section 5.2). Maps candidate diff paths to owning test files, plus declared symbol dependents. STC-owned data; stale entries are findings with an owner, not silent gaps. Revision bound by the selection config (mismatch fails closed). Convention rule (deterministic, documented in selection.py): tests/** maps to itself; src/stc/<area>/<mod>.py maps to tests/unit/test_<mod>.py when that file exists; anything unresolvable broadens (never narrows).",
+  "map_revision": "osm-1",
+  "path_map": {
+    "src/stc/integration/dialectic_runner.py": ["tests/unit/test_integration_dialectic.py"],
+    "src/stc/integration/identity.py": ["tests/unit/test_integration_identity.py"],
+    "src/stc/integration/adapters.py": ["tests/unit/test_integration_adapters.py"],
+    "src/stc/integration/harness_worker.py": ["tests/unit/test_integration_harness_worker.py"],
+    "src/stc/integration/cli_gateway.py": ["tests/unit/test_integration_harness_worker.py"],
+    "src/stc/integration/memory.py": ["tests/unit/test_integration_memory.py"],
+    "src/stc/integration/dossier.py": ["tests/unit/test_integration_dialectic.py"],
+    "src/stc/integration/env_probe.py": ["tests/unit/test_integration_identity.py"],
+    "src/stc/integration/lease_git.py": ["tests/unit/test_integration_dialectic.py"],
+    "src/stc/integration/diff_binding.py": ["tests/unit/test_integration_dialectic.py"],
+    "src/stc/integration/selection.py": ["tests/unit/test_integration_dialectic.py"],
+    "src/stc/integration/linked_records.py": ["tests/unit/test_integration_dialectic.py"],
+    "src/stc/substrate/runner.py": ["tests/unit/test_substrate.py"],
+    "src/stc/substrate/receipt.py": ["tests/unit/test_substrate.py"],
+    "src/stc/judiciary/auditor.py": ["tests/unit/test_judiciary.py"],
+    "src/stc/worktree/manager.py": ["tests/unit/test_worktree.py"],
+    "src/stc/orchestrator/dispatch.py": ["tests/unit/test_integration_harness_worker.py"],
+    "src/stc/compiler/bundler.py": ["tests/unit/test_compiler.py"],
+    "src/stc/schemas/models.py": ["tests/unit/test_schemas.py"],
+    "src/stc/core/config.py": ["tests/unit/test_config.py"],
+    "src/stc/cli.py": ["tests/unit/test_cli.py"],
+    "src/stc/services/engine.py": ["tests/unit/test_engine.py"]
+  },
+  "symbol_dependents": {
+    "execute_gates": ["tests/unit/test_substrate.py"],
+    "render_merged_diff": ["tests/unit/test_integration_dialectic.py"],
+    "verify_candidate_proposal": ["tests/unit/test_integration_dialectic.py"]
+  }
+}

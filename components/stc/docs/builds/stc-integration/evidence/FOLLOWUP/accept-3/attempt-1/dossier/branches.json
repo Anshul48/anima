@@ -1,0 +1,17 @@
+{
+  "branch_refs": [
+    "cand_TASK-P05_ACCEPTANCE-9f1632b8_0_0",
+    "cand_TASK-P05_ACCEPTANCE-9f1632b8_1_0"
+  ],
+  "budget_state": {
+    "elapsed_seconds": 794.8015591459989,
+    "estimated_cost_usd": 0.0,
+    "iterations_completed": 1.0,
+    "tokens_consumed": 0.0
+  },
+  "outcome": "no-champion",
+  "reason": "no-verified-candidate",
+  "run_id": "TASK-P05_ACCEPTANCE-9f1632b8",
+  "scores_summary": {},
+  "tree_id": "TASK-P05_ACCEPTANCE-9f1632b8"
+}

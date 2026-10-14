@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- <workspace-root>/learn-anything/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: <workspace-root>/stc
+configfile: pyproject.toml
+plugins: anyio-4.14.2, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 6 items
+
+tests/unit/test_winner_carry.py::test_seeded_config_replaces_max_with_medium PASSED [ 16%]
+tests/unit/test_winner_carry.py::test_seeded_config_inserts_medium_when_key_absent PASSED [ 33%]
+tests/unit/test_winner_carry.py::test_seeded_config_created_when_operator_config_missing PASSED [ 50%]
+tests/unit/test_winner_carry.py::test_seed_returns_none_without_login PASSED [ 66%]
+tests/unit/test_winner_carry.py::test_seeding_is_idempotent_and_cleans_up PASSED [ 83%]
+tests/unit/test_winner_carry.py::test_operator_login_bytes_untouched PASSED [100%]
+
+============================== 6 passed in 1.82s ===============================

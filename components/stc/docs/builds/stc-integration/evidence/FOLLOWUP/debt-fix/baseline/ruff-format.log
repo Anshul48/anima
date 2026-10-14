@@ -1,0 +1,910 @@
+unformatted: File would be reformatted
+   --> docs/builds/stc-integration/evidence/FOLLOWUP/accept/attempt-1/dossier/runs/TASK-P05_ACCEPTANCE-9a89f20e/leases/_quarantine/TASK-P05_ACCEPTANCE__cand_TASK-P05_ACCEPTANCE-9a89f20e_0_0__8068c1/docs/builds/stc-integration/evidence/FOLLOWUP/live-exp/attempt-1/liveexp-probe.py:89:29
+    |
+88  |         ["git", "-C", str(repo), "rev-parse", "HEAD"],
+    -         capture_output=True, text=True, timeout=60, check=False,
+89  +         capture_output=True,
+90  +         text=True,
+91  +         timeout=60,
+92  +         check=False,
+93  |     )
+--------------------------------------------------------------------------------
+218 |     if FRAME != "baseline":
+219 +
+220 |         def _variant_shape(prompt_rendered: str, _o: Any = _orig_shape) -> str:
+221 |             return apply_frame_variant(
+222 |                 _o(prompt_rendered), sst_text, SST_PROMPT_BEGIN, SST_PROMPT_END
+223 |             )
+224 +
+225 |         _gwmod.shape_gateway_prompt = _variant_shape
+--------------------------------------------------------------------------------
+249 |             calls.append(
+    -                 {"argv": argv, "cwd": cwd, "stdin_text": stdin_text,
+    -                  "timeout": True, "partial_stdout": partial}
+250 +                 {
+251 +                     "argv": argv,
+252 +                     "cwd": cwd,
+253 +                     "stdin_text": stdin_text,
+254 +                     "timeout": True,
+255 +                     "partial_stdout": partial,
+256 +                 }
+257 |             )
+--------------------------------------------------------------------------------
+308 |         outcome.update(
+    -             {"ok": True, "wall_seconds": round(wall, 2),
+    -              "content_chars": len(content), "content_head": content[:500],
+    -              "resp_model": response.model, "resp_profile": response.profile}
+309 +             {
+310 +                 "ok": True,
+311 +                 "wall_seconds": round(wall, 2),
+312 +                 "content_chars": len(content),
+313 +                 "content_head": content[:500],
+314 +                 "resp_model": response.model,
+315 +                 "resp_profile": response.profile,
+316 +             }
+317 |         )
+--------------------------------------------------------------------------------
+332 |         outcome["s2_raw_fallback_nonempty"] = bool(_SST._clean_code(content))
+    -         print(f"{PROBE} OK wall={wall:.1f}s chars={len(content)} "
+    -               f"s2_valid={b0_valid} code_chars={b0_code_chars}", flush=True)
+333 +         print(
+334 +             f"{PROBE} OK wall={wall:.1f}s chars={len(content)} "
+335 +             f"s2_valid={b0_valid} code_chars={b0_code_chars}",
+336 +             flush=True,
+337 +         )
+338 |         rc = 0
+339 |     except Exception as exc:  # noqa: BLE001 - probe records, never raises
+340 |         wall = time.time() - t0
+341 |         outcome.update(
+    -             {"ok": False, "wall_seconds": round(wall, 2),
+    -              "error": f"{type(exc).__name__}: {exc}"}
+342 +             {"ok": False, "wall_seconds": round(wall, 2), "error": f"{type(exc).__name__}: {exc}"}
+343 |         )
+--------------------------------------------------------------------------------
+361 |     outcome["pins_after"] = {
+    -         "sst": git_head(SST_REPO), "prompt_kit": git_head(KIT_REPO), "trace": git_head(TRACE_REPO),
+362 +         "sst": git_head(SST_REPO),
+363 +         "prompt_kit": git_head(KIT_REPO),
+364 +         "trace": git_head(TRACE_REPO),
+365 |     }
+--------------------------------------------------------------------------------
+385 |             "argv_model_flag_ok": (
+    -                 ("--model" not in argv) if MODEL == "default"
+386 +                 ("--model" not in argv)
+387 +                 if MODEL == "default"
+388 |                 else ("--model" in argv and MODEL in argv)
+--------------------------------------------------------------------------------
+396 |             (OUT / "stderr.txt").write_text(
+    -                 "TIMEOUT: harness stderr unrecoverable (process killed).\n")
+397 +                 "TIMEOUT: harness stderr unrecoverable (process killed).\n"
+398 +             )
+399 |             (OUT / "exit.txt").write_text("124\n")
+    -             outcome["timeout_partial_bytes"] = len(
+    -                 (call.get("partial_stdout") or "").encode())
+400 +             outcome["timeout_partial_bytes"] = len((call.get("partial_stdout") or "").encode())
+401 |         else:
+--------------------------------------------------------------------------------
+406 |             header_lines = [
+    -                 line for line in (proc.stderr or "").splitlines()
+    -                 if any(k in line.lower() for k in
+    -                        ("codex", "model", "reasoning", "sandbox", "workdir", "version"))
+407 +                 line
+408 +                 for line in (proc.stderr or "").splitlines()
+409 +                 if any(
+410 +                     k in line.lower()
+411 +                     for k in ("codex", "model", "reasoning", "sandbox", "workdir", "version")
+412 +                 )
+413 |             ][:20]
+414 |             (OUT / "header.txt").write_text("\n".join(header_lines) + "\n")
+415 |             outcome["header_reasoning_line"] = next(
+    -                 (l for l in header_lines if "reasoning" in l.lower()), "")
+416 +                 (l for l in header_lines if "reasoning" in l.lower()), ""
+417 +             )
+418 |         stdin_b = len((call["stdin_text"] or "").encode())
+419 |         out_b = len((OUT / "stdout.txt").read_bytes())
+420 |         err_b = len((OUT / "stderr.txt").read_bytes())
+    -         (OUT / "byte-counts.txt").write_text(
+    -             f"stdin={stdin_b} stdout={out_b} stderr={err_b}\n")
+421 +         (OUT / "byte-counts.txt").write_text(f"stdin={stdin_b} stdout={out_b} stderr={err_b}\n")
+422 |     else:
+--------------------------------------------------------------------------------
+430 |         try:
+    -             recs = [json.loads(l) for l in
+    -                     sidecar.read_text(encoding="utf-8").splitlines() if l.strip()]
+431 +             recs = [
+432 +                 json.loads(l) for l in sidecar.read_text(encoding="utf-8").splitlines() if l.strip()
+433 +             ]
+434 |             outcome["sidecar_records"] = len(recs)
+--------------------------------------------------------------------------------
+442 |     # Cumulative spend row (one per probe = one CLI call, unless skipped).
+    -     spend_path = REPO / "docs/builds/stc-integration/evidence/FOLLOWUP/live-exp/attempt-1/spend.jsonl"
+443 +     spend_path = (
+444 +         REPO / "docs/builds/stc-integration/evidence/FOLLOWUP/live-exp/attempt-1/spend.jsonl"
+445 +     )
+446 |     if "skipped" not in outcome:
+    -         row = {"probe": PROBE, "frame": FRAME, "model": MODEL, "reasoning": REASONING,
+    -                "ok": outcome.get("ok"), "wall_seconds": outcome.get("wall_seconds"),
+    -                "out_bytes": len((OUT / "stdout.txt").read_bytes()) if (OUT / "stdout.txt").is_file() else 0,
+    -                "exit": (OUT / "exit.txt").read_text().strip() if (OUT / "exit.txt").is_file() else "?"}
+447 +         row = {
+448 +             "probe": PROBE,
+449 +             "frame": FRAME,
+450 +             "model": MODEL,
+451 +             "reasoning": REASONING,
+452 +             "ok": outcome.get("ok"),
+453 +             "wall_seconds": outcome.get("wall_seconds"),
+454 +             "out_bytes": len((OUT / "stdout.txt").read_bytes())
+455 +             if (OUT / "stdout.txt").is_file()
+456 +             else 0,
+457 +             "exit": (OUT / "exit.txt").read_text().strip() if (OUT / "exit.txt").is_file() else "?",
+458 +         }
+459 |         with spend_path.open("a", encoding="utf-8") as fh:
+    |
+
+unformatted: File would be reformatted
+   --> docs/builds/stc-integration/evidence/FOLLOWUP/accept/attempt-1/dossier/runs/TASK-P05_ACCEPTANCE-9a89f20e/leases/_quarantine/TASK-P05_ACCEPTANCE__cand_TASK-P05_ACCEPTANCE-9a89f20e_0_0__8068c1/docs/builds/stc-integration/evidence/P05/attempt-1/trial-timeout/harness-writes/run_deep_research_campaign.py:73:1
+    |
+72  |
+73  +
+74  | def log(msg):
+75  |     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+76  |     print(f"[{timestamp}] {msg}", flush=True)
+77  |
+78  +
+79  | def run_cmd(cmd):
+--------------------------------------------------------------------------------
+87  |
+88  +
+89  | def check_research_status(notebook_id):
+    -     code, stdout, stderr = run_cmd(f'nlm.exe research status {notebook_id} --max-wait 0')
+90  +     code, stdout, stderr = run_cmd(f"nlm.exe research status {notebook_id} --max-wait 0")
+91  |     output = stdout + "\n" + stderr
+    -     
+92  +
+93  |     status_match = re.search(r"Status:\s*(\w+)", output, re.IGNORECASE)
+94  |     task_match = re.search(r"Task ID:\s*([^\s\r\n]+)", output, re.IGNORECASE)
+95  |     sources_match = re.search(r"Sources found:\s*(\d+)", output, re.IGNORECASE)
+    -     
+96  +
+97  |     status = status_match.group(1).lower() if status_match else "unknown"
+98  |     task_id = task_match.group(1) if task_match else None
+99  |     sources_found = int(sources_match.group(1)) if sources_match else 0
+    -     
+100 +
+101 |     return status, task_id, sources_found, output
+102 |
+103 +
+104 | def wait_for_completion(notebook_id, expected_task_id=None, max_wait_sec=720, poll_interval=20):
+105 |     start_time = time.time()
+106 |     log(f"Waiting for research task completion (max {max_wait_sec}s)...")
+    -     
+107 +
+108 |     while time.time() - start_time < max_wait_sec:
+109 |         status, task_id, sources_found, raw = check_research_status(notebook_id)
+110 |         elapsed = int(time.time() - start_time)
+    -         
+111 +
+112 |         if status == "completed":
+    -             log(f"Research COMPLETED in {elapsed}s! Task ID: {task_id}, Sources found: {sources_found}")
+113 +             log(
+114 +                 f"Research COMPLETED in {elapsed}s! Task ID: {task_id}, Sources found: {sources_found}"
+115 +             )
+116 |             return True, task_id, sources_found
+--------------------------------------------------------------------------------
+123 |             log(f"Status '{status}' ({elapsed}s elapsed). Raw: {raw.strip()[:100]}")
+    -             
+124 +
+125 |         time.sleep(poll_interval)
+    -         
+126 +
+127 |     log(f"Research TIMED OUT after {max_wait_sec}s")
+128 |     return False, expected_task_id, 0
+129 |
+130 +
+131 | def import_cited_sources(notebook_id, task_id=None):
+    -     cmd = f'nlm.exe research import {notebook_id} --cited-only'
+132 +     cmd = f"nlm.exe research import {notebook_id} --cited-only"
+133 |     if task_id:
+    -         cmd = f'nlm.exe research import {notebook_id} {task_id} --cited-only'
+    -         
+134 +         cmd = f"nlm.exe research import {notebook_id} {task_id} --cited-only"
+135 +
+136 |     log(f"Importing cited sources: {cmd}")
+137 |     code, stdout, stderr = run_cmd(cmd)
+138 |     out = stdout + "\n" + stderr
+139 |     log(f"Import result: {out.strip()}")
+    -     
+140 +
+141 |     match = re.search(r"Imported\s+(\d+)\s+sources", out, re.IGNORECASE)
+142 |     imported = int(match.group(1)) if match else 0
+143 |     return imported, out
+144 |
+145 +
+146 | def start_research(notebook_id, query):
+--------------------------------------------------------------------------------
+152 |     out = stdout + "\n" + stderr
+    -     
+153 +
+154 |     if code != 0:
+155 |         log(f"Failed to start research: {out}")
+156 |         return None
+    -         
+157 +
+158 |     task_match = re.search(r"Task ID:\s*([^\s\r\n]+)", out, re.IGNORECASE)
+--------------------------------------------------------------------------------
+162 |
+163 +
+164 | def save_summary(results):
+165 |     os.makedirs(OUTPUT_DIR, exist_ok=True)
+166 |     with open(LOG_JSON, "w", encoding="utf-8") as f:
+167 |         json.dump(results, f, indent=2)
+    -         
+168 +
+169 |     md_content = "# NotebookLM Deep Research Campaign Execution Summary\n\n"
+--------------------------------------------------------------------------------
+174 |     md_content += "|---|---|---|---|---|---|---|\n"
+    -     
+175 +
+176 |     total_imported = 0
+--------------------------------------------------------------------------------
+180 |         md_content += f"| {r['id']} | **{r['title']}** | `{r.get('task_id', 'N/A')}` | {r.get('sources_found', 0)} | **{imported}** | {r.get('duration_s', 0)}s | {r['status']} |\n"
+    -         
+181 +
+182 |     md_content += f"\n**Total Newly Ingested Cited Sources:** {total_imported}\n\n"
+--------------------------------------------------------------------------------
+190 |         md_content += f"- **Status:** {r['status']}\n\n"
+    -         
+191 +
+192 |     with open(SUMMARY_MD, "w", encoding="utf-8") as f:
+193 |         f.write(md_content)
+194 |     log(f"Summary written to {SUMMARY_MD}")
+195 |
+196 +
+197 | def main():
+198 |     log("=== Starting NotebookLM Deep Research Campaign ===")
+199 |     results = []
+    -     
+200 +
+201 |     for topic in TOPICS:
+--------------------------------------------------------------------------------
+206 |         already_started = topic.get("already_started", False)
+    -         
+207 +
+208 |         log(f"\n=======================================================")
+209 |         log(f"Processing Pass {t_id}: {title}")
+210 |         log(f"=======================================================")
+    -         
+211 +
+212 |         start_ts = time.time()
+    -         
+213 +
+214 |         if not already_started:
+--------------------------------------------------------------------------------
+219 |                 task_id = start_research(NOTEBOOK_ID, query)
+    -                 
+220 +
+221 |             if not task_id:
+222 |                 log(f"ERROR: Could not launch research for Pass {t_id}. Skipping.")
+    -                 results.append({
+    -                     "id": t_id,
+    -                     "title": title,
+    -                     "query": query,
+    -                     "task_id": None,
+    -                     "sources_found": 0,
+    -                     "imported_sources": 0,
+    -                     "duration_s": int(time.time() - start_ts),
+    -                     "status": "LAUNCH_FAILED"
+    -                 })
+223 +                 results.append(
+224 +                     {
+225 +                         "id": t_id,
+226 +                         "title": title,
+227 +                         "query": query,
+228 +                         "task_id": None,
+229 +                         "sources_found": 0,
+230 +                         "imported_sources": 0,
+231 +                         "duration_s": int(time.time() - start_ts),
+232 +                         "status": "LAUNCH_FAILED",
+233 +                     }
+234 +                 )
+235 |                 save_summary(results)
+236 |                 continue
+237 |         else:
+238 |             log(f"Pass {t_id} is already in progress with Task ID: {task_id}")
+    -             
+    -         success, finished_task_id, sources_found = wait_for_completion(NOTEBOOK_ID, task_id, max_wait_sec=600, poll_interval=20)
+239 +
+240 +         success, finished_task_id, sources_found = wait_for_completion(
+241 +             NOTEBOOK_ID, task_id, max_wait_sec=600, poll_interval=20
+242 +         )
+243 |         duration = int(time.time() - start_ts)
+    -         
+244 +
+245 |         if success:
+246 |             actual_task_id = finished_task_id or task_id
+247 |             imported_count, import_raw = import_cited_sources(NOTEBOOK_ID, actual_task_id)
+    -             results.append({
+    -                 "id": t_id,
+    -                 "title": title,
+    -                 "query": query,
+    -                 "task_id": actual_task_id,
+    -                 "sources_found": sources_found,
+    -                 "imported_sources": imported_count,
+    -                 "duration_s": duration,
+    -                 "status": "SUCCESS"
+    -             })
+248 +             results.append(
+249 +                 {
+250 +                     "id": t_id,
+251 +                     "title": title,
+252 +                     "query": query,
+253 +                     "task_id": actual_task_id,
+254 +                     "sources_found": sources_found,
+255 +                     "imported_sources": imported_count,
+256 +                     "duration_s": duration,
+257 +                     "status": "SUCCESS",
+258 +                 }
+259 +             )
+260 |         else:
+    -             results.append({
+    -                 "id": t_id,
+    -                 "title": title,
+    -                 "query": query,
+    -                 "task_id": task_id,
+    -                 "sources_found": sources_found,
+    -                 "imported_sources": 0,
+    -                 "duration_s": duration,
+    -                 "status": "TIMED_OUT_OR_FAILED"
+    -             })
+    -             
+261 +             results.append(
+262 +                 {
+263 +                     "id": t_id,
+264 +                     "title": title,
+265 +                     "query": query,
+266 +                     "task_id": task_id,
+267 +                     "sources_found": sources_found,
+268 +                     "imported_sources": 0,
+269 +                     "duration_s": duration,
+270 +                     "status": "TIMED_OUT_OR_FAILED",
+271 +                 }
+272 +             )
+273 +
+274 |         save_summary(results)
+275 |         # Brief breather between research sessions
+276 |         log(f"Pass {t_id} complete. Pausing 10s before next pass...")
+277 |         time.sleep(10)
+    -         
+278 +
+279 |     log("\n=== Deep Research Campaign Finished! ===")
+280 |     save_summary(results)
+281 |
+282 +
+283 | if __name__ == "__main__":
+    |
+
+unformatted: File would be reformatted
+   --> docs/builds/stc-integration/evidence/FOLLOWUP/live-exp/attempt-1/liveexp-probe.py:89:29
+    |
+88  |         ["git", "-C", str(repo), "rev-parse", "HEAD"],
+    -         capture_output=True, text=True, timeout=60, check=False,
+89  +         capture_output=True,
+90  +         text=True,
+91  +         timeout=60,
+92  +         check=False,
+93  |     )
+--------------------------------------------------------------------------------
+218 |     if FRAME != "baseline":
+219 +
+220 |         def _variant_shape(prompt_rendered: str, _o: Any = _orig_shape) -> str:
+221 |             return apply_frame_variant(
+222 |                 _o(prompt_rendered), sst_text, SST_PROMPT_BEGIN, SST_PROMPT_END
+223 |             )
+224 +
+225 |         _gwmod.shape_gateway_prompt = _variant_shape
+--------------------------------------------------------------------------------
+249 |             calls.append(
+    -                 {"argv": argv, "cwd": cwd, "stdin_text": stdin_text,
+    -                  "timeout": True, "partial_stdout": partial}
+250 +                 {
+251 +                     "argv": argv,
+252 +                     "cwd": cwd,
+253 +                     "stdin_text": stdin_text,
+254 +                     "timeout": True,
+255 +                     "partial_stdout": partial,
+256 +                 }
+257 |             )
+--------------------------------------------------------------------------------
+308 |         outcome.update(
+    -             {"ok": True, "wall_seconds": round(wall, 2),
+    -              "content_chars": len(content), "content_head": content[:500],
+    -              "resp_model": response.model, "resp_profile": response.profile}
+309 +             {
+310 +                 "ok": True,
+311 +                 "wall_seconds": round(wall, 2),
+312 +                 "content_chars": len(content),
+313 +                 "content_head": content[:500],
+314 +                 "resp_model": response.model,
+315 +                 "resp_profile": response.profile,
+316 +             }
+317 |         )
+--------------------------------------------------------------------------------
+332 |         outcome["s2_raw_fallback_nonempty"] = bool(_SST._clean_code(content))
+    -         print(f"{PROBE} OK wall={wall:.1f}s chars={len(content)} "
+    -               f"s2_valid={b0_valid} code_chars={b0_code_chars}", flush=True)
+333 +         print(
+334 +             f"{PROBE} OK wall={wall:.1f}s chars={len(content)} "
+335 +             f"s2_valid={b0_valid} code_chars={b0_code_chars}",
+336 +             flush=True,
+337 +         )
+338 |         rc = 0
+339 |     except Exception as exc:  # noqa: BLE001 - probe records, never raises
+340 |         wall = time.time() - t0
+341 |         outcome.update(
+    -             {"ok": False, "wall_seconds": round(wall, 2),
+    -              "error": f"{type(exc).__name__}: {exc}"}
+342 +             {"ok": False, "wall_seconds": round(wall, 2), "error": f"{type(exc).__name__}: {exc}"}
+343 |         )
+--------------------------------------------------------------------------------
+361 |     outcome["pins_after"] = {
+    -         "sst": git_head(SST_REPO), "prompt_kit": git_head(KIT_REPO), "trace": git_head(TRACE_REPO),
+362 +         "sst": git_head(SST_REPO),
+363 +         "prompt_kit": git_head(KIT_REPO),
+364 +         "trace": git_head(TRACE_REPO),
+365 |     }
+--------------------------------------------------------------------------------
+385 |             "argv_model_flag_ok": (
+    -                 ("--model" not in argv) if MODEL == "default"
+386 +                 ("--model" not in argv)
+387 +                 if MODEL == "default"
+388 |                 else ("--model" in argv and MODEL in argv)
+--------------------------------------------------------------------------------
+396 |             (OUT / "stderr.txt").write_text(
+    -                 "TIMEOUT: harness stderr unrecoverable (process killed).\n")
+397 +                 "TIMEOUT: harness stderr unrecoverable (process killed).\n"
+398 +             )
+399 |             (OUT / "exit.txt").write_text("124\n")
+    -             outcome["timeout_partial_bytes"] = len(
+    -                 (call.get("partial_stdout") or "").encode())
+400 +             outcome["timeout_partial_bytes"] = len((call.get("partial_stdout") or "").encode())
+401 |         else:
+--------------------------------------------------------------------------------
+406 |             header_lines = [
+    -                 line for line in (proc.stderr or "").splitlines()
+    -                 if any(k in line.lower() for k in
+    -                        ("codex", "model", "reasoning", "sandbox", "workdir", "version"))
+407 +                 line
+408 +                 for line in (proc.stderr or "").splitlines()
+409 +                 if any(
+410 +                     k in line.lower()
+411 +                     for k in ("codex", "model", "reasoning", "sandbox", "workdir", "version")
+412 +                 )
+413 |             ][:20]
+414 |             (OUT / "header.txt").write_text("\n".join(header_lines) + "\n")
+415 |             outcome["header_reasoning_line"] = next(
+    -                 (l for l in header_lines if "reasoning" in l.lower()), "")
+416 +                 (l for l in header_lines if "reasoning" in l.lower()), ""
+417 +             )
+418 |         stdin_b = len((call["stdin_text"] or "").encode())
+419 |         out_b = len((OUT / "stdout.txt").read_bytes())
+420 |         err_b = len((OUT / "stderr.txt").read_bytes())
+    -         (OUT / "byte-counts.txt").write_text(
+    -             f"stdin={stdin_b} stdout={out_b} stderr={err_b}\n")
+421 +         (OUT / "byte-counts.txt").write_text(f"stdin={stdin_b} stdout={out_b} stderr={err_b}\n")
+422 |     else:
+--------------------------------------------------------------------------------
+430 |         try:
+    -             recs = [json.loads(l) for l in
+    -                     sidecar.read_text(encoding="utf-8").splitlines() if l.strip()]
+431 +             recs = [
+432 +                 json.loads(l) for l in sidecar.read_text(encoding="utf-8").splitlines() if l.strip()
+433 +             ]
+434 |             outcome["sidecar_records"] = len(recs)
+--------------------------------------------------------------------------------
+442 |     # Cumulative spend row (one per probe = one CLI call, unless skipped).
+    -     spend_path = REPO / "docs/builds/stc-integration/evidence/FOLLOWUP/live-exp/attempt-1/spend.jsonl"
+443 +     spend_path = (
+444 +         REPO / "docs/builds/stc-integration/evidence/FOLLOWUP/live-exp/attempt-1/spend.jsonl"
+445 +     )
+446 |     if "skipped" not in outcome:
+    -         row = {"probe": PROBE, "frame": FRAME, "model": MODEL, "reasoning": REASONING,
+    -                "ok": outcome.get("ok"), "wall_seconds": outcome.get("wall_seconds"),
+    -                "out_bytes": len((OUT / "stdout.txt").read_bytes()) if (OUT / "stdout.txt").is_file() else 0,
+    -                "exit": (OUT / "exit.txt").read_text().strip() if (OUT / "exit.txt").is_file() else "?"}
+447 +         row = {
+448 +             "probe": PROBE,
+449 +             "frame": FRAME,
+450 +             "model": MODEL,
+451 +             "reasoning": REASONING,
+452 +             "ok": outcome.get("ok"),
+453 +             "wall_seconds": outcome.get("wall_seconds"),
+454 +             "out_bytes": len((OUT / "stdout.txt").read_bytes())
+455 +             if (OUT / "stdout.txt").is_file()
+456 +             else 0,
+457 +             "exit": (OUT / "exit.txt").read_text().strip() if (OUT / "exit.txt").is_file() else "?",
+458 +         }
+459 |         with spend_path.open("a", encoding="utf-8") as fh:
+    |
+
+unformatted: File would be reformatted
+   --> docs/builds/stc-integration/evidence/P05/attempt-1/trial-timeout/harness-writes/run_deep_research_campaign.py:73:1
+    |
+72  |
+73  +
+74  | def log(msg):
+75  |     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+76  |     print(f"[{timestamp}] {msg}", flush=True)
+77  |
+78  +
+79  | def run_cmd(cmd):
+--------------------------------------------------------------------------------
+87  |
+88  +
+89  | def check_research_status(notebook_id):
+    -     code, stdout, stderr = run_cmd(f'nlm.exe research status {notebook_id} --max-wait 0')
+90  +     code, stdout, stderr = run_cmd(f"nlm.exe research status {notebook_id} --max-wait 0")
+91  |     output = stdout + "\n" + stderr
+    -     
+92  +
+93  |     status_match = re.search(r"Status:\s*(\w+)", output, re.IGNORECASE)
+94  |     task_match = re.search(r"Task ID:\s*([^\s\r\n]+)", output, re.IGNORECASE)
+95  |     sources_match = re.search(r"Sources found:\s*(\d+)", output, re.IGNORECASE)
+    -     
+96  +
+97  |     status = status_match.group(1).lower() if status_match else "unknown"
+98  |     task_id = task_match.group(1) if task_match else None
+99  |     sources_found = int(sources_match.group(1)) if sources_match else 0
+    -     
+100 +
+101 |     return status, task_id, sources_found, output
+102 |
+103 +
+104 | def wait_for_completion(notebook_id, expected_task_id=None, max_wait_sec=720, poll_interval=20):
+105 |     start_time = time.time()
+106 |     log(f"Waiting for research task completion (max {max_wait_sec}s)...")
+    -     
+107 +
+108 |     while time.time() - start_time < max_wait_sec:
+109 |         status, task_id, sources_found, raw = check_research_status(notebook_id)
+110 |         elapsed = int(time.time() - start_time)
+    -         
+111 +
+112 |         if status == "completed":
+    -             log(f"Research COMPLETED in {elapsed}s! Task ID: {task_id}, Sources found: {sources_found}")
+113 +             log(
+114 +                 f"Research COMPLETED in {elapsed}s! Task ID: {task_id}, Sources found: {sources_found}"
+115 +             )
+116 |             return True, task_id, sources_found
+--------------------------------------------------------------------------------
+123 |             log(f"Status '{status}' ({elapsed}s elapsed). Raw: {raw.strip()[:100]}")
+    -             
+124 +
+125 |         time.sleep(poll_interval)
+    -         
+126 +
+127 |     log(f"Research TIMED OUT after {max_wait_sec}s")
+128 |     return False, expected_task_id, 0
+129 |
+130 +
+131 | def import_cited_sources(notebook_id, task_id=None):
+    -     cmd = f'nlm.exe research import {notebook_id} --cited-only'
+132 +     cmd = f"nlm.exe research import {notebook_id} --cited-only"
+133 |     if task_id:
+    -         cmd = f'nlm.exe research import {notebook_id} {task_id} --cited-only'
+    -         
+134 +         cmd = f"nlm.exe research import {notebook_id} {task_id} --cited-only"
+135 +
+136 |     log(f"Importing cited sources: {cmd}")
+137 |     code, stdout, stderr = run_cmd(cmd)
+138 |     out = stdout + "\n" + stderr
+139 |     log(f"Import result: {out.strip()}")
+    -     
+140 +
+141 |     match = re.search(r"Imported\s+(\d+)\s+sources", out, re.IGNORECASE)
+142 |     imported = int(match.group(1)) if match else 0
+143 |     return imported, out
+144 |
+145 +
+146 | def start_research(notebook_id, query):
+--------------------------------------------------------------------------------
+152 |     out = stdout + "\n" + stderr
+    -     
+153 +
+154 |     if code != 0:
+155 |         log(f"Failed to start research: {out}")
+156 |         return None
+    -         
+157 +
+158 |     task_match = re.search(r"Task ID:\s*([^\s\r\n]+)", out, re.IGNORECASE)
+--------------------------------------------------------------------------------
+162 |
+163 +
+164 | def save_summary(results):
+165 |     os.makedirs(OUTPUT_DIR, exist_ok=True)
+166 |     with open(LOG_JSON, "w", encoding="utf-8") as f:
+167 |         json.dump(results, f, indent=2)
+    -         
+168 +
+169 |     md_content = "# NotebookLM Deep Research Campaign Execution Summary\n\n"
+--------------------------------------------------------------------------------
+174 |     md_content += "|---|---|---|---|---|---|---|\n"
+    -     
+175 +
+176 |     total_imported = 0
+--------------------------------------------------------------------------------
+180 |         md_content += f"| {r['id']} | **{r['title']}** | `{r.get('task_id', 'N/A')}` | {r.get('sources_found', 0)} | **{imported}** | {r.get('duration_s', 0)}s | {r['status']} |\n"
+    -         
+181 +
+182 |     md_content += f"\n**Total Newly Ingested Cited Sources:** {total_imported}\n\n"
+--------------------------------------------------------------------------------
+190 |         md_content += f"- **Status:** {r['status']}\n\n"
+    -         
+191 +
+192 |     with open(SUMMARY_MD, "w", encoding="utf-8") as f:
+193 |         f.write(md_content)
+194 |     log(f"Summary written to {SUMMARY_MD}")
+195 |
+196 +
+197 | def main():
+198 |     log("=== Starting NotebookLM Deep Research Campaign ===")
+199 |     results = []
+    -     
+200 +
+201 |     for topic in TOPICS:
+--------------------------------------------------------------------------------
+206 |         already_started = topic.get("already_started", False)
+    -         
+207 +
+208 |         log(f"\n=======================================================")
+209 |         log(f"Processing Pass {t_id}: {title}")
+210 |         log(f"=======================================================")
+    -         
+211 +
+212 |         start_ts = time.time()
+    -         
+213 +
+214 |         if not already_started:
+--------------------------------------------------------------------------------
+219 |                 task_id = start_research(NOTEBOOK_ID, query)
+    -                 
+220 +
+221 |             if not task_id:
+222 |                 log(f"ERROR: Could not launch research for Pass {t_id}. Skipping.")
+    -                 results.append({
+    -                     "id": t_id,
+    -                     "title": title,
+    -                     "query": query,
+    -                     "task_id": None,
+    -                     "sources_found": 0,
+    -                     "imported_sources": 0,
+    -                     "duration_s": int(time.time() - start_ts),
+    -                     "status": "LAUNCH_FAILED"
+    -                 })
+223 +                 results.append(
+224 +                     {
+225 +                         "id": t_id,
+226 +                         "title": title,
+227 +                         "query": query,
+228 +                         "task_id": None,
+229 +                         "sources_found": 0,
+230 +                         "imported_sources": 0,
+231 +                         "duration_s": int(time.time() - start_ts),
+232 +                         "status": "LAUNCH_FAILED",
+233 +                     }
+234 +                 )
+235 |                 save_summary(results)
+236 |                 continue
+237 |         else:
+238 |             log(f"Pass {t_id} is already in progress with Task ID: {task_id}")
+    -             
+    -         success, finished_task_id, sources_found = wait_for_completion(NOTEBOOK_ID, task_id, max_wait_sec=600, poll_interval=20)
+239 +
+240 +         success, finished_task_id, sources_found = wait_for_completion(
+241 +             NOTEBOOK_ID, task_id, max_wait_sec=600, poll_interval=20
+242 +         )
+243 |         duration = int(time.time() - start_ts)
+    -         
+244 +
+245 |         if success:
+246 |             actual_task_id = finished_task_id or task_id
+247 |             imported_count, import_raw = import_cited_sources(NOTEBOOK_ID, actual_task_id)
+    -             results.append({
+    -                 "id": t_id,
+    -                 "title": title,
+    -                 "query": query,
+    -                 "task_id": actual_task_id,
+    -                 "sources_found": sources_found,
+    -                 "imported_sources": imported_count,
+    -                 "duration_s": duration,
+    -                 "status": "SUCCESS"
+    -             })
+248 +             results.append(
+249 +                 {
+250 +                     "id": t_id,
+251 +                     "title": title,
+252 +                     "query": query,
+253 +                     "task_id": actual_task_id,
+254 +                     "sources_found": sources_found,
+255 +                     "imported_sources": imported_count,
+256 +                     "duration_s": duration,
+257 +                     "status": "SUCCESS",
+258 +                 }
+259 +             )
+260 |         else:
+    -             results.append({
+    -                 "id": t_id,
+    -                 "title": title,
+    -                 "query": query,
+    -                 "task_id": task_id,
+    -                 "sources_found": sources_found,
+    -                 "imported_sources": 0,
+    -                 "duration_s": duration,
+    -                 "status": "TIMED_OUT_OR_FAILED"
+    -             })
+    -             
+261 +             results.append(
+262 +                 {
+263 +                     "id": t_id,
+264 +                     "title": title,
+265 +                     "query": query,
+266 +                     "task_id": task_id,
+267 +                     "sources_found": sources_found,
+268 +                     "imported_sources": 0,
+269 +                     "duration_s": duration,
+270 +                     "status": "TIMED_OUT_OR_FAILED",
+271 +                 }
+272 +             )
+273 +
+274 |         save_summary(results)
+275 |         # Brief breather between research sessions
+276 |         log(f"Pass {t_id} complete. Pausing 10s before next pass...")
+277 |         time.sleep(10)
+    -         
+278 +
+279 |     log("\n=== Deep Research Campaign Finished! ===")
+280 |     save_summary(results)
+281 |
+282 +
+283 | if __name__ == "__main__":
+    |
+
+unformatted: File would be reformatted
+   --> src/stc/integration/adapters.py:330:31
+    |
+329 |     if bundle.epoch_index != ctx.epoch_index:
+    -         raise RunBindingError(
+    -             f"epoch_index: bundle={bundle.epoch_index} ctx={ctx.epoch_index}"
+    -         )
+330 +         raise RunBindingError(f"epoch_index: bundle={bundle.epoch_index} ctx={ctx.epoch_index}")
+331 |     if bundle.spec_id != ctx.spec_id:
+--------------------------------------------------------------------------------
+381 |     except ValueError as exc:
+    -         raise UndisposedFieldError(
+    -             f"evidence_references[{EVIDENCE_EPOCH!r}]: not an int"
+    -         ) from exc
+382 +         raise UndisposedFieldError(f"evidence_references[{EVIDENCE_EPOCH!r}]: not an int") from exc
+383 |     try:
+--------------------------------------------------------------------------------
+388 |         ) from exc
+    -     if not isinstance(inhibitors, list) or any(
+    -         not isinstance(item, str) for item in inhibitors
+    -     ):
+389 +     if not isinstance(inhibitors, list) or any(not isinstance(item, str) for item in inhibitors):
+390 |         raise UndisposedFieldError(
+--------------------------------------------------------------------------------
+404 |     _check_binding("base_commit", packet.base_commit, ctx.base_commit)
+    -     _check_binding(
+    -         "acceptance_commands", packet.acceptance_commands, list(ctx.acceptance_commands)
+    -     )
+405 +     _check_binding("acceptance_commands", packet.acceptance_commands, list(ctx.acceptance_commands))
+406 |     _check_binding("prompt_template_hash", packet.prompt_template_hash, ctx.adapter_version)
+--------------------------------------------------------------------------------
+431 |         raise BundleSizeExceededError(
+    -             f"inverse bundle size ({size} bytes) exceeds the "
+    -             f"{MAX_BUNDLE_BYTES} byte ceiling"
+432 +             f"inverse bundle size ({size} bytes) exceeds the {MAX_BUNDLE_BYTES} byte ceiling"
+433 |         )
+--------------------------------------------------------------------------------
+490 |                 raise UndisposedFieldError(
+    -                     f"{where}: conflicting actions for {path!r}: "
+    -                     f"{seen[path]!r} vs {action!r}"
+491 +                     f"{where}: conflicting actions for {path!r}: {seen[path]!r} vs {action!r}"
+492 |                 )
+--------------------------------------------------------------------------------
+543 |         raise UndisposedFieldError(
+    -             f"file_operations[{index}].op: unknown op {raw_op!r} "
+    -             "(known: create|modify|delete)"
+544 +             f"file_operations[{index}].op: unknown op {raw_op!r} (known: create|modify|delete)"
+545 |         )
+--------------------------------------------------------------------------------
+554 |     hunk_targets = _parse_hunk_targets(proposal.patch_diff)
+    -     op_targets = [
+    -         _parse_op_dict(op, index) for index, op in enumerate(proposal.file_operations)
+    -     ]
+555 +     op_targets = [_parse_op_dict(op, index) for index, op in enumerate(proposal.file_operations)]
+556 |     if hunk_targets:
+--------------------------------------------------------------------------------
+574 |             if path not in declared:
+    -                 raise UndisposedFieldError(
+    -                     f"target_paths: patch touches undeclared path {path!r}"
+    -                 )
+575 +                 raise UndisposedFieldError(f"target_paths: patch touches undeclared path {path!r}")
+576 |     return [FileTarget(path=path, action=action) for path, action in derived]
+    |
+
+unformatted: File would be reformatted
+   --> src/stc/integration/memory.py:215:16
+    |
+214 |         """Whether the corpus directory with at least one partition exists."""
+    -         return (
+    -             self.corpus_dir.is_dir()
+    -             and (
+    -                 (self.corpus_dir / INHIBITORS_FILE).is_file()
+    -                 or (self.corpus_dir / CONTEXT_INDEX_FILE).is_file()
+    -             )
+215 +         return self.corpus_dir.is_dir() and (
+216 +             (self.corpus_dir / INHIBITORS_FILE).is_file()
+217 +             or (self.corpus_dir / CONTEXT_INDEX_FILE).is_file()
+218 |         )
+    |
+
+unformatted: File would be reformatted
+   --> tests/unit/test_integration_adapters.py:392:48
+    |
+391 | )
+    - def test_inverse_rejects_undisposed_invariants(
+    -     ctx: AdapterContext, bad: str, match: str
+    - ) -> None:
+392 + def test_inverse_rejects_undisposed_invariants(ctx: AdapterContext, bad: str, match: str) -> None:
+393 |     packet = _foreign_packet(ctx, invariants=[bad])
+--------------------------------------------------------------------------------
+406 | )
+    - def test_inverse_rejects_binding_mismatch(
+    -     ctx: AdapterContext, field: str, value: Any
+    - ) -> None:
+407 + def test_inverse_rejects_binding_mismatch(ctx: AdapterContext, field: str, value: Any) -> None:
+408 |     with pytest.raises(RunBindingError, match=field):
+--------------------------------------------------------------------------------
+514 | def test_mutmut_failure_does_not_tank_per_node_reward() -> None:
+    -     score = receipt_to_score(
+    -         make_receipt(0, 0, 0, make_gate(1, 9.9, "mutants survived"))
+    -     )
+515 +     score = receipt_to_score(make_receipt(0, 0, 0, make_gate(1, 9.9, "mutants survived")))
+516 |     assert score.normalized_reward == 1.0
+--------------------------------------------------------------------------------
+552 | def test_hunks_preserve_order_and_defaults() -> None:
+    -     targets = proposal_to_filetargets(
+    -         make_proposal(patch_diff=DIFF_MODIFY + DIFF_CREATE)
+    -     )
+553 +     targets = proposal_to_filetargets(make_proposal(patch_diff=DIFF_MODIFY + DIFF_CREATE))
+554 |     assert [t.path for t in targets] == ["src/a.py", "new.py"]
+--------------------------------------------------------------------------------
+620 | def test_target_paths_declared_untouched_allowed() -> None:
+    -     proposal = make_proposal(
+    -         patch_diff=DIFF_MODIFY, target_paths=["src/a.py", "planned.py"]
+    -     )
+621 +     proposal = make_proposal(patch_diff=DIFF_MODIFY, target_paths=["src/a.py", "planned.py"])
+622 |     assert [t.path for t in proposal_to_filetargets(proposal)] == ["src/a.py"]
+    |
+
+unformatted: File would be reformatted
+   --> tests/unit/test_integration_memory.py:150:14
+    |
+149 |     client.insert_proposal(
+    -         "p1", "REJECTED", "negative_inhibitor", "SST custody runs acceptance first only",
+150 +         "p1",
+151 +         "REJECTED",
+152 +         "negative_inhibitor",
+153 +         "SST custody runs acceptance first only",
+154 |         component="sst-custody",
+155 |     )
+156 |     client.insert_proposal(
+    -         "p2", "REFUTED", "negative_inhibitor", "Originals stay authoritative always",
+157 +         "p2",
+158 +         "REFUTED",
+159 +         "negative_inhibitor",
+160 +         "Originals stay authoritative always",
+161 |         component="general",
+    |
+
+8 files would be reformatted, 241 files already formatted

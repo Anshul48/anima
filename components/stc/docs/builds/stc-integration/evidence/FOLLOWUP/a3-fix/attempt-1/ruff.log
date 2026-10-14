@@ -1,0 +1,6 @@
+$ ruff check src/stc/integration/cli_gateway.py tests/unit/test_a3_patch_format.py
+All checks passed!
+rc=0
+$ ruff format --check src/stc/integration/cli_gateway.py tests/unit/test_a3_patch_format.py
+2 files already formatted
+rc=0

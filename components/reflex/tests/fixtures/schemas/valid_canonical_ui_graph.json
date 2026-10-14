@@ -1,0 +1,53 @@
+{
+  "timestamp_ms": 1755430000000.0,
+  "nodes": {
+    "btn_1": {
+      "node_id": "btn_1",
+      "role": "button",
+      "bounds": {
+        "x1": 100,
+        "y1": 200,
+        "x2": 250,
+        "y2": 250
+      },
+      "label": "Checkout",
+      "value": "",
+      "is_clickable": true,
+      "is_editable": false,
+      "is_focused": false,
+      "is_enabled": true,
+      "parent_id": "container_1",
+      "children_ids": [],
+      "source": "dom",
+      "confidence": 1.0,
+      "attributes": {
+        "aria-label": "Proceed to checkout"
+      }
+    },
+    "container_1": {
+      "node_id": "container_1",
+      "role": "container",
+      "bounds": {
+        "x1": 50,
+        "y1": 50,
+        "x2": 800,
+        "y2": 600
+      },
+      "label": "Cart Summary",
+      "value": "",
+      "is_clickable": false,
+      "is_editable": false,
+      "is_focused": false,
+      "is_enabled": true,
+      "parent_id": null,
+      "children_ids": ["btn_1"],
+      "source": "dom",
+      "confidence": 1.0,
+      "attributes": {}
+    }
+  },
+  "focused_node_id": null,
+  "active_window_title": "Shopping Cart",
+  "url": "https://shop.example.com/cart",
+  "viewport_size": [1920, 1080]
+}

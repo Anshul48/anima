@@ -1,0 +1,3 @@
+$ mypy --strict --follow-imports=silent src/stc/integration/cli_gateway.py tests/unit/test_a3_patch_format.py
+Success: no issues found in 2 source files
+rc=0

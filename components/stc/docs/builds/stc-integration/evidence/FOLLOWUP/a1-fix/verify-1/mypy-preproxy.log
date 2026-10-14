@@ -1,0 +1,15 @@
+=== own pristine reconstruction (remove import L42 + appended L1240+) ===
+6e059f08e203478f3a70489b99385dc5a81a09386c274baf16a83e2c76bf1019  /tmp/a1v1-pristine-test.py
+(tasked pristine: 6e059f08e203478f3a70489b99385dc5a81a09386c274baf16a83e2c76bf1019)
+=== pristine mypy (same flags) ===
+/tmp/a1v1-pristine-test.py:175: error: Unused "type: ignore" comment  [unused-ignore]
+/tmp/a1v1-pristine-test.py:175: error: Incompatible types in assignment (expression has type "str", target has type "ProviderProfile")  [assignment]
+/tmp/a1v1-pristine-test.py:175: note: Error code "assignment" not covered by "type: ignore[dict-item]" comment
+/tmp/a1v1-pristine-test.py:576: error: Unused "type: ignore" comment  [unused-ignore]
+/tmp/a1v1-pristine-test.py:1169: error: Returning Any from function declared to return "str"  [no-any-return]
+/tmp/a1v1-pristine-test.py:1216: error: Returning Any from function declared to return "str"  [no-any-return]
+Found 5 errors in 1 file (checked 1 source file)
+pristine mypy rc=1
+=== product files untouched after ===
+c072f1dac2725f470bfeb9753288e2158064838467784d3f8ceb279b640a0ff5  src/stc/integration/dialectic_runner.py
+eea1a7eea04eebbe21680836e4823e01bb2bfa62729f4bcd41bcb219f52a0ec0  tests/unit/test_integration_dialectic.py

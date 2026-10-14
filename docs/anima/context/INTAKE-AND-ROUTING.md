@@ -1,0 +1,12 @@
+# ANIMA intake and routing
+
+Use the complete proposed [operating procedures](../architecture/proposals/2026-10-10-PERSONAL-ASSISTANT-AND-DEVELOPMENTAL-SUBSTRATE/SOPs/OPERATING-PROCEDURES.md) and [worked cases](../architecture/proposals/2026-10-10-PERSONAL-ASSISTANT-AND-DEVELOPMENTAL-SUBSTRATE/SOPs/WORKED-CASES.md). Adoption maps to each owner's existing records; this page provides the short everyday route.
+
+1. Preserve the source, date, exact relevant wording and actual author. A pasted model argument remains attributed commentary even when its enclosing turn is a user message.
+2. Identify whether the input is an idea, question, investigation request, direct instruction or constraint change. Record its scope and authority. Current explicit authorization can supersede an older restriction; record the change and continue within it. A speculative possibility does not grant implementation authority.
+3. Find the responsible home: local project for internal decisions; cross-project discussion for caller/contract needs; ANIMA for consequential macro relationships or shared constraints; exploratory reading-room notes for unresolved research. Link related homes instead of creating competing authoritative records.
+4. Give a disposition: answer, investigate within a bound, execute within existing authority, propose a change, defer with a trigger, or reject with reasons. One attributable entry and disposition may suffice. Reintroduced ideas retain the original reason and the new qualifier; failures remain evidence.
+5. Escalate only the consequential intent/semantic/constraint/authority/cost decision that remains after cheap investigation. Supply alternatives, recommendation, evidence, uncertainty and continuable work. Routine technical difficulty remains the coordinator's job.
+6. For integration, discuss candidates early; consume an actual owner-qualified exact artifact, check compatibility/state migration and verify the real caller. A source directory, contract draft or historical test count is not a qualified dependency.
+
+Keep accepted decisions distinct from proposed mechanisms and verified findings. Preserve scoped supersession; do not silently erase history or promote a research analogy. Update the existing owner record and relevant ANIMA source route when an attributable change warrants it. [Project informing prompts and response homes](../architecture/proposals/2026-10-10-PERSONAL-ASSISTANT-AND-DEVELOPMENTAL-SUBSTRATE/project-handoffs/README.md) provide the local continuation route.

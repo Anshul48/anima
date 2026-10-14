@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Table User Management</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    button { padding: 5px 10px; margin-right: 5px; cursor: pointer; }
+    .btn-edit { background: #ffc107; border: 1px solid #d39e00; }
+    .btn-delete { background: #dc3545; color: white; border: 1px solid #bd2130; }
+  </style>
+</head>
+<body>
+  <h1>User Management</h1>
+  <table id="users_table">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="row_alice">
+        <td>USR-001</td>
+        <td class="user-name">Alice Smith</td>
+        <td>alice@example.com</td>
+        <td>Admin</td>
+        <td>
+          <button id="edit_alice" class="btn-edit">Edit</button>
+          <button id="delete_alice" class="btn-delete">Delete</button>
+        </td>
+      </tr>
+      <tr id="row_bob">
+        <td>USR-002</td>
+        <td class="user-name">Bob Jones</td>
+        <td>bob@example.com</td>
+        <td>Viewer</td>
+        <td>
+          <button id="edit_bob" class="btn-edit">Edit</button>
+          <button id="delete_bob" class="btn-delete">Delete</button>
+        </td>
+      </tr>
+      <tr id="row_charlie">
+        <td>USR-003</td>
+        <td class="user-name">Charlie Brown</td>
+        <td>charlie@example.com</td>
+        <td>Editor</td>
+        <td>
+          <button id="edit_charlie" class="btn-edit">Edit</button>
+          <button id="delete_charlie" class="btn-delete">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

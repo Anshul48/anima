@@ -1,0 +1,75 @@
+{
+  "$schema": "https://entorhinal.local/schemas/v1/context_snapshot.schema.json",
+  "snapshot_id": "01915dfb-6981-7f89-9a67-9c60e42cb701",
+  "schema_version": "1.0.0",
+  "request_id": "REQ-REFLEX-20260820-0001",
+  "issued_at": "2026-08-20T08:00:00.000000Z",
+  "expires_at": "2026-08-20T08:05:00.000000Z",
+  "purpose_granted": "Resolve active repository branch and target issue ID for task planning",
+  "scope_granted": [
+    "scope:workspace.active_project",
+    "scope:browser.recent_tabs",
+    "scope:terminal.last_commands"
+  ],
+  "active_facts": [
+    {
+      "fact_id": "01915dfb-6981-7f89-9a67-9c60e42cb702",
+      "schema_version": "1.0.0",
+      "entity_uri": "workspace:auth-service",
+      "attribute": "active_branch",
+      "value": "fix/login-button-padding",
+      "confidence": 0.98,
+      "valid_from": "2026-08-20T07:55:00.000000Z",
+      "valid_to": null,
+      "supporting_evidence_ids": [
+        "01915dfb-6981-7f89-9a67-9c60e42cb703"
+      ],
+      "derived_by": "compiler.workspace_tracker",
+      "revision_id": 1
+    },
+    {
+      "fact_id": "01915dfb-6981-7f89-9a67-9c60e42cb704",
+      "schema_version": "1.0.0",
+      "entity_uri": "browser:tab.github_issue",
+      "attribute": "active_issue",
+      "value": {
+        "issue_id": "104",
+        "title": "Login button misaligned on mobile viewport",
+        "repo": "example/auth-service"
+      },
+      "confidence": 0.95,
+      "valid_from": "2026-08-20T07:58:00.000000Z",
+      "valid_to": null,
+      "supporting_evidence_ids": [
+        "01915dfb-6981-7f89-9a67-9c60e42cb705"
+      ],
+      "derived_by": "compiler.browser_intent",
+      "revision_id": 1
+    }
+  ],
+  "active_hypotheses": [
+    {
+      "hypothesis_id": "01915dfb-6981-7f89-9a67-9c60e42cb706",
+      "proposed_intent": "User is preparing a pull request for Issue #104",
+      "confidence_score": 0.75,
+      "candidate_evidence_ids": [
+        "01915dfb-6981-7f89-9a67-9c60e42cb703",
+        "01915dfb-6981-7f89-9a67-9c60e42cb705"
+      ],
+      "uncertainty_reasons": [
+        "No branch push detected yet in terminal"
+      ],
+      "expires_at": "2026-08-20T08:10:00.000000Z",
+      "is_hypothesis": true
+    }
+  ],
+  "evidence_provenance_refs": [
+    "01915dfb-6981-7f89-9a67-9c60e42cb703",
+    "01915dfb-6981-7f89-9a67-9c60e42cb705"
+  ],
+  "redaction_manifest": [
+    "Authorization",
+    "Cookie"
+  ],
+  "disclaimer": "ADVISORY ONLY. Direct user instruction and fresh observation take precedence."
+}

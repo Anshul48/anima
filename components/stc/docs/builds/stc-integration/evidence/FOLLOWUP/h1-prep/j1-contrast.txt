@@ -1,0 +1,6 @@
+# J1 contrast probe: identical bytes, bare +++ (exact live) vs +++ b/ (+2 B); green self-consistent receipt so scans decide
+# cmd: <real-gates python> /tmp/h1-j1-probe.py  (0 live calls)
+
+--- bare-+++ (exact live bytes): status=APPROVED findings=0
+--- b-prefixed variant (+2 B): status=REJECTED findings=1
+    ZERO_MOCK_VIOLATION tests/unit/test_integration_runner_pins.py:9 'from unittest.mock import AsyncMock'

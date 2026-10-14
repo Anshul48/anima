@@ -1,0 +1,88 @@
+{
+  "adapter": "list2slot/v1",
+  "expected_rounds": 4,
+  "holdings": {
+    "SC-L": {
+      "prefs": [
+        "A",
+        "B"
+      ],
+      "req_tasks": [
+        "A",
+        "B"
+      ]
+    },
+    "SC-S": {
+      "prefs": [
+        "C",
+        "D"
+      ],
+      "req_tasks": [
+        "C",
+        "D"
+      ]
+    }
+  },
+  "precedence": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "C",
+      "D"
+    ]
+  ],
+  "prefs": {
+    "A": "M0",
+    "B": "M1",
+    "C": "M1",
+    "D": "M0"
+  },
+  "slots": {
+    "S0": {
+      "machine": "M0",
+      "time": "t0"
+    },
+    "S1": {
+      "machine": "M1",
+      "time": "t0"
+    },
+    "S2": {
+      "machine": "M0",
+      "time": "t1"
+    },
+    "S3": {
+      "machine": "M1",
+      "time": "t1"
+    }
+  },
+  "split_state": true,
+  "task_id": "S2",
+  "tasks": {
+    "A": {
+      "window": [
+        "S0",
+        "S2"
+      ]
+    },
+    "B": {
+      "window": [
+        "S1",
+        "S3"
+      ]
+    },
+    "C": {
+      "window": [
+        "S0",
+        "S1"
+      ]
+    },
+    "D": {
+      "window": [
+        "S2",
+        "S3"
+      ]
+    }
+  }
+}

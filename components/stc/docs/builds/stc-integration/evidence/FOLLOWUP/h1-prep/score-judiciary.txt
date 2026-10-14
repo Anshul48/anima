@@ -1,0 +1,9 @@
+# H1 PATH-REVIEW phase-2 transcript: REAL receipt_to_score + REAL JudiciaryAuditor over REAL render_merged_diff (0 live calls)
+# receipts built from the OBSERVED file-scoped gate outcomes above; mutmut honestly NOT-MEASURED; signature self-consistent (auditor no-runner canonical)
+
+=== kg-lease: score passed=True reward=1.00 hard={'verifier_passed': True, 'stc_ruff': True, 'stc_mypy': True, 'stc_pytest': True}
+=== kg-lease: judiciary status=REJECTED
+    finding SUBSTRATE_GATE_FAILURE CRITICAL artifacts/receipts/receipt.json:- snippet='mutmut (exit 1)'
+=== bad-lease: score passed=False reward=0.00 hard={'verifier_passed': False, 'stc_ruff': False, 'stc_mypy': False, 'stc_pytest': False}
+=== bad-lease: judiciary status=REJECTED
+    finding SUBSTRATE_GATE_FAILURE CRITICAL artifacts/receipts/receipt.json:- snippet='ruff (exit 1), mypy (exit 1), pytest (exit 2), mutmut (exit 1)'

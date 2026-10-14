@@ -1,0 +1,28 @@
+src/stc/compiler/bundler.py:12: error: Library stubs not installed for "yaml"  [import-untyped]
+src/stc/compiler/bundler.py:12: note: Hint: "python3 -m pip install types-PyYAML"
+src/stc/compiler/bundler.py:12: note: (or run "mypy --install-types" to install all missing stub packages)
+src/stc/compiler/bundler.py:12: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+src/stc/compiler/bundler.py:325: error: Returning Any from function declared to return "str"  [no-any-return]
+tests/unit/test_integration_adapters.py:175: error: Unused "type: ignore" comment  [unused-ignore]
+tests/unit/test_integration_adapters.py:175: error: Argument "acceptance_commands" to "AdapterContext" has incompatible type "list[str]"; expected "tuple[str, ...]"  [arg-type]
+tests/unit/test_integration_adapters.py:175: note: Error code "arg-type" not covered by "type: ignore[list-item]" comment
+tests/integration/test_pipeline.py:6: error: Library stubs not installed for "yaml"  [import-untyped]
+tests/integration/test_pipeline.py:6: note: Hint: "python3 -m pip install types-PyYAML"
+tests/integration/test_pipeline.py:6: note: (or run "mypy --install-types" to install all missing stub packages)
+tests/integration/test_pipeline.py:6: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+tests/unit/test_integration_dialectic.py:176: error: Unused "type: ignore" comment  [unused-ignore]
+tests/unit/test_integration_dialectic.py:176: error: Incompatible types in assignment (expression has type "str", target has type "ProviderProfile")  [assignment]
+tests/unit/test_integration_dialectic.py:176: note: Error code "assignment" not covered by "type: ignore[dict-item]" comment
+tests/unit/test_integration_dialectic.py:577: error: Unused "type: ignore" comment  [unused-ignore]
+tests/unit/test_integration_dialectic.py:1170: error: Returning Any from function declared to return "str"  [no-any-return]
+tests/unit/test_integration_dialectic.py:1217: error: Returning Any from function declared to return "str"  [no-any-return]
+tests/integration/test_dialectic_fixture.py:182: error: Unused "type: ignore" comment  [unused-ignore]
+tests/integration/test_dialectic_fixture.py:182: error: Incompatible types in assignment (expression has type "str", target has type "ProviderProfile")  [assignment]
+tests/integration/test_dialectic_fixture.py:182: note: Error code "assignment" not covered by "type: ignore[dict-item]" comment
+tests/integration/test_dialectic_fixture.py:271: error: Returning Any from function declared to return "dict[str, Any] | None"  [no-any-return]
+tests/integration/test_dialectic_fixture.py:278: error: Returning Any from function declared to return "dict[str, Any] | None"  [no-any-return]
+tests/integration/test_dialectic_fixture.py:283: error: Returning Any from function declared to return "list[dict[str, Any]]"  [no-any-return]
+src/stc/cli.py:20: error: Library stubs not installed for "yaml"  [import-untyped]
+tests/unit/test_compiler.py:22: error: Library stubs not installed for "yaml"  [import-untyped]
+tests/unit/test_cli.py:6: error: Library stubs not installed for "yaml"  [import-untyped]
+Found 18 errors in 8 files (checked 67 source files)

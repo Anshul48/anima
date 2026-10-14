@@ -1,0 +1,124 @@
+.............................F.......................................... [ 13%]
+........................................................................ [ 27%]
+........................................................................ [ 40%]
+........................................................................ [ 54%]
+........................................................................ [ 68%]
+........................................................................ [ 81%]
+...........................FFF.......................................... [ 95%]
+FFFF.........s..s.....s                                                  [100%]
+=================================== FAILURES ===================================
+____________________________ test_cli_run_json_mode ____________________________
+tests/unit/test_cli.py:251: in test_cli_run_json_mode
+    assert res.exit_code == 0
+E   assert 1 == 0
+E    +  where 1 = <Result SystemExit(1)>.exit_code
+_____________ test_substrate_runner_real_clean_execution_and_save ______________
+<workspace-root>\stc\tests\unit\test_substrate.py:473: in test_substrate_runner_real_clean_execution_and_save
+    ???
+E   AssertionError: assert 1 == 0
+E    +  where 1 = GateReport(gate_name='ruff', exit_code=1, duration_seconds=0.1588, violations_count=1, raw_output_snippet='<workspace-root>/trace/.venv-linux/bin/python: No module named ruff').exit_code
+E    +    where GateReport(gate_name='ruff', exit_code=1, duration_seconds=0.1588, violations_count=1, raw_output_snippet='<workspace-root>/trace/.venv-linux/bin/python: No module named ruff') = ExecutionReceipt(receipt_id='rcpt_aadd408f3551', task_id='TASK-CLEAN-TREE', epoch_index=1, commit_hash='edf5389873e4d4...8236887adb6d00f623713445c76c570101ebcb2fe762cbc35fb283fb03ff5e', correlation_id='corr_bf861955f77b', causation_id=None).gate_ruff
+________ test_injected_syntax_error_fails_gate_1_with_is_passing_false _________
+<workspace-root>\stc\tests\unit\test_substrate.py:542: in test_injected_syntax_error_fails_gate_1_with_is_passing_false
+    ???
+E   AssertionError: assert ('unexpected eof' in '<workspace-root>/trace/.venv-linux/bin/python: no module named ruff' or 'syntax' in '<workspace-root>/trace/.venv-linux/bin/python: no module named ruff')
+________________ test_clean_tree_emits_verifiable_receipt_json _________________
+<workspace-root>\stc\tests\unit\test_substrate.py:561: in test_clean_tree_emits_verifiable_receipt_json
+    ???
+E   AssertionError: assert False is True
+E    +  where False = ExecutionReceipt(receipt_id='rcpt_11fee8203506', task_id='STAGE-1', epoch_index=1, commit_hash='edf5389873e4d4a2a4752e...42a35c114873230af69a5a3121ede8ce416b6aee179fcbfc823a0b338aa0ab', correlation_id='corr_e44b154fc332', causation_id=None).is_passing
+___________________ test_full_dag_pipeline_sovereign_accept ____________________
+tests/integration/test_dag_pipeline.py:80: in test_full_dag_pipeline_sovereign_accept
+    assert res.exit_code == 0, f"Command failed: {res.output}"
+E   AssertionError: Command failed: ╭──────────────────────────────────────────────────────────────────────────────╮
+E     │ Starting Autonomous STC Pipeline for                                         │
+E     │ <workspace-root>/stc/specs/sample_spec.m │
+E     │ d                                                                            │
+E     ╰──────────────────────────────────────────────────────────────────────────────╯
+E     1. N01-N02: Ingest & Validate Spec Atom ... DONE (Spec ID: sample_spec)
+E     2. N03: Tree of Concerns (TOC) Decomposition ... DONE (Ambiguity Score: 0.30)
+E        [!] High ambiguity (0.30 >= 0.30). Resolving structured dilemma...
+E        [+] Invariants locked to specs/invariants/SAMPLE_SPEC_INVARIANTS.md
+E     3. N07-N08: Query Hippocampal Trace Memory ... DONE (0 inhibitors active)
+E     
+E     ─── Epoch 1/3 Execution ───
+E     4. N09: Context Compilation (Bundle <= 25KB) ... DONE (1105 bytes)
+E     5. N10: Allocate Leased Git Worktree ... DONE (feature/stc-task-sample_spec-e1 at stc-task-sample_spec)
+E     6. N11: Verify Typing Membranes ... PASS (PEP 544 Protocols & Pydantic V2 verified)
+E     7. N12: Dispatch Executive Worker (Chaperone) ... DONE (Notary custody attested)
+E     8. N13-N16: Mechanical Substrate Gates ... FAIL (ruff, mypy)
+E     
+E     ─── Epoch 2/3 Execution ───
+E     4. N09: Context Compilation (Bundle <= 25KB) ... DONE (1054 bytes)
+E     5. N10: Allocate Leased Git Worktree ... DONE (feature/stc-task-sample_spec-e2 at stc-task-sample_spec)
+E     6. N11: Verify Typing Membranes ... PASS (PEP 544 Protocols & Pydantic V2 verified)
+E     7. N12: Dispatch Executive Worker (Chaperone) ... DONE (Notary custody attested)
+E     8. N13-N16: Mechanical Substrate Gates ... FAIL (ruff, mypy)
+E     
+E     ─── Epoch 3/3 Execution ───
+E     4. N09: Context Compilation (Bundle <= 25KB) ... DONE (1104 bytes)
+E     5. N10: Allocate Leased Git Worktree ... DONE (feature/stc-task-sample_spec-e3 at stc-task-sample_spec)
+E     6. N11: Verify Typing Membranes ... PASS (PEP 544 Protocols & Pydantic V2 verified)
+E     7. N12: Dispatch Executive Worker (Chaperone) ... DONE (Notary custody attested)
+E     8. N13-N16: Mechanical Substrate Gates ... FAIL (ruff, mypy)
+E     Error: Pipeline halted: Substrate gates failed across 3 epochs.
+E     
+E   assert 1 == 0
+E    +  where 1 = <Result SystemExit(1)>.exit_code
+___________________ test_full_dag_pipeline_sovereign_decline ___________________
+tests/integration/test_dag_pipeline.py:133: in test_full_dag_pipeline_sovereign_decline
+    assert res.exit_code == 0, f"Command failed: {res.output}"
+E   AssertionError: Command failed: ╭──────────────────────────────────────────────────────────────────────────────╮
+E     │ Starting Autonomous STC Pipeline for                                         │
+E     │ /tmp/pytest-of-<user>/pytest-271/test_full_dag_pipeline_soverei1/decline_spe │
+E     │ c.md                                                                         │
+E     ╰──────────────────────────────────────────────────────────────────────────────╯
+E     1. N01-N02: Ingest & Validate Spec Atom ... DONE (Spec ID: decline_spec)
+E     2. N03: Tree of Concerns (TOC) Decomposition ... DONE (Ambiguity Score: 0.00)
+E     3. N07-N08: Query Hippocampal Trace Memory ... DONE (0 inhibitors active)
+E     
+E     ─── Epoch 1/3 Execution ───
+E     4. N09: Context Compilation (Bundle <= 25KB) ... DONE (1090 bytes)
+E     5. N10: Allocate Leased Git Worktree ... DONE (feature/stc-task-decline-test-e1 at stc-task-decline-test)
+E     6. N11: Verify Typing Membranes ... PASS (PEP 544 Protocols & Pydantic V2 verified)
+E     7. N12: Dispatch Executive Worker (Chaperone) ... DONE (Notary custody attested)
+E     8. N13-N16: Mechanical Substrate Gates ... FAIL (ruff, mypy)
+E     
+E     ─── Epoch 2/3 Execution ───
+E     4. N09: Context Compilation (Bundle <= 25KB) ... DONE (1039 bytes)
+E     5. N10: Allocate Leased Git Worktree ... DONE (feature/stc-task-decline-test-e2 at stc-task-decline-test)
+E     6. N11: Verify Typing Membranes ... PASS (PEP 544 Protocols & Pydantic V2 verified)
+E     7. N12: Dispatch Executive Worker (Chaperone) ... DONE (Notary custody attested)
+E     8. N13-N16: Mechanical Substrate Gates ... FAIL (ruff, mypy)
+E     
+E     ─── Epoch 3/3 Execution ───
+E     4. N09: Context Compilation (Bundle <= 25KB) ... DONE (1089 bytes)
+E     5. N10: Allocate Leased Git Worktree ... DONE (feature/stc-task-decline-test-e3 at stc-task-decline-test)
+E     6. N11: Verify Typing Membranes ... PASS (PEP 544 Protocols & Pydantic V2 verified)
+E     7. N12: Dispatch Executive Worker (Chaperone) ... DONE (Notary custody attested)
+E     8. N13-N16: Mechanical Substrate Gates ... FAIL (ruff, mypy)
+E     Error: Pipeline halted: Substrate gates failed across 3 epochs.
+E     
+E   assert 1 == 0
+E    +  where 1 = <Result SystemExit(1)>.exit_code
+___________________ test_circuit_breaker_bounded_epoch_retry ___________________
+tests/integration/test_dag_pipeline.py:184: in test_circuit_breaker_bounded_epoch_retry
+    assert "FAIL (pytest)" in output
+E   AssertionError: assert 'FAIL (pytest)' in '╭──────────────────────────────────────────────────────────────────────────────╮\n│ Starting Autonomous STC Pipeline ...nical Substrate Gates ... FAIL (ruff, mypy, pytest)\nError: Pipeline halted: Substrate gates failed across 2 epochs.\n'
+_____________________ test_dag_pipeline_json_mode_contract _____________________
+tests/integration/test_dag_pipeline.py:217: in test_dag_pipeline_json_mode_contract
+    assert res.exit_code == 0, f"Command failed: {res.output}"
+E   AssertionError: Command failed: Error: Pipeline halted: Substrate gates failed across 3 epochs.
+E     
+E   assert 1 == 0
+E    +  where 1 = <Result SystemExit(1)>.exit_code
+=========================== short test summary info ============================
+FAILED tests/unit/test_cli.py::test_cli_run_json_mode - assert 1 == 0
+FAILED tests/unit/test_substrate.py::test_substrate_runner_real_clean_execution_and_save
+FAILED tests/unit/test_substrate.py::test_injected_syntax_error_fails_gate_1_with_is_passing_false
+FAILED tests/unit/test_substrate.py::test_clean_tree_emits_verifiable_receipt_json
+FAILED tests/integration/test_dag_pipeline.py::test_full_dag_pipeline_sovereign_accept
+FAILED tests/integration/test_dag_pipeline.py::test_full_dag_pipeline_sovereign_decline
+FAILED tests/integration/test_dag_pipeline.py::test_circuit_breaker_bounded_epoch_retry
+FAILED tests/integration/test_dag_pipeline.py::test_dag_pipeline_json_mode_contract
+8 failed, 516 passed, 3 skipped, 6 deselected in 1890.10s (0:31:30)

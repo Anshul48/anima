@@ -1,0 +1,7 @@
+name: "reciprocal-rank-fusion"
+action: "compute"
+priority: "high"
+timeout_seconds: 30
+payload:
+  op: "sum"
+  values: [10, 20, 30, 40]

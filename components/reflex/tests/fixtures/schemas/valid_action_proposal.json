@@ -1,0 +1,43 @@
+{
+  "identity": {
+    "action_id": "act_8f7b2c9d1e3a4567",
+    "session_id": "sess_20260817_test",
+    "step_index": 1,
+    "idempotency_key": "8f7b2c9d1e3a456789abcdef0123456789abcdef0123456789abcdef01234567",
+    "created_at_ms": 1755430000000.0,
+    "nonce": "a1b2c3d4e5f6"
+  },
+  "action": {
+    "action_type": "click",
+    "target_node_id": "btn_submit_order",
+    "target_label": "Submit Order",
+    "coords": {
+      "x": 0.52,
+      "y": 0.68
+    },
+    "text_payload": null,
+    "key_code": null,
+    "scroll_delta": null,
+    "safety_class": "reversible",
+    "metadata": {
+      "domain": "shop.example.com",
+      "attempt": 1
+    }
+  },
+  "expected_delta": {
+    "added_nodes": ["div_confirmation_banner"],
+    "removed_nodes": [],
+    "modified_nodes": ["btn_submit_order"],
+    "pixel_change_ratio": 0.05,
+    "changed_bounding_boxes": [[200, 300, 600, 450]],
+    "outcome_class": "success"
+  },
+  "required_scopes": [
+    "browser:interact"
+  ],
+  "reasoning_summary": "Click the submit order button to finalize checkout",
+  "metadata": {
+    "planner_version": "v1.2",
+    "confidence": 0.95
+  }
+}

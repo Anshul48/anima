@@ -1,0 +1,23 @@
+{
+  "snapshot_id": "ctx_snap_20260817_001",
+  "timestamp_ms": 1755430000000.0,
+  "claims": [
+    {
+      "subject": "active_project",
+      "value": "CheckoutFlow",
+      "confidence": 0.99
+    },
+    {
+      "subject": "user_intent",
+      "value": "Buy items in shopping cart",
+      "confidence": 0.92
+    }
+  ],
+  "confidence": 0.95,
+  "source": "entorhinal",
+  "is_advisory": true,
+  "ttl_ms": 60000.0,
+  "metadata": {
+    "device": "desktop_primary"
+  }
+}

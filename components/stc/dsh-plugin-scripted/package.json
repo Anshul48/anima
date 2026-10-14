@@ -1,0 +1,8 @@
+{
+  "name": "@stc/dsh-plugin-scripted",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "TEST FIXTURE ONLY — scripted LLM provider for quota-free product-journey demos. NOT part of the STC release bundle; never install into a production home.",
+  "keywords": ["dsh-plugin", "test-fixture"]
+}

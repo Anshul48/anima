@@ -1,0 +1,11 @@
+services:
+  sst-visualizer:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - sst-data:/app/.sst
+    command: ["visualize", "tree_default", "--port", "8501", "--host", "0.0.0.0"]
+
+volumes:
+  sst-data:

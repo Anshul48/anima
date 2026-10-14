@@ -1,0 +1,86 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "anima-substrate"
+version = "0.1.1"
+description = "Maintained substrate package: persistent project worlds, pinned participants, crash-atomic local host (stdlib-only, offline)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Anshul48", email = "anshulraj48@gmail.com" }]
+keywords = ["substrate", "worlds", "recovery", "offline"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = []
+
+[project.optional-dependencies]
+# No optional runtime dependencies: the SST extra shells to a
+# caller-staged SST checkout + caller-provided interpreter (see
+# docs/SST-STAGING.md). Tooling (pytest/ruff/build) lives in the
+# project ./.venv, never in the installed package.
+
+[project.scripts]
+anima-substrate = "anima_substrate.cli:main"
+
+[tool.hatch.build]
+# src-layout auto-detected (src/anima_substrate); do NOT set
+# targets.*.packages (it breaks detection and ships an empty wheel).
+# JSON fixtures ship alongside .py (provcheck + accept pack).
+artifacts = []
+
+[tool.hatch.build.targets.sdist]
+# Curated: package + tests + examples + docs + legal. prototype/
+# (frozen research trees), .venv, dist, and run state never ship.
+include = [
+  "src",
+  "tests",
+  "examples",
+  "docs",
+  "LICENSE",
+  "README.md",
+  "CHANGELOG.md",
+  "CONTRIBUTING.md",
+  "CITATION.cff",
+  "PROVENANCE.md",
+  "pyproject.toml",
+]
+exclude = [
+  "prototype/**",
+  ".venv/**",
+  "dist/**",
+  ".git/**",
+  "**/__pycache__/**",
+  "**/*.db",
+  "**/runs/**",
+  ".pytest_cache/**",
+  ".ruff_cache/**",
+  ".coverage/**",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint]
+# Deliberate minimal set: syntax errors + pyflakes + import order +
+# whitespace. Carried host code predates stricter style rules; behavior
+# stability wins over stylistic churn (see PROVENANCE.md).
+select = ["E4", "E7", "E9", "F", "I", "W"]
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+case-sensitive = true

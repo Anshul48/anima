@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
+rootdir: <workspace-root>/stc
+configfile: pyproject.toml
+plugins: anyio-4.14.2, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 81 items / 5 deselected / 76 selected
+
+tests/unit/test_integration_harness_worker.py .......................... [ 34%]
+..................................................                       [100%]
+
+====================== 76 passed, 5 deselected in 16.23s =======================

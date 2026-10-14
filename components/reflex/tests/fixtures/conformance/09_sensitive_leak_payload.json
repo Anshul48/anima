@@ -1,0 +1,57 @@
+{
+  "$schema": "https://entorhinal.local/schemas/v1/context_snapshot.schema.json",
+  "snapshot_id": "01915dfb-6981-7f89-9a67-9c60e42cb750",
+  "schema_version": "1.0.0",
+  "request_id": "REQ-REFLEX-20260820-0009",
+  "issued_at": "2026-08-20T08:00:00.000000Z",
+  "expires_at": "2026-08-20T08:05:00.000000Z",
+  "purpose_granted": "Inspect developer session credentials and environment",
+  "scope_granted": [
+    "scope:workspace.active_project",
+    "scope:terminal.env"
+  ],
+  "active_facts": [
+    {
+      "fact_id": "01915dfb-6981-7f89-9a67-9c60e42cb751",
+      "schema_version": "1.0.0",
+      "entity_uri": "terminal:env.aws",
+      "attribute": "access_key_id",
+      "value": "<REDACTED:CREDENTIAL>",
+      "confidence": 0.95,
+      "valid_from": "2026-08-20T07:55:00.000000Z",
+      "valid_to": null,
+      "supporting_evidence_ids": [
+        "01915dfb-6981-7f89-9a67-9c60e42cb752"
+      ],
+      "derived_by": "compiler.terminal_env",
+      "revision_id": 1
+    },
+    {
+      "fact_id": "01915dfb-6981-7f89-9a67-9c60e42cb753",
+      "schema_version": "1.0.0",
+      "entity_uri": "browser:session.cookie",
+      "attribute": "session_token",
+      "value": "<REDACTED:SESSION_TOKEN>",
+      "confidence": 0.92,
+      "valid_from": "2026-08-20T07:56:00.000000Z",
+      "valid_to": null,
+      "supporting_evidence_ids": [
+        "01915dfb-6981-7f89-9a67-9c60e42cb754"
+      ],
+      "derived_by": "compiler.browser_session",
+      "revision_id": 1
+    }
+  ],
+  "active_hypotheses": [],
+  "evidence_provenance_refs": [
+    "01915dfb-6981-7f89-9a67-9c60e42cb752",
+    "01915dfb-6981-7f89-9a67-9c60e42cb754"
+  ],
+  "redaction_manifest": [
+    "raw_payload.headers.Authorization",
+    "raw_payload.cookies.session_id",
+    "raw_payload.env.AWS_SECRET_ACCESS_KEY",
+    "raw_payload.env.OPENAI_API_KEY"
+  ],
+  "disclaimer": "ADVISORY ONLY. Direct user instruction and fresh observation take precedence."
+}

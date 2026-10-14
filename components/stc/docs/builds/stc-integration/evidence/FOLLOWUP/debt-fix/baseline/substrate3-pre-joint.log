@@ -1,0 +1,22 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_____________ test_substrate_runner_real_clean_execution_and_save ______________
+<workspace-root>\stc\tests\unit\test_substrate.py:473: in test_substrate_runner_real_clean_execution_and_save
+    ???
+E   AssertionError: assert 1 == 0
+E    +  where 1 = GateReport(gate_name='ruff', exit_code=1, duration_seconds=0.1543, violations_count=1, raw_output_snippet='<workspace-root>/trace/.venv-linux/bin/python: No module named ruff').exit_code
+E    +    where GateReport(gate_name='ruff', exit_code=1, duration_seconds=0.1543, violations_count=1, raw_output_snippet='<workspace-root>/trace/.venv-linux/bin/python: No module named ruff') = ExecutionReceipt(receipt_id='rcpt_3e1f573157be', task_id='TASK-CLEAN-TREE', epoch_index=1, commit_hash='edf5389873e4d4...fecc451f7eb2ab971deeb3fd046ea816bd15e38563268cbfe25775d8021c35', correlation_id='corr_9620e20f1e1b', causation_id=None).gate_ruff
+________________ test_clean_tree_emits_verifiable_receipt_json _________________
+<workspace-root>\stc\tests\unit\test_substrate.py:561: in test_clean_tree_emits_verifiable_receipt_json
+    ???
+E   AssertionError: assert False is True
+E    +  where False = ExecutionReceipt(receipt_id='rcpt_5ba7f3e48291', task_id='STAGE-1', epoch_index=1, commit_hash='edf5389873e4d4a2a4752e...dd17cbd86460694c1b275caaad404bde81ace5d7c06910514a3bfa11c44b12', correlation_id='corr_de7b8899c75b', causation_id=None).is_passing
+________ test_injected_syntax_error_fails_gate_1_with_is_passing_false _________
+<workspace-root>\stc\tests\unit\test_substrate.py:542: in test_injected_syntax_error_fails_gate_1_with_is_passing_false
+    ???
+E   AssertionError: assert ('unexpected eof' in '<workspace-root>/trace/.venv-linux/bin/python: no module named ruff' or 'syntax' in '<workspace-root>/trace/.venv-linux/bin/python: no module named ruff')
+=========================== short test summary info ============================
+FAILED tests/unit/test_substrate.py::test_substrate_runner_real_clean_execution_and_save
+FAILED tests/unit/test_substrate.py::test_clean_tree_emits_verifiable_receipt_json
+FAILED tests/unit/test_substrate.py::test_injected_syntax_error_fails_gate_1_with_is_passing_false
+3 failed in 20.89s

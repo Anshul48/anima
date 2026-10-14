@@ -1,0 +1,3090 @@
+{
+  "reviewed_at_utc": "2026-10-08T14:03:43.120423+00:00",
+  "scope": "Stage 1 documentary verification only. No Stage 2 execution, implementation inspection, tests, deployments or source edits.",
+  "capture": {
+    "physical_lines": 4296,
+    "ordinal_last": 4295,
+    "bytes": 30006999,
+    "sha256": "9b3d813b1bb852b00dd7fb4659d248766d5d344480084372a45993bb875b1f69",
+    "last_record_timestamp": "2026-10-08T13:38:21.168Z",
+    "visible_message_counts_before_filtering": {
+      "user": 85,
+      "assistant": 171
+    },
+    "live_archive_bytes_at_review": 30200924,
+    "records_beyond_frontier": "Not reviewed or integrated",
+    "matches_declared_sha256": true,
+    "matches_declared_bytes": true,
+    "declared_last_record_timestamp": "2026-10-08T13:37:08.709Z",
+    "matches_declared_last_record_timestamp": false
+  },
+  "session_identity_checks": [
+    {
+      "session_id": "01a0f85a-6e14-7e93-8bc3-83af412e7eec",
+      "physical_lines": 4296,
+      "bytes": 30006999,
+      "sha256": "9b3d813b1bb852b00dd7fb4659d248766d5d344480084372a45993bb875b1f69",
+      "matches_declared_identity": true,
+      "last_record_timestamp": "2026-10-08T13:38:21.168Z",
+      "scope": "Byte-prefix identity check only; secondary message contents not reviewed"
+    },
+    {
+      "session_id": "01a0f883-6883-7533-abe7-46a05f627c19",
+      "physical_lines": 1699,
+      "bytes": 10699465,
+      "sha256": "238ec68905cc02f78b2cebe57f5d8c8b624b488b1abb7e1c5a32f83202903003",
+      "matches_declared_identity": true,
+      "last_record_timestamp": "2026-10-05T10:17:04.969Z",
+      "scope": "Byte-prefix identity check only; secondary message contents not reviewed"
+    },
+    {
+      "session_id": "01a0c6ea-6263-7be2-a05e-2230f9e4e805",
+      "physical_lines": 632,
+      "bytes": 2505965,
+      "sha256": "765eb340d30f16197a47690eb863c638d36fdaa93d4fb0b1b240535f64e384d1",
+      "matches_declared_identity": true,
+      "last_record_timestamp": "2026-10-04T03:06:55.989Z",
+      "scope": "Byte-prefix identity check only; secondary message contents not reviewed"
+    },
+    {
+      "session_id": "01a0e3f7-6c9b-7f73-99be-3a78d601237e",
+      "physical_lines": 361,
+      "bytes": 2241263,
+      "sha256": "68a2fdbe7de489273733dc0937b3cae1c2fa26a3cc0b30db1c2d064dd40d765b",
+      "matches_declared_identity": true,
+      "last_record_timestamp": "2026-10-03T15:50:31.985Z",
+      "scope": "Byte-prefix identity check only; secondary message contents not reviewed"
+    }
+  ],
+  "user_coverage": {
+    "substantive_visible_turns": 76,
+    "distinct_texts": 67,
+    "environment_only_records_excluded": 9,
+    "substantive_turns_missing_from_user_file": [],
+    "exact_duplicate_text_groups": [
+      [
+        44,
+        1272
+      ],
+      [
+        46,
+        1274
+      ],
+      [
+        48,
+        1276
+      ],
+      [
+        50,
+        1278
+      ],
+      [
+        278,
+        2594
+      ],
+      [
+        354,
+        2802
+      ],
+      [
+        409,
+        3083
+      ],
+      [
+        471,
+        3347
+      ],
+      [
+        536,
+        3567
+      ]
+    ],
+    "note": "Both occurrences remain in the user file. Identical go-N strings refer to different vector rounds and cannot be treated as identical instructions."
+  },
+  "user_preservation": {
+    "file": "ANIMA/context/integrations/2026-10-08/preserved/USER-SUBSTANTIVE-TURNS.md",
+    "sections": 76,
+    "exact_matches": 76,
+    "trim_only_matches": 0,
+    "mismatches": [],
+    "wrong_physical_line_labels": 76,
+    "nested_fence_sections": 2,
+    "rows": [
+      {
+        "ordinal": 8,
+        "source_physical_line": 9,
+        "labelled_physical_line": 8,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1526,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 18,
+        "source_physical_line": 19,
+        "labelled_physical_line": 18,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 70,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 26,
+        "source_physical_line": 27,
+        "labelled_physical_line": 26,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 18,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 36,
+        "source_physical_line": 37,
+        "labelled_physical_line": 36,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 23964,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 44,
+        "source_physical_line": 45,
+        "labelled_physical_line": 44,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 148,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 46,
+        "source_physical_line": 47,
+        "labelled_physical_line": 46,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 148,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 48,
+        "source_physical_line": 49,
+        "labelled_physical_line": 48,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 149,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 50,
+        "source_physical_line": 51,
+        "labelled_physical_line": 50,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 198,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 62,
+        "source_physical_line": 63,
+        "labelled_physical_line": 62,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 53918,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 74,
+        "source_physical_line": 75,
+        "labelled_physical_line": 74,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 64989,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 86,
+        "source_physical_line": 87,
+        "labelled_physical_line": 86,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 2,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 198,
+        "source_physical_line": 199,
+        "labelled_physical_line": 198,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 424,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 216,
+        "source_physical_line": 217,
+        "labelled_physical_line": 216,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 329,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 252,
+        "source_physical_line": 253,
+        "labelled_physical_line": 252,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 135,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 278,
+        "source_physical_line": 279,
+        "labelled_physical_line": 278,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 354,
+        "source_physical_line": 355,
+        "labelled_physical_line": 354,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 409,
+        "source_physical_line": 410,
+        "labelled_physical_line": 409,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 471,
+        "source_physical_line": 472,
+        "labelled_physical_line": 471,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 536,
+        "source_physical_line": 537,
+        "labelled_physical_line": 536,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 599,
+        "source_physical_line": 600,
+        "labelled_physical_line": 599,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 659,
+        "source_physical_line": 660,
+        "labelled_physical_line": 659,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 2,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 704,
+        "source_physical_line": 705,
+        "labelled_physical_line": 704,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 5,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 747,
+        "source_physical_line": 748,
+        "labelled_physical_line": 747,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 5,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 791,
+        "source_physical_line": 792,
+        "labelled_physical_line": 791,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 5,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 830,
+        "source_physical_line": 831,
+        "labelled_physical_line": 830,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 5,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 864,
+        "source_physical_line": 865,
+        "labelled_physical_line": 864,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 5,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 913,
+        "source_physical_line": 914,
+        "labelled_physical_line": 913,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 5,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 965,
+        "source_physical_line": 966,
+        "labelled_physical_line": 965,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 5,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1026,
+        "source_physical_line": 1027,
+        "labelled_physical_line": 1026,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 5,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1084,
+        "source_physical_line": 1085,
+        "labelled_physical_line": 1084,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 7,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1176,
+        "source_physical_line": 1177,
+        "labelled_physical_line": 1176,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 853,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1260,
+        "source_physical_line": 1261,
+        "labelled_physical_line": 1260,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 6974,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1270,
+        "source_physical_line": 1271,
+        "labelled_physical_line": 1270,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 148,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1272,
+        "source_physical_line": 1273,
+        "labelled_physical_line": 1272,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 148,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1274,
+        "source_physical_line": 1275,
+        "labelled_physical_line": 1274,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 148,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1276,
+        "source_physical_line": 1277,
+        "labelled_physical_line": 1276,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 149,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1278,
+        "source_physical_line": 1279,
+        "labelled_physical_line": 1278,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 198,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1285,
+        "source_physical_line": 1286,
+        "labelled_physical_line": 1285,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 13999,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1324,
+        "source_physical_line": 1325,
+        "labelled_physical_line": 1324,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 666,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1371,
+        "source_physical_line": 1372,
+        "labelled_physical_line": 1371,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 17,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1387,
+        "source_physical_line": 1388,
+        "labelled_physical_line": 1387,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1005,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1423,
+        "source_physical_line": 1424,
+        "labelled_physical_line": 1423,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 794,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1492,
+        "source_physical_line": 1493,
+        "labelled_physical_line": 1492,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 54142,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1567,
+        "source_physical_line": 1568,
+        "labelled_physical_line": 1567,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 11602,
+        "contains_bare_triple_backtick_line": true
+      },
+      {
+        "ordinal": 1628,
+        "source_physical_line": 1629,
+        "labelled_physical_line": 1628,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1857,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1707,
+        "source_physical_line": 1708,
+        "labelled_physical_line": 1707,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 354,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1715,
+        "source_physical_line": 1716,
+        "labelled_physical_line": 1715,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 21,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1717,
+        "source_physical_line": 1718,
+        "labelled_physical_line": 1717,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 249,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1719,
+        "source_physical_line": 1720,
+        "labelled_physical_line": 1719,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 42,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1721,
+        "source_physical_line": 1722,
+        "labelled_physical_line": 1721,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 77,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1776,
+        "source_physical_line": 1777,
+        "labelled_physical_line": 1776,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 481,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1841,
+        "source_physical_line": 1842,
+        "labelled_physical_line": 1841,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 26933,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1849,
+        "source_physical_line": 1850,
+        "labelled_physical_line": 1849,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 13424,
+        "contains_bare_triple_backtick_line": true
+      },
+      {
+        "ordinal": 1915,
+        "source_physical_line": 1916,
+        "labelled_physical_line": 1915,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1652,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1917,
+        "source_physical_line": 1918,
+        "labelled_physical_line": 1917,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 581,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1919,
+        "source_physical_line": 1920,
+        "labelled_physical_line": 1919,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 221,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1921,
+        "source_physical_line": 1922,
+        "labelled_physical_line": 1921,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 317,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2142,
+        "source_physical_line": 2143,
+        "labelled_physical_line": 2142,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 67,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2249,
+        "source_physical_line": 2250,
+        "labelled_physical_line": 2249,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2388,
+        "source_physical_line": 2389,
+        "labelled_physical_line": 2388,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2594,
+        "source_physical_line": 2595,
+        "labelled_physical_line": 2594,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2802,
+        "source_physical_line": 2803,
+        "labelled_physical_line": 2802,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3083,
+        "source_physical_line": 3084,
+        "labelled_physical_line": 3083,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3347,
+        "source_physical_line": 3348,
+        "labelled_physical_line": 3347,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3567,
+        "source_physical_line": 3568,
+        "labelled_physical_line": 3567,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3801,
+        "source_physical_line": 3802,
+        "labelled_physical_line": 3801,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 6,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3887,
+        "source_physical_line": 3888,
+        "labelled_physical_line": 3887,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1025,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3894,
+        "source_physical_line": 3895,
+        "labelled_physical_line": 3894,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 311,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4009,
+        "source_physical_line": 4010,
+        "labelled_physical_line": 4009,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 184,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4019,
+        "source_physical_line": 4020,
+        "labelled_physical_line": 4019,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 36,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4027,
+        "source_physical_line": 4028,
+        "labelled_physical_line": 4027,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4035,
+        "source_physical_line": 4036,
+        "labelled_physical_line": 4035,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 10,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4051,
+        "source_physical_line": 4052,
+        "labelled_physical_line": 4051,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 20,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4107,
+        "source_physical_line": 4108,
+        "labelled_physical_line": 4107,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 734,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4242,
+        "source_physical_line": 4243,
+        "labelled_physical_line": 4242,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 654,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4273,
+        "source_physical_line": 4274,
+        "labelled_physical_line": 4273,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 874,
+        "contains_bare_triple_backtick_line": false
+      }
+    ]
+  },
+  "assistant_preservation": {
+    "file": "ANIMA/context/integrations/2026-10-08/preserved/ASSISTANT-SUBSTANTIVE-PROPOSALS.md",
+    "sections": 122,
+    "exact_matches": 89,
+    "trim_only_matches": 33,
+    "mismatches": [],
+    "wrong_physical_line_labels": 122,
+    "nested_fence_sections": 2,
+    "rows": [
+      {
+        "ordinal": 123,
+        "source_physical_line": 124,
+        "labelled_physical_line": 123,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 332,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 159,
+        "source_physical_line": 160,
+        "labelled_physical_line": 159,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 427,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 183,
+        "source_physical_line": 184,
+        "labelled_physical_line": 183,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 400,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 191,
+        "source_physical_line": 192,
+        "labelled_physical_line": 191,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 9637,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 209,
+        "source_physical_line": 210,
+        "labelled_physical_line": 209,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 3620,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 223,
+        "source_physical_line": 224,
+        "labelled_physical_line": 223,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 375,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 245,
+        "source_physical_line": 246,
+        "labelled_physical_line": 245,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 2869,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 271,
+        "source_physical_line": 272,
+        "labelled_physical_line": 271,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 5541,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 309,
+        "source_physical_line": 310,
+        "labelled_physical_line": 309,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 400,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 347,
+        "source_physical_line": 348,
+        "labelled_physical_line": 347,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 8836,
+        "contains_bare_triple_backtick_line": true
+      },
+      {
+        "ordinal": 389,
+        "source_physical_line": 390,
+        "labelled_physical_line": 389,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 328,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 402,
+        "source_physical_line": 403,
+        "labelled_physical_line": 402,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 7966,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 434,
+        "source_physical_line": 435,
+        "labelled_physical_line": 434,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 339,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 458,
+        "source_physical_line": 459,
+        "labelled_physical_line": 458,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 326,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 462,
+        "source_physical_line": 463,
+        "labelled_physical_line": 462,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 8201,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 507,
+        "source_physical_line": 508,
+        "labelled_physical_line": 507,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 345,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 529,
+        "source_physical_line": 530,
+        "labelled_physical_line": 529,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 8063,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 574,
+        "source_physical_line": 575,
+        "labelled_physical_line": 574,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 350,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 592,
+        "source_physical_line": 593,
+        "labelled_physical_line": 592,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 7641,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 630,
+        "source_physical_line": 631,
+        "labelled_physical_line": 630,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 352,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 642,
+        "source_physical_line": 643,
+        "labelled_physical_line": 642,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 8027,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 686,
+        "source_physical_line": 687,
+        "labelled_physical_line": 686,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 323,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 697,
+        "source_physical_line": 698,
+        "labelled_physical_line": 697,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 9264,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 734,
+        "source_physical_line": 735,
+        "labelled_physical_line": 734,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 340,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 740,
+        "source_physical_line": 741,
+        "labelled_physical_line": 740,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 9248,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 780,
+        "source_physical_line": 781,
+        "labelled_physical_line": 780,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 310,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 784,
+        "source_physical_line": 785,
+        "labelled_physical_line": 784,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 9589,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 821,
+        "source_physical_line": 822,
+        "labelled_physical_line": 821,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 357,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 827,
+        "source_physical_line": 828,
+        "labelled_physical_line": 827,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 10861,
+        "contains_bare_triple_backtick_line": true
+      },
+      {
+        "ordinal": 857,
+        "source_physical_line": 858,
+        "labelled_physical_line": 857,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 361,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 861,
+        "source_physical_line": 862,
+        "labelled_physical_line": 861,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 10215,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 906,
+        "source_physical_line": 907,
+        "labelled_physical_line": 906,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 10701,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 948,
+        "source_physical_line": 949,
+        "labelled_physical_line": 948,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 366,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 958,
+        "source_physical_line": 959,
+        "labelled_physical_line": 958,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 11281,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1000,
+        "source_physical_line": 1001,
+        "labelled_physical_line": 1000,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 316,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1019,
+        "source_physical_line": 1020,
+        "labelled_physical_line": 1019,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 10417,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1060,
+        "source_physical_line": 1061,
+        "labelled_physical_line": 1060,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 316,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1077,
+        "source_physical_line": 1078,
+        "labelled_physical_line": 1077,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 11465,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1119,
+        "source_physical_line": 1120,
+        "labelled_physical_line": 1119,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 313,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1169,
+        "source_physical_line": 1170,
+        "labelled_physical_line": 1169,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 12033,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1208,
+        "source_physical_line": 1209,
+        "labelled_physical_line": 1208,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 315,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1227,
+        "source_physical_line": 1228,
+        "labelled_physical_line": 1227,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 334,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1253,
+        "source_physical_line": 1254,
+        "labelled_physical_line": 1253,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 7837,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1263,
+        "source_physical_line": 1264,
+        "labelled_physical_line": 1263,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 301,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1290,
+        "source_physical_line": 1291,
+        "labelled_physical_line": 1290,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 309,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1317,
+        "source_physical_line": 1318,
+        "labelled_physical_line": 1317,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 6741,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1364,
+        "source_physical_line": 1365,
+        "labelled_physical_line": 1364,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 7730,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1378,
+        "source_physical_line": 1379,
+        "labelled_physical_line": 1378,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1745,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1416,
+        "source_physical_line": 1417,
+        "labelled_physical_line": 1416,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1616,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1452,
+        "source_physical_line": 1453,
+        "labelled_physical_line": 1452,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 317,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1467,
+        "source_physical_line": 1468,
+        "labelled_physical_line": 1467,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 358,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1485,
+        "source_physical_line": 1486,
+        "labelled_physical_line": 1485,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 4988,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1497,
+        "source_physical_line": 1498,
+        "labelled_physical_line": 1497,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 300,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1530,
+        "source_physical_line": 1531,
+        "labelled_physical_line": 1530,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 349,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1560,
+        "source_physical_line": 1561,
+        "labelled_physical_line": 1560,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 5005,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1590,
+        "source_physical_line": 1591,
+        "labelled_physical_line": 1590,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 501,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1618,
+        "source_physical_line": 1619,
+        "labelled_physical_line": 1618,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 6816,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1665,
+        "source_physical_line": 1666,
+        "labelled_physical_line": 1665,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 386,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1681,
+        "source_physical_line": 1682,
+        "labelled_physical_line": 1681,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 419,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1698,
+        "source_physical_line": 1699,
+        "labelled_physical_line": 1698,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 6050,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1768,
+        "source_physical_line": 1769,
+        "labelled_physical_line": 1768,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 483,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1834,
+        "source_physical_line": 1835,
+        "labelled_physical_line": 1834,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 704,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1860,
+        "source_physical_line": 1861,
+        "labelled_physical_line": 1860,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 334,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1938,
+        "source_physical_line": 1939,
+        "labelled_physical_line": 1938,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 461,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 1984,
+        "source_physical_line": 1985,
+        "labelled_physical_line": 1984,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 471,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2056,
+        "source_physical_line": 2057,
+        "labelled_physical_line": 2056,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 438,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2112,
+        "source_physical_line": 2113,
+        "labelled_physical_line": 2112,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 360,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2135,
+        "source_physical_line": 2136,
+        "labelled_physical_line": 2135,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1816,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2185,
+        "source_physical_line": 2186,
+        "labelled_physical_line": 2185,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 383,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2218,
+        "source_physical_line": 2219,
+        "labelled_physical_line": 2218,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 396,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2242,
+        "source_physical_line": 2243,
+        "labelled_physical_line": 2242,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1030,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2303,
+        "source_physical_line": 2304,
+        "labelled_physical_line": 2303,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 460,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2333,
+        "source_physical_line": 2334,
+        "labelled_physical_line": 2333,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 398,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2378,
+        "source_physical_line": 2379,
+        "labelled_physical_line": 2378,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1126,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2391,
+        "source_physical_line": 2392,
+        "labelled_physical_line": 2391,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 304,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2428,
+        "source_physical_line": 2429,
+        "labelled_physical_line": 2428,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 376,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2468,
+        "source_physical_line": 2469,
+        "labelled_physical_line": 2468,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 372,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2503,
+        "source_physical_line": 2504,
+        "labelled_physical_line": 2503,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 333,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2552,
+        "source_physical_line": 2553,
+        "labelled_physical_line": 2552,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 308,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2587,
+        "source_physical_line": 2588,
+        "labelled_physical_line": 2587,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1185,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2597,
+        "source_physical_line": 2598,
+        "labelled_physical_line": 2597,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 371,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2642,
+        "source_physical_line": 2643,
+        "labelled_physical_line": 2642,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 409,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2696,
+        "source_physical_line": 2697,
+        "labelled_physical_line": 2696,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 370,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2741,
+        "source_physical_line": 2742,
+        "labelled_physical_line": 2741,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": false,
+        "trim_only_matches": true,
+        "characters": 383,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2795,
+        "source_physical_line": 2796,
+        "labelled_physical_line": 2795,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1164,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2855,
+        "source_physical_line": 2856,
+        "labelled_physical_line": 2855,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 320,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2929,
+        "source_physical_line": 2930,
+        "labelled_physical_line": 2929,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 321,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 2961,
+        "source_physical_line": 2962,
+        "labelled_physical_line": 2961,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 369,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3001,
+        "source_physical_line": 3002,
+        "labelled_physical_line": 3001,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 359,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3061,
+        "source_physical_line": 3062,
+        "labelled_physical_line": 3061,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 338,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3076,
+        "source_physical_line": 3077,
+        "labelled_physical_line": 3076,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1161,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3086,
+        "source_physical_line": 3087,
+        "labelled_physical_line": 3086,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 319,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3148,
+        "source_physical_line": 3149,
+        "labelled_physical_line": 3148,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 337,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3180,
+        "source_physical_line": 3181,
+        "labelled_physical_line": 3180,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 356,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3205,
+        "source_physical_line": 3206,
+        "labelled_physical_line": 3205,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 323,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3260,
+        "source_physical_line": 3261,
+        "labelled_physical_line": 3260,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 349,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3315,
+        "source_physical_line": 3316,
+        "labelled_physical_line": 3315,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 345,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3340,
+        "source_physical_line": 3341,
+        "labelled_physical_line": 3340,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1037,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3405,
+        "source_physical_line": 3406,
+        "labelled_physical_line": 3405,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 366,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3454,
+        "source_physical_line": 3455,
+        "labelled_physical_line": 3454,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 348,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3468,
+        "source_physical_line": 3469,
+        "labelled_physical_line": 3468,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 335,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3537,
+        "source_physical_line": 3538,
+        "labelled_physical_line": 3537,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 300,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3558,
+        "source_physical_line": 3559,
+        "labelled_physical_line": 3558,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1206,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3622,
+        "source_physical_line": 3623,
+        "labelled_physical_line": 3622,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 332,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3664,
+        "source_physical_line": 3665,
+        "labelled_physical_line": 3664,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 370,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3675,
+        "source_physical_line": 3676,
+        "labelled_physical_line": 3675,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 344,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3700,
+        "source_physical_line": 3701,
+        "labelled_physical_line": 3700,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 352,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3764,
+        "source_physical_line": 3765,
+        "labelled_physical_line": 3764,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 367,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3835,
+        "source_physical_line": 3836,
+        "labelled_physical_line": 3835,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 308,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3878,
+        "source_physical_line": 3879,
+        "labelled_physical_line": 3878,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1176,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3910,
+        "source_physical_line": 3911,
+        "labelled_physical_line": 3910,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 505,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3936,
+        "source_physical_line": 3937,
+        "labelled_physical_line": 3936,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 348,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 3992,
+        "source_physical_line": 3993,
+        "labelled_physical_line": 3992,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 335,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4002,
+        "source_physical_line": 4003,
+        "labelled_physical_line": 4002,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1263,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4044,
+        "source_physical_line": 4045,
+        "labelled_physical_line": 4044,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 1592,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4100,
+        "source_physical_line": 4101,
+        "labelled_physical_line": 4100,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 301,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4112,
+        "source_physical_line": 4113,
+        "labelled_physical_line": 4112,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 484,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4146,
+        "source_physical_line": 4147,
+        "labelled_physical_line": 4146,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 415,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4195,
+        "source_physical_line": 4196,
+        "labelled_physical_line": 4195,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 490,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4235,
+        "source_physical_line": 4236,
+        "labelled_physical_line": 4235,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 2049,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4245,
+        "source_physical_line": 4246,
+        "labelled_physical_line": 4245,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 374,
+        "contains_bare_triple_backtick_line": false
+      },
+      {
+        "ordinal": 4267,
+        "source_physical_line": 4268,
+        "labelled_physical_line": 4267,
+        "message_id_matches": true,
+        "timestamp_matches": true,
+        "exact_text_matches": true,
+        "trim_only_matches": false,
+        "characters": 537,
+        "contains_bare_triple_backtick_line": false
+      }
+    ]
+  },
+  "omitted_visible_assistant_messages": [
+    {
+      "ordinal": 11,
+      "physical_line": 12,
+      "timestamp": "2026-10-01T16:52:44.370Z",
+      "message_id": "msg_09cc03222f164b43016abe8fd91f6487d098fe24fd62ef1a73",
+      "characters": 287,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 29,
+      "physical_line": 30,
+      "timestamp": "2026-10-01T16:53:25.158Z",
+      "message_id": "msg_09cc03222f164b43016abe9004050887d0b0f0eb776c45e93b",
+      "characters": 111,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 41,
+      "physical_line": 42,
+      "timestamp": "2026-10-01T16:54:30.939Z",
+      "message_id": "msg_09cc03222f164b43016abe90433e0087d0ba5fe0ca3bde498f",
+      "characters": 115,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 55,
+      "physical_line": 56,
+      "timestamp": "2026-10-01T16:54:37.451Z",
+      "message_id": "msg_09cc03222f164b43016abe904cf13487d0b7a106347528b5c0",
+      "characters": 52,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 67,
+      "physical_line": 68,
+      "timestamp": "2026-10-01T16:56:59.206Z",
+      "message_id": "msg_09cc03222f164b43016abe90da0b1c87d0ac637e27f8dab742",
+      "characters": 91,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 79,
+      "physical_line": 80,
+      "timestamp": "2026-10-01T16:59:42.673Z",
+      "message_id": "msg_09cc03222f164b43016abe917dba0087d08de8fc37108226ae",
+      "characters": 169,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 89,
+      "physical_line": 90,
+      "timestamp": "2026-10-01T16:59:52.429Z",
+      "message_id": "msg_09cc03222f164b43016abe9185e24887d0997f450ee1d33952",
+      "characters": 270,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 255,
+      "physical_line": 256,
+      "timestamp": "2026-10-01T17:29:05.992Z",
+      "message_id": "msg_09cc03222f164b43016abe985e8e1487d087d5977faeda1119",
+      "characters": 264,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 281,
+      "physical_line": 282,
+      "timestamp": "2026-10-01T17:32:47.709Z",
+      "message_id": "msg_09cc03222f164b43016abe993d2b6887d0b2fd2cac07f98e63",
+      "characters": 277,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 357,
+      "physical_line": 358,
+      "timestamp": "2026-10-01T17:45:01.649Z",
+      "message_id": "msg_09cc03222f164b43016abe9c1b139887d09d40a083d7198ea5",
+      "characters": 276,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 412,
+      "physical_line": 413,
+      "timestamp": "2026-10-01T17:55:16.809Z",
+      "message_id": "msg_09cc03222f164b43016abe9e82bda887d0b3912916c273e13f",
+      "characters": 266,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 474,
+      "physical_line": 475,
+      "timestamp": "2026-10-02T02:30:56.789Z",
+      "message_id": "msg_09cc03222f164b43016abf175d3fd087d097cbc3c5dcf5e3ed",
+      "characters": 226,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 539,
+      "physical_line": 540,
+      "timestamp": "2026-10-02T02:40:02.405Z",
+      "message_id": "msg_09cc03222f164b43016abf1980362487d0ae40f8877af6892d",
+      "characters": 271,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 602,
+      "physical_line": 603,
+      "timestamp": "2026-10-02T02:46:39.229Z",
+      "message_id": "msg_09cc03222f164b43016abf1b0d759487d08eeeaf11a4243003",
+      "characters": 252,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 662,
+      "physical_line": 663,
+      "timestamp": "2026-10-02T02:58:08.923Z",
+      "message_id": "msg_09cc03222f164b43016abf1dbf81f087d0b63c2afbad089761",
+      "characters": 162,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 707,
+      "physical_line": 708,
+      "timestamp": "2026-10-02T03:02:26.716Z",
+      "message_id": "msg_09cc03222f164b43016abf1ec037e887d0a70077107c294edf",
+      "characters": 221,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 750,
+      "physical_line": 751,
+      "timestamp": "2026-10-02T03:10:08.555Z",
+      "message_id": "msg_09cc03222f164b43016abf208f25d887d0a8499872781dc415",
+      "characters": 194,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 794,
+      "physical_line": 795,
+      "timestamp": "2026-10-02T03:42:40.651Z",
+      "message_id": "msg_09cc03222f164b43016abf282f7c9087d0b12b0a3d678a0852",
+      "characters": 145,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 833,
+      "physical_line": 834,
+      "timestamp": "2026-10-02T03:47:54.266Z",
+      "message_id": "msg_09cc03222f164b43016abf2968f53087d0981ef506bd0f51b1",
+      "characters": 210,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 867,
+      "physical_line": 868,
+      "timestamp": "2026-10-02T03:52:39.293Z",
+      "message_id": "msg_09cc03222f164b43016abf2a856a8887d0989c80df83aa9c8b",
+      "characters": 251,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 892,
+      "physical_line": 893,
+      "timestamp": "2026-10-02T04:00:21.836Z",
+      "message_id": "msg_09cc03222f164b43016abf2c54169c87d0a38873dfbbb77a91",
+      "characters": 275,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 916,
+      "physical_line": 917,
+      "timestamp": "2026-10-02T04:04:38.453Z",
+      "message_id": "msg_09cc03222f164b43016abf2d548cd887d08452450dd6db6990",
+      "characters": 188,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 968,
+      "physical_line": 969,
+      "timestamp": "2026-10-02T04:13:43.542Z",
+      "message_id": "msg_09cc03222f164b43016abf2f756b1887d0a09449fa9c68e9ed",
+      "characters": 186,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1017,
+      "physical_line": 1018,
+      "timestamp": "2026-10-02T04:19:45.862Z",
+      "message_id": "msg_09cc03222f164b43016abf30df9bfc87d0a1a6c2a1ce16e7f9",
+      "characters": 262,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1029,
+      "physical_line": 1030,
+      "timestamp": "2026-10-02T04:21:16.991Z",
+      "message_id": "msg_09cc03222f164b43016abf313bdba487d0803aef9ded1e4c32",
+      "characters": 183,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1087,
+      "physical_line": 1088,
+      "timestamp": "2026-10-02T04:39:41.194Z",
+      "message_id": "msg_09cc03222f164b43016abf358b9fa487d0aeafc06b7e5f2ab6",
+      "characters": 213,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1179,
+      "physical_line": 1180,
+      "timestamp": "2026-10-02T05:33:43.466Z",
+      "message_id": "msg_09cc03222f164b43016abf4235a52087d0a9376528bcba7c37",
+      "characters": 173,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1327,
+      "physical_line": 1328,
+      "timestamp": "2026-10-02T09:26:10.019Z",
+      "message_id": "msg_09cc03222f164b43016abf78b00fd087d087a68901bf92a0a4",
+      "characters": 220,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1345,
+      "physical_line": 1346,
+      "timestamp": "2026-10-02T09:28:30.771Z",
+      "message_id": "msg_09cc03222f164b43016abf793dacd887d096c4a30e93290457",
+      "characters": 279,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1392,
+      "physical_line": 1393,
+      "timestamp": "2026-10-03T04:01:15.764Z",
+      "message_id": "msg_09cc03222f164b43016ac07e0a6c7887d086bf6ce7d4389f08",
+      "characters": 263,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1428,
+      "physical_line": 1429,
+      "timestamp": "2026-10-03T08:34:30.739Z",
+      "message_id": "msg_09cc03222f164b43016ac0be14456087d0a0c755cbb983510c",
+      "characters": 268,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1570,
+      "physical_line": 1571,
+      "timestamp": "2026-10-03T14:23:30.979Z",
+      "message_id": "msg_09cc03222f164b43016ac10fe0aa0887d0b6e47177512931ce",
+      "characters": 246,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1631,
+      "physical_line": 1632,
+      "timestamp": "2026-10-04T15:49:34.703Z",
+      "message_id": "msg_09cc03222f164b43016ac2758e2ec487d08e7656f8edf1bb2b",
+      "characters": 188,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1710,
+      "physical_line": 1711,
+      "timestamp": "2026-10-05T16:35:36.270Z",
+      "message_id": "msg_09cc03222f164b43016ac3d1d7784c87d09028766bf63420bf",
+      "characters": 218,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1728,
+      "physical_line": 1729,
+      "timestamp": "2026-10-05T16:40:27.345Z",
+      "message_id": "msg_09cc03222f164b43016ac3d2fb0a2487d0bc054c80c3373bb1",
+      "characters": 199,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1754,
+      "physical_line": 1755,
+      "timestamp": "2026-10-05T16:42:22.365Z",
+      "message_id": "msg_09cc03222f164b43016ac3d36e1bfc87d08f2a5e23ab96982e",
+      "characters": 122,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1787,
+      "physical_line": 1788,
+      "timestamp": "2026-10-05T16:47:58.346Z",
+      "message_id": "msg_09cc03222f164b43016ac3d4bd9ba087d09db82fa6b1642b9b",
+      "characters": 263,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 1810,
+      "physical_line": 1811,
+      "timestamp": "2026-10-05T16:49:13.005Z",
+      "message_id": "msg_09cc03222f164b43016ac3d5081a4487d0866c62ab702c453b",
+      "characters": 241,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 2145,
+      "physical_line": 2146,
+      "timestamp": "2026-10-05T17:42:55.180Z",
+      "message_id": "msg_09cc03222f164b43016ac3e19deaa087d0843a066d2225bf00",
+      "characters": 218,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 2252,
+      "physical_line": 2253,
+      "timestamp": "2026-10-05T17:54:34.275Z",
+      "message_id": "msg_09cc03222f164b43016ac3e459a47887d0a1d3917425368770",
+      "characters": 252,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 2724,
+      "physical_line": 2725,
+      "timestamp": "2026-10-06T11:59:20.448Z",
+      "message_id": "msg_09cc03222f164b43016ac4e29854e887d0bdf0124f28ca90d8",
+      "characters": 299,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 2805,
+      "physical_line": 2806,
+      "timestamp": "2026-10-06T12:12:17.251Z",
+      "message_id": "msg_09cc03222f164b43016ac4e5a09afc87d09e1bc3ccc2173ee6",
+      "characters": 257,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 3350,
+      "physical_line": 3351,
+      "timestamp": "2026-10-06T17:56:22.065Z",
+      "message_id": "msg_09cc03222f164b43016ac5364023e487d09714f74ae033e9bd",
+      "characters": 225,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 3570,
+      "physical_line": 3571,
+      "timestamp": "2026-10-06T18:32:41.340Z",
+      "message_id": "msg_09cc03222f164b43016ac53ec91d9c87d0949c1c50e4a57860",
+      "characters": 256,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 3806,
+      "physical_line": 3807,
+      "timestamp": "2026-10-07T02:56:03.096Z",
+      "message_id": "msg_09cc03222f164b43016ac5b4c3fa3887d0abca8f22d472ae32",
+      "characters": 262,
+      "disposition": "No full exact-text route found; needs substantive/duplicate/omission disposition",
+      "exact_full_text_present_elsewhere": []
+    },
+    {
+      "ordinal": 3897,
+      "physical_line": 3898,
+      "timestamp": "2026-10-08T11:31:43.338Z",
+      "message_id": "msg_09cc03222f164b43016ac77f1db2a887d0bca05b620da30748",
+      "characters": 186,
+      "disposition": "Exact text retained elsewhere, but individual coverage mapping is absent",
+      "exact_full_text_present_elsewhere": [
+        "ANIMA/context/integrations/2026-10-08/preserved/INDEPENDENT-MODULES-AND-DIRECTIVES.md"
+      ]
+    },
+    {
+      "ordinal": 4012,
+      "physical_line": 4013,
+      "timestamp": "2026-10-08T12:38:04.540Z",
+      "message_id": "msg_09cc03222f164b43016ac78eab2ca887d0909d7275b4fdca6f",
+      "characters": 147,
+      "disposition": "Exact text retained elsewhere, but individual coverage mapping is absent",
+      "exact_full_text_present_elsewhere": [
+        "ANIMA/context/integrations/2026-10-08/preserved/INDEPENDENT-MODULES-AND-DIRECTIVES.md"
+      ]
+    },
+    {
+      "ordinal": 4054,
+      "physical_line": 4055,
+      "timestamp": "2026-10-08T12:44:41.785Z",
+      "message_id": "msg_09cc03222f164b43016ac79038000487d0a8fc903230cdfb67",
+      "characters": 196,
+      "disposition": "Exact text retained elsewhere, but individual coverage mapping is absent",
+      "exact_full_text_present_elsewhere": [
+        "ANIMA/context/integrations/2026-10-08/preserved/INDEPENDENT-MODULES-AND-DIRECTIVES.md"
+      ]
+    },
+    {
+      "ordinal": 4278,
+      "physical_line": 4279,
+      "timestamp": "2026-10-08T13:35:54.163Z",
+      "message_id": "msg_09cc03222f164b43016ac79c39047887d0900e6fcf18ba6249",
+      "characters": 207,
+      "disposition": "Exact text retained elsewhere, but individual coverage mapping is absent",
+      "exact_full_text_present_elsewhere": [
+        "ANIMA/context/integrations/2026-10-08/preserved/INDEPENDENT-MODULES-AND-DIRECTIVES.md"
+      ]
+    }
+  ],
+  "assistant_messages_absent_from_main_file_summary": {
+    "absent_from_main_file": 49,
+    "exact_text_present_elsewhere": 4,
+    "no_full_exact_text_route_found": 45,
+    "note": "Semantic duplicates and routine acknowledgements may be legitimately omitted after explicit individual disposition; exact-string absence alone is not proof of lost meaning."
+  },
+  "omitted_assistant_examples": [
+    {
+      "ordinal": 1017,
+      "physical_line": 1018,
+      "visible_assistant_text": "One relevant finding: a test-time-compute study excluded the substantial cost of estimating question difficulty from its allocation-efficiency analysis. That reinforces a concrete requirement here: measure the chooser’s cost alongside the benefit of its choices.",
+      "exact_full_text_present_in_existing_anima_markdown": [],
+      "limitation": "Exact-text absence does not establish semantic absence; curator must supply an explicit disposition or exact-source route."
+    },
+    {
+      "ordinal": 1345,
+      "physical_line": 1346,
+      "visible_assistant_text": "Containment, ownership, access, and function should be separate. That gives worlds room to share capabilities and form composites, while allowing state and responsibility to move through explicit integration. A relationship can then reshape organization as well as communication.",
+      "exact_full_text_present_in_existing_anima_markdown": [],
+      "limitation": "Exact-text absence does not establish semantic absence; curator must supply an explicit disposition or exact-source route."
+    },
+    {
+      "ordinal": 4278,
+      "physical_line": 4279,
+      "visible_assistant_text": "Understood. I’ll give you only the prompts and which sessions to paste them into. The macro architect will prepare the project-specific SOPs and handoffs; you won’t need to adapt a template for each project.",
+      "exact_full_text_present_in_existing_anima_markdown": [
+        "ANIMA/context/integrations/2026-10-08/preserved/INDEPENDENT-MODULES-AND-DIRECTIVES.md"
+      ],
+      "limitation": "Exact-text absence does not establish semantic absence; curator must supply an explicit disposition or exact-source route."
+    }
+  ],
+  "sources_register": {
+    "integration_rows": 4,
+    "integration_document_source_rows": 0
+  },
+  "structured_files": [
+    {
+      "path": "ANIMA/context/integrations/2026-10-08/SOURCES.jsonl",
+      "parseable_rows": 4
+    },
+    {
+      "path": "ANIMA/context/integrations/2026-10-08/DECISIONS.jsonl",
+      "parseable_rows": 5
+    },
+    {
+      "path": "ANIMA/context/SOURCES.jsonl",
+      "parseable_rows": 28
+    },
+    {
+      "path": "ANIMA/context/DECISIONS-AND-CORRECTIONS.jsonl",
+      "parseable_rows": 21
+    }
+  ],
+  "control_document_identity": [
+    {
+      "path": "ANIMA/START-HERE.md",
+      "bytes": 4754,
+      "sha256": "aea24181fee5ce8c919aa75db2d8a2d427bf410fc018da9db6ee95a6fbdc429b"
+    },
+    {
+      "path": "ANIMA/README.md",
+      "bytes": 3457,
+      "sha256": "a453f868a0bd8ff260e86ae8b6ee7f5049be544f6abfdffd46a0c6d019ff106c"
+    },
+    {
+      "path": "ANIMA/context/README.md",
+      "bytes": 3198,
+      "sha256": "25b295cc1aa9be3d1999d4966da7c5da2ea095d4832e5e2b5767391bfdfb5ba8"
+    },
+    {
+      "path": "ANIMA/context/OPERATIVE-BRIEF.md",
+      "bytes": 9393,
+      "sha256": "da65fa28cbd4509a2d0e5a1f6897b1c6495dc263888b2a04e796963f22eb1558"
+    },
+    {
+      "path": "ANIMA/context/INTAKE-AND-ROUTING.md",
+      "bytes": 3386,
+      "sha256": "af89a912bcfad0aea59b6a1fe6a70f569b20fddc2bc524570d03fb3853bd528e"
+    },
+    {
+      "path": "ANIMA/architecture/notes/README.md",
+      "bytes": 7236,
+      "sha256": "2a40407371ced93a73cfdada2ea99c4d4ddcdfb68062977d0635c7c37c1383b4"
+    },
+    {
+      "path": "ANIMA/context/integrations/2026-10-08/SYNTHESIS.md",
+      "bytes": 11503,
+      "sha256": "b4c01087ea1cef5b26354e832184b0e481114d8abb88f1af8ac759090d7de474"
+    },
+    {
+      "path": "ANIMA/context/integrations/2026-10-08/INDEX.md",
+      "bytes": 5975,
+      "sha256": "4c035f90a5d83e1516b0db67b48ee49aca53c8b4bbc8910e553e2b571a101481"
+    },
+    {
+      "path": "ANIMA/context/integrations/2026-10-08/ARCHITECTURE-HANDOFF.md",
+      "bytes": 4647,
+      "sha256": "efaa905c340fbf7d93b15a963bcae855c94c25385c0278555db537bd9b556baf"
+    },
+    {
+      "path": "ANIMA/context/integrations/2026-10-08/COVERAGE-AND-REVIEW.md",
+      "bytes": 6921,
+      "sha256": "2282b36823fd368f46a3f9bd89e0591709cc8309c1bdda0ab563eb09567aa934"
+    },
+    {
+      "path": "ANIMA/context/integrations/2026-10-08/preserved/SOURCE-MAP.md",
+      "bytes": 2850,
+      "sha256": "9883dfda18dfb1cd0ba6a7b4c756c45073e85f057be2563feb30a792221e3bfb"
+    },
+    {
+      "path": "ANIMA/context/tracks/EXPERIMENTS.md",
+      "bytes": 3275,
+      "sha256": "13edc55a7198773f7364ec37202c19fba853163e7dc641b81ebbe9562675c79d"
+    },
+    {
+      "path": "ANIMA/context/tracks/SST.md",
+      "bytes": 2888,
+      "sha256": "dc232e0772eee6082ea140a0ae72dad80cf1cd0721f92aef558f55cfd6e95c36"
+    },
+    {
+      "path": "ANIMA/context/tracks/STC.md",
+      "bytes": 5833,
+      "sha256": "4f4d4a1afecc462a206655c07fca66a406190698abfdb00cdcafb63e7a26ca04"
+    },
+    {
+      "path": "ANIMA/context/tracks/SUBSTRATE.md",
+      "bytes": 4675,
+      "sha256": "ca199b09f04c4450ebd1037b9ff03753ac1215c14302d814a1626319695bc41e"
+    },
+    {
+      "path": "ANIMA/context/tracks/TL.md",
+      "bytes": 5084,
+      "sha256": "08afb91f045ef8eae0d251f8483117301d3bd33b30dca36f9ef3b3d1bd7b7cb9"
+    },
+    {
+      "path": "ANIMA/context/tracks/TRACE.md",
+      "bytes": 5134,
+      "sha256": "02a7f9e8f5a145e69ac2d32d683be6f9cb4081f58889dbce989ac77c19feb1ad"
+    }
+  ],
+  "navigation": {
+    "files_checked": 17,
+    "local_links_checked": 203,
+    "problems": [],
+    "scope": "Authored navigation/control documents only; historical links inside verbatim text are not rewritten. Heading checks approximate GitHub Markdown, not a browser rendering test."
+  },
+  "developmental_packet_document_inventory": [
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/CONSTRUCTION-LANGUAGES.md",
+      "bytes": 15137,
+      "sha256": "1b39ac2da8282764aa15ae5d47b5733c3c37c22508d3ef6cb871c702f489925d",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/CREATIVITY-AND-CONSTRAINTS.md",
+      "bytes": 14358,
+      "sha256": "b5e448f434f595397699b6b8c8e190ce4b67ab42b5f7092e888659e443611cc6",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/EXPERT-WORLDS-AND-SEARCH.md",
+      "bytes": 14569,
+      "sha256": "6c942b326881c8c55e23be45f2f303323667111226d124116fe1a4555022b20a",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/FORAGING-PROMPTS.md",
+      "bytes": 9636,
+      "sha256": "aec9d969c8959c930062f23e038f781e7ee4e2b1a06ee0cd51d0ec6aebc71baa",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/PHYSICAL-DEVELOPMENT.md",
+      "bytes": 14930,
+      "sha256": "ca9273ab0b2aa539137d0791fc89df5b860b9a5f91b8d40062e2d6d58d3355f9",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/README.md",
+      "bytes": 13241,
+      "sha256": "caf29eccc7ad11abc736940682b740ee364509346ed7bdd5f64662aed9cc5cd1",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/REVIEW-PLAN.md",
+      "bytes": 6060,
+      "sha256": "6d6df7120e41120816d7d4253adbf3ed4dd5448b1802332cef07b0cee0c17a99",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/REVIEW.md",
+      "bytes": 13788,
+      "sha256": "6d4352d046a1eff84ed342597a4e375200f1ea467f53299bd1de833e9089bad6",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/reviewed-draft/CONSTRUCTION-LANGUAGES.txt",
+      "bytes": 15137,
+      "sha256": "1b39ac2da8282764aa15ae5d47b5733c3c37c22508d3ef6cb871c702f489925d",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/reviewed-draft/SYNTHESIS.txt",
+      "bytes": 26963,
+      "sha256": "c4d0d78d17e27acef1c5f9941711dc9e813414154897eebb1a0b60fadf33e41b",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/SYNTHESIS.md",
+      "bytes": 34875,
+      "sha256": "06da6f4af43fe46b959af8df95c57a8ee0b6dbeeaa240d0fc444f994846e1699",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-01-DEVELOPMENTAL-CHANGE.md",
+      "bytes": 34437,
+      "sha256": "ef3648b3a75e583753cc4bdccb082bfdc231643284d10fcbe16d6742e87cbaae",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-02-ATTENTION-AND-COMMITMENTS.md",
+      "bytes": 34765,
+      "sha256": "bf54c646ce344b53d6bcf942b6134b57a2af2d5b11b7f1df1ba906ed448a722d",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-03-EVIDENCE-NOTE.md",
+      "bytes": 9971,
+      "sha256": "4ed60fb3cd7b3788131557e4bff51ea69b90fef91dc0c29e16b8afc66111dc2d",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-03-EXPERT-INDIVIDUALITY.md",
+      "bytes": 37549,
+      "sha256": "d59bbb007fd15c46280523ff1e68a03f3c1cdc5c74e655662e3b13b163e9b504",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-04-EVIDENCE-NOTE.md",
+      "bytes": 12509,
+      "sha256": "0ea4126d11910367f7d2ec0fb93700ae883583e85193d9287d0f4aa19002d019",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-04-PHYSICAL-CONSTRUCTION.md",
+      "bytes": 36870,
+      "sha256": "c84e6d419855d45dce9cd9c47992377c22c6d3f09c826ce56401eeae95a61589",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-05-CREATIVE-COVERAGE.md",
+      "bytes": 39401,
+      "sha256": "85cb13ba97b251d71e8543a8450faa74a819ffeb313124f1328ef72a5e6ed6ff",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-05-NEUROSCIENCE-EVIDENCE.md",
+      "bytes": 13615,
+      "sha256": "7e7dc927cd6c3ef550feb57cdccf3e56429eff8e21618b00a06bcb151a7969a0",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-05-SEARCH-EVIDENCE.md",
+      "bytes": 14236,
+      "sha256": "cfe9fc458bcd424ecb8551508b2efe33dbd4bec832418fab21f4394b567d6255",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-06-CHOICE-EVIDENCE.md",
+      "bytes": 12564,
+      "sha256": "0e73f45d10ece1af7cc6eb2096fd324f8d147e46c8c3f81650ee7076b97680df",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-06-CONSTRUCTION-REPERTOIRES.md",
+      "bytes": 38924,
+      "sha256": "1340cb109053004208711afdf45b81ed232a4b664d601a6365743285a99568a8",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-06-LIBRARY-EVIDENCE.md",
+      "bytes": 14051,
+      "sha256": "2bb915569b305331e88fd651d4d857292a2ea7dbc4219ed9a710331bc18b2c17",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-07-ALLOCATION-EVIDENCE.md",
+      "bytes": 13229,
+      "sha256": "a6ef1f4fa7baac501d82e5629a9d34dc0c549d1957425794db45ca3a4f84cfac",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-07-PROGRAMME-SEARCH.md",
+      "bytes": 42793,
+      "sha256": "619b3846a1d2e7e9c449fb3955fed79c3d030169938bdf145c8b5e13863190d9",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-07-SEARCH-EVIDENCE.md",
+      "bytes": 13710,
+      "sha256": "179bd42829baf3a65668adc51f7aaeb63ac8dc0e0dcce5f10808e1dba5c7d46a",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-08-INHERITANCE-EVIDENCE.md",
+      "bytes": 13302,
+      "sha256": "6e88faf9385cb26394f865e6fbdb240cfde4130c1b9a76252ceabf68a216949f",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-08-RETENTION-AND-DESCENDANTS.md",
+      "bytes": 46618,
+      "sha256": "7d4dc9491b7d5ff17ab161371cdedf25254005bfbcfc70a93f086a61e133592e",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    },
+    {
+      "path": "ANIMA/architecture/notes/2026-10-05-DEVELOPMENTAL-WORLDS/VECTOR-08-RETENTION-EVIDENCE.md",
+      "bytes": 14052,
+      "sha256": "f8b816cbaafe3ea71feb5144cd1902808d29b5d490b36e142efb3e18694178e8",
+      "note": "Identity observed by coordinator review; not evidence of curator reading or architecture acceptance"
+    }
+  ],
+  "ecosystem": {
+    "directory_present": false,
+    "provenance_files": [
+      "ANIMA/context/provenance/initial-ecosystem-draft-2026-10-02/catalog.json",
+      "ANIMA/context/provenance/initial-ecosystem-draft-2026-10-02/context/HISTORY-CURATOR.md",
+      "ANIMA/context/provenance/initial-ecosystem-draft-2026-10-02/context/HISTORY-SOURCES.json",
+      "ANIMA/context/provenance/initial-ecosystem-draft-2026-10-02/context/README.md",
+      "ANIMA/context/provenance/initial-ecosystem-draft-2026-10-02/ORGANIZATION.md",
+      "ANIMA/context/provenance/initial-ecosystem-draft-2026-10-02/README.md"
+    ],
+    "limitation": "Post-deletion observation cannot recheck prior hidden files, reparse points, original redirect contents, or pre-deletion dependency checks."
+  },
+  "execution_note": "An earlier interactive probe completed its comparisons but failed while printing a large Unicode user excerpt under cp1252. This reproducible script writes UTF-8 JSON and exports no large transcript excerpts. The failure changed no source or deliverable."
+}

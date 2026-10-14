@@ -1,0 +1,124 @@
+[project]
+name = "stc"
+version = "0.1.0"
+description = "STC - Biomimetic Spec-To-Code Autonomous Engineering Engine"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Anshul48", email = "anshulraj48@gmail.com" }
+]
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+    "Typing :: Typed",
+]
+dependencies = [
+    "click>=8.1.7",
+    "httpx>=0.27.0",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.2.0",
+    "python-dotenv>=1.0.1",
+    "pyyaml>=6.0.1",
+    "rich>=13.7.1",
+    "tenacity>=8.3.0",
+]
+
+[project.scripts]
+stc = "stc.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mutmut>=3.7.0",
+    "mypy>=1.10.0",
+    "pytest>=8.2.0",
+    "pytest-asyncio>=0.23.6",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.4.4",
+    "types-pyyaml>=6.0.12",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+# Debt-fix exclusion (recorded; see evidence/FOLLOWUP/debt-fix/readiness.md):
+# immutable historical evidence records are not executable lease code. They
+# are never imported (no packages under evidence/, proven ModuleNotFoundError
+# in the lease env), never in mypy/pytest scope (src+tests only), and the
+# judiciary scans diff text, never evidence/. Gate-1 commands stay
+# 01_INVARIANTS.md §5-literal (`ruff check .`, `ruff format --check .`); the
+# tool honors project config exactly as it honors .gitignore (worktrees/
+# precedent). Whole-evidence LEASE exclusion was rejected by experiment
+# (W1/W2 Gate-3 tests read evidence/ .txt/.json fixtures), so lease contents
+# stay whole-tree and only the lint scan scope excludes this dir. All of
+# src/, tests/, configuration, and required fixtures remain covered.
+exclude = [
+    "docs/builds/stc-integration/evidence",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "SIM", # flake8-simplify
+    "RUF", # Ruff-specific rules
+    "PTH", # flake8-use-pathlib
+]
+ignore = [
+    "RUF012", # Mutable class attributes in Pydantic models
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["stc"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
+# External pinned trees (resolved via MYPYPATH/PYTHONPATH sibling env):
+# their internals are never gate-blocking, but a missing tree must stay
+# loud (no ignore_missing_imports) so the gate fails closed, never silent.
+[[tool.mypy.overrides]]
+module = ["prompt_kit.*", "sst.*"]
+ignore_errors = true
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+addopts = "--strict-markers --tb=short"
+markers = ["live: live CLI-harness tests, deselected in gate runs (D13)"]
+
+[tool.mutmut]
+paths_to_mutate = ["src/stc/"]
+runner = "pytest"
+tests_dir = ["tests/"]

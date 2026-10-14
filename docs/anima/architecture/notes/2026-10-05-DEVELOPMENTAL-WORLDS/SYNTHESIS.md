@@ -1,0 +1,274 @@
+# Developmental worlds: integrated architecture synthesis
+
+> Public curation note: links to records excluded from this public release were converted to plaintext historical references; the original record identities are preserved inline.
+
+Proposed macro architecture analysis, 2026-10-05. Written from the user's supplied material and bounded specialist investigations. This document records an interpretation and proposed discussion map; it does not ratify a runtime, reassign project ownership, launch a build, or qualify an experiment.
+
+The governing direction remains the [ANIMA operative brief](../../../context/OPERATIVE-BRIEF.md), subject to the user's latest steering in this conversation. The detailed specialist notes are [physical development](PHYSICAL-DEVELOPMENT.md), [expert worlds and search](EXPERT-WORLDS-AND-SEARCH.md), [creativity and constraints](CREATIVITY-AND-CONSTRAINTS.md), and [construction languages](CONSTRUCTION-LANGUAGES.md).
+
+## What this material adds
+
+The common ambition is an environment in which useful organization can be constructed, revised, retained and inherited. STC, TRACE and SST are participating capabilities and demanding use cases. ANIMA's canvas also includes people, organizations, embodied systems and physical development.
+
+The new material sharpens five parts of that ambition.
+
+First, accommodating a new module is only one kind of change. The system should be able to revise how work is represented, how participants cooperate, who maintains state, which capabilities become integrated, and which arrangements deserve persistence. A composition can become a new participant. Existing primitives provide a starting population of capabilities without determining the final organization.
+
+Second, hardware development becomes an active parallel research direction. The new emphasis is a reusable physical-construction process that lets the user work mainly on conceptual architecture while competent systems and engineers realize and investigate it. Capable hands are a demanding early target; humanoid mobility, actuation and morphology remain meaningful choices rather than settled prerequisites.
+
+Third, expertise can belong to persistent worlds. A specialized model is one ingredient; history, evidence, priorities, procedures, unresolved disagreements and methods of assessment can also distinguish an expert. Tight local cooperation and independent expert trajectories can coexist.
+
+Fourth, creative association needs access to material that summaries suppress. The normal navigation path can be efficient while discovery occasionally crosses its organization or bypasses its signposts. Diversity concerns methods and representations as well as retained content.
+
+Fifth, context selection and long-horizon consistency need explicit machinery. A system that can change its organization needs ways to keep obligations effective through those changes. It also needs to distinguish an unfamiliar useful possibility from a prohibited action, a contradiction, or a stale assumption.
+
+These additions make the middle of the architecture more important: context selection, representation, coordination, assessment and structural transition. They do not establish that biological fidelity, more agents or more computation will automatically produce the desired capability.
+
+## The most pertinent problem
+
+My proposed next macro question is:
+
+**What is a useful unit of developmental change, and what information and responsibility must accompany it so that the system can assess, enact and retain the change?**
+
+A module is too narrow as the only answer. A learned parameter update is too narrow. A rewritten program is too broad if it hides state and responsibility changes. A relationship edge is too narrow if integration changes both participants.
+
+For example, two expert worlds might discover that they solve a recurring research problem better with a shared experimental model. The adaptation could involve a new representation, a changed consultation policy, a shared artifact, a different allocation of work and a revised evaluator. Recording only a stronger connection would miss most of what happened.
+
+Likewise, a new tendon arrangement might improve physical control while requiring a different sensor interpretation, calibration and maintenance procedure. A software-only change record would lose the conditions that made the result work.
+
+A useful change record therefore needs to express the problem being addressed, the affected surfaces, current assumptions, expected consequences, responsibility for enactment, evidence, and the resulting state. The form may vary by domain. We should establish shared meanings before trying to freeze a universal schema.
+
+This builds on the earlier [world-boundary discussion](../../../../../components/substrate/docs/WORLD-BOUNDARIES.md). That discussion established distinguishable custody, access, function and placement. The present question concerns how those relationships develop together and how their consequences remain understandable.
+
+## Accommodating change and discovering beneficial change
+
+Two capabilities must be assessed separately.
+
+A substrate can make changes possible: replace a procedure, translate a representation, revise a relationship, create a coalition, migrate state, or alter execution placement. This is the machinery of change.
+
+A learning or search process can identify changes worth making. That requires observations, a model of the problem, candidate construction, meaningful comparison, credit assignment and retained outcomes. This is the discovery of beneficial change.
+
+We should build toward both, while recognizing that the first does not imply the second. A system can be highly reconfigurable and still reorganize badly. A persuasive proposal can also fail when applied to actual state or a physical device.
+
+The user explicitly permits human architecture and AI search as guides. Initial changes can be designed and assessed deliberately. Autonomous discovery becomes a stronger claim when the system repeatedly finds useful changes across varied conditions and retains advantages afterward.
+
+Within-lifetime adjustment, organizational development, and evolutionary variation across descendants also differ. A knee-remodeling analogy concerns local adaptation and development. It illustrates how feedback and local mechanisms can organize a system without specifying every microscopic action. It does not establish a software remodeling algorithm or make every local update a population-level evolutionary event.
+
+LLMs can propose mechanisms, simulate symbolic scenarios, and help design experiments. Their imagined outcomes remain hypotheses until supported by an appropriate simulator, formal result, measurement or observation. Using a frozen substrate or STC to investigate a successor can be useful; recursive hosting should pay for a concrete advantage.
+
+## A proposed adaptation vocabulary
+
+The following surfaces are worth distinguishing. They are not a requirement for separate layers or microservices.
+
+| Surface | Examples of change | What must remain intelligible |
+|---|---|---|
+| Activation and context | Which evidence, experts or hypotheses become active | The task, applicable commitments and reasons for selection |
+| Representations | Schemas, deltas, abstractions, uncertainty models | Meaning, versions, provenance and translation losses |
+| Procedures and capabilities | New operators, modified workflows, specialized implementations | Applicability, effects, failure evidence and evaluation limits |
+| Relationships | Routing, consultation, shared workspace, representation mapping | Participants, purpose, information exchange and delegated powers |
+| Organization | Coalitions, assimilation, fusion, fission, expert extraction | State custody, lifecycle, resources, obligations and lineage |
+| Memory participation | Promotion, demotion, retirement, revisitation | Historical meaning and the cost of recovering inactive evidence |
+| Assessment | New tests, improved measurements, revised criteria | What changed in the evaluator and which claims it can establish |
+| Execution and embodiment | Model placement, hardware allocation, actuators, morphology | Actual configuration, operating envelope and physical consequences |
+
+The shared substrate should make those changes expressible and accountable. Each world supplies domain meaning and the mechanisms that actually change its own state. A frozen opaque model can be recontextualized or recomposed externally; that does not expose its internal parameters for learning.
+
+Changing assessment needs a further distinction. Improving a measurement or broadening test coverage can help judge the same target. Changing the target, relaxing a requirement or modifying whose interests count is a different decision. Better reported scores after an evaluator revision do not establish better behavior; retain the versioned criteria and compare what each actually measures. Assessment adaptation should not silently grant the candidate permission to redefine success.
+
+The vocabulary must permit coordinated changes. A useful new abstraction can require revisions to both an expert's memory organization and its consultation protocol. Insisting that one interface remain fixed at all costs can block that transition. Conversely, treating every improvement as permission to change every dependency would make continuity impossible.
+
+A practical research target is local revision where possible, explicit migration where necessary, and a retained account of the resulting meaning. It cannot eliminate the work of genuine semantic change.
+
+## Mechanisms and competing emphases for development
+
+Recording adaptation surfaces is insufficient. The architecture needs mechanisms that actually construct and change organization. Three complementary responsibilities deserve investigation. Their mechanisms can coexist; what we compare is where transformation power lives, how changes are selected and learned, and what crosses to a successor. None of the realizations below is selected here.
+
+**Executable organizational transformations.** A world exposes concrete operations that can create a coalition, replace a procedure, translate a representation, transfer state, assimilate a participant or split a composite. A human or search process composes them into candidate changes, assesses effects and enacts an authorized transition. The first operations can be designed explicitly, with later search proposing new ones. This approach makes consequential transformations inspectable and supplies an engineering foundation. Its limitation is that a catalogue can accommodate only changes its operations can express. Calling an operation “fuse” does not make it capable of reconciling arbitrary internal states.
+
+**Locally learning participants and relationships.** Each participant and relevant relationship maintains a limited model of what others need, what an interaction is likely to produce and how its own choices affect outcomes. Observed mismatches guide revisions to consultation, context selection, representation mappings, resources and local procedures. Repeated successful coordination can motivate deeper integration. This approach most directly explores the user's interest in middle layers organizing through interaction. However, prediction error alone cannot decide what to change: an unfamiliar observation, a bad translation, a misleading model and a failed procedure can produce similar discrepancies. Reducing error by avoiding difficult interactions may also reduce capability. Task feedback, contrasting interventions and qualified checks are needed to investigate credit assignment.
+
+**Inherited developmental rules.** A successor receives rules for constructing useful organization rather than only a copied mature graph. The rules can specify initial capabilities, conditions for specialization, how to explore relationships, when to form composites and how to retire unhelpful arrangements. The environment and experience produce different resulting organizations. This approach addresses the deeper developmental-substrate ambition and can reuse existing primitives. Its hard problem is discovering generative rules that transfer: apparent success in a narrow environment may be an overfit construction recipe. Population search is one possible discovery method, but authored rules, learning and bounded search can also be investigated before a full evolutionary ecology.
+
+Consider a memory expert and a planning expert facing recurring failures on tasks that require historical exceptions. In the transformation approach, search might propose a shared exception-review procedure and a composite workspace. In the local-learning approach, the participants learn which situations warrant consultation and what conditions must accompany a retrieved precedent. In the developmental-rule approach, descendants inherit a procedure that establishes this cooperation when the relevant demand appears. A deeper integration would change actual shared state, responsibility or redundant mechanisms, rather than merely increase message frequency.
+
+Different emphases produce different predictions. Explicit operations may deliver useful changes quickly but constrain unforeseen forms. Local learning may adapt to changing interaction demands while creating attribution and stability problems. Developmental rules may amortize discovery across descendants but impose discovery and transfer costs before the benefit appears. Operations define available change, learned policies select and adapt it, and developmental rules carry a generative prior across lifetimes. Compare implementations within those dimensions, rather than treating the three responsibilities as interchangeable architectures. Include tasks requiring new organization, changed environments and the cost of retaining that organization; prediction accuracy and successful organization remain separate outcomes.
+
+A useful shared foundation supports versioned participants and artifacts, local state, observable interactions, resources, available change operations and attributable outcomes. Domain representations and learning policies can differ above that foundation. The foundation itself can have explicit version transitions; “stable physics” need not mean its first design is immutable forever.
+
+A plausible starting research arrangement is to make real transformations possible, study whether participants learn which ones help, and retain rules for reproducing demonstrated advantages. That sequence is a hypothesis about obtaining evidence efficiently. It is not a build authorization, a guarantee of open-ended development or a reason to postpone all useful local learning.
+
+## A world contains mechanisms and retains responsibility
+
+A world can contain models, people-facing processes, memories, simulations, tools, other worlds and composite participants. Containment need not be identical to ownership, expertise, communication or physical placement.
+
+A world should retain responsibility for its exported commitments until they are deliberately revised or transferred. If a planner and a simulator form a composite, their shared arrangement needs a clear account of who maintains the model, whose evidence supports its predictions, and who can authorize execution. If the composite later splits, those obligations need owners.
+
+This need not mean a human approves every local update. Standing delegation can permit routine adaptation. The distinction is between exercising granted powers and changing the objectives, shared constraints, custody or consequential risk boundaries that define those powers.
+
+Relationship machinery can support learned consultation and actual integration. A relationship can have state, code, representation mappings, observations and an adaptation procedure. It can become an internal mechanism of a composite. Identity and lineage can preserve historical understanding while organization changes.
+
+The promise of flexible interfaces also needs precision. Communication still requires some shared conventions for identifying messages, participants, artifacts and transitions. We can keep that floor small and versioned while allowing task vocabulary, protocols and representations above it to develop. “No fixed APIs” is a productive rejection of permanently hand-designed semantic relationships; it cannot mean no shared meaning at all.
+
+## Constraint enforcement should enable development
+
+Input 4C introduces two related responsibilities: select useful context for the next consequential step, and keep commitments effective over long work histories. These are distinct.
+
+Context selection manages limited attention. It decides which evidence, assumptions, unresolved questions and expert views are useful now. This is a learned or heuristic judgment, so it can miss something important.
+
+Constraint enforcement concerns the validity of a proposed transition or result. Some requirements admit dependable mechanical checks. Others require uncertain interpretation, experiments or judgment. A typed record does not formalize every meaning in the record, and a classifier's agreement does not establish truth.
+
+A proposed architecture should distinguish at least:
+
+- Governing constraints and delegated limits.
+- Task commitments and applicable domain requirements.
+- Current beliefs and assumptions, which may be corrected.
+- Learned schema preferences and usual methods, which may be challenged.
+- Open alternatives, whose disagreements should survive exploration.
+
+Otherwise a familiar schema can become an unquestionable law, or a convenient speculation can replace an actual obligation.
+
+The constraint view active in a working context is a compact selection. The authoritative record and relevant checks should remain outside any one model's recollection. A global resource limit, for example, should not disappear because retrieval omitted the sentence describing it. Likewise, retaining a requirement in storage does not ensure that an executor actually obeys it.
+
+For long-horizon consistency, the hard problems include identifying applicable scope, recognizing changed meanings, locating dependent conclusions, resolving genuine conflicts and handling partial observability. A requirement may be valid for one experiment and inappropriate for another. An old assumption may be retired without invalidating the historical result recorded under it.
+
+This suggests distributed ownership with explicit exchanges of commitments and evidence. It does not imply one executive model that continuously understands the whole system. Local worlds need assessable obligations; cross-world agreements need recognizable consequences. The constraint machinery itself needs evaluation.
+
+## Creativity and control can cooperate
+
+The functional interpretation of 4B is a memory-grounded constructive process: retrieve relevant material, associate and recombine, explore candidate consequences, inspect mismatches, evaluate and retain useful arrangements. The neuroscience dossier separates evidence for particular ingredients from the much stronger claim of a universal anatomical cascade.
+
+Novelty benefits from relaxing learned preferences and customary formulations. It does not require every governing constraint to disappear. A candidate can temporarily depart from a familiar schema while remaining explicitly hypothetical. An exploratory world can investigate changes to a governing rule as a proposal without silently executing under that revised rule.
+
+This distinction is important for outliers. An unusual source, counterexample or candidate should have a route into exploration even if the central summary makes it look irrelevant. It need not receive unlimited active resources or immediate acceptance. A bounded exploratory allowance and delayed evaluation can preserve possibilities while their consequences are investigated.
+
+The process need not be a fixed serial pipeline. Evaluation can expose a missing concept; construction can reveal a missing constraint; a specialist can reframe the question. A small working context can retain enough structure to guide the next move while the broader evidence and unresolved alternatives remain accessible.
+
+The diagram describes responsibilities in a possible loop, not a brain model or selected runtime anatomy:
+
+~~~mermaid
+flowchart LR
+    O[Observations and unresolved problems] --> C[Select working context]
+    C --> P[Construct alternatives]
+    P --> E[Assess consequences]
+    E --> T[Apply an authorized change]
+    T --> O
+    E --> M[Retain outcomes and lineage]
+    M --> C
+    K[Applicable commitments and checks] -.-> C
+    K -.-> E
+    K -.-> T
+    E -->|Mismatch or missing representation| P
+~~~
+
+TRACE can contribute attributable experiences and interpretations, SST can organize bounded alternatives and search, and STC can realize and assess constructions. Actual ownership and qualified integration remain with their projects.
+
+## Persistent expertise and a society of worlds
+
+A whole expert world can maintain its own questions, evidence, learning trajectory and evaluation habits. This is a meaningful possibility beyond selecting a specialist prompt.
+
+Separate worlds and internal specialist clusters occupy different positions along independent dimensions: model adaptation, memory custody, task responsibility, representational freedom, consultation frequency and lifecycle. They need not differ along all of them. Worlds can share source evidence while maintaining distinct interpretations.
+
+Tight coupling reduces repeated explanation and can improve joint work around a difficult task. Independence can preserve methods, disagreements and novel directions that early consensus would erase. A coalition can provide a shared working space while its members retain independent histories. Useful repeated cooperation can justify deeper integration.
+
+Diversity is not guaranteed by spawning more agents or assigning personality labels. It is better investigated through observable variations in evidence seeking, exploratory breadth, counterexample search, abstraction, experimental habits and willingness to reframe. Different methods can still share model errors and misleading source material.
+
+The challenging question is what a society adds under a comparable full budget: better solutions, complementary discoveries, more robust judgment, or merely more generated material. A trillion tokens of distributed activity is not automatically a coherent trillion-token reasoning episode.
+
+The user's interest in societies and descendants supports retained expertise and organizational variety. It does not make federation mandatory for current TRACE, nor does it imply that a coordinated society must achieve AGI or ASI.
+
+## Memory hierarchy and outliers
+
+The earlier hot/warm/cold proposal remains useful as an architectural distinction. Hot memory can be scarce, contested and lossy; warm organization can support richer schemas and qualified relationships; cold records can preserve history and attributable source material.
+
+These temperatures are independent of truth status. A valid result may become inactive. A popular active belief may be weakly supported. Retirement from a main graph does not erase the meaning of a historical event.
+
+The user's dislike of dragging tombstones through every active traversal concerns participation cost. A compact historical status or dependency record can live outside the ordinary cognitive path. Temporal work can explicitly pay for deeper recovery. The exact records needed for source identity and history remain the owning module's contract; a macro tier proposal does not remove them.
+
+Creativity complicates pure frequency-based retention. Rare material may have high conditional value in a future conjunction. We cannot know all such values in advance. Multiple representatives, routes to source material, alternative organizations and bounded exploration offer candidate mechanisms. No compact summary guarantees preservation of every future discovery.
+
+Cold access can recover forgotten facts. It does not necessarily recover the interpretive context that made them noticeable, or do so within the available budget. This is why summary compression, source fidelity and creative coverage require separate evaluation.
+
+Inheritance needs to preserve conditional evidence through successive composition. A procedure can leave one expert with its preconditions omitted, become part of a composite, and reach a successor that never sees its counterexamples. Each export may look reasonable while the final capability loses the conditions that made it useful. A retained capability should therefore carry recoverable applicability, dependencies, known failures and evidence limits. This does not require copying every transcript; it requires preserving enough meaning to use and revise the inheritance responsibly.
+
+## Physical development belongs in parallel
+
+The hardware analogue of STC is a system for moving from conceptual intent through candidate design, simulation, engineering, fabrication, measurements and reusable revisions. The body's morphology and control are participants in that loop.
+
+Functional hands provide a useful demanding work envelope: manipulating varied objects, coordinating both hands, regulating contact, recovering from slip and using tools. The exact evaluation should reflect representative tasks. Bipedal mobility should be justified by access and terrain needs rather than inherited from the word “humanoid.”
+
+Artificial muscles and morphological computation deserve active investigation under the user's preference. Motor-driven devices can remain a bootstrap or comparison path when necessary. Tendon routing, passive compliance and actuator energy conversion are separate choices that interact; one should not be mistaken for another.
+
+Simulation fidelity should follow the decision. Simplified dynamics and calibrated surrogates may preserve useful design rankings; detailed deformation or thermal models become valuable when they change those rankings or predicted failures. A physical design still needs measurements, actual configuration identity and an account of manufacturing and maintenance.
+
+The workplace ambition combines physical competence with situated understanding and organizational improvement. A robot observing a process might cooperate with software capabilities to propose an improvement. The quality of its observation, the validity of the proposed change, and the actual outcome are separate claims.
+
+Hardware can therefore progress on useful foundations now while deeper co-design remains a later major bet. This refines A → C → B → D without reversing its priority map or making current software completion wait for a universal embodied substrate.
+
+## Large projects as search material
+
+Input 3A is valuable if “turn the project into SST” means make consequential alternatives navigable and evidence-linked. An organization also has dependencies, shared resources and observed execution histories. Those objects should not all be forced into one tree.
+
+A graph-building capability can produce attributable views of accessible organizational records. SST can search possible interventions against a versioned view. TRACE can retain interpretations and lessons. Execution owners maintain actual work state; TL's source organization responsibilities remain distinct.
+
+The question is which representation lets search change a useful decision. An elaborate organizational map can cost more to maintain than the value of its recommendations. A small bounded decision, informed by real evidence, is an appropriate way to assess the machinery without limiting the eventual organizational scale.
+
+## Strong objections we should retain
+
+The architecture can become too general to produce useful capability. Every proposed shared mechanism should have a concrete demanding caller and an alternative that omits it. Generalization should follow recurring needs, while the macro contract leaves room for richer future organization.
+
+The evaluator can dominate the outcome. More candidate generation can exploit weak checks rather than improve the actual target. Independent verification, better measurements and retained failures are useful, but no universal verifier appears merely because authority is structurally separated.
+
+Preserving every possible outlier can overwhelm finite cognition. A discovery allowance must be bounded, and its usefulness measured. The tradeoff cannot be solved by declaring all rare content important.
+
+Local autonomy can produce incompatible changes. Independent worlds need ways to express commitments, versions, disagreements and pending transitions. Shared formats and migration costs are part of the programme, even when semantic interfaces are plastic.
+
+Physical adaptation is materially constrained. Some changes require replacement, fabrication or new calibration. Software revision and physical remodeling share a feedback pattern but differ in reversibility, timescale and installed cost.
+
+Finally, inherited organization can become baggage. A retained procedure needs applicability and retirement conditions. A successor should gain from prior work without being forced to keep every historical choice.
+
+## Proposed discussion order
+
+This is a new compact macro round, not a continuation with invented definitions for the earlier eighteen vectors. It can expand as the user adds material.
+
+| Vector | Architectural question | Main home | Useful discussion output |
+|---|---|---|---|
+| 1. Developmental change | What may develop together, and what accompanies a change? | Macro/substrate | A small vocabulary of adaptation surfaces, effects and responsibilities |
+| 2. Attention and commitments | What selects context, what is checked, and what may be revised? | Macro, then cognitive/constraint architect | Separate commitments, beliefs, preferences and their owners |
+| 3. Expert individuality | When is a specialist a persistent world rather than a cluster? | Macro, then TRACE | Criteria for independence, shared state, coalition and extraction |
+| 4. Physical construction | What should the hardware-development environment provide? | Macro, then robotics/hardware | Conceptual front door, work envelope and evidence loop |
+| 5. Creative coverage | How can useful outliers and unfamiliar combinations survive compression? | TL + TRACE + SST, with distinct source/search duties | Candidate mechanisms and a capability comparison |
+| 6. Construction repertoires | What can cheap selection exploit, and how does the language grow? | STC, with SST/TRACE interfaces | A domain experiment with repertoire escape and inheritance |
+| 7. Programme search | How do alternatives relate to dependencies and observed execution? | Responsible domain world with SST; STC for construction cases | Distinguishable graph views and one consequential decision |
+| 8. Retention and descendants | What passes to a successor and what should be reacquired? | Macro, then local owners | Inheritance costs, applicability and retirement criteria |
+
+I recommend beginning with vector 1, then using vector 2 to check its coherence. The physical-development front door should be discussed early, while specialized actuation and simulation research proceeds alongside the macro round. The user can move any vector forward; the table is a proposal.
+
+The first discussion should end with a few concrete transformations the system ought to accommodate, each describing what changes, what remains responsible, and how a useful outcome could be recognized. That gives focused architects actionable questions without pretending the entire substrate has been designed.
+
+For the main branch points, make competing choices and useful discriminating evidence explicit:
+
+| Choice | Alternatives worth preserving | Evidence that could change the choice |
+|---|---|---|
+| Development mechanism | Authored versus generated transformations; local versus joint selection; snapshots versus procedures or generators in inheritance | Useful changes on unforeseen demands, later transfer and complete costs |
+| Context and control | Larger shared contexts, selected contexts with explicit commitments, more domain-specific checks | Missed exceptions, violations, false blocking and recovery effort |
+| Expertise organization | One hierarchical world, internal specialists, independent trajectories with temporary coupling | Complementary capability under matched budgets and retained disagreements |
+| Physical-development entry | Existing robot/toolchain bootstrap, new component research, coordinated use of both | Installed-system capability, simulation ranking stability and engineering reconstruction costs |
+| Creative memory | Efficient summary navigation, additional residual/source routes, bounded cross-region exploration | Valid discoveries needing exceptions, noise and attention cost |
+| Construction knowledge | Authored operations, learned operations, model adaptation, mixed repertoires | Completed work beyond the initial vocabulary and beneficial prospective reuse |
+
+These are choices to investigate, not a request to choose every branch before proceeding. A useful outcome from the macro round is a few justified commitments with other mechanisms deliberately left open.
+
+## Input disposition and outstanding context work
+
+| Input | Preserved contribution | Treatment in this packet |
+|---|---|---|
+| Developmental-substrate framing | Worlds can reorganize and integrate existing primitives | Central question; not reduced to routing |
+| 1A | Human attention, architect/coordinator separation, evidence and authority | Used as operating guidance; pasted audits, counts and STC-Lite proposals remain unverified |
+| 1B | Hardware construction ecosystem, capable hands, biomimetic actuation, situated collaborators | Physical-development dossier; active parallel direction, no selected platform |
+| 2A | Persistent experts, diversity, contested hot memory, outlier concern | Expert-worlds dossier and memory/creativity analysis |
+| 3A | Organizational work as navigable alternatives | Search representation separated from actual execution and dependencies |
+| 4A | Strong generative thought plus structured cheap decisions | Construction-language note; savings and verifier claims qualified |
+| 4B | Memory-grounded recombination and simulation | Neuroscience evidence separated from an engineering creative loop |
+| 4C | Context selection and long-horizon constraint/consistency management | Coupled with creativity; old project not opened |
+
+The queued complete B1/B2 archive review is still separate. The supplied material is sufficient for this proposed map. After discussion, attributable decisions and newly clarified priorities can be condensed into the curated context packet while preserving these fuller analyses. None of the exploratory mechanisms here should be silently promoted into project requirements.

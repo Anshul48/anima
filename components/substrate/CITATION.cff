@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "anima-substrate"
+message: "If you use this software, please cite it as below."
+type: software
+version: 0.1.1
+date-released: 2026-10-08
+authors:
+  - alias: Anshul48
+    email: anshulraj48@gmail.com
+abstract: >-
+  A small, offline, stdlib-only Python host for persistent project
+  worlds: nested delegation, pinned participant families, crash-atomic
+  local state, fusion/fission/quarantine, portable composites, and an
+  evidence-grounded propose-assess-retain-reuse loop. Single-host, toy
+  scale, process-crash-only envelope; no learning or discovery claims.
+keywords:
+  - nested-worlds
+  - accountable-recovery
+  - composite-reuse
+  - offline
+license: Apache-2.0
+repository-code: "https://github.com/Anshul48/anima-substrate"
+url: "https://github.com/Anshul48/anima-substrate"

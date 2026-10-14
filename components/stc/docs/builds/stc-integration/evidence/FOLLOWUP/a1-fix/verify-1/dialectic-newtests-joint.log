@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- <workspace-root>/trace/.venv-linux/bin/python
+rootdir: <workspace-root>/stc
+configfile: pyproject.toml
+plugins: anyio-4.14.2, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 61 items / 58 deselected / 3 selected
+
+tests/unit/test_integration_dialectic.py::test_mirror_dst_inside_src_excludes_destination PASSED [ 33%]
+tests/unit/test_integration_dialectic.py::test_mirror_disjoint_layout_faithful PASSED [ 66%]
+tests/unit/test_integration_dialectic.py::test_mirror_self_reference_refuses_loudly PASSED [100%]
+
+======================= 3 passed, 58 deselected in 2.77s =======================

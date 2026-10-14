@@ -1,0 +1,26 @@
+# ANIMA mono-repo — local/secret hygiene. Staged for public GitHub; never
+# commit secrets, credentials, private data, or machine-local state.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+secrets/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+.venv-linux/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+*.db
+*.sqlite3
+runs/
+.DS_Store
+Thumbs.db

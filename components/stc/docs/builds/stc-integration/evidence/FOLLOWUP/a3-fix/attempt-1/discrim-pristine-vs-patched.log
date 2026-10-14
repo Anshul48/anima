@@ -1,0 +1,18 @@
+proposal git apply --check rc: 0
+===== cand-0 (5182 B) =====
+pristine success: False
+pristine err: git apply failed: error: corrupt patch at line 169
+ | fallback: Unrecognized diff line format in tests/unit/test_integration_runner_pins.py: '*** End Patch'
+patched  success: True
+patched  err: 
+pristine file: ABSENT
+patched file: 4923 B sha 75f3af96e4093311 head b'"""Regression pins for the P04 runner\'s '
+===== cand-1 (3929 B) =====
+pristine success: True
+pristine err: 
+patched  success: True
+patched  err: 
+pristine file: 3929 B sha 0c7052d6bc37e6e7 head b'*** Begin Patch\n*** Add File: tests/unit'
+patched file: 3716 B sha f746b09d41a9de47 head b'"""P04 runner defensive-branch pins.\n\nTh'
+live cand-0 stderr byte-identical to pristine replay: True
+live cand-0 stderr head: 'git apply failed: error: corrupt patch at line 169\n | fallback: Unrecognized diff line format in tests/unit/test_integra'

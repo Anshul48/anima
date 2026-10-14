@@ -1,0 +1,17 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_____________ test_substrate_runner_real_clean_execution_and_save ______________
+tests/unit/test_substrate.py:473: in test_substrate_runner_real_clean_execution_and_save
+    assert receipt.gate_ruff.exit_code == 0
+E   AssertionError: assert 1 == 0
+E    +  where 1 = GateReport(gate_name='ruff', exit_code=1, duration_seconds=0.9383, violations_count=123, raw_output_snippet='\nI001 [*...123 errors.\n[*] 64 fixable with the `--fix` option (7 hidden fixes can be enabled with the `--unsafe-fixes` option).').exit_code
+E    +    where GateReport(gate_name='ruff', exit_code=1, duration_seconds=0.9383, violations_count=123, raw_output_snippet='\nI001 [*...123 errors.\n[*] 64 fixable with the `--fix` option (7 hidden fixes can be enabled with the `--unsafe-fixes` option).') = ExecutionReceipt(receipt_id='rcpt_cdd2c6ec179c', task_id='TASK-CLEAN-TREE', epoch_index=1, commit_hash='edf5389873e4d4...e1883c30d2b1227d27eed05e40745442c20ab7afff8ee4af77ceb390046e41', correlation_id='corr_7f1d28794bac', causation_id=None).gate_ruff
+________________ test_clean_tree_emits_verifiable_receipt_json _________________
+tests/unit/test_substrate.py:561: in test_clean_tree_emits_verifiable_receipt_json
+    assert receipt.is_passing is True
+E   AssertionError: assert False is True
+E    +  where False = ExecutionReceipt(receipt_id='rcpt_b16f0744e076', task_id='STAGE-1', epoch_index=1, commit_hash='edf5389873e4d4a2a4752e...fa8ecae09d0f5aa2079eb3356609fc9ec080818cc32f6a4e7135c372cb055b', correlation_id='corr_ebe2757c973f', causation_id=None).is_passing
+=========================== short test summary info ============================
+FAILED tests/unit/test_substrate.py::test_substrate_runner_real_clean_execution_and_save
+FAILED tests/unit/test_substrate.py::test_clean_tree_emits_verifiable_receipt_json
+2 failed in 39.51s

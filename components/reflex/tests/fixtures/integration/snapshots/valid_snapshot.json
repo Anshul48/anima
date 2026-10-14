@@ -1,0 +1,23 @@
+{
+  "snapshot_id": "snap_golden_001",
+  "timestamp_ms": 1700000000000.0,
+  "claims": [
+    {
+      "subject": "active_project",
+      "value": "ReflexAutomation",
+      "confidence": 0.99
+    },
+    {
+      "subject": "user_role",
+      "value": "administrator",
+      "confidence": 0.95
+    }
+  ],
+  "confidence": 0.92,
+  "source": "entorhinal_fake_daemon",
+  "is_advisory": true,
+  "ttl_ms": 300000.0,
+  "metadata": {
+    "device": "desktop_primary"
+  }
+}

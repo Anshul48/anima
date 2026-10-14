@@ -1,0 +1,37 @@
+{
+  "$schema": "https://entorhinal.local/schemas/v1/context_snapshot.schema.json",
+  "snapshot_id": "01915dfb-6981-7f89-9a67-9c60e42cb730",
+  "schema_version": "1.0.0",
+  "request_id": "REQ-REFLEX-20260820-0005",
+  "issued_at": "2026-08-20T08:00:00.000000Z",
+  "expires_at": "2026-08-20T08:05:00.000000Z",
+  "purpose_granted": "Check branch status after user correction override lock",
+  "scope_granted": [
+    "scope:workspace.active_project"
+  ],
+  "active_facts": [
+    {
+      "fact_id": "01915dfb-6981-7f89-9a67-9c60e42cb731",
+      "schema_version": "1.0.0",
+      "entity_uri": "workspace:auth-service",
+      "attribute": "active_branch",
+      "value": "main",
+      "confidence": 1.0,
+      "valid_from": "2026-08-20T07:59:00.000000Z",
+      "valid_to": null,
+      "supporting_evidence_ids": [
+        "CORR-USER-20260820-001"
+      ],
+      "derived_by": "user_correction:lock",
+      "revision_id": 2
+    }
+  ],
+  "active_hypotheses": [],
+  "evidence_provenance_refs": [
+    "CORR-USER-20260820-001"
+  ],
+  "redaction_manifest": [
+    "revoked_prior_branch_fact:01915dfb-6981-7f89-9a67-9c60e42cb739"
+  ],
+  "disclaimer": "ADVISORY ONLY. Direct user instruction and fresh observation take precedence."
+}

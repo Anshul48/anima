@@ -1,0 +1,22 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_____________ test_substrate_runner_real_clean_execution_and_save ______________
+<workspace-root>\stc\tests\unit\test_substrate.py:473: in test_substrate_runner_real_clean_execution_and_save
+    ???
+E   AssertionError: assert 1 == 0
+E    +  where 1 = GateReport(gate_name='ruff', exit_code=1, duration_seconds=0.155, violations_count=1, raw_output_snippet='<workspace-root>/trace/.venv-linux/bin/python: No module named ruff').exit_code
+E    +    where GateReport(gate_name='ruff', exit_code=1, duration_seconds=0.155, violations_count=1, raw_output_snippet='<workspace-root>/trace/.venv-linux/bin/python: No module named ruff') = ExecutionReceipt(receipt_id='rcpt_112a4c6e4e97', task_id='TASK-CLEAN-TREE', epoch_index=1, commit_hash='edf5389873e4d4...38a6d9d6470c570624832d5ff52b723dd6e0531c1d0c7de5613ed1cf09804e', correlation_id='corr_c431d9a79bb2', causation_id=None).gate_ruff
+________________ test_clean_tree_emits_verifiable_receipt_json _________________
+<workspace-root>\stc\tests\unit\test_substrate.py:561: in test_clean_tree_emits_verifiable_receipt_json
+    ???
+E   AssertionError: assert False is True
+E    +  where False = ExecutionReceipt(receipt_id='rcpt_60ae3a69b518', task_id='STAGE-1', epoch_index=1, commit_hash='edf5389873e4d4a2a4752e...6268d7a722446607228deb579e143e1269e39d80ddba5ee0131e2727c732e9', correlation_id='corr_811032e46c54', causation_id=None).is_passing
+________ test_injected_syntax_error_fails_gate_1_with_is_passing_false _________
+<workspace-root>\stc\tests\unit\test_substrate.py:542: in test_injected_syntax_error_fails_gate_1_with_is_passing_false
+    ???
+E   AssertionError: assert ('unexpected eof' in '<workspace-root>/trace/.venv-linux/bin/python: no module named ruff' or 'syntax' in '<workspace-root>/trace/.venv-linux/bin/python: no module named ruff')
+=========================== short test summary info ============================
+FAILED tests/unit/test_substrate.py::test_substrate_runner_real_clean_execution_and_save
+FAILED tests/unit/test_substrate.py::test_clean_tree_emits_verifiable_receipt_json
+FAILED tests/unit/test_substrate.py::test_injected_syntax_error_fails_gate_1_with_is_passing_false
+3 failed in 19.67s

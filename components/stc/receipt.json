@@ -1,0 +1,40 @@
+{
+  "receipt_id": "rcpt_aa33e8504162",
+  "task_id": "STAGE-5",
+  "epoch_index": 1,
+  "commit_hash": "747dba6e278fc2d44effe6732d00c0bd44d91e6a",
+  "timestamp_utc": "2026-09-06T17:05:03Z",
+  "python_version": "3.12.3",
+  "os_platform": "Linux",
+  "gate_ruff": {
+    "gate_name": "ruff",
+    "exit_code": 0,
+    "duration_seconds": 0.466,
+    "violations_count": 0,
+    "raw_output_snippet": "70 files already formatted\nAll checks passed!"
+  },
+  "gate_mypy": {
+    "gate_name": "mypy",
+    "exit_code": 0,
+    "duration_seconds": 3.066,
+    "violations_count": 0,
+    "raw_output_snippet": "Success: no issues found in 47 source files"
+  },
+  "gate_pytest": {
+    "gate_name": "pytest",
+    "exit_code": 0,
+    "duration_seconds": 141.517,
+    "violations_count": 0,
+    "raw_output_snippet": "tests/integration/test_dag_pipeline.py::test_cli_judge_rejection_fail_closed PASSED [100%]\n\n======================== 13 passed in 140.26s (0:02:20) ========================\n[pytest summary: 13 passed, 0 failed, 0 skipped, 0 errors]"
+  },
+  "gate_mutmut": {
+    "gate_name": "mutmut",
+    "exit_code": 0,
+    "duration_seconds": 128.45,
+    "violations_count": 0,
+    "raw_output_snippet": "⠋ 792/792  🎉 695 🫽 0  ⏰ 0  🤔 0  🙁 97  🔇 0  🧙 0\n0.00 mutations/second\nSaved CI/CD stats to mutants/mutmut-stage-5-scoped-stats.json\n{\n    \"stage\": \"STAGE-5\",\n    \"judiciary/auditor.py\": {\n        \"killed\": 490,\n        \"survived\": 62,\n        \"total\": 552,\n        \"kill_rate\": \"88.77%\"\n    },\n    \"genome/store.py\": {\n        \"killed\": 205,\n        \"survived\": 35,\n        \"total\": 240,\n        \"kill_rate\": \"85.42%\"\n    },\n    \"killed\": 695,\n    \"survived\": 97,\n    \"total\": 792,\n    \"no_tests\": 0,\n    \"skipped\": 0,\n    \"suspicious\": 0,\n    \"timeout\": 0,\n    \"check_was_interrupted_by_user\": 0,\n    \"segfault\": 0\n}\n[mutmut kill rate: 87.75% (threshold: 85.00%)]"
+  },
+  "sha256_signature": "0042ff5d8ff4dd3c2764b1371dabd06a738fd340aa31706469ec7a9f191e8248",
+  "correlation_id": "corr_f9a355ee2a61",
+  "causation_id": null
+}

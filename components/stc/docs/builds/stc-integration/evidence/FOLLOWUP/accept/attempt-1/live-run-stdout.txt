@@ -1,0 +1,4 @@
+Running dialectic loop: TASK-P05_ACCEPTANCE
+[!] No champion (budget-exhausted) — partial NEEDS_REPAIR dossier at 
+<workspace-root>/stc/docs/builds/stc-integra
+tion/evidence/FOLLOWUP/accept/attempt-1/dossier

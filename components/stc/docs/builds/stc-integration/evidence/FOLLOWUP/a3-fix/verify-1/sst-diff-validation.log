@@ -1,0 +1,89 @@
+########## real-gates 3.11.15 ##########
+cand0: 5182 B sha=44a77e3048d6ce0ee9c5571912d41f1cac5de6a617ceb4793a291d0c90509a11
+cand1: 3929 B sha=0c7052d6bc37e6e7d26a7037842244228c75b38fb3bc6f6b6d72567a03db2fe3
+[PASS] c0-pinned
+[PASS] c1-pinned
+sst-custody-sha=43c246819b3db3c9897813cbef98debbcb41f1c3176e5df5139dc075f42ec864
+[PASS] sst-base-pinned
+[PASS] git-apply-check
+apply-check rc=0 stderr=''
+[PASS] git-apply
+[PASS] normalizer-exposed
+c0 pristine: success=False err="git apply failed: error: corrupt patch at line 169\n | fallback: Unrecognized diff line format in tests/unit/test_integration_runner_pins.py: '*** End Patch'" file=None
+c0 patched : success=True err='None' file=(4923, '75f3af96e40933111e626817f929c90b98d1d5a363f780a93104793182e880a1')
+[PASS] c0-pristine-fails
+[PASS] c0-pristine-apply-stage
+[PASS] c0-patched-succeeds
+[PASS] c0-patched-bytes
+[PASS] c0-patched-clean
+c1 pristine: success=True file=(3929, '0c7052d6bc37e6e7d26a7037842244228c75b38fb3bc6f6b6d72567a03db2fe3')
+c1 patched : success=True err='None' file=(3716, 'f746b09d41a9de4764eae60aa36f8e140cb5084ab46baccc255c15e9e2a20e9a')
+[PASS] c1-pristine-verbatim-garbage
+[PASS] c1-patched-succeeds
+[PASS] c1-patched-bytes
+[PASS] c1-patched-clean
+[PASS] c1-patched-127-lines
+[PASS] v3-new-r0-noop
+[PASS] v3-new-pristine-ok
+[PASS] v3-new-patched-ok
+[PASS] v3-new-identical
+[PASS] v3-mod-r0-noop
+[PASS] v3-mod-pristine-ok
+[PASS] v3-mod-patched-ok
+[PASS] v3-mod-identical
+[PASS] v3-raw-r0-noop
+[PASS] v3-raw-pristine-ok
+[PASS] v3-raw-patched-ok
+[PASS] v3-raw-identical
+[PASS] v3-bold-r0-noop
+[PASS] v3-bold-pristine-ok
+[PASS] v3-bold-patched-ok
+[PASS] v3-bold-identical
+[PASS] sst-bytes-unchanged
+[PASS] sst-status-empty
+RESULT: 34/34 PASS
+########## joint 3.12.3 ##########
+cand0: 5182 B sha=44a77e3048d6ce0ee9c5571912d41f1cac5de6a617ceb4793a291d0c90509a11
+cand1: 3929 B sha=0c7052d6bc37e6e7d26a7037842244228c75b38fb3bc6f6b6d72567a03db2fe3
+[PASS] c0-pinned
+[PASS] c1-pinned
+sst-custody-sha=43c246819b3db3c9897813cbef98debbcb41f1c3176e5df5139dc075f42ec864
+[PASS] sst-base-pinned
+[PASS] git-apply-check
+apply-check rc=0 stderr=''
+[PASS] git-apply
+[PASS] normalizer-exposed
+c0 pristine: success=False err="git apply failed: error: corrupt patch at line 169\n | fallback: Unrecognized diff line format in tests/unit/test_integration_runner_pins.py: '*** End Patch'" file=None
+c0 patched : success=True err='None' file=(4923, '75f3af96e40933111e626817f929c90b98d1d5a363f780a93104793182e880a1')
+[PASS] c0-pristine-fails
+[PASS] c0-pristine-apply-stage
+[PASS] c0-patched-succeeds
+[PASS] c0-patched-bytes
+[PASS] c0-patched-clean
+c1 pristine: success=True file=(3929, '0c7052d6bc37e6e7d26a7037842244228c75b38fb3bc6f6b6d72567a03db2fe3')
+c1 patched : success=True err='None' file=(3716, 'f746b09d41a9de4764eae60aa36f8e140cb5084ab46baccc255c15e9e2a20e9a')
+[PASS] c1-pristine-verbatim-garbage
+[PASS] c1-patched-succeeds
+[PASS] c1-patched-bytes
+[PASS] c1-patched-clean
+[PASS] c1-patched-127-lines
+[PASS] v3-new-r0-noop
+[PASS] v3-new-pristine-ok
+[PASS] v3-new-patched-ok
+[PASS] v3-new-identical
+[PASS] v3-mod-r0-noop
+[PASS] v3-mod-pristine-ok
+[PASS] v3-mod-patched-ok
+[PASS] v3-mod-identical
+[PASS] v3-raw-r0-noop
+[PASS] v3-raw-pristine-ok
+[PASS] v3-raw-patched-ok
+[PASS] v3-raw-identical
+[PASS] v3-bold-r0-noop
+[PASS] v3-bold-pristine-ok
+[PASS] v3-bold-patched-ok
+[PASS] v3-bold-identical
+[PASS] sst-bytes-unchanged
+[PASS] sst-status-empty
+RESULT: 34/34 PASS
+rc=0

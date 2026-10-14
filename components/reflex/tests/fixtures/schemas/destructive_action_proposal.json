@@ -1,0 +1,39 @@
+{
+  "identity": {
+    "action_id": "act_destructive_001",
+    "session_id": "sess_test_destructive",
+    "step_index": 3,
+    "idempotency_key": "fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210",
+    "created_at_ms": 1755430000000.0,
+    "nonce": "destnonce"
+  },
+  "action": {
+    "action_type": "click",
+    "target_node_id": "btn_delete_database",
+    "target_label": "Delete Entire Database",
+    "coords": {
+      "x": 0.8,
+      "y": 0.9
+    },
+    "text_payload": null,
+    "key_code": null,
+    "scroll_delta": null,
+    "safety_class": "destructive",
+    "metadata": {
+      "domain": "admin.example.com"
+    }
+  },
+  "expected_delta": {
+    "added_nodes": [],
+    "removed_nodes": ["db_card"],
+    "modified_nodes": [],
+    "pixel_change_ratio": 0.3,
+    "changed_bounding_boxes": [[100, 100, 800, 600]],
+    "outcome_class": "success"
+  },
+  "required_scopes": [
+    "browser:interact"
+  ],
+  "reasoning_summary": "Attempting destructive deletion button click",
+  "metadata": {}
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://entorhinal.local/schemas/v1/context_snapshot.schema.json",
+  "snapshot_id": "01915dfb-6981-7f89-9a67-9c60e42cb720",
+  "schema_version": "1.0.0",
+  "request_id": "REQ-REFLEX-20260801-0004",
+  "issued_at": "2026-08-01T10:00:00.000000Z",
+  "expires_at": "2026-08-01T10:05:00.000000Z",
+  "purpose_granted": "Resolve stale session state from prior month",
+  "scope_granted": [
+    "scope:workspace.active_project"
+  ],
+  "active_facts": [
+    {
+      "fact_id": "01915dfb-6981-7f89-9a67-9c60e42cb721",
+      "schema_version": "1.0.0",
+      "entity_uri": "workspace:old-deprecated-repo",
+      "attribute": "active_file",
+      "value": "legacy_v0.py",
+      "confidence": 0.50,
+      "valid_from": "2026-08-01T09:50:00.000000Z",
+      "valid_to": "2026-08-01T10:05:00.000000Z",
+      "supporting_evidence_ids": [
+        "01915dfb-6981-7f89-9a67-9c60e42cb722"
+      ],
+      "derived_by": "compiler.workspace_tracker",
+      "revision_id": 1
+    }
+  ],
+  "active_hypotheses": [],
+  "evidence_provenance_refs": [
+    "01915dfb-6981-7f89-9a67-9c60e42cb722"
+  ],
+  "redaction_manifest": [],
+  "disclaimer": "ADVISORY ONLY. Direct user instruction and fresh observation take precedence."
+}

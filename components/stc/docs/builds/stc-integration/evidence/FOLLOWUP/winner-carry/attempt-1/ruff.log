@@ -1,0 +1,7 @@
+$ ruff check <owned>
+All checks passed!
+rc=0
+
+$ ruff format --check <owned>
+2 files already formatted
+rc=0

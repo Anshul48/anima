@@ -1,0 +1,246 @@
+<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/mutmut/configuration.py:143: UserWarning: The config paths_to_mutate is deprecated. Please rename it to source_paths
+  warnings.warn("The config paths_to_mutate is deprecated. Please rename it to source_paths")
+<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/mutmut/configuration.py:152: UserWarning: The config tests_dir is deprecated. Please add the path to pytest_add_cli_args_test_selection instead
+  warnings.warn(
+
+⠋ Generating mutants
+⠙ Generating mutants
+⠹ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+⠏ Generating mutants
+⠋ Generating mutants
+⠙ Generating mutants
+⠹ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+⠏ Generating mutants
+⠋ Generating mutants
+⠙ Generating mutants
+⠹ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+⠏ Generating mutants
+⠋ Generating mutants
+⠙ Generating mutants
+⠹ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+⠏ Generating mutants
+⠋ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+⠏ Generating mutants
+⠋ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+⠏ Generating mutants
+⠋ Generating mutants
+⠙ Generating mutants
+⠹ Generating mutants
+⠏ Generating mutants
+⠋ Generating mutants
+⠸ Generating mutants
+⠼ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+⠏ Generating mutants
+⠋ Generating mutants
+⠴ Generating mutants
+⠦ Generating mutants
+⠙ Generating mutants
+⠹ Generating mutants
+⠙ Generating mutants
+⠹ Generating mutants
+⠧ Generating mutants
+⠇ Generating mutants
+    done in 43099ms (42 files mutated, 0 ignored, 0 unmodified)
+
+⠸ Running stats     
+⠼ Running stats
+⠴ Running stats
+⠦ Running stats
+⠧ Running stats
+⠇ Running stats
+⠏ Running stats
+⠋ Running stats
+⠙ Running stats
+⠹ Running stats
+⠸ Running stats
+⠼ Running stats
+⠴ Running stats
+⠦ Running stats
+⠧ Running stats
+⠇ Running stats
+F
+=================================== FAILURES ===================================
+___________________ test_full_dag_pipeline_sovereign_accept ____________________
+Traceback (most recent call last):
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/_pytest/runner.py", line 361, in from_call
+    result: TResult | None = func()
+                             ^^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/_pytest/runner.py", line 250, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/_pytest/logging.py", line 865, in pytest_runtest_call
+    yield
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    return (yield)
+            ^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/_pytest/skipping.py", line 268, in pytest_runtest_call
+    return (yield)
+            ^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/_pytest/runner.py", line 184, in pytest_runtest_call
+    item.runtest()
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/_pytest/python.py", line 1707, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_callers.py", line 53, in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_result.py", line 103, in get_result
+    raise exc.with_traceback(tb)
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_callers.py", line 38, in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace-root>/learn-anything/.venv/lib/python3.11/site-packages/_pytest/python.py", line 167, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/debtfix-diag/merge/mutants/tests/integration/test_dag_pipeline.py", line 80, in test_full_dag_pipeline_sovereign_accept
+    assert res.exit_code == 0, f"Command failed: {res.output}"
+AssertionError: Command failed: ╭──────────────────────────────────────────────────────────────────────────────╮
+  │ Starting Autonomous STC Pipeline for                                         │
+  │ /tmp/debtfix-diag/merge/specs/sample_spec.md                                 │
+  ╰──────────────────────────────────────────────────────────────────────────────╯
+  1. N01-N02: Ingest & Validate Spec Atom ... DONE (Spec ID: sample_spec)
+  2. N03: Tree of Concerns (TOC) Decomposition ... DONE (Ambiguity Score: 0.30)
+     [!] High ambiguity (0.30 >= 0.30). Resolving structured dilemma...
+     [+] Invariants locked to specs/invariants/SAMPLE_SPEC_INVARIANTS.md
+  3. N07-N08: Query Hippocampal Trace Memory ... DONE (0 inhibitors active)
+  
+  ─── Epoch 1/3 Execution ───
+  4. N09: Context Compilation (Bundle <= 25KB) ... DONE (658 bytes)
+  5. N10: Allocate Leased Git Worktree ... DONE (feature/stc-task-sample_spec-e1 at stc-task-sample_spec)
+  6. N11: Verify Typing Membranes ... PASS (PEP 544 Protocols & Pydantic V2 verified)
+  7. N12: Dispatch Executive Worker (Chaperone) ... DONE (Notary custody attested)
+  8. N13-N16: Mechanical Substrate Gates ... FAIL (ruff, mypy)
+  
+  ─── Epoch 2/3 Execution ───
+  4. N09: Context Compilation (Bundle <= 25KB) ... DONE (607 bytes)
+  5. N10: Allocate Leased Git Worktree ... DONE (feature/stc-task-sample_spec-e2 at stc-task-sample_spec)
+  6. N11: Verify Typing Membranes ... PASS (PEP 544 Protocols & Pydantic V2 verified)
+  7. N12: Dispatch Executive Worker (Chaperone) ... DONE (Notary custody attested)
+  8. N13-N16: Mechanical Substrate Gates ... FAIL (ruff, mypy)
+  
+  ─── Epoch 3/3 Execution ───
+  4. N09: Context Compilation (Bundle <= 25KB) ... DONE (657 bytes)
+  5. N10: Allocate Leased Git Worktree ... DONE (feature/stc-task-sample_spec-e3 at stc-task-sample_spec)
+  6. N11: Verify Typing Membranes ... PASS (PEP 544 Protocols & Pydantic V2 verified)
+  7. N12: Dispatch Executive Worker (Chaperone) ... DONE (Notary custody attested)
+  8. N13-N16: Mechanical Substrate Gates ... FAIL (mypy)
+  Error: Pipeline halted: Substrate gates failed across 3 epochs.
+  
+assert 1 == 0
+ +  where 1 = <Result SystemExit(1)>.exit_code
+=========================== short test summary info ============================
+FAILED tests/integration/test_dag_pipeline.py::test_full_dag_pipeline_sovereign_accept
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed in 133.16s (0:02:13)
+failed to collect stats. runner returned 1
+
+MUTMUT-RC=1 (124/137=box-exceeded)

@@ -1,0 +1,16 @@
+{
+  "branch_refs": [
+    "cand_TASK-P05_ACCEPTANCE-9a89f20e_0_0"
+  ],
+  "budget_state": {
+    "elapsed_seconds": 2335.6371208749915,
+    "estimated_cost_usd": 0.0,
+    "iterations_completed": 1.0,
+    "tokens_consumed": 0.0
+  },
+  "outcome": "no-champion",
+  "reason": "budget-exhausted",
+  "run_id": "TASK-P05_ACCEPTANCE-9a89f20e",
+  "scores_summary": {},
+  "tree_id": "TASK-P05_ACCEPTANCE-9a89f20e"
+}

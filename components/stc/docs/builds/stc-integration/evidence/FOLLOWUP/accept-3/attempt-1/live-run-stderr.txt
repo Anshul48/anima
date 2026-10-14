@@ -1,0 +1,1 @@
+Error: No champion (no-verified-candidate) — partial dossier at docs/builds/stc-integration/evidence/FOLLOWUP/accept-3/attempt-1/dossier.

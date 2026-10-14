@@ -1,0 +1,2 @@
+{"ts": "2026-09-14T17:43:34.213812+00:00", "channel": "gateway", "harness": "codex", "model": "default", "task_id": "gateway", "lease_id": "", "attempt": 1, "ok": true, "exit_code": 0, "timed_out": false, "duration_s": 57.847, "out_bytes": 6379, "note": ""}
+{"ts": "2026-09-14T17:49:33.416945+00:00", "channel": "gateway", "harness": "codex", "model": "default", "task_id": "gateway", "lease_id": "", "attempt": 1, "ok": true, "exit_code": 0, "timed_out": false, "duration_s": 52.392, "out_bytes": 4969, "note": ""}

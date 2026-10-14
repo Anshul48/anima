@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "attempt": 1,
+      "channel": "gateway",
+      "duration_s": 57.847,
+      "exit_code": 0,
+      "harness": "codex",
+      "lease_id": "",
+      "model": "default",
+      "note": "",
+      "ok": true,
+      "out_bytes": 6379,
+      "task_id": "gateway",
+      "timed_out": false,
+      "ts": "2026-09-14T17:43:34.213812+00:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "gateway",
+      "duration_s": 52.392,
+      "exit_code": 0,
+      "harness": "codex",
+      "lease_id": "",
+      "model": "default",
+      "note": "",
+      "ok": true,
+      "out_bytes": 4969,
+      "task_id": "gateway",
+      "timed_out": false,
+      "ts": "2026-09-14T17:49:33.416945+00:00"
+    }
+  ],
+  "totals": {
+    "gateway_calls": 2,
+    "gateway_ok": 2,
+    "rows": 2,
+    "tokens": null,
+    "tokens_note": "unobservable from CLI harnesses (P03 precedent); spend tracked in ledger rows",
+    "usd_metered": 0.0,
+    "worker_calls": 0,
+    "worker_ok": 0
+  }
+}

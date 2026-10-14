@@ -1,0 +1,40 @@
+{
+  "skill_id": "skill_checkout_submit_v1",
+  "version": 1,
+  "preconditions_hash": "c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2",
+  "goal_embedding": [0.012, -0.045, 0.128, 0.089, -0.015],
+  "visual_context_embedding": [0.034, 0.112, -0.056, 0.201, 0.014],
+  "action_sequence": [
+    {
+      "action_type": "click",
+      "target_node_id": "btn_submit",
+      "target_label": "Submit",
+      "coords": {
+        "x": 0.5,
+        "y": 0.75
+      },
+      "text_payload": null,
+      "key_code": null,
+      "scroll_delta": null,
+      "safety_class": "reversible",
+      "metadata": {}
+    }
+  ],
+  "expected_delta": {
+    "added_nodes": ["msg_success_dialog"],
+    "removed_nodes": ["form_registration"],
+    "modified_nodes": [],
+    "pixel_change_ratio": 0.15,
+    "changed_bounding_boxes": [
+      [100, 150, 400, 350]
+    ],
+    "outcome_class": "success"
+  },
+  "timing_mean_ms": 38.2,
+  "timing_std_ms": 4.1,
+  "confidence": 0.98,
+  "safety_class": "reversible",
+  "provenance_episode_ids": ["ep_test_001", "ep_test_002"],
+  "validated_count": 12,
+  "last_validated": "2026-08-17T12:00:00"
+}

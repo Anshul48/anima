@@ -1,0 +1,1 @@
+/home/<user>/.local/bin/codex exec --skip-git-repo-check -s read-only -C /tmp/stc-gateway-yxpcehkj --ephemeral -o /tmp/stc-gateway-yxpcehkj/last-message.md -

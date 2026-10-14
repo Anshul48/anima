@@ -1,0 +1,21 @@
+{
+  "artifact": "policy-selection-v1",
+  "selected_default": "b1-direct",
+  "winner": null,
+  "baseline": "b1-direct",
+  "basis": {
+    "ledger_sha256": "86ca1efe41fee5901ab6463f14dbf944369323ce42203e25dbbd26e9e2c219f0",
+    "rescore": "dsh-plugin-stc/evidence/pilot-2026-09-30/rescore-v1.json",
+    "batch_cost_usd": 0.0386,
+    "scores": {"b1-direct": 1.0, "b2-gated": 0.6666666666666666},
+    "failures": {"b2-gated": ["new-feature"]}
+  },
+  "decided": "2026-10-04",
+  "procedure": "scripts/rescore-to-episodes.py + node policy/score.ts <episodes> b1-direct; winner null keeps baseline (ties lose). Regenerate, never hand-edit.",
+  "limits": [
+    "n=3 preliminary; selection affects the next batch DEFAULT only.",
+    "Explicit --policies always wins; challengers need explicit full runs (default-narrowing starves challengers otherwise).",
+    "Corrupt/unknown selection fails closed to all POLICIES with a warning.",
+    "Promotion remains human-gated; this file authorizes no promotion."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "snapshot_id": 12345,
+  "schema_version": "invalid_version_not_semver",
+  "issued_at": "not-a-valid-iso-date",
+  "expires_at": -9999,
+  "purpose_granted": null,
+  "scope_granted": "invalid_scopes_type_string_instead_of_array",
+  "active_facts": "this_should_be_a_list_not_a_string",
+  "active_hypotheses": {
+    "corrupted_object": true
+  },
+  "confidence": 999.9,
+  "corrupted_structure": true
+}

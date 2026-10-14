@@ -1,0 +1,42 @@
+[project]
+name = "entorhinal"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Anshul48", email = "anshulraj48@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "aiofiles>=25.1.0",
+    "cryptography>=50.0.0",
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+    "inquirerpy>=0.3.4",
+    "litellm>=1.98.0",
+    "numpy>=2.5.2",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.15.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "python-dotenv>=1.2.3",
+    "pyyaml>=6.0.3",
+    "questionary>=2.1.1",
+    "rich>=15.0.0",
+    "typer>=0.27.1",
+    "uvicorn>=0.52.3",
+]
+
+[project.scripts]
+entorhinal = "entorhinal.cli.main:app"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+# Repo suite lives in tests/ only. Frozen evaluation fixtures under
+# evidence/ (case workdirs contain test_*.py by design) must never be
+# collected as repo tests.
+testpaths = ["tests"]
+norecursedirs = ["__pycache__", ".venv", ".venv-linux", "evidence", "run"]

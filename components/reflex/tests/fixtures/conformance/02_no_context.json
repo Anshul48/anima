@@ -1,0 +1,17 @@
+{
+  "$schema": "https://entorhinal.local/schemas/v1/context_snapshot.schema.json",
+  "snapshot_id": "01915dfb-6981-7f89-9a67-9c60e42cb710",
+  "schema_version": "1.0.0",
+  "request_id": "REQ-REFLEX-20260820-0002",
+  "issued_at": "2026-08-20T08:00:00.000000Z",
+  "expires_at": "2026-08-20T08:05:00.000000Z",
+  "purpose_granted": "Query context for unrelated task without active signals",
+  "scope_granted": [
+    "scope:workspace.active_project"
+  ],
+  "active_facts": [],
+  "active_hypotheses": [],
+  "evidence_provenance_refs": [],
+  "redaction_manifest": [],
+  "disclaimer": "ADVISORY ONLY. Direct user instruction and fresh observation take precedence."
+}
