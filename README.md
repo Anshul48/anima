@@ -41,8 +41,9 @@ python examples/quickstart.py   # ends with: ANIMA quickstart OK
 ```
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for how the pieces fit
-together and [docs/CODE-TOUR.md](docs/CODE-TOUR.md) for where to start
-reading each component.
+together, [docs/CODE-TOUR.md](docs/CODE-TOUR.md) for where to start
+reading each component, and [docs/ABOUT.md](docs/ABOUT.md) for the
+proposed GitHub About text and topics.
 
 ## Architecture
 
