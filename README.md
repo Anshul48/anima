@@ -38,10 +38,23 @@ The root package `anima` exposes convenience import aliases only, mapping direct
 
 ## Quickstart
 
-The fastest end-to-end check installs the root alias package plus the stdlib-only substrate component, then executes a real substrate journey (participant run, byte-identical close/reopen, recovery):
+To run from a fresh checkout in an isolated virtual environment:
 
 ```bash
+git clone https://github.com/Anshul48/anima.git
+cd anima
+
+# Create and activate an isolated Python 3.12 virtual environment:
+python3.12 -m venv .venv
+source .venv/bin/activate
+
+# Or using uv:
+# uv venv .venv --python 3.12 && source .venv/bin/activate
+
+# Install the root alias package and the stdlib-only substrate component:
 pip install -e . -e components/substrate
+
+# Execute the verified substrate journey (participant run, byte-identical close/reopen):
 python examples/quickstart.py   # ends with: ANIMA quickstart OK
 ```
 
@@ -62,9 +75,9 @@ distributions as same-object convenience aliases (`anima.substrate`,
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the architecture guide and [docs/anima/architecture/](docs/anima/architecture/) for background proposals.
 
 
-## Installation
+## Installation & Environment
 
-Python 3.12+ is recommended (substrate alone works on 3.11+). From the repository root:
+The root metadata targets Python `>=3.11` (and `substrate` alone runs on stdlib-only Python 3.11+). However, running all five components requires Python 3.12+. From the repository root:
 
 ```bash
 # Install a single component (e.g. substrate, stdlib-only):
@@ -127,7 +140,7 @@ Offline, stdlib-only host for persistent project worlds. Manages pinned particip
 
 ### 2. `sst` (`sst-engine`) — Dialectic MCTS Heuristic Search
 
-High-performance heuristic tree search system discovering verified code implementations via asymmetric dialectic rollouts: high-entropy divergent planning, low-entropy monotropic refinement, deterministic gate verification, and value synthesis.
+Dialectic MCTS heuristic tree search engine discovering verified code implementations via asymmetric rollouts: high-entropy divergent planning, low-entropy monotropic refinement, deterministic gate verification, and value synthesis.
 
 * **Install**: `pip install -e components/sst`
 * **Runtime Requirements**: Local search data structures and budget policies run purely locally. Model-driven tree rollouts require either local Ollama models (`ollama run ...`) or external LLM provider configurations.
@@ -223,16 +236,30 @@ Local-first temporal context engine: records task evidence, compiles multi-times
   # Audit access grants and consumer query logs
   entorhinal audit
 
-  # Start local loopback FastAPI daemon
+  # Display local loopback FastAPI daemon options
   entorhinal serve --help
-  ```
-  *(Note: Importing `entorhinal` displays an advisory `API running WITHOUT authentication` banner on legacy/test paths. For production local serving, configure HTTP principal credentials via `entorhinal auth --help`)*.
-* **Python API**:
-  ```python
-  import entorhinal.schemas.task_event as te
-  from entorhinal.runtime.factory import build_runtime
 
-  print("TaskEvent schema version:", te.TaskEvent.__name__)
+  # Bootstrap and inspect HTTP principal credentials
+  entorhinal auth --help
+  ```
+  *(Note: Demo and test paths operate unauthenticated by design, printing an advisory banner. Serving over HTTP requires authenticated credentials managed via `entorhinal auth` or [`AuthStore`](components/entorhinal/src/entorhinal/runtime/auth.py); see [components/entorhinal/README.md](components/entorhinal/README.md) and [docs/BUILDER-AUTHORITY-BOUNDARY.md](components/entorhinal/docs/BUILDER-AUTHORITY-BOUNDARY.md))*.
+* **Python API (Offline Policy & Auth Store Example)**:
+  ```python
+  import tempfile, pathlib
+  from entorhinal.policy.engine import PolicyEngine
+  from entorhinal.runtime.auth import AuthStore, ROLE_ADMIN
+
+  # Offline consent rule registration (does not initialize server runtime)
+  engine = PolicyEngine()
+  rule_id = engine.add_consent_rule(allow=True, priority=10)
+  print("Consent rule registered:", rule_id)
+
+  # Principal credential configuration in a temporary auth store
+  with tempfile.TemporaryDirectory() as tmpdir:
+      store = AuthStore(pathlib.Path(tmpdir) / "auth.json")
+      principal, secret = store.create_principal(role=ROLE_ADMIN, principal_id="admin-demo")
+      authenticated = store.authenticate(secret)
+      print("Configured principal:", authenticated.principal_id, "role:", authenticated.role)
   ```
 
 ---
@@ -263,7 +290,7 @@ System 1 vision and perception engine designed for autonomous computer-use workf
 
 ## Verification & Testing
 
-Every component includes dedicated unit and conformance test suites:
+Every component includes dedicated unit and conformance test suites (requires `pytest`, installed via `pip install pytest` or your test environment):
 
 ```bash
 # Run root namespace import smoke tests:
@@ -279,12 +306,24 @@ python examples/quickstart.py
 CI workflows run automatically on push and pull requests as defined in [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
 
 
+## Maturity & Component Scope
+
+ANIMA components are modular research systems exploring attributable local execution, heuristic code synthesis, and computer use. Component validation covers bounded unit, smoke, and conformance invariants within isolated test suites and local test harnesses; it does not constitute general production or turn-key guarantees. Model-driven rollouts and perception pipelines require caller-selected and caller-configured model backends.
+
+
 ## Scope & Boundaries
 
 This repository ships the five research components, the alias namespace package, tests, and curated background documentation:
 - **No shared runtime**: There is no overarching daemon, monolithic server, or implicit inter-component coupling.
-- **No private data or secrets**: Synthetic test fixtures are sanitized and push-protection safe (see [`SECRET-SCAN.md`](SECRET-SCAN.md)).
-- **Explicit model boundaries**: AI model integrations require explicit user-provided local models (e.g. Ollama) or configured API credentials; no paid or unauthenticated remote calls are executed by default.
+- **Offline / mock demonstrations**: Demonstrated CLI snippets and example scripts run via offline, stdlib, or mock execution paths. Model-driven capabilities (e.g., MCTS tree search rollouts or vision escalation) require caller-configured local runners (e.g., Ollama) or remote provider credentials, and may incur external provider charges.
+- **Sanitized publication record**: Test fixtures are synthetic and push-protection safe; see the dated [SECRET-SCAN.md](SECRET-SCAN.md) (2026-10-15) for the bounded publication check.
+
+
+## Contributing & Security
+
+- **Contributing**: Contributions and workflow guidelines are documented in [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Security**: Security posture, disclosure procedures, and authority boundaries are documented in [SECURITY.md](SECURITY.md) and [components/entorhinal/docs/BUILDER-AUTHORITY-BOUNDARY.md](components/entorhinal/docs/BUILDER-AUTHORITY-BOUNDARY.md).
+- **Code Tour & Architecture**: See [docs/CODE-TOUR.md](docs/CODE-TOUR.md) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for navigation guides.
 
 
 ## Provenance
