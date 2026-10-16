@@ -49,7 +49,7 @@ python3.12 -m venv .venv
 source .venv/bin/activate
 
 # Or using uv:
-# uv venv .venv --python 3.12 && source .venv/bin/activate
+# uv venv .venv --python 3.12 --seed && source .venv/bin/activate
 
 # Install the root alias package and the stdlib-only substrate component:
 pip install -e . -e components/substrate
@@ -316,7 +316,7 @@ ANIMA components are modular research systems exploring attributable local execu
 This repository ships the five research components, the alias namespace package, tests, and curated background documentation:
 - **No shared runtime**: There is no overarching daemon, monolithic server, or implicit inter-component coupling.
 - **Offline / mock demonstrations**: Demonstrated CLI snippets and example scripts run via offline, stdlib, or mock execution paths. Model-driven capabilities (e.g., MCTS tree search rollouts or vision escalation) require caller-configured local runners (e.g., Ollama) or remote provider credentials, and may incur external provider charges.
-- **Sanitized publication record**: Test fixtures are synthetic and push-protection safe; see the dated [SECRET-SCAN.md](SECRET-SCAN.md) (2026-10-15) for the bounded publication check.
+- **Sanitized publication record**: Test fixtures are synthetic and push-protection safe; see the dated [SECRET-SCAN.md](SECRET-SCAN.md) (2026-10-14) for the bounded publication check.
 
 
 ## Contributing & Security
