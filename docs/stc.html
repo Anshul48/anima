@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STC — Spec-to-Code pipeline (ANIMA site B)</title>
+<link rel="stylesheet" href="site-b.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="topbar"><div class="wrap">
+<a class="brand" href="stc.html">ANIMA site B</a>
+<nav><a href="stc.html">STC</a><a href="entorhinal.html">Entorhinal</a><a href="reflex.html">Reflex</a></nav>
+</div></div>
+<div class="wrap" id="main">
+<h1>STC — Spec-to-Code pipeline</h1>
+<p>
+<span class="label receipt">Receipt</span>
+<span class="label real">Real-replay</span>
+<span class="label badge">Badge-only</span>
+</p>
+
+<div class="card status-quote">
+<p><strong>Status (verbatim, components/stc/README via root table note):</strong>
+“<strong>STC</strong> is a production-grade, distributed autonomous engineering engine”.
+Badges claim “209 passed” and “mutmut 87.75%” — see badge-only box below.</p>
+</div>
+
+<h2>Pipeline visual: spec → 4 gates</h2>
+<p>Gate statuses below are <strong>REAL-REPLAY of signed receipt values</strong> from
+<code class="inline">components/stc/receipt.json</code>
+(receipt_id <code class="inline">rcpt_aa33e8504162</code>, task STAGE-5,
+commit <code class="inline">747dba6e</code>, dated <code class="inline">2026-09-06T17:05:03Z</code>).
+All four gates recorded <code class="inline">exit_code 0</code>. Animation is decorative; numbers are receipt values.</p>
+
+<div class="flow" data-gate-flow aria-label="Spec to gate pipeline">
+<div class="gate" data-state="done"><strong>Spec</strong><span class="st">input</span><span class="fine">specs/sample_spec.md</span></div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="gate" data-state="done"><strong>ruff</strong><span class="st">exit 0</span><span class="fine">0.47 s · 70 files formatted</span></div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="gate" data-state="done"><strong>mypy</strong><span class="st">exit 0</span><span class="fine">3.07 s · 47 files clean</span></div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="gate" data-state="done"><strong>pytest</strong><span class="st">exit 0</span><span class="fine">141.5 s · 13 passed (receipt scope)</span></div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="gate" data-state="done"><strong>mutmut</strong><span class="st">exit 0</span><span class="fine">128.5 s · kill 87.75%</span></div>
+</div>
+
+<table>
+<caption>Receipt gate values (receipt.json, 2026-09-06). Label: RECEIPT.</caption>
+<tr><th>Gate</th><th>Exit</th><th>Duration</th><th>Snippet</th></tr>
+<tr><td>ruff</td><td>0</td><td>0.466 s</td><td>70 files already formatted; All checks passed!</td></tr>
+<tr><td>mypy</td><td>0</td><td>3.066 s</td><td>Success: no issues found in 47 source files</td></tr>
+<tr><td>pytest</td><td>0</td><td>141.517 s</td><td>13 passed (STAGE-5 scope)</td></tr>
+<tr><td>mutmut</td><td>0</td><td>128.45 s</td><td>695 killed / 792; kill rate 87.75%</td></tr>
+</table>
+
+<h2>TEST-REPORT smoke: 37 passed</h2>
+<p><span class="label real">Real-replay</span>
+Root <code class="inline">TEST-REPORT.md</code> row 9 (staged 2026-10-14, re-verified in fix pass):
+<code class="inline">pytest tests/unit/test_schemas.py -q</code> in components/stc →
+<strong>exit 0, 37 passed</strong>. This is the repo-verified schemas smoke scope.</p>
+
+<div class="card limits">
+<h3>Badge-only claims — NOT re-run here</h3>
+<p><span class="label badge">Badge-only</span>
+“209 passed” and “mutmut 87.75%” badges in the STC README are <strong>upstream badge
+claims, not re-run in this tree</strong> (TEST-REPORT scope-honesty section, 2026-10-14).
+Do not cite them as current verification. The verified counts on this site are the
+receipt gates above plus the 37-passed schemas smoke.</p>
+</div>
+
+<h2>Pin vintage</h2>
+<p class="fine">Site freezes to GitHub pin <code class="inline">construction.stc.1f93f15c</code>
+(pinned 2026-10-06, <code class="inline">docs/anima/catalogue/pins/construction.stc.1f93f15c.json</code>).
+Local tree <code class="inline">Utilities/stc d78cd4e</code> (2026-10-11) is
+<strong>ahead</strong> of this pin; site numbers are pin-vintage, not local-HEAD.</p>
+
+<h2>Sources</h2>
+<ul>
+<li><code class="inline">components/stc/receipt.json</code> — rcpt_aa33e8504162, 2026-09-06</li>
+<li><code class="inline">TEST-REPORT.md</code> rows 9 + scope-honesty — staged 2026-10-14</li>
+<li><code class="inline">docs/anima/catalogue/pins/construction.stc.1f93f15c.json</code> — pin 2026-10-06</li>
+</ul>
+<p class="fine">Privacy: no secrets, screenshots, traces, or emails on this page. Static content is complete without JavaScript.</p>
+</div>
+<script src="site-b.js"></script>
+</body>
+</html>

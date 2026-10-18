@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reflex — Crop-and-route concept (ANIMA site B)</title>
+<link rel="stylesheet" href="site-b.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="topbar"><div class="wrap">
+<a class="brand" href="stc.html">ANIMA site B</a>
+<nav><a href="stc.html">STC</a><a href="entorhinal.html">Entorhinal</a><a href="reflex.html">Reflex</a></nav>
+</div></div>
+<div class="wrap" id="main">
+<h1>Reflex — Crop-and-route concept</h1>
+<p>
+<span class="label illustrated">Illustrated</span>
+<span class="label synthetic">Synthetic</span>
+<span class="label real">Real-replay</span>
+</p>
+
+<div class="card status-quote">
+<p><strong>Status (verbatim, components/reflex/README limits):</strong>
+“Research/seed stage: model names, latency figures, and complexity claims in
+<code class="inline">ARCHITECTURE.md</code> are hypotheses to measure, not release commitments.”
+Latency / O(N) figures on this page are <strong>aspirational hypotheses</strong>, not measurements.</p>
+</div>
+
+<h2>Crop-and-route (illustrated concept)</h2>
+<p><span class="label illustrated">Illustrated</span>
+Concept from <code class="inline">REFLEX-AMBITION.md</code>: fast detectors propose boxes,
+a cheap relevance filter scores them, and <strong>only small high-resolution crops</strong>
+(<code class="inline">CropPacket</code>) route to heavy VLMs — never full frames.
+The mock below is <strong>drawn in JavaScript at load; it is a synthetic diagram, not a
+screenshot</strong>. No real-screen PNGs ship on this site (privacy hard ban).</p>
+
+<canvas class="viz" id="synthetic-screen" width="640" height="300" role="img"
+aria-label="Synthetic illustration: abstract boxes with relevance scores; two routed crops highlighted"></canvas>
+<noscript><p class="fine">No-JS: concept still reads — detectors propose boxes, filter scores relevance,
+only top crops (e.g. box1, box3) route to the VLM; full frame is never sent.</p></noscript>
+
+<pre>full frame → detect boxes → relevance filter → route top crops → VLM answer
+  (synthetic boxes)   (cheap scores)    (CropPacket: box1, box3)  (grounded)</pre>
+
+<h2>Real replay: privacy redactor</h2>
+<p><span class="label real">Real-replay</span>
+TEST-REPORT row 11 (staged 2026-10-14, re-verified in fix pass):
+<code class="inline">tests/test_privacy_redactor.py</code> →
+<strong>exit 0, 14 passed + 11 subtests</strong>. This is the verified real chip on this page;
+everything else visual is illustrated.</p>
+
+<h2>Ambition ladder (vision-fenced)</h2>
+<p>From <code class="inline">REFLEX-AMBITION.md</code>. Ladders describe <strong>direction, not
+delivered capability</strong> — vision-fenced, hypotheses to measure:</p>
+<table>
+<caption>Escalation ladder (REFLEX-AMBITION.md). Label: ILLUSTRATED / vision-fenced.</caption>
+<tr><th>Rung</th><th>Stage</th><th>Note</th></tr>
+<tr><td>L0/L1</td><td>DOM / cache</td><td>cheapest; grounded when available</td></tr>
+<tr><td>L2</td><td>YOLO + OCR</td><td>box proposals (hypothesis)</td></tr>
+<tr><td>L3</td><td>Feature grounding</td><td>relevance filter (hypothesis)</td></tr>
+<tr><td>L4/L5</td><td>Targeted VLM</td><td>small crops only; full frame never sent</td></tr>
+</table>
+
+<div class="card limits">
+<h3>Limits</h3>
+<ul>
+<li>No shipped screenshots, crops, routing traces, or generated-code samples in this tree.</li>
+<li>Entry point is <code class="inline">main.py</code> (Jarvis console; <code class="inline">--mock --demo</code> for offline); no installed console script.</li>
+<li>Pin vintage: site ships GitHub snapshot (<code class="inline">8b44867</code>, 2026-10-14). Local <code class="inline">relfex 6c2462b</code> (2026-10-17) is <strong>ahead</strong> with browser-loop work not in this pin.</li>
+</ul>
+</div>
+
+<h2>Sources</h2>
+<ul>
+<li><code class="inline">components/reflex/README.md</code> — status + limits (verbatim above)</li>
+<li><code class="inline">components/reflex/REFLEX-AMBITION.md</code> — ladder + O(N) crop routing</li>
+<li><code class="inline">TEST-REPORT.md</code> row 11 — staged 2026-10-14</li>
+</ul>
+<p class="fine">Privacy: synthetic canvas mock only. No .env content, real-screen PNGs, or eval secret-word hits on this page.</p>
+</div>
+<script src="site-b.js"></script>
+</body>
+</html>
