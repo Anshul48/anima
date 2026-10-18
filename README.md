@@ -6,52 +6,63 @@
 
 ![ANIMA component overview: five cards for substrate, SST, STC, entorhinal, and reflex](assets/anima-overview.svg)
 
-## What ANIMA is
+> **Research preview.** ANIMA is experimental research shared early for
+> feedback. It is not a production runtime, not a hosted service, and
+> not a benchmark champion — just working code with measured numbers.
 
-ANIMA is a collection of reusable research components for attributable
-local computation: persistent project worlds, heuristic search,
-spec-to-code engineering, advisory temporal context, and computer-use
-perception. The direction they serve is neuro-symbolic scaffolds for
-externalized cognition — durable symbolic structure (worlds, budgets,
-specs, evidence, audit trails) around model-driven search and synthesis,
-with a cost model that keeps architect decisions, coordinator
-scheduling, and swarm model calls separately budgeted and attributable.
+## ANIMA in 30 seconds
 
-That composition is a proposal today, not shipped wiring. What this
-repository actually ships is five independently installable components
-plus a thin alias namespace: there is no shared server, no
-cross-component wiring, and no hosted service here. Shared background
-and proposals live in [docs/anima/](docs/anima/).
+**What:** Superintelligence will not come from a bigger model alone.
+ANIMA externalizes intelligence into the environment: persistent
+project worlds, heuristic search, spec-to-code construction, advisory
+memory, and computer-use perception — durable scaffolds around models
+so cognition lives in the system, not in a single prompt.
 
-## Status
+**Who it helps:** agent builders who need attributable, budgeted local
+execution across many models — [who it is for](#who-it-is-for).
 
-What is verified today (see [TEST-REPORT.md](TEST-REPORT.md), staged
-2026-10-14, CPython 3.12.3): root alias imports 8 passed; substrate
-207 passed, 11 skipped; SST 161 passed, exact parity with the CUT1 pin
-record (frozen-lock env); STC schemas 37 passed; entorhinal
-fact-identity 9 passed plus conformance/truth 29 passed, 2 skipped;
-reflex privacy-redactor 14 passed plus 11 subtests; every CLI responds;
-and the substrate journey below ends with `ANIMA quickstart OK`.
-Component validation covers bounded unit, smoke, and conformance
-invariants within isolated test suites and local test harnesses; it
-does not constitute general production or turn-key guarantees.
+**Proof:** a frozen 10M-token memory build (TRACE seam12a) organizes
+**10,003,381 tokens** into **13,081 docs** and **63,441 atoms** with
+**recall@10 0.7367 (all) / 0.4883 (leave-schema-out)**, repairs
+**5,847 defects to 0 in 6 iterations**, in **9,494.9 s (~2.6 h)** at
+**~8.5 GB peak RAM** (parent-process peak 8489.1 MB, rss-hwm), freeze
+sha `8d3bbb6b`. [TRACE section](#trace-the-memory-layer) ·
+[benchmarks](#benchmarks-frozen-seam12a-o94-scale10m) ·
+[live explorer](https://anshul48.github.io/trace/explorer/) ·
+[run it](#quickstart).
 
-## Constraints
+## The dream (Vision — direction, not shipped)
 
-Every component runs alone: each has its own install, its own test
-suite, and its own caller-selected state directory, with no shared
-server and no cross-component imports. Work is bounded before it runs:
-substrate pins participants and delegates explicit budgets, STC
-compiles task bundles under a strict 25 KB ceiling and passes every
-worker through deterministic gates (Ruff, Mypy strict, Pytest, Mutmut)
-plus blind judiciary review and a human promotion gate, and SST refuses
-to promote unless the verifier passed on the exact logged bytes.
-Memory stays advisory: entorhinal records evidence and serves context
-snapshots but has zero autonomous mutation authority, and every
-correction, consent grant, deletion, and access is audit-logged under
-user control.
+Everything in this section is direction, not a claim about what exists.
+The composition it describes is a proposal today, not shipped wiring.
 
-## Modules
+The dream is a dynamic substrate that rewires itself while it runs:
+worlds that split, merge, and quarantine organizations the way cells
+divide and immune systems isolate; software that literally evolves
+like biology — variation under search, selection under deterministic
+gates, inheritance through versioned genomes of verified code.
+
+A cost cascade keeps that evolution affordable. A frontier model acts
+as architect and decides rarely; a coordinator schedules and budgets;
+Spark swarms of cheap models do the abundant work. Each layer is
+budgeted separately, so intelligence scales by spending wisely rather
+than by renting the largest model for every step.
+
+Cognition is offloaded to deterministic scaffolds that do not forget:
+a hippocampus-inspired retrieval layer, a prefrontal-inspired
+constraint and planning system, and a basal-ganglia-inspired gate that
+only lets verified work through. Memory itself is TRACE: the layer
+that supplies schema priors from everything seen before, plus negative
+knowledge — what was tried, what failed, and what must never ship.
+
+## What exists today
+
+Five independently installable research components plus a thin alias
+namespace. There is no shared server, no cross-component wiring, and
+no hosted service here. Shared background and proposals live in
+[docs/anima/](docs/anima/).
+
+### Modules
 
 | Component | Distribution | Status (repo wording) | Guide |
 |---|---|---|---|
@@ -67,19 +78,33 @@ imports (`import anima_substrate`, `import sst`, ...) are primary;
 
 > **Note on PyPI name collision**: The native import name `reflex` collides with the unrelated Reflex web framework on PyPI. Do not install both into the same Python environment.
 
-## Packaging & Import Structure
+### Status
 
-The repository contains six distinct distribution packages across six `pyproject.toml` files: one root alias package and five independent component packages.
+What is verified today (see [TEST-REPORT.md](TEST-REPORT.md), staged
+2026-10-14, CPython 3.12.3): root alias imports 8 passed; substrate
+207 passed, 11 skipped; SST 161 passed, exact parity with the CUT1 pin
+record (frozen-lock env); STC schemas 37 passed; entorhinal
+fact-identity 9 passed plus conformance/truth 29 passed, 2 skipped;
+reflex privacy-redactor 14 passed plus 11 subtests; every CLI responds;
+and the substrate journey below ends with `ANIMA quickstart OK`.
+Component validation covers bounded unit, smoke, and conformance
+invariants within isolated test suites and local test harnesses; it
+does not constitute general production or turn-key guarantees.
 
-The root package `anima` exposes convenience import aliases only, mapping directly to five native packages:
+### Constraints
 
-| Alias | Distribution Name | Native Import Name | Component Directory | Description |
-|---|---|---|---|---|
-| `anima.substrate` | `anima-substrate` (0.1.1) | `import anima_substrate` | [`components/substrate/`](components/substrate/) | Persistent project worlds, pinned participants, crash-atomic local state (stdlib-only) |
-| `anima.sst` | `sst-engine` (0.1.0) | `import sst` | [`components/sst/`](components/sst/) | Asymmetric dialectic MCTS heuristic search engine |
-| `anima.stc` | `stc` (0.1.0) | `import stc` | [`components/stc/`](components/stc/) | Biomimetic spec-to-code autonomous engineering engine |
-| `anima.entorhinal` | `entorhinal` (0.1.0) | `import entorhinal` | [`components/entorhinal/`](components/entorhinal/) | Local-first advisory temporal context (evidence, projections, user-controlled snapshots) |
-| `anima.reflex` | `reflex` (0.1.0) | `import reflex` | [`components/reflex/`](components/reflex/) | Autonomous computer-use vision & perception (fast spatial affordances & crop routing) |
+Every component runs alone: each has its own install, its own test
+suite, and its own caller-selected state directory, with no shared
+server and no cross-component imports. Work is bounded before it runs:
+substrate pins participants and delegates explicit budgets, STC
+compiles task bundles under a strict 25 KB ceiling and passes every
+worker through deterministic gates (Ruff, Mypy strict, Pytest, Mutmut)
+plus blind judiciary review and a human promotion gate, and SST refuses
+to promote unless the verifier passed on the exact logged bytes.
+Memory stays advisory: entorhinal records evidence and serves context
+snapshots but has zero autonomous mutation authority, and every
+correction, consent grant, deletion, and access is audit-logged under
+user control.
 
 ## Quickstart
 
@@ -108,33 +133,75 @@ together, [docs/CODE-TOUR.md](docs/CODE-TOUR.md) for where to start
 reading each component, and [docs/ABOUT.md](docs/ABOUT.md) for the
 proposed GitHub About text and topics.
 
-## TRACE: the memory layer (frozen seam12a 10M build)
+### Deep dive
 
-TRACE is the memory layer for this ecosystem: an experimental retrieval
-architecture that organizes continuous document streams into an
-overlapping multi-tier DAG without global clustering recomputation. The
-frozen build below is measured, not projected. Live explorer:
-[anshul48.github.io/trace/explorer/](https://anshul48.github.io/trace/explorer/).
-Source: [github.com/Anshul48/trace](https://github.com/Anshul48/trace).
+How each piece works lives behind these links: [substrate
+guide](components/substrate/README.md), [SST
+guide](components/sst/README.md), [STC
+guide](components/stc/README.md), [entorhinal
+guide](components/entorhinal/README.md), [reflex
+guide](components/reflex/README.md), [architecture
+guide](docs/ARCHITECTURE.md), [code
+tour](docs/CODE-TOUR.md), and background proposals in
+[docs/anima/](docs/anima/).
+
+## Who it is for
+
+- **Agent builders** who want worlds with explicit custody: pinned
+  participants, delegated budgets, and crash-atomic state instead of
+  hidden global state. Built for local, attributable execution — use
+  substrate to explore it.
+- **Multi-model orchestrators** who want search, construction, and
+  memory budgeted as separate concerns: SST for heuristic search with
+  deterministic promotion gates, STC for bounded spec-to-code bundles,
+  entorhinal for advisory context that can never mutate on its own.
+- **Cost-conscious teams**: budgets are explicit before work runs
+  (substrate delegates them, STC caps bundles at 25 KB, SST verifies
+  on the exact logged bytes), so model spend is attributable per
+  participant and per task.
+
+## TRACE: the memory layer
+
+TRACE is the memory layer for this ecosystem: an experimental
+retrieval architecture that organizes continuous document streams into
+an overlapping multi-tier DAG without global clustering
+recomputation. The frozen build below is measured, not projected.
 
 Freeze identity (pinned): **seam12a**, tarball sha256
 `8d3bbb6bf53e1731811065a9de156a9997be740d598cd1dfa0a3d946928dbf64`,
 run **o94-scale10m**, probes `b332d62d...`, harness `9f78479a...`,
 final commits `164195`. The freeze holds 253 files (`frozen_ok=true`).
 
-Measured numbers (receipt-quoted): 10003381 tokens, 13081 docs, 63441
-atoms, 5353 source commits, 164195 final commits. Guided recall@10
-0.7367 all / 0.4883 LSO (120 probes across chunk/noisy/cross
-families); flat recall@10 0.055 / 0.0017. Repair ran 6 iterations,
-5847 to 0, with 0 pending. Query-complete latency p50/p95 96.8/115.5 ms
-(n=33, all within 5 s); append ack-to-query 0.114 s; 27796 reader
-requests over 2 threads at p50 74.7 ms. Wall 9494.9 s; RSS peaks tree
-9700.9 MiB (transient, at t=3097 s) / parent 8489.1 / child 7169.2
-MiB; 2.85 GiB retained on disk (VM-side figures). No broad-benchmark
-or state-of-the-art claim is made: this is the project team's
+Measured headline: 10,003,381 tokens, 13,081 docs, 63,441 atoms;
+guided recall@10 0.7367 all / 0.4883 leave-schema-out; self-repair
+5,847 to 0 over 6 iterations; wall 9,494.9 s (~2.6 h); peak RAM
+~8.5 GB (parent-process peak 8489.1 MB, rss-hwm). Live explorer:
+[live explorer](https://anshul48.github.io/trace/explorer/).
+Source: [github.com/Anshul48/trace](https://github.com/Anshul48/trace).
+
+What exists is a Python package plus the `tools/product_pilot.py`
+CLI — no SDK, no API, and no hosted endpoint is claimed. Built for
+memory-over-streams research; use it to explore schema priors and
+negative knowledge (what failed, and what must never ship) on your
+own corpora at small scale.
+
+### Benchmarks (frozen seam12a, o94-scale10m)
+
+| Benchmark | Score |
+|---|---|
+| Guided recall@10, all sources (120 probes: chunk/noisy/cross) | 0.7367 |
+| Guided recall@10, leave-schema-out | 0.4883 |
+| Flat recall@10, all sources (baseline, same probes) | 0.055 |
+| Flat recall@10, leave-schema-out (baseline, same probes) | 0.0017 |
+| Self-repair debt over 6 iterations | 5847 to 0, 0 pending |
+| Query-complete latency p50/p95 (n=33, all within 5 s) | 96.8/115.5 ms |
+| Append ack-to-query | 0.114 s |
+| Reader load, 2 threads, 27796 requests, p50 | 74.7 ms |
+
+No broad-benchmark claim is made: this is the project team's
 prototype evaluation protocol, nothing more.
 
-### Run the frozen build (quickstart, verified 2026-10-18)
+### Reproduce the benchmark
 
 From inside the extracted seam12a dir, with the environment kept
 inside that dir:
@@ -160,13 +227,11 @@ fields `doc_id` + `text`) plus `emb_cache/` in `tl-gpu-embcache-v1`
 layout (`meta.json`, `index.jsonl`, FP32 `shard_NNNNNN.f32` files).
 Non-VM runs are capped at 1M tokens via `--profile local`.
 
-### Full-10M reproduction: two blockers, no one-click path today
-
-A full 10M-token reproduction is blocked by two facts, and there is no
-one-click 10M repro today: (a) the external corpus `docs-100m.jsonl`
-plus its embedding cache is absent — the 1.2 MB freeze tarball is
-source-only and ships no dataset; (b) the `--profile vm` path exits
-unless the hostname is `trace-build500`
+A full 10M-token reproduction is blocked by two facts, and there is
+no one-click 10M repro today: (a) the external corpus
+`docs-100m.jsonl` plus its embedding cache is absent — the 1.2 MB
+freeze tarball is source-only and ships no dataset; (b) the
+`--profile vm` path exits unless the hostname is `trace-build500`
 (`VM profile requires existing trace-build500; local runs capped at
 1M TOK`). Behind that gate the corpus is absent too, so the 10M
 numbers above stay receipt-labeled, not re-measured here. Scaling to
@@ -181,218 +246,6 @@ distributions as same-object convenience aliases (`anima.substrate`,
 `anima.sst`, ...). Native imports (`import anima_substrate`, `import sst`,
 ...) are primary; the diagram arrows are import aliases, not data flow.
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the architecture guide and [docs/anima/architecture/](docs/anima/architecture/) for background proposals.
-
-## Installation & Environment
-
-The root metadata targets Python `>=3.11` (and `substrate` alone runs on stdlib-only Python 3.11+). However, running all five components requires Python 3.12+. From the repository root:
-
-```bash
-# Install a single component (e.g. substrate, stdlib-only):
-pip install -e components/substrate
-
-# Install all components plus the anima alias package:
-pip install -r requirements/components-all.txt
-```
-
-Alternatively, Astral's [`uv`](https://github.com/astral-sh/uv) can be used:
-```bash
-uv pip install -e . -e components/substrate
-```
-Components [sst](components/sst/) and [stc](components/stc/) also provide frozen `uv.lock` files from their pinned releases.
-
-## Component Guides & Verified Usage
-
-### 1. `substrate` (`anima-substrate`) — Persistent Project Worlds
-
-Offline, stdlib-only host for persistent project worlds. Manages pinned participant families, delegated budgets, and crash-atomic state in a caller-selected directory with zero external runtime dependencies.
-
-* **Install**: `pip install -e components/substrate`
-* **CLI Quickstart**:
-  ```bash
-  anima-substrate --help
-  anima-substrate families
-  ```
-* **Python API**:
-  ```python
-  import tempfile, pathlib, json, hashlib
-  from anima_substrate.host import api
-  from anima_substrate.participants import get_family
-
-  work = pathlib.Path(tempfile.mkdtemp(prefix="sub-demo-"))
-  state = work / "state"
-  api.init_run(state)
-
-  tree = work / "release"
-  tree.mkdir(parents=True)
-  (tree / "app.py").write_text("print('hello')\n")
-  manifest = work / "pins.json"
-  manifest.write_text(json.dumps({
-      "manifest_version": 1,
-      "release": "v1",
-      "files": {"app.py": hashlib.sha256(b"print('hello')\n").hexdigest()}
-  }))
-
-  fam = get_family("relcheck", "v1")
-  fam.create(state, "RC1", {}, "runner")
-  rep = fam.run(state, "RC1", {
-      "task_id": "T1",
-      "manifest_path": str(manifest),
-      "tree_root": str(tree)
-  })
-  print("relcheck valid:", rep["valid"])
-  ```
-
----
-
-### 2. `sst` (`sst-engine`) — Dialectic MCTS Heuristic Search
-
-Dialectic MCTS heuristic tree search engine discovering verified code implementations via asymmetric rollouts: high-entropy divergent planning, low-entropy monotropic refinement, deterministic gate verification, and value synthesis.
-
-* **Install**: `pip install -e components/sst`
-* **Runtime Requirements**: Local search data structures and budget policies run purely locally. Model-driven tree rollouts require either local Ollama models (`ollama run ...`) or external LLM provider configurations.
-* **CLI Commands**:
-  ```bash
-  # Display CLI help and subcommands
-  sst --help
-
-  # Execute bounded MCTS search with acceptance test verification
-  sst run --help
-
-  # Launch Cytoscape.js DAG visualizer or task UI
-  sst visualize --help
-  sst ui --help
-  ```
-* **Python API**:
-  ```python
-  from sst.core import SSTNode, NodeRole, NodeStatus, DomainMode, PayloadType
-  from sst.search.policy import BudgetTracker
-
-  tracker = BudgetTracker()
-  node = SSTNode(
-      tree_id="tree_demo",
-      node_id="node_root",
-      parent_id=None,
-      depth=0,
-      role=NodeRole.PLANNER,
-      domain=DomainMode.AUTOBUILD,
-      title="Goal: Fast Parser",
-      payload_type=PayloadType.GOAL,
-      content="Synthesize verified parser",
-      status=NodeStatus.UNEXPANDED
-  )
-  print(f"SST Node created: id={node.node_id}, role={node.role.value}")
-  ```
-
----
-
-### 3. `stc` (`stc`) — Spec-To-Code Autonomous Engineering
-
-Autonomous engineering engine implementing biomimetic separation of concerns: Socratic spec intake, bounded context compilation (strict <= 25 KB task bundles), ephemeral Git worktree leases, and deterministic quality gates (Ruff, Mypy Strict, Pytest, Mutmut).
-
-* **Install**: `pip install -e components/stc`
-* **Runtime Requirements**: Local decomposition, bundle compilation, and worktree leases run offline with git. Full worker execution uses local tool harnesses (such as Aider/Agy) and configured models.
-* **CLI Commands**:
-  ```bash
-  # Inspect runtime environment and invariants
-  stc info
-  stc health
-
-  # Compile an atomic sub-25KB task bundle from a spec
-  stc compile TASK-001 --spec components/stc/examples/sample_spec.yaml
-
-  # Manage ephemeral Git worktree leases
-  stc worktree lease --help
-  stc worktree list
-  ```
-* **Python API**:
-  ```python
-  import hashlib
-  from stc.schemas.models import SpecAtom
-  from stc.socratic import SocraticDecomposer
-
-  raw_spec = "Goal: Implement secure token validator.\nInvariants: Must reject expired tokens.\n"
-  spec = SpecAtom(
-      spec_id="SPEC-001",
-      source_path="inline",
-      raw_content=raw_spec,
-      content_sha256=hashlib.sha256(raw_spec.encode()).hexdigest()
-  )
-  decomposer = SocraticDecomposer()
-  toc = decomposer.decompose(spec)
-  print("Socratic ambiguity score:", toc.ambiguity_score)
-  print("Domain invariants:", toc.domain_invariants.invariants)
-  ```
-
----
-
-### 4. `entorhinal` (`entorhinal`) — Local-First Advisory Temporal Context
-
-Local-first temporal context engine: records task evidence, compiles multi-timescale projections, serves context snapshots to local consumers, and enforces cryptographic hash-chained audit trails, user corrections, and cascade deletion. Operates strictly under advisory authority (zero autonomous mutation authority).
-
-* **Install**: `pip install -e components/entorhinal`
-* **Runtime Requirements**: Evidence logging, audit querying, and retention policies run on local SQLite. AI projection distillation optionally integrates with local Ollama (`qwen3.8:27b`, `nomic-embed-text`) or external providers.
-* **CLI Commands**:
-  ```bash
-  # Inspect measured health and projection state
-  entorhinal status
-
-  # Inspect real-time chronological evidence timeline
-  entorhinal inspect timeline
-
-  # Audit access grants and consumer query logs
-  entorhinal audit
-
-  # Display local loopback FastAPI daemon options
-  entorhinal serve --help
-
-  # Bootstrap and inspect HTTP principal credentials
-  entorhinal auth --help
-  ```
-  *(Note: Demo and test paths operate unauthenticated by design, printing an advisory banner. Serving over HTTP requires authenticated credentials managed via `entorhinal auth` or [`AuthStore`](components/entorhinal/src/entorhinal/runtime/auth.py); see [components/entorhinal/README.md](components/entorhinal/README.md) and [docs/BUILDER-AUTHORITY-BOUNDARY.md](components/entorhinal/docs/BUILDER-AUTHORITY-BOUNDARY.md))*.
-* **Python API (Offline Policy & Auth Store Example)**:
-  ```python
-  import tempfile, pathlib
-  from entorhinal.policy.engine import PolicyEngine
-  from entorhinal.runtime.auth import AuthStore, ROLE_ADMIN
-
-  # Offline consent rule registration (does not initialize server runtime)
-  engine = PolicyEngine()
-  rule_id = engine.add_consent_rule(allow=True, priority=10)
-  print("Consent rule registered:", rule_id)
-
-  # Principal credential configuration in a temporary auth store
-  with tempfile.TemporaryDirectory() as tmpdir:
-      store = AuthStore(pathlib.Path(tmpdir) / "auth.json")
-      principal, secret = store.create_principal(role=ROLE_ADMIN, principal_id="admin-demo")
-      authenticated = store.authenticate(secret)
-      print("Configured principal:", authenticated.principal_id, "role:", authenticated.role)
-  ```
-
----
-
-### 5. `reflex` (`reflex`) — Computer-Use Vision & Perception
-
-System 1 vision and perception engine designed for autonomous computer-use workflows: fast spatial affordance detection, cheap relevance filtering, and targeted escalation of small crops to heavier vision models instead of forwarding entire high-resolution desktop frames.
-
-* **Install**: `pip install -e components/reflex`
-* **Runtime Requirements**: Computer-use console uses a mock window manager substrate on Linux/CI environments (`--mock`). Real desktop interaction targets Windows desktop environments.
-* **CLI Quickstart**:
-  ```bash
-  # Display Jarvis computer-use console help
-  python components/reflex/main.py --help
-
-  # Run automated demonstration in mock window mode (offline safe)
-  python components/reflex/main.py --mock --demo
-  ```
-* **Python API**:
-  ```python
-  from reflex.perception.vision.vision_grounder import MockVisionGrounder
-
-  grounder = MockVisionGrounder()
-  print("Reflex VisionGrounder initialized:", grounder.__class__.__name__)
-  ```
-
----
 
 ## Verification & Testing
 
@@ -421,6 +274,7 @@ This repository ships the five research components, the alias namespace package,
 - **No shared runtime**: There is no overarching daemon, monolithic server, or implicit inter-component coupling.
 - **Offline / mock demonstrations**: Demonstrated CLI snippets and example scripts run via offline, stdlib, or mock execution paths. Model-driven capabilities (e.g., MCTS tree search rollouts or vision escalation) require caller-configured local runners (e.g., Ollama) or remote provider credentials, and may incur external provider charges.
 - **Sanitized publication record**: Test fixtures are synthetic and push-protection safe; see the dated [SECRET-SCAN.md](SECRET-SCAN.md) (2026-10-14) for the bounded publication check.
+- **No autoplay media**: this README ships no animated or auto-playing content.
 
 ## Roadmap
 
@@ -428,7 +282,7 @@ Labeled outlook only — none of this is claimed as shipped:
 
 - **TRACE scale-up (100M+ tokens)**: the frozen seam12a build above is
   a 10M-token measurement; larger corpora need a fetchable dataset and
-  a reproducible large-machine path first.
+  a reproducible large-machine path.
 - **Composed worlds**: running substrate worlds with SST search, STC
   construction, entorhinal memory, and TRACE retrieval under one
   budgeted arrangement is the stated direction in
@@ -436,12 +290,15 @@ Labeled outlook only — none of this is claimed as shipped:
 - **Cost accounting**: per-participant budgets exist in substrate now;
   extending that accounting across coordinator scheduling and model
   calls is future work.
+- **Interfaces**: any hosted or graphical interface is in development
+  at most — nothing dated, nothing promised.
 
 ## Contributing & Security
 
 - **Contributing**: Contributions and workflow guidelines are documented in [CONTRIBUTING.md](CONTRIBUTING.md).
 - **Security**: Security posture, disclosure procedures, and authority boundaries are documented in [SECURITY.md](SECURITY.md) and [components/entorhinal/docs/BUILDER-AUTHORITY-BOUNDARY.md](components/entorhinal/docs/BUILDER-AUTHORITY-BOUNDARY.md).
 - **Code Tour & Architecture**: See [docs/CODE-TOUR.md](docs/CODE-TOUR.md) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for navigation guides.
+
 
 ## Provenance
 
@@ -457,6 +314,7 @@ Staged 2026-10-14 from user-owned sources (see [MANIFEST.md](MANIFEST.md)):
 | docs/anima | curated subset of ANIMA (2026-10-14) |
 
 Upstream remotes: `anima-substrate`, `entorhinal`, `relfex`, `utilities-sst` (all `github.com/Anshul48/...`); `stc` has no remote configured. Per-file history stays in those sources; this repo starts fresh.
+
 
 ## License
 
@@ -481,3 +339,4 @@ third-party material. Third-party code, data, and model terms shipped
 inside components keep their own licenses, copyright notices, and
 attribution exactly as found, as documented in the component READMEs;
 no license text or copyright notice was removed from any directory.
+
