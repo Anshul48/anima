@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entorhinal — Advisory memory (ANIMA site B)</title>
+<link rel="stylesheet" href="site-b.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="topbar"><div class="wrap">
+<a class="brand" href="stc.html">ANIMA site B</a>
+<nav><a href="stc.html">STC</a><a href="entorhinal.html">Entorhinal</a><a href="reflex.html">Reflex</a></nav>
+</div></div>
+<div class="wrap" id="main">
+<h1>Entorhinal — Advisory memory</h1>
+<p>
+<span class="label synthetic">Synthetic</span>
+<span class="label real">Real-replay</span>
+<span class="label receipt">Report-dated</span>
+</p>
+
+<div class="card status-quote">
+<p><strong>Boundary — advisory, never acts (verbatim, components/entorhinal/README):</strong>
+“Local-first advisory temporal context: a memory system that records task evidence,
+compiles multi-timescale projections, serves context snapshots to local consumers, and
+enforces user control (corrections, consent, cascade deletion, audit).”
+Entorhinal has <strong>zero autonomous mutation authority</strong>: it advises, it never acts.
+See <code class="inline">docs/BUILDER-AUTHORITY-BOUNDARY.md</code> (DEFINITIVE).</p>
+</div>
+
+<h2>Timeline ribbon (synthetic data only)</h2>
+<p><span class="label synthetic">Synthetic</span>
+The ribbon below uses <strong>invented placeholder events</strong> — never real user traces.
+The consented trace corpus (<code class="inline">consented_trace_corpus.json</code>) is
+<strong>excluded</strong> from this site by the privacy hard ban. Flow follows the real
+concept order: evidence → fact → projection → snapshot, with consent gates and a
+cascade-deletion tombstone.</p>
+
+<div class="flow" data-ribbon aria-label="Synthetic context timeline">
+<div class="gate" data-state="done"><strong>evidence</strong><span class="st">synthetic</span><span class="fine">3 demo events</span></div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="gate" data-state="done"><strong>fact</strong><span class="st">synthetic</span><span class="fine">compiled</span></div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="gate" data-state="done"><strong>projection</strong><span class="st">synthetic</span><span class="fine">short/mid/long</span></div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="gate" data-state="done"><strong>snapshot</strong><span class="st">synthetic</span><span class="fine">served + consent gate</span></div>
+<span class="arrow" aria-hidden="true">→</span>
+<div class="gate" data-state="done"><strong>deletion</strong><span class="st">tombstone</span><span class="fine">cascade proof</span></div>
+</div>
+
+<pre>evidence(3 synthetic) → fact → projection[short|mid|long] → snapshot
+  [consent gate: grants list]      [tombstone: cascade deletion]
+$ entorhinal status
+$ entorhinal inspect timeline
+$ entorhinal grants list
+$ entorhinal audit
+$ entorhinal serve   # local loopback FastAPI daemon</pre>
+
+<h2>Real replay: CLI + smoke</h2>
+<p><span class="label real">Real-replay</span>
+TEST-REPORT row 10 (staged 2026-10-14): <code class="inline">tests/test_fact_identity.py</code> →
+<strong>exit 0, 9 passed</strong>. CLI surface (<code class="inline">status / inspect / grants / audit / serve</code>)
+responds; see TEST-REPORT row 12 (all CLIs respond, exit 0).</p>
+
+<h2>Shadow evaluation numbers (report-dated, not replayable)</h2>
+<p><span class="label receipt">Report-dated</span>
+From <code class="inline">components/entorhinal/docs/evals/05-SHADOW-EVALUATION-REPORT.md</code>,
+<strong>dated 2026-09-30</strong> (Stage I4, Entorhinal × Reflex). No run logs ship in-tree;
+numbers are quotable as a dated report, not replayable here:</p>
+<table>
+<caption>Shadow report KPIs, dated 2026-09-30. Label: REPORT-DATED.</caption>
+<tr><th>Metric</th><th>Value</th></tr>
+<tr><td>Total executions</td><td>24 (8 scenarios × 3 conditions)</td></tr>
+<tr><td>Unsafe actions</td><td>0</td></tr>
+<tr><td>Steps baseline → advisory</td><td>31 → 23 (−25.8%, 8 steps saved)</td></tr>
+<tr><td>Stale-context harm</td><td>0.0%</td></tr>
+<tr><td>P99 latency overhead</td><td>~1.2 ms (P50 14.96 ms)</td></tr>
+</table>
+
+<div class="card limits">
+<h3>Limits</h3>
+<ul>
+<li>No private corpus, live stores, timelines, run logs, or credentials ship (README limits).</li>
+<li>Evaluation verdict QUALIFIED (EVALUATION_REPORT.json, 2026-08-19, 52 fixtures / 252 facts) is dated scope, not current.</li>
+<li>Pin vintage: site ships GitHub snapshot; local entorhinal work is active Phase-2 drift — sync deliberately, never auto-merge.</li>
+</ul>
+</div>
+
+<h2>Sources</h2>
+<ul>
+<li><code class="inline">components/entorhinal/README.md</code> — status + limits (verbatim above)</li>
+<li><code class="inline">components/entorhinal/docs/BUILDER-AUTHORITY-BOUNDARY.md</code> — DEFINITIVE boundary</li>
+<li><code class="inline">components/entorhinal/docs/evals/05-SHADOW-EVALUATION-REPORT.md</code> — 2026-09-30</li>
+<li><code class="inline">TEST-REPORT.md</code> rows 10, 12–14 — staged 2026-10-14</li>
+</ul>
+<p class="fine">Privacy: synthetic ribbon only. No consented-trace content, session logs, or author emails on this page.</p>
+</div>
+<script src="site-b.js"></script>
+</body>
+</html>
