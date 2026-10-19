@@ -68,7 +68,7 @@ and warn amber #7a4a00 accents, thin 1-2px rounded strokes, even flat
 lighting, generous whitespace, no text.`
 - Negative: master + `screenshot, user interface, browser window`.
 - Alt text: `Illustrative abstract diagram of a three-stage retrieval pipeline.`
-- Honesty: illustrative.
+- Depiction: illustrative.
 
 ### 2. TRACE OG — `trace`, social share, 1200x630
 
@@ -82,7 +82,7 @@ free of detail for title overlay, 1-2px rounded strokes, flat even
 lighting, no text.`
 - Negative: master.
 - Alt text: `Illustrative TRACE share image: abstract document and node motif.`
-- Honesty: illustrative.
+- Depiction: illustrative.
 
 ### 3. ANIMA hero — `anima`, landing hero, 16:9
 
@@ -97,7 +97,7 @@ strokes, calm symmetric composition, generous whitespace, flat even
 lighting, no text.`
 - Negative: master + `galaxy photo, nebula, space photo`.
 - Alt text: `Illustrative abstract image of nested worlds within worlds.`
-- Honesty: illustrative.
+- Depiction: illustrative.
 
 ### 4. ANIMA OG — `anima`, social share, 1200x630
 
@@ -110,7 +110,7 @@ tinted world-glyphs in warn bg #fdf3e3 and paper #f4f6f8; background
 1-2px rounded strokes, flat even lighting, no text.`
 - Negative: master.
 - Alt text: `Illustrative ANIMA share image: abstract nested-rings motif.`
-- Honesty: illustrative.
+- Depiction: illustrative.
 
 ### 5. Divider — architecture sections, 21:5 panorama
 
@@ -124,7 +124,7 @@ paper background #f4f6f8 fading to white #ffffff at edges, 1px strokes,
 flat, no text.`
 - Negative: master.
 - Alt text: `Illustrative divider: small geometric module glyphs on a line.`
-- Honesty: illustrative.
+- Depiction: illustrative.
 
 ### 6. Divider — evaluation/benchmark sections, 21:5 panorama
 
@@ -138,7 +138,7 @@ lighting, purely decorative, no text, no numbers.`
 - Negative: master + `axes, axis labels, tick marks, gridlines, numbers,
 chart, graph paper`.
 - Alt text: `Illustrative divider: decorative abstract bars, not real data.`
-- Honesty: illustrative (explicitly not measured results).
+- Depiction: illustrative (explicitly not measured results).
 
 ### 7. Divider — reproducibility/provenance sections, 21:5 panorama
 
@@ -151,7 +151,7 @@ highlighted warn bg #fdf3e3, hairline #c3ced8 separators, 1-2px rounded
 strokes, flat, no text.`
 - Negative: master.
 - Alt text: `Illustrative divider: abstract linked-capsule provenance chain.`
-- Honesty: illustrative.
+- Depiction: illustrative.
 
 ## OG 1200x630 spec (per site)
 
