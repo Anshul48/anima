@@ -283,5 +283,16 @@ footer.site { border-top: 1px solid var(--line); margin-top: 2rem; padding: 1rem
 table.data code { white-space: nowrap; }
 /* Try-it table breathing room. */
 table.data.try-it td { padding: 0.65rem 0.8rem; }
+/* Hero claim line under the hook. */
+.claim { font-size: 1.1rem; }
+/* Modules grid balance: no single-orphan last row. */
+@media (min-width: 40rem) {
+  .grid.grid-balance > .card:last-child { grid-column: span 2; }
+}
+@media (min-width: 60rem) {
+  .grid.grid-balance { grid-template-columns: repeat(6, 1fr); }
+  .grid.grid-balance > .card:nth-child(-n+3) { grid-column: span 2; }
+  .grid.grid-balance > .card:nth-child(n+4) { grid-column: span 3; }
+}
 /* Proof/pin chips never split mid-phrase. */
 .pin { white-space: nowrap; }

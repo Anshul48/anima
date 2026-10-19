@@ -22,18 +22,17 @@
 
 <h1>ANIMA — budgeted cognition you can replay</h1>
 <p class="hook rise">ANIMA puts cognition in the system: worlds, search, construction, memory, perception — budgeted, attributable, local.</p>
+<p class="claim">Two claims: a 10M-token memory layer (TRACE — 10,003,381 tokens, guided recall@10 0.7367) plus a neuro-symbolic search-and-build scaffold: State Space Tree search (SST), Spec-To-Code gated construction (STC), budgeted project worlds (Substrate), advisory temporal memory (Entorhinal), and vision-fenced crop routing (Reflex).</p>
 <p class="cta-row"><a class="btn" href="substrate.html">Replay the 7-step journey</a> <a class="btn secondary" href="stc.html">Verify a receipt hash</a></p>
 
 <section class="block" aria-labelledby="proof">
 <h2 id="proof">Proof</h2>
 <div class="table-scroll">
 <table class="data">
-<caption>Frozen TRACE build seam12a, run o94-scale10m. Source: trace README proof strip.</caption>
-<tr><th>Measure</th><th>Value</th></tr>
-<tr><td>Tokens</td><td><span data-count="10003381">10,003,381</span></td></tr>
-<tr><td>Documents</td><td><span data-count="13081">13,081</span></td></tr>
-<tr><td>Atoms</td><td><span data-count="63441">63,441</span></td></tr>
-<tr><td>Guided recall@10</td><td>0.7367 all / 0.4883 leave-source-out; flat 0.055 / 0.0017</td></tr>
+<caption>Scaffold receipts. TRACE memory numbers live in the callout below.</caption>
+<tr><th>Module</th><th>Result</th></tr>
+<tr><td>SST</td><td>161 passed (pin receipt df78f428, 2026-10-04) <span class="chip chip-receipt">RECEIPT</span></td></tr>
+<tr><td>STC</td><td>37-schema smoke re-verified (TEST-REPORT); 209-suite badge-only, not re-run <span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-badge">BADGE-ONLY</span></td></tr>
 </table>
 </div>
 </section>
@@ -58,17 +57,18 @@ Freeze sha256 <code>8d3bbb6b…28dbf64</code>. Live explorer:
 <caption>Five one-line starts, one per module.</caption>
 <tr><th>#</th><th>Try</th><th>Where</th></tr>
 <tr><td>1</td><td><code>python examples/quickstart.py</code> — ends with <code>ANIMA quickstart OK</code></td><td><a href="substrate.html">Substrate</a></td></tr>
-<tr><td>2</td><td>Grow, critique, prune the search tree; keep the failure leg visible</td><td><a href="sst.html">SST</a></td></tr>
-<tr><td>3</td><td>Light the four gates; paste a hash to verify against the pin</td><td><a href="stc.html">STC</a></td></tr>
-<tr><td>4</td><td>Walk the synthetic timeline ribbon; read the dated shadow report</td><td><a href="entorhinal.html">Entorhinal</a></td></tr>
-<tr><td>5</td><td>Run the privacy redactor: 14 passed; arc stays illustrated-only</td><td><a href="reflex.html">Reflex</a></td></tr>
+<tr><td>2</td><td><code>uv run sst run --goal "..." --max-iterations 5</code> — bounded dialectic search</td><td><a href="sst.html">SST</a></td></tr>
+<tr><td>3</td><td><code>uv run stc health</code> — system diagnostics and gate info</td><td><a href="stc.html">STC</a></td></tr>
+<tr><td>4</td><td><code>entorhinal status</code> — advisory context, changes nothing</td><td><a href="entorhinal.html">Entorhinal</a></td></tr>
+<tr><td>5</td><td><code>python components/reflex/main.py --help</code> — console entry, no install</td><td><a href="reflex.html">Reflex</a></td></tr>
 </table>
 </div>
 </section>
 
 <section class="block" aria-labelledby="modules">
 <h2 id="modules">Modules</h2>
-<div class="grid layout-grid">
+<p class="fine">Legend: <span class="chip chip-real">REAL-REPLAY</span> runnable artifact · <span class="chip chip-receipt">RECEIPT</span> quoted generated artifact, dated · <span class="chip chip-illus">ILLUSTRATED</span> concept, no runnable trace · <span class="chip chip-synth">SYNTHETIC</span> placeholder for private material. Full definitions in <a href="#limits">Limits</a>.</p>
+<div class="grid layout-grid grid-balance">
 <div class="card">
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span></div>
 <h3>Substrate</h3>
