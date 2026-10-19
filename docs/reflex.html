@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reflex — Crop-and-route concept (ANIMA)</title>
-<link rel="stylesheet" href="site.css">
+<title>Reflex — ANIMA</title>
+<link rel="stylesheet" href="assets/design.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -18,47 +18,34 @@
   <a class="nav" href="reflex.html">Reflex</a>
 </div></nav>
 <main id="main" class="wrap">
-<h1>Reflex — Crop-and-route concept</h1>
-<p>
-<span class="label illustrated">Illustrated</span>
-<span class="label synthetic">Synthetic</span>
-<span class="label real">Real-replay</span>
-</p>
 
-<div class="card status-quote">
-<p><strong>Status (verbatim, components/reflex/README limits):</strong>
-“Research/seed stage: model names, latency figures, and complexity claims in
-<code class="inline">ARCHITECTURE.md</code> are hypotheses to measure, not release commitments.”
-Latency / O(N) figures on this page are <strong>aspirational hypotheses</strong>, not measurements.</p>
+<p class="hook rise">Reflex routes only small high-resolution crops to heavy vision — full frames never sent.</p>
+
+<section class="block" aria-labelledby="proof">
+<h2 id="proof">Proof</h2>
+<table class="data">
+<caption>One real chip; everything else visual is illustrated. Source: TEST-REPORT.md row 11.</caption>
+<tr><th>Check</th><th>Result</th></tr>
+<tr><td>Privacy redactor</td><td><code>tests/test_privacy_redactor.py</code> → 14 passed + 11 subtests <span class="chip chip-real">REAL-REPLAY</span></td></tr>
+<tr><td>Latency figures</td><td>aspirational hypotheses, not measurements <span class="chip chip-illus">ILLUSTRATED</span></td></tr>
+<tr><td>Routing traces</td><td>none shipped in this tree <span class="chip chip-illus">ILLUSTRATED</span></td></tr>
+<tr><td>Screen images</td><td>synthetic canvas mock only; no real-screen PNGs <span class="chip chip-synth">SYNTHETIC</span></td></tr>
+</table>
+</section>
+
+<section class="block" aria-labelledby="hero">
+<h2 id="hero">Reflex arc <span class="chip chip-illus">ILLUSTRATED</span> vision-fenced</h2>
+<div class="hero rise">
+<p>Concept from <code>REFLEX-AMBITION.md</code>: fast detectors propose boxes, a cheap relevance filter
+scores them, and only small high-resolution crops (<code>CropPacket</code>) route to heavy VLMs.
+Ladders describe direction, not delivered capability — hypotheses to measure.</p>
 </div>
-
-<h2>Crop-and-route (illustrated concept)</h2>
-<p><span class="label illustrated">Illustrated</span>
-Concept from <code class="inline">REFLEX-AMBITION.md</code>: fast detectors propose boxes,
-a cheap relevance filter scores them, and <strong>only small high-resolution crops</strong>
-(<code class="inline">CropPacket</code>) route to heavy VLMs — never full frames.
-The mock below is <strong>drawn in JavaScript at load; it is a synthetic diagram, not a
-screenshot</strong>. No real-screen PNGs ship on this site (privacy hard ban).</p>
-
 <canvas class="viz" id="synthetic-screen" width="640" height="300" role="img"
 aria-label="Synthetic illustration: abstract boxes with relevance scores; two routed crops highlighted"></canvas>
-<noscript><p class="fine">No-JS: concept still reads — detectors propose boxes, filter scores relevance,
-only top crops (e.g. box1, box3) route to the VLM; full frame is never sent.</p></noscript>
-
+<noscript><p class="fine">No-JS: detectors propose boxes, filter scores relevance, only top crops (box1, box3) route to the VLM; full frame is never sent.</p></noscript>
 <pre>full frame → detect boxes → relevance filter → route top crops → VLM answer
   (synthetic boxes)   (cheap scores)    (CropPacket: box1, box3)  (grounded)</pre>
-
-<h2>Real replay: privacy redactor</h2>
-<p><span class="label real">Real-replay</span>
-TEST-REPORT row 11 (staged 2026-10-14, re-verified in fix pass):
-<code class="inline">tests/test_privacy_redactor.py</code> →
-<strong>exit 0, 14 passed + 11 subtests</strong>. This is the verified real chip on this page;
-everything else visual is illustrated.</p>
-
-<h2>Ambition ladder (vision-fenced)</h2>
-<p>From <code class="inline">REFLEX-AMBITION.md</code>. Ladders describe <strong>direction, not
-delivered capability</strong> — vision-fenced, hypotheses to measure:</p>
-<table>
+<table class="data">
 <caption>Escalation ladder (REFLEX-AMBITION.md). Label: ILLUSTRATED / vision-fenced.</caption>
 <tr><th>Rung</th><th>Stage</th><th>Note</th></tr>
 <tr><td>L0/L1</td><td>DOM / cache</td><td>cheapest; grounded when available</td></tr>
@@ -66,27 +53,42 @@ delivered capability</strong> — vision-fenced, hypotheses to measure:</p>
 <tr><td>L3</td><td>Feature grounding</td><td>relevance filter (hypothesis)</td></tr>
 <tr><td>L4/L5</td><td>Targeted VLM</td><td>small crops only; full frame never sent</td></tr>
 </table>
+</section>
 
-<div class="card limits">
-<h3>Limits</h3>
+<section class="block" aria-labelledby="try">
+<h2 id="try">Try it</h2>
+<ol>
+<li>Run the redactor: <code>tests/test_privacy_redactor.py</code> → 14 passed + 11 subtests.</li>
+<li>Start offline: <code>main.py --mock --demo</code> (Jarvis console; no installed console script).</li>
+<li>Read the ambition: <code>REFLEX-AMBITION.md</code> ladder + O(N) crop routing.</li>
+</ol>
+</section>
+
+<section class="block" aria-labelledby="limits">
+<h2 id="limits">Limits</h2>
+<div class="limits">
 <ul>
 <li>No shipped screenshots, crops, routing traces, or generated-code samples in this tree.</li>
-<li>Entry point is <code class="inline">main.py</code> (Jarvis console; <code class="inline">--mock --demo</code> for offline); no installed console script.</li>
-<li>Pin vintage: site ships GitHub snapshot (<code class="inline">8b44867</code>, 2026-10-14). Local <code class="inline">relfex 6c2462b</code> (2026-10-17) is <strong>ahead</strong> with browser-loop work not in this pin.</li>
+<li>Entry point is <code>main.py</code> (Jarvis console; <code>--mock --demo</code> for offline); no installed console script.</li>
+<li>Status (verbatim, component README limits): “Research/seed stage: model names, latency figures, and complexity claims in its ARCHITECTURE.md are hypotheses to measure, not release commitments.”</li>
 </ul>
 </div>
+</section>
 
-<h2>Sources</h2>
+<section class="block" aria-labelledby="go-deeper">
+<h2 id="go-deeper">Go deeper</h2>
 <ul>
-<li><code class="inline">components/reflex/README.md</code> — status + limits (verbatim above)</li>
-<li><code class="inline">components/reflex/REFLEX-AMBITION.md</code> — ladder + O(N) crop routing</li>
-<li><code class="inline">TEST-REPORT.md</code> row 11 — staged 2026-10-14</li>
+<li><a href="../components/reflex/README.md">Component README</a> ·
+<a href="../TEST-REPORT.md">TEST-REPORT.md</a> ·
+<a href="index.html">Index</a></li>
 </ul>
-<p class="fine">Privacy: synthetic canvas mock only. No .env content, real-screen PNGs, or eval secret-word hits on this page.</p>
+<!-- ws6: external links (papers, explorer deep-links, PyPI) attach here -->
+</section>
+
 </main>
 <footer class="site"><div class="wrap">
 ANIMA research preview · <a href="index.html">Index</a> · License Apache-2.0.
 </div></footer>
-<script src="site.js"></script>
+<script src="assets/motion.js"></script>
 </body>
 </html>

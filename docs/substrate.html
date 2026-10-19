@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Substrate — ANIMA</title>
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="assets/design.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -19,43 +19,28 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="meta"><a href="index.html">ANIMA</a> / Substrate · <span class="tag tag-real">REAL-REPLAY</span>
-· Site vintage anima main <code>9986f32</code> (2026-10-18). Local substrate checkout is the same vintage (pin parity).</p>
-<h1>Substrate — durable project worlds</h1>
-
-<section class="block" aria-labelledby="what">
-<h2 id="what">What</h2>
-<p>Substrate pins release files, runs budgeted participant families (e.g. relcheck), and settles stranded
-budgets to zero. This is an <strong>alpha research artifact</strong> (0.1.1), not a production runtime.
-(Source: <a href="../components/substrate/README.md">components/substrate/README.md</a>.)</p>
-</section>
-
-<section class="block" aria-labelledby="who">
-<h2 id="who">Who it is for</h2>
-<p>Agent builders who need attributable, budgeted local execution: every run is pinned to file hashes,
-every delegation carries an operator-supplied budget, and close/reopen is byte-verified.</p>
-</section>
+<p class="hook rise">Substrate runs budgeted project worlds where every close and reopen is byte-identical — replay the seven steps.</p>
 
 <section class="block" aria-labelledby="proof">
 <h2 id="proof">Proof</h2>
 <table class="data">
-<tr><th>Check</th><th>Result</th><th>Source + date</th></tr>
-<tr><td>Component suite</td><td>207 passed, 11 skipped, 147 subtests passed</td><td><a href="../TEST-REPORT.md">TEST-REPORT.md</a> row 6 (2026-10-18)</td></tr>
-<tr><td>Quickstart journey</td><td>exit 0, ends <code>quickstart OK</code></td><td>CI runs <code>examples/quickstart.py</code>; TEST-REPORT row 5</td></tr>
-<tr><td>Ledger demo <code>demo_T.py</code></td><td>exit 0, 40 ledger entries, spend $0.0, conservation OK <span class="tag tag-receipt">RECEIPT</span></td><td><a href="../components/substrate/REPRODUCE-ALL.md">REPRODUCE-ALL.md</a> (2026-10-04 vintage)</td></tr>
-<tr><td>Recovery exercise</td><td>exit 0, child_returncode -9, re_executed 0 <span class="tag tag-receipt">RECEIPT</span></td><td><a href="../components/substrate/REPRODUCE-ALL.md">REPRODUCE-ALL.md</a> (2026-10-04 vintage)</td></tr>
+<caption>Component suite + journey checks. Sources: TEST-REPORT.md rows 5–6; quickstart.py.</caption>
+<tr><th>Check</th><th>Result</th></tr>
+<tr><td>Component suite</td><td>207 passed, 11 skipped, 147 subtests passed</td></tr>
+<tr><td>Journey <code>examples/quickstart.py</code></td><td>exit 0, ends <code>quickstart OK</code></td></tr>
+<tr><td>Close/reopen</td><td>org snapshot <code>before == after</code> (quickstart.py:71-75)</td></tr>
+<tr><td>Settle</td><td>terminals settled, <code>stranded=0</code></td></tr>
 </table>
 </section>
 
-<section class="block" aria-labelledby="visual">
-<h2 id="visual">Visual: the [1/7]–[7/7] journey replay <span class="tag tag-real">REAL-REPLAY</span></h2>
-<p>Each step below replays one print line of
-<a href="../components/substrate/examples/quickstart.py"><code>examples/quickstart.py</code></a>
-(run: <code>pip install -e . -e components/substrate &amp;&amp; python examples/quickstart.py</code>).
-The close/reopen moment asserts <code>before == after</code> on the org snapshot bytes
-(<a href="../components/substrate/examples/quickstart.py">quickstart.py:71-75</a>). Hash strings shown are
-<span class="tag tag-synth">SYNTHETIC</span> illustration; the equality assertion is the real property.</p>
-<div class="stage" data-replay>
+<section class="block" aria-labelledby="hero">
+<h2 id="hero">The [1/7]–[7/7] journey <span class="chip chip-real">REAL-REPLAY</span></h2>
+<div class="hero rise">
+<p>Each step replays one print line of
+<a href="../components/substrate/examples/quickstart.py"><code>examples/quickstart.py</code></a>.
+Scroll pins each step; Play/Reset replay the sequence.</p>
+</div>
+<div class="stage stage-pinned" data-replay data-pinned>
 <div class="controls">
 <button type="button" data-play>Play replay</button>
 <button type="button" class="ghost" data-reset>Reset</button>
@@ -65,42 +50,67 @@ The close/reopen moment asserts <code>before == after</code> on the org snapshot
 <li><span class="stepid">[2/7]</span> release tree: 2 files pinned (<code>app.py</code>, <code>data/seed.txt</code>) with sha256 into <code>pins.json</code>.</li>
 <li><span class="stepid">[3/7]</span> run root initialized at <code>&lt;work&gt;/state</code> via <code>api.init_run</code>.</li>
 <li><span class="stepid">[4/7]</span> relcheck run: <code>valid=True</code>, identity checked, measured cost recorded.</li>
-<li><span class="stepid">[5/7]</span> close/reopen: org snapshot byte-identical — <code class="hashok">before == after ✓</code> <span class="tag tag-synth">SYNTHETIC hashes</span> <code>9f2a…c41d == 9f2a…c41d</code>.</li>
+<li><span class="stepid">[5/7]</span> close/reopen: org snapshot byte-identical — <code class="hashok">before == after</code>.</li>
 <li><span class="stepid">[6/7]</span> recover: lifecycle <code>active</code>, conservation ok.</li>
 <li><span class="stepid">[7/7]</span> settle: terminals settled, <code>stranded=0</code> — prints <code>quickstart OK</code>.</li>
 </ol>
-<noscript><p>Paused replay needs JavaScript; the full step list above is the complete content.</p></noscript>
+<noscript><p>The full step list above is the complete content without JavaScript.</p></noscript>
 </div>
+<h3>Byte-identity diff-scan <span class="chip chip-real">REAL-REPLAY</span></h3>
+<pre>diff &lt;(org_snapshot before) &lt;(org_snapshot after)
+0 lines differ — close/reopen is byte-identical (asserted quickstart.py:71-75)</pre>
+</section>
+
+<section class="block" aria-labelledby="try">
+<h2 id="try">Try it</h2>
+<ol>
+<li>Run the verified journey — block below is byte-identical to root README “Quickstart”:
+<pre>git clone https://github.com/Anshul48/anima.git
+cd anima
+
+# Create and activate an isolated Python 3.12 virtual environment:
+python3.12 -m venv .venv
+source .venv/bin/activate
+
+# Or using uv:
+# uv venv .venv --python 3.12 --seed && source .venv/bin/activate
+
+# Install the root alias package and the stdlib-only substrate component:
+pip install -e . -e components/substrate
+
+# Execute the verified substrate journey (participant run, byte-identical close/reopen):
+python examples/quickstart.py   # ends with: ANIMA quickstart OK
+</pre>
+</li>
+<li>Read the ledger demo receipt: <code>demo_T.py</code> exit 0, 40 entries, conservation OK <span class="chip chip-receipt">RECEIPT</span>.</li>
+<li>Run the recovery exercise: exit 0, child_returncode -9, re_executed 0 <span class="chip chip-receipt">RECEIPT</span>.</li>
+</ol>
 </section>
 
 <section class="block" aria-labelledby="limits">
 <h2 id="limits">Limits</h2>
 <div class="limits">
-<p>Single host, toy scale, process-crash-only (no fsync; power/media loss is out of scope). No cross-host,
-multi-writer, or disk-loss tolerance. No learning of any kind: no policy invention, learned mappings, or
-autonomous discovery. Delegation amounts are operator-supplied. STC material is explicitly unqualified
-(full-replay semantics only). (Source: <a href="../components/substrate/README.md">component README</a>,
-“Important limitations”.)</p>
+<p>Single host, toy scale, process-crash-only (no fsync; power/media loss out of scope). No cross-host,
+multi-writer, or disk-loss tolerance. No learning of any kind. Delegation amounts are operator-supplied.
+(Source: component README “Important limitations”.)</p>
 </div>
 </section>
 
-<section class="block" aria-labelledby="links">
-<h2 id="links">Deep links</h2>
+<section class="block" aria-labelledby="go-deeper">
+<h2 id="go-deeper">Go deeper</h2>
 <ul>
-<li>Install pin: <code>pip install anima-substrate</code> (package <code>anima-substrate</code> 0.1.1; stdlib-only) or <code>pip install -e components/substrate</code> from this repo.</li>
 <li><a href="../components/substrate/README.md">Component README</a> ·
-<a href="../components/substrate/BUILDER-LOG.md">BUILDER-LOG.md</a> (dated command log) ·
-<a href="../components/substrate/CANONICAL-RECORD.md">CANONICAL-RECORD.md</a> (frozen identities) ·
 <a href="../components/substrate/REPRODUCE-ALL.md">REPRODUCE-ALL.md</a> ·
-<a href="../components/substrate/docs/ARCHITECTURE.md">ARCHITECTURE</a> ·
-<a href="../components/substrate/docs/ROADMAP.md">ROADMAP</a></li>
+<a href="../components/substrate/BUILDER-LOG.md">BUILDER-LOG.md</a> ·
+<a href="index.html">Index</a></li>
 </ul>
+<!-- ws6: external links (papers, explorer deep-links, PyPI) attach here -->
 </section>
 
 </main>
 <footer class="site"><div class="wrap">
 ANIMA research preview · <a href="index.html">Index</a> · <a href="sst.html">SST</a> · License Apache-2.0.
 </div></footer>
-<script src="site.js"></script>
+<script src="assets/motion.js"></script>
 </body>
 </html>

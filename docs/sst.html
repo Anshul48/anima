@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SST — ANIMA</title>
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="assets/design.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -19,71 +19,54 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="meta"><a href="index.html">ANIMA</a> / SST · <span class="tag tag-real">REAL-REPLAY</span> +
-<span class="tag tag-receipt">RECEIPT</span> · Site vintage: pin <code>df78f428</code> (2026-10-04).
-Local sst checkout <code>85611d2</code> is AHEAD of this pin — site numbers are pin vintage only.</p>
-<h1>SST — heuristic dialectic search</h1>
-
-<section class="block" aria-labelledby="what">
-<h2 id="what">What</h2>
-<p>SST is heuristic dialectic-MCTS search: diverge candidate patches, critique them honestly
-(<code>CRITIQUE_FAILED</code> is a kept verdict, never a fabricated <code>APPROVE</code>), synthesize
-survivors, and promote only through integrity + staleness + human gates. Model rollouts need
-caller-configured backends. (Source: <a href="../components/sst/README.md">components/sst/README.md</a>
-+ root README module table, 2026-10-18.)</p>
-</section>
-
-<section class="block" aria-labelledby="who">
-<h2 id="who">Who it is for</h2>
-<p>Builders who want search with auditable failure: every candidate keeps its rationale, diff, checks,
-critic verdict, and evidence event links, and the event log is the source of truth.</p>
-</section>
+<p class="hook rise">SST searches by honest dialectic: diverge, critique, synthesize — failures kept, never fabricated.</p>
 
 <section class="block" aria-labelledby="proof">
 <h2 id="proof">Proof</h2>
 <table class="data">
-<tr><th>Check</th><th>Result</th><th>Source + date</th></tr>
-<tr><td>Suite on pin checkout</td><td><span data-count="161">161</span> passed in 43.15s — exact parity with CUT1 pin record <span class="tag tag-receipt">RECEIPT</span></td><td><code>docs/anima/catalogue/pins/search.sst.df78f428.json</code> → <code>actual_caller_checks.sst_suite_on_pin_checkout</code> (pin 2026-10-04; CUT1 approval 2026-10-13)</td></tr>
-<tr><td>STC consumption-path rerun</td><td>81 passed, 4 failed (classified environmental, log kept) <span class="tag tag-receipt">RECEIPT</span></td><td>same pin file → <code>stc_consumption_path_rerun</code></td></tr>
-<tr><td>Live-model qualification attempt 1</td><td><code>no_candidate</code> — kept failure, 7,574 real tokens, 74.4s <span class="tag tag-receipt">RECEIPT</span></td><td><a href="../components/sst/docs/LIVE-QUALIFICATION-2026-10-04.md">LIVE-QUALIFICATION-2026-10-04.md</a> (2026-10-04; run evidence files pruned from public tree, log text only)</td></tr>
-<tr><td>UI journey suite</td><td>real-backend browser journey green <span class="tag tag-real">REAL-REPLAY</span></td><td><code>tests/unit/test_ui_journey.py</code> + <a href="../components/sst/docs/UI-JOURNEY.md">UI-JOURNEY.md</a> (stdlib <code>http.server</code> on :8501)</td></tr>
+<caption>Pin df78f428 (2026-10-04); CUT1 approval 2026-10-13.</caption>
+<tr><th>Check</th><th>Result</th></tr>
+<tr><td>Suite on pin checkout</td><td><span data-count="161">161</span> passed in 43.15s — exact parity with CUT1 pin record <span class="chip chip-receipt">RECEIPT</span></td></tr>
+<tr><td>STC consumption-path rerun</td><td>81 passed, 4 failed (classified environmental, log kept) <span class="chip chip-receipt">RECEIPT</span></td></tr>
+<tr><td>UI journey suite</td><td>real-backend browser journey green <span class="chip chip-real">REAL-REPLAY</span></td></tr>
+<tr><td>Live-model qualification attempt 1</td><td><code>no_candidate</code> — kept failure, 7,574 real tokens, 74.4s <span class="chip chip-receipt">RECEIPT</span></td></tr>
 </table>
 </section>
 
-<section class="block" aria-labelledby="visual">
-<h2 id="visual">Visual: dialectic search-tree growth <span class="tag tag-real">REAL-REPLAY</span> shape,
-<span class="tag tag-illus">ILLUSTRATED</span> node text</h2>
-<p>The growth pattern (diverge → critique → synthesize → champion, with pruned branches kept visible)
-replays the real controller shape; node labels are schematic, not a logged run. The journey stages
-(create task → run → live progress → alternatives → decide → promote → reopen) replay the real UI journey
-in <a href="../components/sst/docs/UI-JOURNEY.md">UI-JOURNEY.md</a> (stdlib server <code>:8501</code>,
-Cytoscape graph CDN-optional, tables authoritative offline).</p>
-<div class="stage" data-replay>
+<section class="block" aria-labelledby="hero">
+<h2 id="hero">Search-tree growth <span class="chip chip-real">REAL-REPLAY</span> shape, <span class="chip chip-illus">ILLUSTRATED</span> node text</h2>
+<div class="hero rise">
+<p>Growth pattern replays the real controller shape (diverge → critique → synthesize → champion, pruned
+branches kept visible); node labels are schematic, not a logged run.</p>
+</div>
+<div class="stage" data-tree>
 <div class="controls">
 <button type="button" data-play>Play growth</button>
 <button type="button" class="ghost" data-reset>Reset</button>
 </div>
-<ol class="steps">
-<li><span class="stepid">Diverge</span> 3 candidates branch from the task root (dialectic temperatures 1.2 / 0.1 / 0.3 per pin record).</li>
-<li><span class="stepid">Critique</span> critic scores each branch; one fails honestly with <code>CRITIQUE_FAILED</code> (rank 0.5, kept visible).</li>
-<li><span class="stepid">Alternatives</span> survivors compared: rationale, diff, checks, evidence event links (UI Alternatives tab).</li>
-<li><span class="stepid">Synthesize</span> surviving branches merge into one unified candidate.</li>
-<li><span class="stepid">Decide + promote</span> human verdict recorded; promote passes integrity + snapshot + freshness gates.</li>
-<li><span class="stepid">Reopen</span> result rebuilds from the event log; unfinished runs report <code>IncompleteSearchError</code>.</li>
-</ol>
-<noscript><p>Animated growth needs JavaScript; the full stage list above is the complete content.</p></noscript>
+<div class="treenode" data-branch="root">task root: fix <code>mul</code> in <code>math_mod.py</code></div>
+<div class="treenode" data-branch="diverge">candidate A (temp 1.2) — checks pass, rank 0.8</div>
+<div class="treenode" data-branch="diverge">candidate B (temp 0.1) — checks pass, rank 0.6</div>
+<div class="treenode" data-branch="prune">candidate C (temp 0.3) — <code>CRITIQUE_FAILED</code>, rank 0.5, kept visible</div>
+<div class="treenode" data-branch="synth">synthesis of A+B — unified candidate</div>
+<div class="treenode" data-branch="champion">champion — promoted through integrity + snapshot + freshness gates</div>
+<noscript><p>The full node list above is the complete content without JavaScript.</p></noscript>
 </div>
-
-<h3>Live-qualification leg <span class="tag tag-receipt">RECEIPT</span> + failure leg (honest)</h3>
-<p>Real SAIL Research run, model <code>deepseek-ai/DeepSeek-V4.1-Flash</code> (probe 38 prompt / 31 completion
-tokens, HTTP 200 <code>PROBE-OK</code>): task fix <code>mul</code> in <code>math_mod.py</code>
-(<code>a + b</code> bug), acceptance <code>test_math.py</code>. Attempt 1 returned
-<code>content: null</code> on a reasoning model, stringified into a literal <code>"None"</code> patch —
-all 3 candidates failed acceptance honestly (<code>ImportError</code>, exit 1). Observed 7,574 real tokens,
-0 provider errors, 74.4s wall. Evidence files (<code>run1-envelope.json</code>, <code>diverge-prompt.txt</code>)
-are manifest-pruned from the public tree; only this log text ships. No keys were ever printed, logged, or
-committed (key traveled via untracked git-ignored <code>.env</code> only — no key content on this page).
+<h3>Failure leg — live qualification <span class="chip chip-receipt">RECEIPT</span> LIVE-QUAL 2026-10-04</h3>
+<p>Real run, model <code>deepseek-ai/DeepSeek-V4.1-Flash</code> (probe 38 prompt / 31 completion tokens,
+HTTP 200 <code>PROBE-OK</code>): attempt 1 returned <code>content: null</code> on a reasoning model,
+stringified into a literal <code>"None"</code> patch — all 3 candidates failed acceptance honestly
+(<code>ImportError</code>, exit 1). Observed 7,574 real tokens, 0 provider errors, 74.4s wall.
 (Source: <a href="../components/sst/docs/LIVE-QUALIFICATION-2026-10-04.md">LIVE-QUALIFICATION-2026-10-04.md</a>.)</p>
+</section>
+
+<section class="block" aria-labelledby="try">
+<h2 id="try">Try it</h2>
+<ol>
+<li>Open the UI journey: <code>.venv/bin/python -m sst.ui.app --project PATH --port 8501</code>, then <code>http://127.0.0.1:8501</code>.</li>
+<li>Run the CLI: <code>sst run/status/promote/visualize/ui --json</code> (exit codes 0/2/3/4/130).</li>
+<li>Install the pin: package <code>sst-engine</code> 0.1.0.</li>
+</ol>
 </section>
 
 <section class="block" aria-labelledby="limits">
@@ -96,26 +79,24 @@ committed (key traveled via untracked git-ignored <code>.env</code> only — no 
 <li>Promote integrity binding is unkeyed tamper-evidence (HMAC future).</li>
 <li>See <code>docs/RECOVERY-LIMITS.md</code> for what the event log can and cannot reconstruct.</li>
 </ul>
-<p class="meta">Sources: pin file <code>known_limits</code> + <a href="../components/sst/docs/FREEZE-MANIFEST.md">FREEZE-MANIFEST.md</a> (2026-10-04).</p>
 </div>
 </section>
 
-<section class="block" aria-labelledby="links">
-<h2 id="links">Deep links</h2>
+<section class="block" aria-labelledby="go-deeper">
+<h2 id="go-deeper">Go deeper</h2>
 <ul>
-<li>Install pin: package <code>sst-engine</code> 0.1.0; CLI <code>sst run/status/promote/visualize/ui --json</code> (exit codes 0/2/3/4/130).</li>
-<li>UI journey: <code>.venv/bin/python -m sst.ui.app --project PATH --port 8501</code>, open <code>http://127.0.0.1:8501</code> (Source: <a href="../components/sst/docs/UI-JOURNEY.md">UI-JOURNEY.md</a>).</li>
 <li><a href="../components/sst/README.md">Component README</a> ·
-<a href="../components/sst/docs/FREEZE-MANIFEST.md">FREEZE-MANIFEST</a> ·
+<a href="../components/sst/docs/UI-JOURNEY.md">UI-JOURNEY.md</a> ·
 <a href="../components/sst/docs/LIVE-QUALIFICATION-2026-10-04.md">LIVE-QUALIFICATION</a> ·
-<a href="../components/sst/docs/04_DIALECTIC_SEARCH.md">04_DIALECTIC_SEARCH</a></li>
+<a href="index.html">Index</a></li>
 </ul>
+<!-- ws6: external links (papers, explorer deep-links, PyPI) attach here -->
 </section>
 
 </main>
 <footer class="site"><div class="wrap">
 ANIMA research preview · <a href="index.html">Index</a> · <a href="substrate.html">Substrate</a> · License Apache-2.0.
 </div></footer>
-<script src="site.js"></script>
+<script src="assets/motion.js"></script>
 </body>
 </html>

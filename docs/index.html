@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ANIMA — Research Preview</title>
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="assets/design.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -19,114 +19,108 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<h1>ANIMA — Research Preview</h1>
-<p class="meta">Site vintage: anima main <code>9986f32</code> (2026-10-18). Module numbers are pinned to the
-sources cited on each card. Per-module pin vintage is stated on each page: sst/stc/reflex site data is pin
-vintage; local checkouts are ahead (sst <code>85611d2</code>, stc <code>d78cd4e</code>, relfex <code>6c2462b</code>).</p>
+<p class="hook rise">ANIMA puts cognition in the system: worlds, search, construction, memory, perception — budgeted, attributable, local.</p>
 
-<section class="block" aria-labelledby="in30">
-<h2 id="in30">ANIMA in 30 seconds</h2>
-<p><strong>What:</strong> Superintelligence will not come from a bigger model alone. ANIMA externalizes
-intelligence into the environment: persistent project worlds, heuristic search, spec-to-code construction,
-advisory memory, and computer-use perception — durable scaffolds around models so cognition lives in the
-system, not in a single prompt. (Source: root <a href="../README.md">README.md</a>, “ANIMA in 30 seconds”.)</p>
-<p><strong>Who it helps:</strong> agent builders who need attributable, budgeted local execution across many
-models. <strong>Proof (one line):</strong> substrate replays a 7-step journey ending byte-identical;
-SST replays a real task-to-result UI journey plus a kept failure leg. Details on the module pages.</p>
+<section class="block" aria-labelledby="proof">
+<h2 id="proof">Proof</h2>
+<table class="data">
+<caption>Frozen TRACE build seam12a, run o94-scale10m. Source: trace README proof strip.</caption>
+<tr><th>Measure</th><th>Value</th></tr>
+<tr><td>Tokens</td><td><span data-count="10003381">10,003,381</span></td></tr>
+<tr><td>Documents</td><td><span data-count="13081">13,081</span></td></tr>
+<tr><td>Atoms</td><td><span data-count="63441">63,441</span></td></tr>
+<tr><td>Guided recall@10</td><td>0.7367 all / 0.4883 leave-source-out; flat 0.055 / 0.0017</td></tr>
+</table>
 </section>
 
-<section class="block" aria-labelledby="dream">
-<h2 id="dream">The dream vs. today</h2>
-<div class="grid">
-<div class="card">
-<h3><span class="tag tag-illus">ILLUSTRATED direction</span> The dream</h3>
-<p>Direction, not a claim about what exists. A dynamic substrate that rewires itself while it runs;
-software that evolves under search, selection under deterministic gates, inheritance through versioned
-genomes. (Source: root <a href="../README.md">README.md</a>, “The dream”, which states the composition
-it describes is a proposal today, not shipped wiring.)</p>
-</div>
-<div class="card">
-<h3><span class="tag tag-real">REAL-REPLAY</span> What exists today</h3>
-<p>Five independently installable research components plus a thin alias namespace. No shared server, no
-cross-component wiring, no hosted service. Each module page below replays or receipts what its component
-actually does. (Source: root <a href="../README.md">README.md</a>, “What exists today”.)</p>
-</div>
+<section class="block" aria-labelledby="hero">
+<h2 id="hero">TRACE — the memory layer</h2>
+<div class="hero rise">
+<p><span class="chip chip-receipt">RECEIPT</span> ANIMA's memory story is TRACE: frozen build
+<strong>seam12a</strong> organizing <strong>10,003,381 tokens</strong> into
+<strong>13,081 docs</strong> and <strong>63,441 atoms</strong>, guided recall@10
+<strong>0.7367</strong> (all) / <strong>0.4883</strong> (leave-source-out).
+Self-repair 5,847 to 0 over 6 iterations; wall 9,494.9 s; peak RAM ~8.5 GB.
+Freeze sha256 <code>8d3bbb6b…28dbf64</code>. Live explorer:
+<a href="https://anshul48.github.io/trace/explorer/">TRACE explorer</a>.</p>
 </div>
 </section>
 
-<div class="trace-banner" role="note" aria-label="TRACE memory layer">
-<h2>TRACE — the memory layer</h2>
-<p>ANIMA’s memory story is TRACE: a frozen 10M-token build (seam12a) organizing
-<strong><span data-count="10003381">10,003,381</span> tokens</strong> into
-<strong><span data-count="13081">13,081</span> docs</strong> and <strong><span data-count="63441">63,441</span> atoms</strong>,
-recall@10 <strong>0.7367</strong> (all) / <strong>0.4883</strong> (leave-schema-out). Figures from root
-README “Proof” (2026-10-18). Live explorer: <a href="https://anshul48.github.io/trace/explorer/">TRACE explorer</a>.</p>
-</div>
+<section class="block" aria-labelledby="try">
+<h2 id="try">Try it</h2>
+<table class="data">
+<caption>Five one-line starts, one per module.</caption>
+<tr><th>#</th><th>Try</th><th>Where</th></tr>
+<tr><td>1</td><td><code>python examples/quickstart.py</code> — ends with <code>ANIMA quickstart OK</code></td><td><a href="substrate.html">Substrate</a></td></tr>
+<tr><td>2</td><td>Grow, critique, prune the search tree; keep the failure leg visible</td><td><a href="sst.html">SST</a></td></tr>
+<tr><td>3</td><td>Light the four gates; paste a hash to verify against the pin</td><td><a href="stc.html">STC</a></td></tr>
+<tr><td>4</td><td>Walk the synthetic timeline ribbon; read the dated shadow report</td><td><a href="entorhinal.html">Entorhinal</a></td></tr>
+<tr><td>5</td><td>Run the privacy redactor: 14 passed; arc stays illustrated-only</td><td><a href="reflex.html">Reflex</a></td></tr>
+</table>
+</section>
 
 <section class="block" aria-labelledby="modules">
 <h2 id="modules">Modules</h2>
-<div class="grid">
-
+<div class="grid layout-grid">
 <div class="card">
-<div class="chiprow"><span class="tag tag-real">REAL-REPLAY</span></div>
+<div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span></div>
 <h3>Substrate</h3>
-<p class="status-quote">“Alpha research artifact, not a production runtime; stdlib-only; suite 207 passed, 11 skipped” — root README module table (2026-10-18).</p>
-<p>What: durable project worlds with budgeted participant runs. Proof: the [1/7]–[7/7] journey replay.</p>
-<p><a href="substrate.html">Deep page: journey + byte-identity proofs</a> · <a href="../components/substrate/README.md">Component README</a></p>
+<p class="status-quote">“Alpha research artifact, not a production runtime; stdlib-only; suite 207 passed, 11 skipped” — root README module table.</p>
+<p><a href="substrate.html">Deep page: journey + byte-identity proofs</a></p>
 </div>
-
 <div class="card">
-<div class="chiprow"><span class="tag tag-real">REAL-REPLAY</span> <span class="tag tag-receipt">RECEIPT</span></div>
+<div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-receipt">RECEIPT</span></div>
 <h3>SST</h3>
-<p class="status-quote">“Heuristic dialectic-MCTS search; repo check 161 passed, exact parity with the CUT1 pin record; model rollouts need caller-configured backends” — root README module table (2026-10-18).</p>
-<p>What: heuristic dialectic search over candidate solutions. Proof: UI journey replay + 161-passed pin receipt + kept live failure leg.</p>
-<p><a href="sst.html">Deep page: search + UI journey + failure leg</a> · <a href="../components/sst/README.md">Component README</a></p>
+<p class="status-quote">“Heuristic dialectic-MCTS search; repo check 161 passed, exact parity with the CUT1 pin record; model rollouts need caller-configured backends” — root README module table.</p>
+<p><a href="sst.html">Deep page: search + failure leg</a></p>
 </div>
-
 <div class="card">
-<div class="chiprow"><span class="tag tag-receipt">RECEIPT</span></div>
+<div class="chiprow"><span class="chip chip-receipt">RECEIPT</span></div>
 <h3>STC</h3>
-<p class="status-quote">“Component description: production-grade, distributed autonomous engineering engine; badges 209 tests passing and Mutmut kill rate &gt;= 85%; repo re-verified the schemas smoke (37 passed), full suite not re-run” — root README module table (2026-10-18).</p>
-<p>What: spec-to-code construction pipeline. Proof: signed machine receipt <code>rcpt_aa33e8504162</code> (gates exit 0); 209/mutmut are upstream badge claims, not re-run here.</p>
-<p><a href="stc.html">Deep page: gates + receipt + smoke</a> · <a href="../components/stc/README.md">Component README</a></p>
+<p class="status-quote">“Component description: production-grade, distributed autonomous engineering engine; badges 209 tests passing and Mutmut kill rate &gt;= 85%; repo re-verified the schemas smoke (37 passed), full suite not re-run” — root README module table.</p>
+<p><a href="stc.html">Deep page: gates + receipt + smoke</a></p>
 </div>
-
 <div class="card">
-<div class="chiprow"><span class="tag tag-illus">ILLUSTRATED</span></div>
+<div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span></div>
 <h3>Entorhinal</h3>
-<p class="status-quote">“Local-first advisory temporal context under strictly advisory authority (zero autonomous mutation authority); smoke test_fact_identity.py 9 passed” — root README module table (2026-10-18).</p>
-<p>What: advisory memory that records evidence and serves context, never mutates on its own. Shadow numbers are report-only, not replayable from the tree.</p>
-<p><a href="entorhinal.html">Deep page: CLI + shadow report</a> · <a href="../components/entorhinal/README.md">Component README</a></p>
+<p class="status-quote">“Local-first advisory temporal context under strictly advisory authority (zero autonomous mutation authority); smoke test_fact_identity.py 9 passed” — root README module table.</p>
+<p><a href="entorhinal.html">Deep page: CLI + shadow report</a></p>
 </div>
-
 <div class="card">
-<div class="chiprow"><span class="tag tag-illus">ILLUSTRATED-ONLY</span></div>
+<div class="chiprow"><span class="chip chip-illus">ILLUSTRATED-ONLY</span></div>
 <h3>Reflex</h3>
-<p class="status-quote">“Research/seed stage: model names, latency figures, and complexity claims in its ARCHITECTURE.md are hypotheses to measure, not release commitments; smoke test_privacy_redactor.py 14 passed; four upstream pass-only test files excluded, not claimed as passing” — root README module table (2026-10-18).</p>
-<p>What: computer-use perception (crop-and-route concept). No shipped screenshots or traces; any animation must be concept-only.</p>
-<p><a href="reflex.html">Deep page: concept + redactor</a> · <a href="../components/reflex/README.md">Component README</a></p>
+<p class="status-quote">“Research/seed stage: model names, latency figures, and complexity claims in its ARCHITECTURE.md are hypotheses to measure, not release commitments; smoke test_privacy_redactor.py 14 passed; four upstream pass-only test files excluded, not claimed as passing” — root README module table.</p>
+<p><a href="reflex.html">Deep page: concept + redactor</a></p>
 </div>
-
 </div>
 </section>
 
-<section class="block" aria-labelledby="honesty">
-<h2 id="honesty">Honesty + limits, site-wide</h2>
+<section class="block" aria-labelledby="limits">
+<h2 id="limits">Limits</h2>
+<div class="limits">
 <ul>
-<li><span class="tag tag-real">REAL-REPLAY</span> replays a runnable artifact from this repo (command + file cited).</li>
-<li><span class="tag tag-receipt">RECEIPT</span> quotes a generated artifact (log/receipt/pin JSON) with its date; not re-run by this site.</li>
-<li><span class="tag tag-illus">ILLUSTRATED</span> draws the concept because no runnable trace ships; no measured numbers.</li>
-<li><span class="tag tag-synth">SYNTHETIC</span> placeholder data standing in for private material that is never published.</li>
-<li>Privacy: no keys, no real-screen images, no consented-trace content, no session logs, no author emails appear on any page.</li>
-<li>Pin vintage: site data is GitHub pin vintage (sst <code>df78f428</code> 2026-10-04). Local checkouts ahead of pins are noted, never mixed in as results.</li>
+<li><span class="chip chip-real">REAL-REPLAY</span> replays a runnable artifact from this repo (command + file cited).</li>
+<li><span class="chip chip-receipt">RECEIPT</span> quotes a generated artifact (log/receipt/pin JSON) with its date; not re-run by this site.</li>
+<li><span class="chip chip-illus">ILLUSTRATED</span> draws the concept because no runnable trace ships; no measured numbers.</li>
+<li><span class="chip chip-synth">SYNTHETIC</span> placeholder data standing in for private material that is never published.</li>
+<li>No keys, real-screen images, consented-trace content, session logs, or author emails appear on any page.</li>
 </ul>
+</div>
+</section>
+
+<section class="block" aria-labelledby="go-deeper">
+<h2 id="go-deeper">Go deeper</h2>
+<ul>
+<li><a href="substrate.html">Substrate journey</a> · <a href="sst.html">SST search</a> · <a href="stc.html">STC gates</a> · <a href="entorhinal.html">Entorhinal memory</a> · <a href="reflex.html">Reflex concept</a></li>
+<li><a href="../README.md">Root README</a> · <a href="../TEST-REPORT.md">TEST-REPORT.md</a></li>
+</ul>
+<!-- ws6: external links (papers, explorer deep-links, PyPI) attach here -->
 </section>
 
 </main>
 <footer class="site"><div class="wrap">
-ANIMA research preview · site vintage main <code>9986f32</code> (2026-10-18) ·
-<a href="../README.md">README</a> · <a href="../TEST-REPORT.md">TEST-REPORT.md</a> · License Apache-2.0.
+ANIMA research preview · <a href="index.html">Index</a> · License Apache-2.0.
 </div></footer>
-<script src="site.js"></script>
+<script src="assets/motion.js"></script>
 </body>
 </html>
