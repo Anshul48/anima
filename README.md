@@ -130,8 +130,13 @@ python examples/quickstart.py   # ends with: ANIMA quickstart OK
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for how the pieces fit
 together, [docs/CODE-TOUR.md](docs/CODE-TOUR.md) for where to start
-reading each component, and [docs/ABOUT.md](docs/ABOUT.md) for the
-proposed GitHub About text and topics.
+reading each component, [docs/ROADMAP.md](docs/ROADMAP.md) for outlook,
+maturity, and provenance, [docs/TRACE-REPRODUCE.md](docs/TRACE-REPRODUCE.md)
+for the frozen TRACE build, [docs/image-prompts.md](docs/image-prompts.md)
+for illustration prompts, and [docs/ABOUT.md](docs/ABOUT.md) for the
+proposed GitHub About text and topics. Shared tokens:
+[docs/assets/design.css](docs/assets/design.css),
+[docs/assets/motion.js](docs/assets/motion.js).
 
 ### Deep dive
 
@@ -200,6 +205,7 @@ own corpora at small scale.
 
 No broad-benchmark claim is made: this is the project team's
 prototype evaluation protocol, nothing more.
+Mirrored with links in [docs/TRACE-REPRODUCE.md](docs/TRACE-REPRODUCE.md).
 
 ### Reproduce the benchmark
 
@@ -241,11 +247,12 @@ numbers above stay receipt-labeled, not re-measured here. Scaling to
 
 ![ANIMA repository architecture: the anima alias package over five independent distributions](assets/anima-architecture.svg)
 
-The [`anima` alias package](src/anima/) re-exports the five native
-distributions as same-object convenience aliases (`anima.substrate`,
-`anima.sst`, ...). Native imports (`import anima_substrate`, `import sst`,
-...) are primary; the diagram arrows are import aliases, not data flow.
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the architecture guide and [docs/anima/architecture/](docs/anima/architecture/) for background proposals.
+Moved to [docs/ROADMAP.md](docs/ROADMAP.md): the alias-package summary,
+maturity, scope, roadmap outlook, and provenance now live there; the
+README keeps this pointer only. Native imports (`import anima_substrate`,
+`import sst`, ...) stay primary. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+for the architecture guide and [docs/anima/architecture/](docs/anima/architecture/)
+for background proposals.
 
 ## Verification & Testing
 
@@ -264,34 +271,11 @@ python examples/quickstart.py
 
 CI workflows run automatically on push and pull requests as defined in [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
 
-## Maturity & Component Scope
+## Maturity, scope, and roadmap
 
-ANIMA components are modular research systems exploring attributable local execution, heuristic code synthesis, and computer use. Component validation covers bounded unit, smoke, and conformance invariants within isolated test suites and local test harnesses; it does not constitute general production or turn-key guarantees. Model-driven rollouts and perception pipelines require caller-selected and caller-configured model backends.
-
-## Scope & Boundaries
-
-This repository ships the five research components, the alias namespace package, tests, and curated background documentation:
-- **No shared runtime**: There is no overarching daemon, monolithic server, or implicit inter-component coupling.
-- **Offline / mock demonstrations**: Demonstrated CLI snippets and example scripts run via offline, stdlib, or mock execution paths. Model-driven capabilities (e.g., MCTS tree search rollouts or vision escalation) require caller-configured local runners (e.g., Ollama) or remote provider credentials, and may incur external provider charges.
-- **Sanitized publication record**: Test fixtures are synthetic and push-protection safe; see the dated [SECRET-SCAN.md](SECRET-SCAN.md) (2026-10-14) for the bounded publication check.
-- **No autoplay media**: this README ships no animated or auto-playing content.
-
-## Roadmap
-
-Labeled outlook only — none of this is claimed as shipped:
-
-- **TRACE scale-up (100M+ tokens)**: the frozen seam12a build above is
-  a 10M-token measurement; larger corpora need a fetchable dataset and
-  a reproducible large-machine path.
-- **Composed worlds**: running substrate worlds with SST search, STC
-  construction, entorhinal memory, and TRACE retrieval under one
-  budgeted arrangement is the stated direction in
-  [docs/anima/](docs/anima/), not a qualified integration today.
-- **Cost accounting**: per-participant budgets exist in substrate now;
-  extending that accounting across coordinator scheduling and model
-  calls is future work.
-- **Interfaces**: any hosted or graphical interface is in development
-  at most — nothing dated, nothing promised.
+Moved to [docs/ROADMAP.md](docs/ROADMAP.md): maturity and component
+scope, scope and boundaries, the labeled roadmap outlook, and provenance
+now live there; the README keeps this pointer only.
 
 ## Contributing & Security
 
@@ -302,19 +286,55 @@ Labeled outlook only — none of this is claimed as shipped:
 
 ## Provenance
 
-Staged 2026-10-14 from user-owned sources (see [MANIFEST.md](MANIFEST.md)):
+Moved to [docs/ROADMAP.md](docs/ROADMAP.md): the staging table and
+upstream-remotes note now live there; the README keeps this pointer only.
 
-| Component | Source revision staged |
-|---|---|
-| substrate | worktree HEAD `755b0d1` (2026-10-11) |
-| sst | frozen `search.sst@df78f428` (2026-10-04 release) |
-| stc | frozen `construction.stc@1f93f15c` (2026-10-06) |
-| entorhinal | worktree HEAD `0be71d8` (2026-10-11) |
-| reflex | worktree HEAD `8b44867` (2026-10-14; source dir spelled `relfex`) |
-| docs/anima | curated subset of ANIMA (2026-10-14) |
+## Go deeper
 
-Upstream remotes: `anima-substrate`, `entorhinal`, `relfex`, `utilities-sst` (all `github.com/Anshul48/...`); `stc` has no remote configured. Per-file history stays in those sources; this repo starts fresh.
+> External readings below are inspiration, not endorsement. Inclusion does not
+> imply affiliation, approval, or that our systems implement these methods.
 
+Memory / retrieval (TRACE):
+
+- Dense Passage Retrieval for Open-Domain Question Answering — Karpukhin et al. https://arxiv.org/abs/2004.04906
+- Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks — Lewis et al. https://arxiv.org/abs/2005.11401
+- REALM: Retrieval-Augmented Language Model Pre-Training — Guu et al. https://arxiv.org/abs/2002.08909
+- MemGPT: Towards LLMs as Operating Systems — Packer et al. https://arxiv.org/abs/2310.08560
+
+Persistent worlds (substrate):
+
+- Generative Agents: Interactive Simulacra of Human Behavior — Park et al. https://arxiv.org/abs/2304.03442
+- Voyager: An Open-Ended Embodied Agent with Large Language Models — Wang et al. https://arxiv.org/abs/2305.16291
+- World Models — Ha & Schmidhuber. https://arxiv.org/abs/1803.10122
+- Playing Atari with Deep Reinforcement Learning — Mnih et al. https://arxiv.org/abs/1312.5602
+
+Search (sst):
+
+- Mastering Chess and Shogi by Self-Play (AlphaZero) — Silver et al. https://arxiv.org/abs/1712.01815
+- Tree of Thoughts — Yao et al. https://arxiv.org/abs/2305.10601
+- Language Agent Tree Search — Zhou et al. https://arxiv.org/abs/2310.04406
+- Self-Consistency Improves Chain of Thought Reasoning — Wang et al. https://arxiv.org/abs/2203.11171
+
+Spec-driven codegen (stc):
+
+- Evaluating Large Language Models Trained on Code (Codex) — Chen et al. https://arxiv.org/abs/2107.03374
+- Competition-Level Code Generation with AlphaCode — Li et al. https://arxiv.org/abs/2203.07814
+- Program Synthesis with Large Language Models — Austin et al. https://arxiv.org/abs/2108.07732
+- SWE-bench — Jimenez et al. https://arxiv.org/abs/2310.06770
+
+Temporal context / privacy (entorhinal):
+
+- Attention Is All You Need — Vaswani et al. https://arxiv.org/abs/1706.03762
+- Language Models are Few-Shot Learners (GPT-3) — Brown et al. https://arxiv.org/abs/2005.14165
+- Membership Inference Attacks against Machine Learning Models — Shokri et al. https://arxiv.org/abs/1610.05820
+- Deep Learning with Differential Privacy — Abadi et al. https://arxiv.org/abs/1607.00133
+
+Computer-use agents (reflex):
+
+- OSWorld — Xie et al. https://arxiv.org/abs/2404.07972
+- WebArena — Zhou et al. https://arxiv.org/abs/2307.13854
+- ReAct: Synergizing Reasoning and Acting in Language Models — Yao et al. https://arxiv.org/abs/2210.03629
+- Reflexion: Language Agents with Verbal Reinforcement Learning — Shinn et al. https://arxiv.org/abs/2303.11366
 
 ## License
 
