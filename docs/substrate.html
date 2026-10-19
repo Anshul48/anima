@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Substrate — ANIMA</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/design.css">
 </head>
 <body>
@@ -23,6 +24,7 @@
 
 <section class="block" aria-labelledby="proof">
 <h2 id="proof">Proof</h2>
+<div class="table-scroll">
 <table class="data">
 <caption>Component suite + journey checks. Sources: TEST-REPORT.md rows 5–6; quickstart.py.</caption>
 <tr><th>Check</th><th>Result</th></tr>
@@ -31,6 +33,7 @@
 <tr><td>Close/reopen</td><td>org snapshot <code>before == after</code> (quickstart.py:71-75)</td></tr>
 <tr><td>Settle</td><td>terminals settled, <code>stranded=0</code></td></tr>
 </table>
+</div>
 </section>
 
 <section class="block" aria-labelledby="hero">
@@ -38,7 +41,8 @@
 <div class="hero rise">
 <p>Each step replays one print line of
 <a href="../components/substrate/examples/quickstart.py"><code>examples/quickstart.py</code></a>.
-Scroll pins each step; Play/Reset replay the sequence.</p>
+Scroll pins each step; Play/Reset replay the sequence.
+Animation is decorative; numbers are measured quickstart values.</p>
 </div>
 <div class="stage stage-pinned" data-replay data-pinned>
 <div class="controls">

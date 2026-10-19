@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reflex — ANIMA</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/design.css">
 </head>
 <body>
@@ -23,6 +24,7 @@
 
 <section class="block" aria-labelledby="proof">
 <h2 id="proof">Proof</h2>
+<div class="table-scroll">
 <table class="data">
 <caption>One real chip; everything else visual is illustrated. Source: TEST-REPORT.md row 11.</caption>
 <tr><th>Check</th><th>Result</th></tr>
@@ -31,6 +33,7 @@
 <tr><td>Routing traces</td><td>none shipped in this tree <span class="chip chip-illus">ILLUSTRATED</span></td></tr>
 <tr><td>Screen images</td><td>synthetic canvas mock only; no real-screen PNGs <span class="chip chip-synth">SYNTHETIC</span></td></tr>
 </table>
+</div>
 </section>
 
 <section class="block" aria-labelledby="hero">
@@ -45,6 +48,7 @@ aria-label="Synthetic illustration: abstract boxes with relevance scores; two ro
 <noscript><p class="fine">No-JS: detectors propose boxes, filter scores relevance, only top crops (box1, box3) route to the VLM; full frame is never sent.</p></noscript>
 <pre>full frame → detect boxes → relevance filter → route top crops → VLM answer
   (synthetic boxes)   (cheap scores)    (CropPacket: box1, box3)  (grounded)</pre>
+<div class="table-scroll">
 <table class="data">
 <caption>Escalation ladder (REFLEX-AMBITION.md). Label: ILLUSTRATED / vision-fenced.</caption>
 <tr><th>Rung</th><th>Stage</th><th>Note</th></tr>
@@ -53,6 +57,7 @@ aria-label="Synthetic illustration: abstract boxes with relevance scores; two ro
 <tr><td>L3</td><td>Feature grounding</td><td>relevance filter (hypothesis)</td></tr>
 <tr><td>L4/L5</td><td>Targeted VLM</td><td>small crops only; full frame never sent</td></tr>
 </table>
+</div>
 </section>
 
 <section class="block" aria-labelledby="try">
