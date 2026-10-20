@@ -1,7 +1,0 @@
-WEBVTT
-
-00:00.000 --> 00:00:28.900
-S T C builds spec to code under deterministic gates. Four gates, four green exits, every value replayed from a signed receipt. Ruff formats seventy files in under half a second. Mypy clears forty-seven files with no issues. Pytest passes thirteen integration tests. And mutation testing kills eighty-seven point seven five percent of mutants. The animation here is decorative; every number is a receipt value.
-
-00:00:28.900 --> 00:00:53.900
-Trust, but verify, in your own browser. The page carries a pinned commit hash taken from the receipt. Paste any hash into the checker. Only the pinned value reports match; anything else reports mismatch. The comparison runs entirely on your machine, and nothing is sent anywhere. Beside the gates, a schemas smoke test passes thirty-seven checks. Measured exits, replayable proof, and no badge claims.

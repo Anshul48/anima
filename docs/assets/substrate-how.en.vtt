@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.400 --> 00:00:02.750
+Worlds that survive kill nine.
+
+00:00:03.950 --> 00:00:10.300
+A world is a project with its own state, budget, and lifecycle. Worlds nest inside worlds.
+
+00:00:11.500 --> 00:00:16.575
+Every change lands in an event log first. Nothing mutates without a record.
+
+00:00:17.775 --> 00:00:22.575
+Snapshots pin the ledger. Delegation never manufactures resources.
+
+00:00:23.775 --> 00:00:30.025
+Then the kill. Minus nine. No handler, no cleanup.  The process just dies.
+
+00:00:31.225 --> 00:00:37.850
+Reopen. The ledger prefix is intact, artifacts byte-identical, zero invokes re-executed.
+
+00:00:39.650 --> 00:00:44.300
+Worlds fuse and split with lineage: every merge records its parents.
+
+00:00:45.500 --> 00:00:49.775
+Exported composites run unmodified in a fresh directory.
+
+00:00:50.975 --> 00:00:56.900
+Limits, on the record: alpha, no learning, one host, crash only. No disk-loss magic.
+
+00:00:58.700 --> 00:01:03.475
+Worlds that survive kill nine.  Install the alpha.

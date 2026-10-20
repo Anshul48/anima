@@ -6,6 +6,7 @@
 <title>Substrate — ANIMA</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/design.css">
+<link rel="stylesheet" href="assets/tier.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -20,15 +21,45 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="hook rise">Close it. Reopen it. Bit-for-bit identical — watch a project world survive the round trip in 57 seconds.</p>
+<p class="hook rise">Worlds that survive <code>kill -9</code>: close, reopen byte-identical — then fuse, split, hand off.</p>
 
-<figure class="videoframe rise" aria-label="Substrate journey film (57 seconds)">
-<video controls preload="none" poster="assets/substrate-poster.jpg">
-<source src="assets/substrate.mp4" type="video/mp4">
-<track kind="captions" srclang="en" label="English" src="assets/substrate.en.vtt">
+<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: a world is snapshotted, killed, restored byte-identical, then fused with another world.">
+<title>Kill-resume-fuse loop</title>
+<defs><marker id="sb-ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="currentColor" stroke-width="1.5"/></marker></defs>
+<g font-family="inherit" font-size="14" text-anchor="middle" fill="currentColor">
+<rect x="20" y="55" width="110" height="60" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="75" y="80">world</text><text x="75" y="99" font-size="11" opacity="0.7">live state</text>
+<rect x="185" y="55" width="110" height="60" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="240" y="80">snapshot</text><text x="240" y="99" font-size="11" opacity="0.7">event log</text>
+<rect x="350" y="55" width="110" height="60" rx="10" fill="none" stroke="currentColor" stroke-width="2" class="m-blink"/>
+<text x="405" y="80">kill -9</text><text x="405" y="99" font-size="11" opacity="0.7">process dies</text>
+<rect x="505" y="55" width="115" height="60" rx="10" fill="none" stroke="currentColor" stroke-width="2.5" class="m-pulse"/>
+<text x="562" y="80">reopen</text><text x="562" y="99" font-size="11" opacity="0.7">byte-identical</text>
+<line x1="130" y1="85" x2="185" y2="85" stroke="currentColor" stroke-width="2" marker-end="url(#sb-ah)"/>
+<line x1="295" y1="85" x2="350" y2="85" stroke="currentColor" stroke-width="2" marker-end="url(#sb-ah)"/>
+<line x1="460" y1="85" x2="505" y2="85" stroke="currentColor" stroke-width="2" marker-end="url(#sb-ah)"/>
+<path d="M 562 115 C 562 145, 240 145, 240 115" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" class="m-dash"/>
+<text x="400" y="152" font-size="11" opacity="0.7">diff: 0 lines differ</text>
+</g>
+</svg>
+
+<figure class="videoframe rise" id="substrate-how" aria-label="Substrate How film (67 seconds)">
+<video controls preload="none" poster="assets/substrate-how-poster.jpg">
+<source src="assets/substrate-how.mp4" type="video/mp4">
+<track kind="captions" srclang="en" label="English" src="assets/substrate-how.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>Watch the 7-step journey: setup, byte-identical close/reopen, clean settle — then replay it live below. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>How (67 s): worlds, event logs, snapshots, kill-resume, fuse/fission lineage. Voice: synthetic (Kokoro TTS).</figcaption>
+<div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-receipt">RECEIPT</span></div>
+</figure>
+
+<figure class="videoframe rise" id="substrate-do" aria-label="Substrate Do film (50 seconds)">
+<video controls preload="none" poster="assets/substrate-do-poster.jpg">
+<source src="assets/substrate-do.mp4" type="video/mp4">
+<track kind="captions" srclang="en" label="English" src="assets/substrate-do.en.vtt">
+Sorry, your browser cannot play this video.
+</video>
+<figcaption>Do (50 s): build, nest, <code>kill -9</code> on camera, reopen byte-identical, fuse — ends on the five commands. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-receipt">RECEIPT</span></div>
 </figure>
 
@@ -98,6 +129,9 @@ python examples/quickstart.py   # ends with: ANIMA quickstart OK
 <li>Read the ledger demo receipt: <code>demo_T.py</code> exit 0, 40 entries, conservation OK <span class="chip chip-receipt">RECEIPT</span>.</li>
 <li>Run the recovery exercise: exit 0, child_returncode -9, re_executed 0 <span class="chip chip-receipt">RECEIPT</span>.</li>
 </ol>
+<p class="fine">Scroll-typed, real command + recorded output:</p>
+<pre class="typed" data-typed>$ python examples/quickstart.py
+ANIMA quickstart OK</pre>
 </section>
 
 <section class="block" aria-labelledby="limits">
@@ -107,6 +141,16 @@ python examples/quickstart.py   # ends with: ANIMA quickstart OK
 multi-writer, or disk-loss tolerance. No learning of any kind. Delegation amounts are operator-supplied.
 (Source: component README “Important limitations”.)</p>
 </div>
+</section>
+
+
+<section class="next-strip" aria-label="What is next">
+<h2>Next</h2>
+<ol>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/#p=7">open the theater</a>.</li>
+<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
+<li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
+</ol>
 </section>
 
 <section class="block" aria-labelledby="go-deeper">
@@ -125,5 +169,6 @@ multi-writer, or disk-loss tolerance. No learning of any kind. Delegation amount
 ANIMA research preview · <a href="index.html">Index</a> · <a href="sst.html">SST</a> · License Apache-2.0.
 </div></footer>
 <script src="assets/motion.js"></script>
+<script src="assets/always.js"></script>
 </body>
 </html>

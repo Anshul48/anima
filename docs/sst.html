@@ -6,6 +6,7 @@
 <title>SST — ANIMA</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/design.css">
+<link rel="stylesheet" href="assets/tier.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -20,16 +21,47 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="hook rise">An honest search keeps its failures on screen — watch the tree grow, get pruned, and tell the truth in 63 seconds.</p>
+<p class="hook rise">Don't trust one draft — watch candidates argue, verify, merge; every loss kept.</p>
 
-<figure class="videoframe rise" aria-label="SST search film (63 seconds)">
-<video controls preload="none" poster="assets/sst-poster.jpg">
-<source src="assets/sst.mp4" type="video/mp4">
-<track kind="captions" srclang="en" label="English" src="assets/sst.en.vtt">
+<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: two candidates diverge, one dies at the gate, critique scores the survivor, synthesis crowns a champion.">
+<title>Dialectic search loop</title>
+<g font-family="inherit" font-size="13" text-anchor="middle" fill="currentColor">
+<circle cx="60" cy="85" r="26" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="60" y="89">root</text>
+<circle cx="200" cy="45" r="24" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="200" y="49">A</text>
+<circle cx="200" cy="125" r="24" fill="none" stroke="currentColor" stroke-width="2" class="m-blink"/>
+<text x="200" y="129">B ✕</text>
+<line x1="82" y1="72" x2="178" y2="52" stroke="currentColor" stroke-width="2"/>
+<line x1="82" y1="98" x2="178" y2="118" stroke="currentColor" stroke-width="2"/>
+<rect x="300" y="60" width="110" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="355" y="82">critique</text><text x="355" y="99" font-size="11" opacity="0.7">scores</text>
+<line x1="224" y1="45" x2="300" y2="72" stroke="currentColor" stroke-width="2"/>
+<rect x="460" y="60" width="120" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2.5" class="m-pulse"/>
+<text x="520" y="82">champion</text><text x="520" y="99" font-size="11" opacity="0.7">promoted</text>
+<line x1="410" y1="85" x2="460" y2="85" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" class="m-dash"/>
+<text x="200" y="162" font-size="11" opacity="0.7">the dead branch stays on screen</text>
+</g>
+</svg>
+
+<figure class="videoframe rise" id="sst-how" aria-label="SST How film (62 seconds)">
+<video controls preload="none" poster="assets/sst-how-poster.jpg">
+<source src="assets/sst-how.mp4" type="video/mp4">
+<track kind="captions" srclang="en" label="English" src="assets/sst-how.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>Tree growth, honest pruning, champion promotion — plus the kept live-qualification failure. Grown below, live. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>How (62 s): diverge, refine, gate — one branch dies visibly — critique, synthesize, champion. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-receipt">RECEIPT</span></div>
+</figure>
+
+<figure class="videoframe rise" id="sst-do" aria-label="SST Do film (50 seconds)">
+<video controls preload="none" poster="assets/sst-do-poster.jpg">
+<source src="assets/sst-do.mp4" type="video/mp4">
+<track kind="captions" srclang="en" label="English" src="assets/sst-do.en.vtt">
+Sorry, your browser cannot play this video.
+</video>
+<figcaption>Do (50 s): a live TEST run — binding printed, no champion, failure retained, promote refuses. Voice: synthetic (Kokoro TTS).</figcaption>
+<div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-receipt">RECEIPT</span></div>
 </figure>
 
 <section class="block" aria-labelledby="proof">
@@ -80,6 +112,10 @@ stringified into a literal <code>"None"</code> patch — all 3 candidates failed
 <li>Run the CLI: <code>sst run/status/promote/visualize/ui --json</code> (exit codes 0/2/3/4/130).</li>
 <li>Install the pin: package <code>sst-engine</code> 0.1.0.</li>
 </ol>
+<p class="fine">Scroll-typed, real command + recorded output (recorded 2026-10-20 · TEST provider):</p>
+<pre class="typed" data-typed>$ sst run --goal "thread-safe ring buffer" --max-iterations 4 --json
+"termination_reason": "no_candidate", "champion": null
+exit code: 2 (no verified candidate)</pre>
 </section>
 
 <section class="block" aria-labelledby="limits">
@@ -93,6 +129,16 @@ stringified into a literal <code>"None"</code> patch — all 3 candidates failed
 <li>See <code>docs/RECOVERY-LIMITS.md</code> for what the event log can and cannot reconstruct.</li>
 </ul>
 </div>
+</section>
+
+
+<section class="next-strip" aria-label="What is next">
+<h2>Next</h2>
+<ol>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/#p=7">open the theater</a>.</li>
+<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
+<li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
+</ol>
 </section>
 
 <section class="block" aria-labelledby="go-deeper">
@@ -111,5 +157,6 @@ stringified into a literal <code>"None"</code> patch — all 3 candidates failed
 ANIMA research preview · <a href="index.html">Index</a> · <a href="substrate.html">Substrate</a> · License Apache-2.0.
 </div></footer>
 <script src="assets/motion.js"></script>
+<script src="assets/always.js"></script>
 </body>
 </html>

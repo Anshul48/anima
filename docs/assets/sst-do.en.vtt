@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.400 --> 00:00:04.500
+S S T, live in test mode: watch a bad idea die.
+
+00:00:05.700 --> 00:00:10.150
+Run a search on the test provider. The binding is printed, not hidden.
+
+00:00:11.350 --> 00:00:16.725
+No champion. The candidates fail verification, and the failure is retained.
+
+00:00:18.525 --> 00:00:23.800
+Status shows the corpses: four divergences, all failed deterministically.
+
+00:00:25.000 --> 00:00:28.650
+Promote refuses. Nothing verified, nothing merged.
+
+00:00:29.850 --> 00:00:35.300
+The envelope says test, exit two, mock true. Fixture runs are unmistakable.
+
+00:00:37.100 --> 00:00:41.425
+Live models need a key. Until then, this rigor is the demo.
+
+00:00:42.625 --> 00:00:46.850
+The search that shows its corpses.  Run it.

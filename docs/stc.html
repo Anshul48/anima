@@ -6,6 +6,7 @@
 <title>STC — ANIMA</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/design.css">
+<link rel="stylesheet" href="assets/tier.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -20,15 +21,46 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="hook rise">STC builds spec-to-code under deterministic gates — every gate exit 0, signed on receipt.</p>
+<p class="hook rise">Specs in, signed receipts out — merge only when the receipt verifies.</p>
 
-<figure class="videoframe rise" aria-label="STC film (54 seconds)">
-<video controls preload="none" poster="assets/stc-poster.jpg">
-<source src="assets/stc.mp4" type="video/mp4">
-<track kind="captions" srclang="en" label="English" src="assets/stc.en.vtt">
+<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: a spec sentence becomes a bundle, passes four gates, earns a signed receipt, and merges.">
+<title>Spec to signed receipt loop</title>
+<g font-family="inherit" font-size="12" text-anchor="middle" fill="currentColor">
+<rect x="10" y="60" width="90" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="55" y="82">spec</text><text x="55" y="98" font-size="10" opacity="0.7">sentence</text>
+<rect x="130" y="60" width="90" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="175" y="82">bundle</text><text x="175" y="98" font-size="10" opacity="0.7">≤25 KB</text>
+<rect x="250" y="60" width="90" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="295" y="82">4 gates</text><text x="295" y="98" font-size="10" opacity="0.7">exit 0</text>
+<rect x="370" y="60" width="110" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2.5" class="m-pulse"/>
+<text x="425" y="82">receipt</text><text x="425" y="98" font-size="10" opacity="0.7">HMAC signed</text>
+<rect x="510" y="60" width="90" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="555" y="82">merge</text><text x="555" y="98" font-size="10" opacity="0.7">judge: blind</text>
+<line x1="100" y1="85" x2="130" y2="85" stroke="currentColor" stroke-width="2"/>
+<line x1="220" y1="85" x2="250" y2="85" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" class="m-dash"/>
+<line x1="340" y1="85" x2="370" y2="85" stroke="currentColor" stroke-width="2"/>
+<line x1="480" y1="85" x2="510" y2="85" stroke="currentColor" stroke-width="2"/>
+<text x="320" y="140" font-size="11" opacity="0.7">tamper one byte → judge quarantines (the Do film shows it)</text>
+</g>
+</svg>
+
+<figure class="videoframe rise" id="stc-how" aria-label="STC How film (58 seconds)">
+<video controls preload="none" poster="assets/stc-how-poster.jpg">
+<source src="assets/stc-how.mp4" type="video/mp4">
+<track kind="captions" srclang="en" label="English" src="assets/stc-how.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>Watch it in 54 seconds: four gates light from a signed receipt, then the hash checker you can run yourself. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>How (58 s): spec sentence to bundle to gates to signed receipt to blind judge to sovereign merge. Voice: synthetic (Kokoro TTS).</figcaption>
+<div class="chiprow"><span class="chip chip-receipt">RECEIPT</span> <span class="chip chip-real">REAL-REPLAY</span></div>
+</figure>
+
+<figure class="videoframe rise" id="stc-do" aria-label="STC Do film (50 seconds)">
+<video controls preload="none" poster="assets/stc-do-poster.jpg">
+<source src="assets/stc-do.mp4" type="video/mp4">
+<track kind="captions" srclang="en" label="English" src="assets/stc-do.en.vtt">
+Sorry, your browser cannot play this video.
+</video>
+<figcaption>Do (50 s): the pipeline on camera — byte count, gates flipping, receipt HMAC, then tamper-a-byte quarantine. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-receipt">RECEIPT</span> <span class="chip chip-real">REAL-REPLAY</span></div>
 </figure>
 
@@ -87,6 +119,9 @@ Animation is decorative; numbers are receipt values.</p>
 <li>Re-run the smoke: <code>pytest tests/unit/test_schemas.py -q</code> → 37 passed.</li>
 <li>Paste any edited hash above; only the pinned value reports MATCH.</li>
 </ol>
+<p class="fine">Scroll-typed, real command + recorded output:</p>
+<pre class="typed" data-typed>$ pytest tests/unit/test_schemas.py -q
+37 passed</pre>
 </section>
 
 <section class="block" aria-labelledby="limits">
@@ -98,6 +133,16 @@ Animation is decorative; numbers are receipt values.</p>
 <li>Verified counts on this page: the four receipt gates plus the 37-passed schemas smoke.</li>
 </ul>
 </div>
+</section>
+
+
+<section class="next-strip" aria-label="What is next">
+<h2>Next</h2>
+<ol>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/#p=7">open the theater</a>.</li>
+<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
+<li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
+</ol>
 </section>
 
 <section class="block" aria-labelledby="go-deeper">
@@ -115,5 +160,6 @@ Animation is decorative; numbers are receipt values.</p>
 ANIMA research preview · <a href="index.html">Index</a> · License Apache-2.0.
 </div></footer>
 <script src="assets/motion.js"></script>
+<script src="assets/always.js"></script>
 </body>
 </html>
