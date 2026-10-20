@@ -296,3 +296,10 @@ table.data.try-it td { padding: 0.65rem 0.8rem; }
 }
 /* Proof/pin chips never split mid-phrase. */
 .pin { white-space: nowrap; }
+/* R4 video hero: panel-framed 16:9 player + caption; no autoplay anywhere. */
+.videoframe { background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--radius-l); padding: 0.9rem; margin: 1rem 0; min-width: 0; }
+.videoframe video { display: block; width: 100%; border-radius: var(--radius-m);
+  background: #000; aspect-ratio: 16 / 9; }
+.videoframe figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.6rem; }
+.videoframe .chiprow { margin-top: 0.4rem; }
