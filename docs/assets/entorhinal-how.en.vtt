@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.400 --> 00:00:02.725
+The advisor, not the actor.
+
+00:00:03.925 --> 00:00:08.525
+It receives only permitted signals, and keeps provenance for every line.
+
+00:00:09.725 --> 00:00:15.025
+Secrets die pre-storage: keys and tokens redacted before anything is written.
+
+00:00:16.225 --> 00:00:20.700
+The evidence journal hash-chains every record. Tampering breaks the chain.
+
+00:00:21.900 --> 00:00:27.150
+Projections build focus, session, and uncertainty views across timescales.
+
+00:00:28.350 --> 00:00:33.700
+Consumers get bounded snapshots: disclaimers attached, expiry enforced.
+
+00:00:34.900 --> 00:00:39.875
+Ten minutes to live.  Then the brief expires, by construction.
+
+00:00:41.675 --> 00:00:45.750
+Zero action dispatchers. It advises. It never acts.
+
+00:00:47.550 --> 00:00:53.050
+Reflex advice is future work, blocked on defects. No Trace backend assumed.
+
+00:00:54.250 --> 00:00:59.200
+Memory that warns, never grabs.  Serve it locally.

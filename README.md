@@ -28,8 +28,8 @@
 
 ## Watch it
 
-- 🎬 **[Overview film](https://anshul48.github.io/anima/)** — what ANIMA is and what each component does, in about a minute. Video file `docs/assets/anima.mp4` (720p H.264, captions + transcript on the page; voice is synthetic).
-- 🎬 **Component films** — one per page: `substrate`, `sst`, `stc`, `entorhinal`, `reflex` under `docs/assets/`, embedded with live interactive twins above the fold.
+- 🎬 **[ANIMA films](https://anshul48.github.io/anima/)** — How (73 s): a task-token crosses the constellation; Do (59 s): true-brightness status tour. Files `docs/assets/anima-how/do.mp4` (720p H.264, captions on the page; voice is synthetic).
+- 🎬 **Component films** — a How + Do pair per page: `substrate`, `sst`, `stc`, `entorhinal`, `reflex` under `docs/assets/`, each with posters + captions, no autoplay.
 - 🖱️ **Live interactive twins** — every page pairs its film with something you can click: the substrate journey, search traces, gate pipelines, advisory snapshots.
 
 ## Proof (one line)

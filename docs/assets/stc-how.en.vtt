@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.400 --> 00:00:02.700
+Specs in, signed receipts out.
+
+00:00:03.900 --> 00:00:07.550
+A spec sentence decomposes into a tree of concerns.
+
+00:00:08.750 --> 00:00:13.850
+Each task compiles into a bundle under twenty-five thousand six hundred bytes.
+
+00:00:15.650 --> 00:00:19.325
+A leased worktree isolates the build. Four gates wait.
+
+00:00:20.525 --> 00:00:25.575
+Ruff, mypy, pytest, mutmut. Mechanical, deterministic, appeal-free.
+
+00:00:26.775 --> 00:00:31.650
+Passing gates mint a signed receipt: commit hash, timings, violations.
+
+00:00:33.450 --> 00:00:37.075
+A blind judge audits the diff without knowing the author.
+
+00:00:38.275 --> 00:00:42.925
+Merge only when the receipt verifies. Sovereign, never automatic.
+
+00:00:44.125 --> 00:00:48.800
+No zero-defect claims. The pilot tied one to one, for four cents.
+
+00:00:50.000 --> 00:00:54.625
+Specs in, signed receipts out.  Run the pipeline.

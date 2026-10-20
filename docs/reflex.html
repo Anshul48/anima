@@ -6,6 +6,7 @@
 <title>Reflex — ANIMA</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/design.css">
+<link rel="stylesheet" href="assets/tier.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -20,15 +21,45 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="hook rise">Reflex routes only small high-resolution crops to heavy vision — full frames never sent.</p>
+<p class="hook rise">Reflexes before reasoning: sense structurally, spend vision only where confused. <span class="tchip tchip-vision">*seed* · hypotheses, not commitments</span></p>
 
-<figure class="videoframe rise" aria-label="Reflex film (50 seconds)">
-<video controls preload="none" poster="assets/reflex-poster.jpg">
-<source src="assets/reflex.mp4" type="video/mp4">
-<track kind="captions" srclang="en" label="English" src="assets/reflex.en.vtt">
+<svg class="mech" viewBox="0 0 640 190" role="img" aria-label="Looping mechanism: the escalation ladder climbs from DOM to targeted VLM crops while the full frame is fenced off.">
+<title>Escalation ladder loop</title>
+<g font-family="inherit" font-size="12" text-anchor="middle" fill="currentColor">
+<rect x="20" y="20" width="170" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="105" y="47">L0/L1 · DOM/cache</text>
+<rect x="20" y="72" width="170" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="105" y="99">L2 · YOLO + OCR</text>
+<rect x="20" y="124" width="170" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="105" y="151">L3 · grounding</text>
+<rect x="230" y="72" width="180" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2.5" class="m-pulse"/>
+<text x="320" y="99">L4 · targeted VLM crop</text>
+<rect x="450" y="72" width="170" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4" class="m-blink"/>
+<text x="535" y="92">full frame</text><text x="535" y="108" font-size="11" opacity="0.7">NEVER to VLM</text>
+<line x1="190" y1="94" x2="230" y2="94" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" class="m-dash"/>
+<line x1="470" y1="72" x2="600" y2="116" stroke="currentColor" stroke-width="2"/>
+<line x1="470" y1="116" x2="600" y2="72" stroke="currentColor" stroke-width="2"/>
+<text x="320" y="182" font-size="11" opacity="0.7">spend ≈$0.00 · visible failure kept (the Do film shows it)</text>
+</g>
+</svg>
+
+<figure class="videoframe rise" id="reflex-how" aria-label="Reflex How film (76 seconds)">
+<video controls preload="none" poster="assets/reflex-how-poster.jpg">
+<source src="assets/reflex-how.mp4" type="video/mp4">
+<track kind="captions" srclang="en" label="English" src="assets/reflex-how.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>Watch it in 50 seconds: the illustrated reflex arc, then the one real chip — the privacy redactor. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>How (76 s): the L0–L4 ladder — full-frame never to VLM, latency and spend counters honest. <span class="tchip tchip-vision">*seed*</span> Voice: synthetic (Kokoro TTS).</figcaption>
+<div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-synth">SYNTHETIC</span></div>
+</figure>
+
+<figure class="videoframe rise" id="reflex-do" aria-label="Reflex Do film (58 seconds)">
+<video controls preload="none" poster="assets/reflex-do-poster.jpg">
+<source src="assets/reflex-do.mp4" type="video/mp4">
+<track kind="captions" srclang="en" label="English" src="assets/reflex-do.en.vtt">
+Sorry, your browser cannot play this video.
+</video>
+<figcaption>Do (58 s): honest seed — mis-ground, surprise, halt, re-ground, verify; failure kept. <span class="tchip tchip-vision">*seed*</span> Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-synth">SYNTHETIC</span></div>
 </figure>
 
@@ -77,6 +108,9 @@ aria-label="Synthetic illustration: abstract boxes with relevance scores; two ro
 <li>Start offline: <code>main.py --mock --demo</code> (Jarvis console; no installed console script).</li>
 <li>Read the ambition: <code>REFLEX-AMBITION.md</code> ladder + O(N) crop routing.</li>
 </ol>
+<p class="fine">Scroll-typed, real command + recorded output (the one real chip):</p>
+<pre class="typed" data-typed>$ pytest tests/test_privacy_redactor.py
+14 passed + 11 subtests</pre>
 </section>
 
 <section class="block" aria-labelledby="limits">
@@ -88,6 +122,16 @@ aria-label="Synthetic illustration: abstract boxes with relevance scores; two ro
 <li>Status (verbatim, component README limits): “Research/seed stage: model names, latency figures, and complexity claims in its ARCHITECTURE.md are hypotheses to measure, not release commitments.”</li>
 </ul>
 </div>
+</section>
+
+
+<section class="next-strip" aria-label="What is next">
+<h2>Next</h2>
+<ol>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/#p=7">open the theater</a>.</li>
+<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
+<li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
+</ol>
 </section>
 
 <section class="block" aria-labelledby="go-deeper">
@@ -105,5 +149,6 @@ aria-label="Synthetic illustration: abstract boxes with relevance scores; two ro
 ANIMA research preview · <a href="index.html">Index</a> · License Apache-2.0.
 </div></footer>
 <script src="assets/motion.js"></script>
+<script src="assets/always.js"></script>
 </body>
 </html>
