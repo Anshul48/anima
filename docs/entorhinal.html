@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="assets/design.css">
 <link rel="stylesheet" href="assets/tier.css">
 <link rel="stylesheet" href="assets/nav.css">
+<link rel="stylesheet" href="assets/story.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -22,26 +23,27 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="hook rise">The advisor, not the actor: bounded expiring briefs, provenance per line, zero surveillance.</p>
+<p class="hook rise">Entorhinal is the Remember stop: the advisor, never the actor — it hands the worker a short brief that expires, with a receipt for every line, and it never touches anything itself.</p>
+<p class="analogy">Like a librarian who whispers, never touches: she briefs you on what matters, then shreds the note. She never pulls a book off the shelf for you.</p>
 
-<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: signals pass a redaction gate into an evidence journal, projections compile a snapshot with a countdown, then it expires.">
-<title>Advise then expire loop</title>
+<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: observations pass a scrubbing step into a logbook, a brief is compiled with a countdown, then it expires and nothing is kept.">
+<title>Brief, then shred loop</title>
 <g font-family="inherit" font-size="12" text-anchor="middle" fill="currentColor">
 <rect x="10" y="60" width="90" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="55" y="82">signals</text><text x="55" y="98" font-size="10" opacity="0.7">raw</text>
+<text x="55" y="82">notice</text><text x="55" y="98" font-size="10" opacity="0.7">raw signals</text>
 <rect x="130" y="60" width="100" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="180" y="82">redact</text><text x="180" y="98" font-size="10" opacity="0.7">keys scrubbed</text>
+<text x="180" y="82">scrub</text><text x="180" y="98" font-size="10" opacity="0.7">secrets removed</text>
 <rect x="260" y="60" width="90" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="305" y="82">journal</text><text x="305" y="98" font-size="10" opacity="0.7">evidence</text>
+<text x="305" y="82">logbook</text><text x="305" y="98" font-size="10" opacity="0.7">evidence kept</text>
 <rect x="380" y="60" width="120" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2.5" class="m-pulse"/>
-<text x="440" y="82">snapshot</text><text x="440" y="98" font-size="10" opacity="0.7">TTL countdown</text>
+<text x="440" y="82">brief</text><text x="440" y="98" font-size="10" opacity="0.7">countdown runs</text>
 <rect x="530" y="60" width="80" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4" class="m-blink"/>
-<text x="570" y="82">expiry</text><text x="570" y="98" font-size="10" opacity="0.7">0 bytes kept</text>
+<text x="570" y="82">shred</text><text x="570" y="98" font-size="10" opacity="0.7">0 bytes kept</text>
 <line x1="100" y1="85" x2="130" y2="85" stroke="currentColor" stroke-width="2"/>
 <line x1="230" y1="85" x2="260" y2="85" stroke="currentColor" stroke-width="2"/>
 <line x1="350" y1="85" x2="380" y2="85" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" class="m-dash"/>
 <line x1="500" y1="85" x2="530" y2="85" stroke="currentColor" stroke-width="2"/>
-<text x="320" y="140" font-size="11" opacity="0.7">advises only — zero mutation authority</text>
+<text x="320" y="140" font-size="11" opacity="0.7">advises only — it can change nothing</text>
 </g>
 </svg>
 
@@ -51,7 +53,7 @@
 <track kind="captions" srclang="en" label="English" src="assets/entorhinal-how.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>How (63 s): signals to redaction gate to evidence journal to projections to expiring snapshot. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>How (63 s): notice, scrub, logbook, brief with a countdown, shred. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-synth">SYNTHETIC</span> <span class="chip chip-real">REAL-REPLAY</span></div>
 </figure>
 
@@ -61,30 +63,28 @@ Sorry, your browser cannot play this video.
 <track kind="captions" srclang="en" label="English" src="assets/entorhinal-do.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>Do (53 s): labeled fixture theater — a warning snapshot refires, a fake key is redacted, the audit reads zero bytes. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>Do (53 s): a rehearsed warning — the brief refires, a fake secret is scrubbed, the audit reads zero bytes kept. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-synth">SYNTHETIC</span> <span class="chip chip-real">REAL-REPLAY</span></div>
 </figure>
 
 <section class="block" aria-labelledby="proof">
-<h2 id="proof">Proof</h2>
+<h2 id="proof">Receipts</h2>
 <div class="table-scroll">
 <table class="data">
-<caption>CLI + smoke replays; shadow numbers are report-dated (2026-09-30).</caption>
+<caption>Real surface checks plus one dated report (2026-09-30). Counts live in TEST-REPORT.md.</caption>
 <tr><th>Check</th><th>Result</th></tr>
-<tr><td>Fact identity</td><td><code>tests/test_fact_identity.py</code> → 9 passed <span class="chip chip-real">REAL-REPLAY</span></td></tr>
-<tr><td>CLI surface</td><td><code>status / inspect / grants / audit / serve</code> respond, exit 0 <span class="chip chip-real">REAL-REPLAY</span></td></tr>
-<tr><td>Shadow report</td><td>24 executions, 0 unsafe, steps 31 → 23 <span class="chip chip-receipt">REPORT 2026-09-30; no pin id issued</span></td></tr>
-<tr><td>Mutation authority</td><td>zero — advises only, never acts <span class="chip chip-illus">ILLUSTRATED</span></td></tr>
+<tr><td>Identity check</td><td>passed <span class="chip chip-real">REAL-REPLAY</span></td></tr>
+<tr><td>Command surface (status, inspect, grants, audit, serve)</td><td>all respond <span class="chip chip-real">REAL-REPLAY</span></td></tr>
+<tr><td>Shadow report (2026-09-30)</td><td>24 runs, 0 unsafe, fewer steps <span class="chip chip-receipt">REPORT, dated</span></td></tr>
+<tr><td>Power to change things</td><td>zero — advises only <span class="chip chip-illus">ILLUSTRATED</span></td></tr>
 </table>
 </div>
 </section>
 
 <section class="block" aria-labelledby="hero">
-<h2 id="hero">Timeline ribbon <span class="chip chip-synth">SYNTHETIC</span></h2>
+<h2 id="hero">The brief's journey <span class="chip chip-synth">SYNTHETIC</span></h2>
 <div class="hero rise">
-<p>The ribbon uses invented placeholder events — never real user traces. The consented trace corpus is
-excluded from this site by the privacy hard ban. Order follows the real concept: evidence → fact →
-projection → snapshot, with consent gates and a cascade-deletion tombstone.</p>
+<p>The ribbon uses invented placeholder events — never real traces. The order follows the real idea: evidence → fact → summary → brief, with permission checks and proof of deletion.</p>
 </div>
 <div class="gate-replay">
 <div class="controls">
@@ -92,33 +92,33 @@ projection → snapshot, with consent gates and a cascade-deletion tombstone.</p
 <button type="button" class="ghost" data-reset-flow>Reset</button>
 <button type="button" class="ghost" data-pause-flow>Pause</button>
 </div>
-<div class="flow" data-ribbon aria-label="Synthetic context timeline">
-<div class="gate" data-state="done"><strong>evidence</strong><span class="st">synthetic</span> 3 demo events</div>
+<div class="flow" data-ribbon aria-label="Rehearsed context timeline">
+<div class="gate" data-state="done"><strong>evidence</strong><span class="st">rehearsed</span> 3 demo events</div>
 <span class="arrow" aria-hidden="true">→</span>
-<div class="gate" data-state="done"><strong>fact</strong><span class="st">synthetic</span> compiled</div>
+<div class="gate" data-state="done"><strong>fact</strong><span class="st">rehearsed</span> compiled</div>
 <span class="arrow" aria-hidden="true">→</span>
-<div class="gate" data-state="done"><strong>projection</strong><span class="st">synthetic</span> short/mid/long</div>
+<div class="gate" data-state="done"><strong>summary</strong><span class="st">rehearsed</span> short/mid/long</div>
 <span class="arrow" aria-hidden="true">→</span>
-<div class="gate" data-state="done"><strong>snapshot</strong><span class="st">synthetic</span> served + consent gate</div>
+<div class="gate" data-state="done"><strong>brief</strong><span class="st">rehearsed</span> served + permission check</div>
 <span class="arrow" aria-hidden="true">→</span>
-<div class="gate" data-state="done"><strong>deletion</strong><span class="st">tombstone</span> cascade proof</div>
+<div class="gate" data-state="done"><strong>deletion</strong><span class="st">proof kept</span> shredded on record</div>
 </div>
 </div>
-<h3>Literal fence <span class="chip chip-synth">SYNTHETIC</span></h3>
-<p class="fine">Scroll-typed, real CLI surface (all five respond, exit 0):</p>
+<h3>Real surface <span class="chip chip-real">REAL-REPLAY</span></h3>
+<p class="fine">Scroll-typed, real commands (all five respond):</p>
 <pre class="typed" data-typed>$ entorhinal status
 $ entorhinal inspect timeline
 $ entorhinal grants list
 $ entorhinal audit
 $ entorhinal serve   # local loopback daemon
-# shadow (REPORT 2026-09-30): 24 executions, 0 unsafe, steps 31 -&gt; 23</pre>
+# shadow (REPORT 2026-09-30): 24 runs, 0 unsafe, fewer steps</pre>
 </section>
 
 <section class="block" aria-labelledby="try">
 <h2 id="try">Try it</h2>
 <ol>
-<li>Check identity: <code>tests/test_fact_identity.py</code> → 9 passed.</li>
-<li>List grants: <code>entorhinal grants list</code> — consent gate visible.</li>
+<li>Check identity: <code>tests/test_fact_identity.py</code>.</li>
+<li>List permissions: <code>entorhinal grants list</code> — the permission check is visible.</li>
 <li>Audit everything: <code>entorhinal audit</code> — corrections, deletions, access logged.</li>
 </ol>
 </section>
@@ -127,11 +127,18 @@ $ entorhinal serve   # local loopback daemon
 <h2 id="limits">Limits</h2>
 <div class="limits">
 <ul>
-<li>No private corpus, live stores, timelines, run logs, or credentials ship (README limits).</li>
-<li>Evaluation verdict QUALIFIED (EVALUATION_REPORT.json, 2026-08-19, 52 fixtures / 252 facts) is dated scope, not current.</li>
-<li>Shadow numbers are report-dated (2026-09-30; no pin id issued), quotable as a dated report, not replayable here.</li>
-<li>Pin vintage: site ships GitHub snapshot; local entorhinal work is active Phase-2 drift — sync deliberately, never auto-merge.</li>
+<li>No private material ships here — every demonstration uses rehearsed stand-ins.</li>
+<li>The shadow numbers are a dated report (2026-09-30), quotable — not re-runnable here.</li>
+<li>It advises only: zero power to change anything, by design and by audit.</li>
 </ul>
+</div>
+</section>
+
+<section class="block" aria-labelledby="future">
+<h2 id="future">Future <span class="tchip tchip-vision">VISION · drawn, not built</span></h2>
+<div class="future-box">
+<h3>Briefing the eyes</h3>
+<p>One day, the librarian could brief Reflex — the computer-use seed — through sealed, versioned notes. Still advising, never acting. Blocked today; drawn, not built.</p>
 </div>
 </section>
 
@@ -139,8 +146,8 @@ $ entorhinal serve   # local loopback daemon
 <section class="next-strip" aria-label="What is next">
 <h2>Next</h2>
 <ol>
-<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
-<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 check questions — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
+<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 sealed boxes on disk, waiting on their inventory list — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
 <li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
 </ol>
 </section>

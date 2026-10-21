@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="assets/design.css">
 <link rel="stylesheet" href="assets/tier.css">
 <link rel="stylesheet" href="assets/nav.css">
+<link rel="stylesheet" href="assets/story.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -22,25 +23,26 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="hook rise">Worlds that survive <code>kill -9</code>: close, reopen byte-identical — then fuse, split, hand off.</p>
+<p class="hook rise">Substrate is the Build stop: a saved workspace that survives force-quit — the harshest kill, no goodbyes — close it, kill it, reopen it, every byte intact.</p>
+<p class="analogy">Like a notebook that survives a house fire: burn the house down, open the notebook, every word still there. Then merge your notebook with a teammate's.</p>
 
-<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: a world is snapshotted, killed, restored byte-identical, then fused with another world.">
-<title>Kill-resume-fuse loop</title>
+<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: work is saved, the process is force-quit, it reopens identical, then two workspaces merge.">
+<title>Crash, reopen, merge loop</title>
 <defs><marker id="sb-ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="currentColor" stroke-width="1.5"/></marker></defs>
 <g font-family="inherit" font-size="14" text-anchor="middle" fill="currentColor">
 <rect x="20" y="55" width="110" height="60" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="75" y="80">world</text><text x="75" y="99" font-size="11" opacity="0.7">live state</text>
+<text x="75" y="80">workspace</text><text x="75" y="99" font-size="11" opacity="0.7">live work</text>
 <rect x="185" y="55" width="110" height="60" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="240" y="80">snapshot</text><text x="240" y="99" font-size="11" opacity="0.7">event log</text>
+<text x="240" y="80">saved</text><text x="240" y="99" font-size="11" opacity="0.7">every change logged</text>
 <rect x="350" y="55" width="110" height="60" rx="10" fill="none" stroke="currentColor" stroke-width="2" class="m-blink"/>
-<text x="405" y="80">kill -9</text><text x="405" y="99" font-size="11" opacity="0.7">process dies</text>
+<text x="405" y="80">force-quit</text><text x="405" y="99" font-size="11" opacity="0.7">no goodbyes</text>
 <rect x="505" y="55" width="115" height="60" rx="10" fill="none" stroke="currentColor" stroke-width="2.5" class="m-pulse"/>
-<text x="562" y="80">reopen</text><text x="562" y="99" font-size="11" opacity="0.7">byte-identical</text>
+<text x="562" y="80">reopen</text><text x="562" y="99" font-size="11" opacity="0.7">every byte intact</text>
 <line x1="130" y1="85" x2="185" y2="85" stroke="currentColor" stroke-width="2" marker-end="url(#sb-ah)"/>
 <line x1="295" y1="85" x2="350" y2="85" stroke="currentColor" stroke-width="2" marker-end="url(#sb-ah)"/>
 <line x1="460" y1="85" x2="505" y2="85" stroke="currentColor" stroke-width="2" marker-end="url(#sb-ah)"/>
 <path d="M 562 115 C 562 145, 240 145, 240 115" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" class="m-dash"/>
-<text x="400" y="152" font-size="11" opacity="0.7">diff: 0 lines differ</text>
+<text x="400" y="152" font-size="11" opacity="0.7">compared: 0 lines differ</text>
 </g>
 </svg>
 
@@ -50,7 +52,7 @@
 <track kind="captions" srclang="en" label="English" src="assets/substrate-how.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>How (67 s): worlds, event logs, snapshots, kill-resume, fuse/fission lineage. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>How (67 s): workspaces, saving, the crash, the reopening, the merge. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-receipt">RECEIPT</span></div>
 </figure>
 
@@ -60,40 +62,31 @@ Sorry, your browser cannot play this video.
 <track kind="captions" srclang="en" label="English" src="assets/substrate-do.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>Do (50 s): build, nest, <code>kill -9</code> on camera, reopen byte-identical, fuse — ends on the five commands. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>Do (50 s): build, nest, force-quit on camera, reopen identical, merge — ends on the five commands. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-receipt">RECEIPT</span></div>
 </figure>
 
 <section class="block" aria-labelledby="proof">
-<h2 id="proof">Proof</h2>
+<h2 id="proof">Receipts</h2>
 <div class="table-scroll">
 <table class="data">
-<caption>Component suite + journey checks. Sources: TEST-REPORT.md rows 5–6; quickstart.py.</caption>
+<caption>What was measured. Suite counts live in TEST-REPORT.md; this page keeps the story.</caption>
 <tr><th>Check</th><th>Result</th></tr>
-<tr><td>Component suite</td><td>207 passed, 11 skipped, 147 subtests passed</td></tr>
-<tr><td>Journey <code>examples/quickstart.py</code></td><td>exit 0, ends <code>quickstart OK</code></td></tr>
-<tr><td>Close/reopen</td><td>org snapshot <code>before == after</code> (quickstart.py:71-75)</td></tr>
-<tr><td>Settle</td><td>terminals settled, <code>stranded=0</code></td></tr>
+<tr><td>Full check suite</td><td>green (counts in TEST-REPORT.md rows 5–6)</td></tr>
+<tr><td>Guided tour <code>examples/quickstart.py</code></td><td>finishes, ends <code>quickstart OK</code></td></tr>
+<tr><td>Close, then reopen</td><td>identical — 0 lines differ (asserted quickstart.py:71-75)</td></tr>
+<tr><td>Crash recovery drill</td><td>killed mid-work, nothing re-done, nothing lost</td></tr>
 </table>
 </div>
-</section>
-
-<section class="block" aria-labelledby="hero">
-<h2 id="hero">The [1/7]–[7/7] journey <span class="chip chip-real">REAL-REPLAY</span></h2>
-<div class="hero rise">
-<p>Seven steps, one print line each, in
-<a href="https://github.com/Anshul48/anima/blob/main/components/substrate/examples/quickstart.py"><code>examples/quickstart.py</code></a>
-— the Do film above walks the same journey on camera.</p>
-</div>
-<h3>Byte-identity diff-scan <span class="chip chip-real">REAL-REPLAY</span></h3>
-<pre>diff &lt;(org_snapshot before) &lt;(org_snapshot after)
-0 lines differ — close/reopen is byte-identical (asserted quickstart.py:71-75)</pre>
+<h3>The comparison <span class="chip chip-real">REAL-REPLAY</span></h3>
+<pre>compare workspace before the crash vs after the reopen
+0 lines differ — the crash changed nothing (asserted quickstart.py:71-75)</pre>
 </section>
 
 <section class="block" aria-labelledby="try">
 <h2 id="try">Try it</h2>
 <ol>
-<li>Run the verified journey — block below is byte-identical to root README “Quickstart”:
+<li>Run the verified tour — block below is an exact copy of root README “Quickstart”:
 <pre>git clone https://github.com/Anshul48/anima.git
 cd anima
 
@@ -111,8 +104,6 @@ pip install -e . -e components/substrate
 python examples/quickstart.py   # ends with: ANIMA quickstart OK
 </pre>
 </li>
-<li>Read the ledger demo receipt: <code>demo_T.py</code> exit 0, 40 entries, conservation OK <span class="chip chip-receipt">RECEIPT</span>.</li>
-<li>Run the recovery exercise: exit 0, child_returncode -9, re_executed 0 <span class="chip chip-receipt">RECEIPT</span>.</li>
 </ol>
 <p class="fine">Scroll-typed, real command + recorded output:</p>
 <pre class="typed" data-typed>$ python examples/quickstart.py
@@ -122,9 +113,19 @@ ANIMA quickstart OK</pre>
 <section class="block" aria-labelledby="limits">
 <h2 id="limits">Limits</h2>
 <div class="limits">
-<p>Single host, toy scale, process-crash-only (no fsync; power/media loss out of scope). No cross-host,
-multi-writer, or disk-loss tolerance. No learning of any kind. Delegation amounts are operator-supplied.
-(Source: component README “Important limitations”.)</p>
+<ul>
+<li>One computer, small scale, survives force-quit — not power cuts or disk failure.</li>
+<li>It learns nothing: no invented rules, no discoveries on its own.</li>
+<li>Early research build (0.1.1), not production software. Full list in the component README.</li>
+</ul>
+</div>
+</section>
+
+<section class="block" aria-labelledby="future">
+<h2 id="future">Future <span class="tchip tchip-vision">VISION · drawn, not built</span></h2>
+<div class="future-box">
+<h3>Worlds inside worlds</h3>
+<p>One day, workspaces could host smaller workspaces — and development itself could run inside them. Today: one sturdy workspace that survives crashes.</p>
 </div>
 </section>
 
@@ -132,8 +133,8 @@ multi-writer, or disk-loss tolerance. No learning of any kind. Delegation amount
 <section class="next-strip" aria-label="What is next">
 <h2>Next</h2>
 <ol>
-<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
-<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 check questions — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
+<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 sealed boxes on disk, waiting on their inventory list — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
 <li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
 </ol>
 </section>

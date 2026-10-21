@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="assets/design.css">
 <link rel="stylesheet" href="assets/tier.css">
 <link rel="stylesheet" href="assets/nav.css">
+<link rel="stylesheet" href="assets/story.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -22,26 +23,27 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="hook rise">Specs in, signed receipts out — merge only when the receipt verifies.</p>
+<p class="hook rise">STC is the Check stop: plans in, signed proof out — every line of code traces to the plan, four strict checks pass, and nothing merges until the proof verifies.</p>
+<p class="analogy">Like a building inspector who signs only what passes: no signature, no merge. And if anyone alters one byte after the inspection, the seal breaks.</p>
 
-<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: a spec sentence becomes a bundle, passes four gates, earns a signed receipt, and merges.">
-<title>Spec to signed receipt loop</title>
+<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: one plan sentence becomes a small work package, passes four checks, earns a signed proof, and merges.">
+<title>Plan to signed proof loop</title>
 <g font-family="inherit" font-size="12" text-anchor="middle" fill="currentColor">
 <rect x="10" y="60" width="90" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="55" y="82">spec</text><text x="55" y="98" font-size="10" opacity="0.7">sentence</text>
+<text x="55" y="82">plan</text><text x="55" y="98" font-size="10" opacity="0.7">one sentence</text>
 <rect x="130" y="60" width="90" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="175" y="82">bundle</text><text x="175" y="98" font-size="10" opacity="0.7">≤25 KB</text>
+<text x="175" y="82">package</text><text x="175" y="98" font-size="10" opacity="0.7">small + capped</text>
 <rect x="250" y="60" width="90" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="295" y="82">4 gates</text><text x="295" y="98" font-size="10" opacity="0.7">exit 0</text>
+<text x="295" y="82">4 checks</text><text x="295" y="98" font-size="10" opacity="0.7">all must pass</text>
 <rect x="370" y="60" width="110" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2.5" class="m-pulse"/>
-<text x="425" y="82">receipt</text><text x="425" y="98" font-size="10" opacity="0.7">HMAC signed</text>
+<text x="425" y="82">proof</text><text x="425" y="98" font-size="10" opacity="0.7">signed + sealed</text>
 <rect x="510" y="60" width="90" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="555" y="82">merge</text><text x="555" y="98" font-size="10" opacity="0.7">judge: blind</text>
+<text x="555" y="82">merge</text><text x="555" y="98" font-size="10" opacity="0.7">inspector: apart</text>
 <line x1="100" y1="85" x2="130" y2="85" stroke="currentColor" stroke-width="2"/>
 <line x1="220" y1="85" x2="250" y2="85" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" class="m-dash"/>
 <line x1="340" y1="85" x2="370" y2="85" stroke="currentColor" stroke-width="2"/>
 <line x1="480" y1="85" x2="510" y2="85" stroke="currentColor" stroke-width="2"/>
-<text x="320" y="140" font-size="11" opacity="0.7">tamper one byte → judge quarantines (the Do film shows it)</text>
+<text x="320" y="140" font-size="11" opacity="0.7">change one byte → the seal breaks (the Do film shows it)</text>
 </g>
 </svg>
 
@@ -51,7 +53,7 @@
 <track kind="captions" srclang="en" label="English" src="assets/stc-how.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>How (58 s): spec sentence to bundle to gates to signed receipt to blind judge to sovereign merge. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>How (58 s): one plan sentence to a small package to four checks to a signed proof to the apart inspector to merge. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-receipt">RECEIPT</span> <span class="chip chip-real">REAL-REPLAY</span></div>
 </figure>
 
@@ -61,54 +63,53 @@ Sorry, your browser cannot play this video.
 <track kind="captions" srclang="en" label="English" src="assets/stc-do.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>Do (50 s): the pipeline on camera — byte count, gates flipping, receipt HMAC, then tamper-a-byte quarantine. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>Do (50 s): the pipeline on camera — package size, checks flipping green, signed proof, then change-a-byte seal-break. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-receipt">RECEIPT</span> <span class="chip chip-real">REAL-REPLAY</span></div>
 </figure>
 
 <section class="block" aria-labelledby="proof">
-<h2 id="proof">Proof</h2>
+<h2 id="proof">Receipts</h2>
 <div class="table-scroll">
 <table class="data">
-<caption>Signed receipt rcpt_aa33e8504162 (2026-09-06); pin construction.stc.1f93f15c (2026-10-06).</caption>
+<caption>One signed proof (2026-09-06) plus a re-run smoke check. Badge counts are upstream claims, not re-runs.</caption>
 <tr><th>Check</th><th>Result</th></tr>
-<tr><td>Gates ruff / mypy / pytest / mutmut</td><td>4x exit 0 <span class="chip chip-receipt">RECEIPT</span></td></tr>
-<tr><td>Schemas smoke</td><td><code>pytest tests/unit/test_schemas.py -q</code> → 37 passed <span class="chip chip-real">REAL-REPLAY</span></td></tr>
-<tr><td>Receipt id</td><td><code>rcpt_aa33e8504162</code>, task STAGE-5, commit <code>747dba6e</code></td></tr>
-<tr><td>Badge claims</td><td>209 passed / mutmut 87.75% — upstream only, not re-run <span class="chip chip-badge">BADGE-ONLY</span></td></tr>
+<tr><td>Four checks (style / types / tests / typo-traps)</td><td>all passed <span class="chip chip-receipt">RECEIPT</span></td></tr>
+<tr><td>Smoke check re-run here</td><td>passed <span class="chip chip-real">REAL-REPLAY</span></td></tr>
+<tr><td>Signed proof</td><td>issued for the run, seal verifiable</td></tr>
 </table>
 </div>
 </section>
 
 <section class="block" aria-labelledby="hero">
-<h2 id="hero">Pipeline: spec → 4 gates <span class="chip chip-receipt">RECEIPT</span></h2>
+<h2 id="hero">The inspection <span class="chip chip-receipt">RECEIPT</span></h2>
 <div class="hero rise">
-<p>Gate statuses replay signed receipt values (<code>components/stc/receipt.json</code>).
-Animation is decorative; numbers are receipt values.</p>
+<p>Check results replay the signed proof's values (<code>components/stc/receipt.json</code>).
+Animation is decorative; results are the proof's values.</p>
 </div>
 <div class="gate-replay">
 <div class="controls">
-<button type="button" data-play-flow>Play gates</button>
+<button type="button" data-play-flow>Play checks</button>
 <button type="button" class="ghost" data-reset-flow>Reset</button>
 <button type="button" class="ghost" data-pause-flow>Pause</button>
 </div>
-<div class="flow" data-gate-flow aria-label="Spec to gate pipeline">
-<div class="gate" data-state="done"><strong>Spec</strong><span class="st">input</span></div>
+<div class="flow" data-gate-flow aria-label="Plan to checks pipeline">
+<div class="gate" data-state="done"><strong>Plan</strong><span class="st">input</span></div>
 <span class="arrow" aria-hidden="true">→</span>
-<div class="gate" data-state="done"><strong>ruff</strong><span class="st">exit 0</span> 0.47 s · 70 files</div>
+<div class="gate" data-state="done"><strong>style</strong><span class="st">passed</span> 70 files</div>
 <span class="arrow" aria-hidden="true">→</span>
-<div class="gate" data-state="done"><strong>mypy</strong><span class="st">exit 0</span> 3.07 s · 47 files</div>
+<div class="gate" data-state="done"><strong>types</strong><span class="st">passed</span> 47 files</div>
 <span class="arrow" aria-hidden="true">→</span>
-<div class="gate" data-state="done"><strong>pytest</strong><span class="st">exit 0</span> 141.5 s · 13 passed</div>
+<div class="gate" data-state="done"><strong>tests</strong><span class="st">passed</span> 13 passed</div>
 <span class="arrow" aria-hidden="true">→</span>
-<div class="gate" data-state="done"><strong>mutmut</strong><span class="st">exit 0</span> 128.5 s · kill 87.75%</div>
+<div class="gate" data-state="done"><strong>typo-traps</strong><span class="st">passed</span> 87.75% caught</div>
 </div>
 </div>
-<h3>Verify-hash <span class="chip chip-real">REAL-REPLAY</span> client-side check</h3>
+<h3>Break the seal yourself <span class="chip chip-real">REAL-REPLAY</span> in your browser</h3>
 <div class="card" data-verify-hash data-pin="747dba6e">
-<label>Paste a commit hash to compare with the receipt pin <code>747dba6e</code>:
-<input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="paste hash here">
+<label>Paste the proof's short code to compare with the pinned value <code>747dba6e</code>:
+<input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="paste code here">
 </label>
-<p data-vh-out> Paste a sha256 to compare with the pin.</p>
+<p data-vh-out> Paste a code to compare with the pin.</p>
 <p class="fine">Compare runs entirely in your browser; nothing is sent anywhere.</p>
 </div>
 </section>
@@ -116,9 +117,9 @@ Animation is decorative; numbers are receipt values.</p>
 <section class="block" aria-labelledby="try">
 <h2 id="try">Try it</h2>
 <ol>
-<li>Read the receipt: <code>components/stc/receipt.json</code> — <code>rcpt_aa33e8504162</code>.</li>
-<li>Re-run the smoke: <code>pytest tests/unit/test_schemas.py -q</code> → 37 passed.</li>
-<li>Paste any edited hash above; only the pinned value reports MATCH.</li>
+<li>Read the proof: <code>components/stc/receipt.json</code>.</li>
+<li>Re-run the smoke check: <code>pytest tests/unit/test_schemas.py -q</code>.</li>
+<li>Paste any edited code above; only the pinned value reports MATCH.</li>
 </ol>
 <p class="fine">Scroll-typed, real command + recorded output:</p>
 <pre class="typed" data-typed>$ pytest tests/unit/test_schemas.py -q
@@ -129,10 +130,18 @@ Animation is decorative; numbers are receipt values.</p>
 <h2 id="limits">Limits</h2>
 <div class="limits">
 <ul>
-<li>“209 passed” and “mutmut 87.75%” badges are upstream badge claims, not re-run in this tree — do not cite them as current verification.</li>
-<li>Site numbers are pin vintage (construction.stc.1f93f15c, 2026-10-06); local stc work ahead of the pin is noted, never mixed in as results.</li>
-<li>Verified counts on this page: the four receipt gates plus the 37-passed schemas smoke.</li>
+<li>Big badge counts are upstream claims, not re-runs here — this page only vouches for the four proof checks plus the smoke.</li>
+<li>Numbers are from the frozen copy (2026-10-06); newer work is noted, never mixed in as results.</li>
+<li>Editing one plan sentence and watching only linked code change is the dream demo — not yet recorded.</li>
 </ul>
+</div>
+</section>
+
+<section class="block" aria-labelledby="future">
+<h2 id="future">Future <span class="tchip tchip-vision">VISION · drawn, not built</span></h2>
+<div class="future-box">
+<h3>Edit a sentence, watch the code follow</h3>
+<p>One day, changing one plan sentence could regenerate exactly the linked code — and nothing else. Today: plans in, signed proof out.</p>
 </div>
 </section>
 
@@ -140,8 +149,8 @@ Animation is decorative; numbers are receipt values.</p>
 <section class="next-strip" aria-label="What is next">
 <h2>Next</h2>
 <ol>
-<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
-<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 check questions — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
+<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 sealed boxes on disk, waiting on their inventory list — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
 <li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
 </ol>
 </section>

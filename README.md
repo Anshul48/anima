@@ -1,4 +1,4 @@
-# ANIMA
+# ANIMA — the map of a mind
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
@@ -7,34 +7,35 @@
 ![ANIMA component overview: five cards for substrate, SST, STC, entorhinal, and reflex](assets/anima-overview.svg)
 
 > **Research preview.** ANIMA is experimental research shared early for
-> feedback. It is not a production runtime, not a hosted service, and
-> not a benchmark champion — just working code with measured numbers.
+> feedback. It is a map, not a machine: it shows how five working parts fit
+> together, and it is honest about what runs and what is still drawn.
 
+**One wrong total. One morning to fix it. Five helpers — and every step keeps its receipt.**
 
-**Superintelligence won't come from a bigger model alone. ANIMA externalizes intelligence into the environment — persistent worlds, heuristic search, spec-to-code construction, advisory memory, computer-use perception — running locally, budgeted, and attributable today.**
+Maya's bakery till rings $14 as $41. The fix travels the map: **remember** how the total was built, **argue** two fixes until one survives, **build** in a workspace that survives force-quit, **check** until a signed proof is issued, and one day — **act**, with eyes that verify every click. That last stop is a seed: drawn, not built.
 
-**New here? [Watch the overview film](https://anshul48.github.io/anima/)** — then run the quickstart below and end with `ANIMA quickstart OK`.
+**New here? [Watch the story](https://anshul48.github.io/anima/)** (two short films, plain words) — then run the quickstart below and end with `ANIMA quickstart OK`.
 
-[Watch it](#watch-it) · [Try it](#quickstart) · [Proof](#proof-one-line) · [Components](#what-exists-today) · [Deep dive](#deep-dive)
+[Watch it](#watch-it) · [Try it](#quickstart) · [Proof](#proof-one-line) · [Helpers](#what-exists-today) · [Deep dive](#deep-dive)
 
 ## What you can do with it today
 
-- **Run a persistent world** — the stdlib-only substrate pins participants, delegates explicit budgets, and reopens crash-atomic state byte-identically. One script, `ANIMA quickstart OK` at the end.
-- **Search before you spend** — SST runs heuristic dialectic-MCTS and refuses to promote unless the verifier passed on the exact logged bytes.
-- **Turn specs into gated code** — STC compiles task bundles under a strict 25 KB ceiling through deterministic gates plus blind judiciary review and a human promotion gate.
-- **Remember without risk** — entorhinal serves advisory context snapshots with zero autonomous mutation authority; everything is audit-logged under your control.
-- **See and click** — reflex works toward computer-use perception (seed stage: its figures are hypotheses to measure, not commitments).
-- **Browse the live pages** — [overview](https://anshul48.github.io/anima/) · [substrate](https://anshul48.github.io/anima/substrate.html) · [sst](https://anshul48.github.io/anima/sst.html) · [stc](https://anshul48.github.io/anima/stc.html) · [entorhinal](https://anshul48.github.io/anima/entorhinal.html) · [reflex](https://anshul48.github.io/anima/reflex.html) — each with its film and live interactive twin.
+- **Survive the crash** — substrate workspaces reopen with every byte intact after a real force-quit (the harshest kill — no goodbyes), then merge, split, or move. One script, `ANIMA quickstart OK` at the end.
+- **Let drafts argue** — SST debates candidate fixes against strict checks; losers stay visible and the survivor becomes the fix.
+- **Demand the receipt** — STC packs work into small capped packages, runs four strict checks plus an independent audit, and merges only when the signed proof verifies.
+- **Get briefed, not watched** — entorhinal whispers short expiring briefs with a receipt per line; it can change nothing and keeps an audit trail.
+- **Glimpse the seed** — reflex aims for cheap-eyes-first computer use (early build: its speed figures are hopes to measure, not commitments).
+- **Browse the live pages** — [story](https://anshul48.github.io/anima/) · [substrate](https://anshul48.github.io/anima/substrate.html) · [sst](https://anshul48.github.io/anima/sst.html) · [stc](https://anshul48.github.io/anima/stc.html) · [entorhinal](https://anshul48.github.io/anima/entorhinal.html) · [reflex](https://anshul48.github.io/anima/reflex.html) — each with its film and something you can click.
 
 ## Watch it
 
-- 🎬 **[ANIMA films](https://anshul48.github.io/anima/)** — How (73 s): a task-token crosses the constellation; Do (59 s): true-brightness status tour. Files `docs/assets/anima-how/do.mp4` (720p H.264, captions on the page; voice is synthetic).
-- 🎬 **Component films** — a How + Do pair per page: `substrate`, `sst`, `stc`, `entorhinal`, `reflex` under `docs/assets/`, each with posters + captions, no autoplay.
-- 🖱️ **Live interactive twins** — every page pairs its film with something you can click: the substrate journey, search traces, gate pipelines, advisory snapshots.
+- 🎬 **[ANIMA films](https://anshul48.github.io/anima/)** — How (73 s): the wrong total travels five stops; Do (59 s): the same map lit by truth, ending where you can touch it. Files `docs/assets/anima-how/do.mp4` (720p H.264, captions on the page; voice is synthetic).
+- 🎬 **Helper films** — a How + Do pair per page: `substrate`, `sst`, `stc`, `entorhinal`, `reflex` under `docs/assets/`, each with posters + captions, no autoplay.
+- 🖱️ **Always something moving** — every page pairs its film with living visuals: the traveling story, the clickable map, crash-and-merge loops, debates, inspections.
 
 ## Proof (one line)
 
-Five local-first components, every suite green, on a frozen 10M-token memory — receipts in [TEST-REPORT.md](TEST-REPORT.md) and [docs/TRACE-REPRODUCE.md](docs/TRACE-REPRODUCE.md).
+Five helpers that run on your own machine, every suite green, beside a frozen 10M-memory map — receipts in [TEST-REPORT.md](TEST-REPORT.md) and [docs/TRACE-REPRODUCE.md](docs/TRACE-REPRODUCE.md).
 
 ## Quickstart
 
@@ -60,26 +61,24 @@ python examples/quickstart.py   # ends with: ANIMA quickstart OK
 
 ## What exists today
 
-Five independently installable research components plus a thin alias
+Five independently installable research helpers plus a thin alias
 namespace. There is no shared server, no cross-component wiring, and
 no hosted service here. Shared background and proposals live in
 [docs/anima/](docs/anima/).
 
-### Modules
+### Helpers
 
-| Component | Distribution | Status (repo wording) | Guide |
+| Helper | Distribution | Status (plain words) | Guide |
 |---|---|---|---|
-| [substrate](components/substrate/) | `anima-substrate` 0.1.1 | Alpha research artifact, not a production runtime; stdlib-only; suite 207 passed, 11 skipped | [Component README](components/substrate/README.md) |
-| [sst](components/sst/) | `sst-engine` 0.1.0 | Heuristic dialectic-MCTS search; repo check 161 passed, exact parity with the CUT1 pin record; model rollouts need caller-configured backends | [Component README](components/sst/README.md) |
-| [stc](components/stc/) | `stc` 0.1.0 | Component description: production-grade, distributed autonomous engineering engine; badges 209 tests passing and Mutmut kill rate >= 85%; repo re-verified the schemas smoke (37 passed), full suite not re-run | [Component README](components/stc/README.md) |
-| [entorhinal](components/entorhinal/) | `entorhinal` 0.1.0 | Local-first advisory temporal context under strictly advisory authority (zero autonomous mutation authority); smoke `test_fact_identity.py` 9 passed | [Component README](components/entorhinal/README.md) |
-| [reflex](components/reflex/) | `reflex` 0.1.0 | Research/seed stage: model names, latency figures, and complexity claims in its `ARCHITECTURE.md` are hypotheses to measure, not release commitments; smoke `test_privacy_redactor.py` 14 passed; four upstream pass-only test files excluded, not claimed as passing | [Component README](components/reflex/README.md) |
+| [substrate](components/substrate/) | `anima-substrate` 0.1.1 | Early research build: workspaces that survive force-quit; suite green (counts in TEST-REPORT.md) | [Component README](components/substrate/README.md) |
+| [sst](components/sst/) | `sst-engine` 0.1.0 | Debates with rehearsal stand-ins; suite green and matching its frozen copy; real-model debates need your key | [Component README](components/sst/README.md) |
+| [stc](components/stc/) | `stc` 0.1.0 | Plans in, signed proof out; four checks + smoke re-verified here; big badge counts are upstream claims, not re-runs | [Component README](components/stc/README.md) |
+| [entorhinal](components/entorhinal/) | `entorhinal` 0.1.0 | Whispering briefs from your own machine; zero power to change anything; identity check green | [Component README](components/entorhinal/README.md) |
+| [reflex](components/reflex/) | `reflex` 0.1.0 | Early seed: speed and cost figures are hopes to measure; the privacy scrubber is the one green chip | [Component README](components/reflex/README.md) |
 
 Component READMEs are the authoritative per-component guides. Native
 imports (`import anima_substrate`, `import sst`, ...) are primary;
 `anima.<component>` modules are same-object convenience aliases.
-
-> **Note on PyPI name collision**: The native import name `reflex` collides with the unrelated Reflex web framework on PyPI. Do not install both into the same Python environment.
 
 > **Note on PyPI name collision**: The native import name `reflex` collides with the unrelated Reflex web framework on PyPI. Do not install both into the same Python environment.
 
@@ -101,33 +100,33 @@ CI workflows run automatically on push and pull requests as defined in [`.github
 
 ## Who it is for
 
-- **Agent builders** who want worlds with explicit custody: pinned
-  participants, delegated budgets, and crash-atomic state instead of
-  hidden global state. Built for local, attributable execution — use
-  substrate to explore it.
-- **Multi-model orchestrators** who want search, construction, and
-  memory budgeted as separate concerns: SST for heuristic search with
-  deterministic promotion gates, STC for bounded spec-to-code bundles,
-  entorhinal for advisory context that can never mutate on its own.
+- **Agent builders** who want workspaces with explicit custody: saved
+  work, clear budgets, and crash-proof state instead of hidden global
+  state. Built for local, attributable execution — use substrate to
+  explore it.
+- **Multi-model orchestrators** who want arguing, checking, and
+  remembering as separate budgeted concerns: SST for debates with
+  strict approval, STC for small capped work packages with signed
+  proof, entorhinal for briefs that can never change anything on
+  their own.
 - **Cost-conscious teams**: budgets are explicit before work runs, so
-  model spend is attributable per participant and per task.
+  model spend is attributable per helper and per task.
 
 ## TRACE: the memory layer
 
-TRACE is ANIMA's memory layer: one frozen, receipt-backed 10M-token build (seam12a, run o94-scale10m) — 10M tokens, ~8.5 GB peak, self-repairing. Numbers live in [docs/TRACE-REPRODUCE.md](docs/TRACE-REPRODUCE.md); the system lives at [github.com/Anshul48/trace](https://github.com/Anshul48/trace) with its [live explorer](https://anshul48.github.io/trace/explorer/).
+TRACE is ANIMA's memory layer: one frozen, receipt-backed 10M-token build (codenamed seam12a) — ten million filed memories (a token is a small piece of text) with replayable paths and a measured found-it score. Numbers live in [docs/TRACE-REPRODUCE.md](docs/TRACE-REPRODUCE.md); the system lives at [github.com/Anshul48/trace](https://github.com/Anshul48/trace) with its [live replay](https://anshul48.github.io/trace/play/) and [explorer](https://anshul48.github.io/trace/explorer/).
 
 ## Vision (direction — not shipped)
 
-> The dream is a dynamic substrate that rewires itself while it runs:
-> worlds that split, merge, and quarantine organizations the way cells
-> divide and immune systems isolate; software that literally evolves
-> like biology — variation under search, selection under deterministic
-> gates, inheritance through versioned genomes of verified code. A cost
-> cascade keeps that evolution affordable: a frontier model decides
-> rarely, a coordinator budgets, swarms of cheap models do the abundant
-> work. Everything in this section is direction, not a claim about what
-> exists — the composition it describes is a proposal today, not shipped
-> wiring.
+> The dream is a living workshop that rewires itself while it runs:
+> workspaces that split, merge, and seal off problems the way cells
+> divide and immune systems isolate; software that improves the way
+> gardens do — many seedlings tried, only the proven kept, seeds of
+> verified work replanted. A cost cascade keeps that growth
+> affordable: the sharpest model decides rarely, a coordinator
+> budgets, swarms of cheap models do the abundant work. Everything
+> in this section is direction, not a claim about what exists — the
+> composition it describes is a proposal today, not shipped wiring.
 
 ## Deep dive
 
@@ -141,7 +140,7 @@ guide](docs/ARCHITECTURE.md), [code
 tour](docs/CODE-TOUR.md), and background proposals in
 [docs/anima/](docs/anima/).
 
-Maturity, scope, roadmap outlook, and provenance live in [docs/ROADMAP.md](docs/ROADMAP.md); the GitHub About text in [docs/ABOUT.md](docs/ABOUT.md); illustration prompts in [docs/image-prompts.md](docs/image-prompts.md). Shared tokens:
+Maturity, scope, roadmap outlook, and history live in [docs/ROADMAP.md](docs/ROADMAP.md); the GitHub About text in [docs/ABOUT.md](docs/ABOUT.md); illustration prompts in [docs/image-prompts.md](docs/image-prompts.md). Shared tokens:
 [docs/assets/design.css](docs/assets/design.css),
 [docs/assets/motion.js](docs/assets/motion.js).
 
@@ -174,4 +173,3 @@ third-party material. Third-party code, data, and model terms shipped
 inside components keep their own licenses, copyright notices, and
 attribution exactly as found, as documented in the component READMEs;
 no license text or copyright notice was removed from any directory.
-

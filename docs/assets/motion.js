@@ -222,9 +222,9 @@
       function norm(s) { return s.trim().toLowerCase().replace(/^sha256:/, ""); }
       function check() {
         var val = norm(input.value);
-        if (!val) { out.textContent = "Paste a sha256 to compare with the pin."; out.className = ""; return; }
-        if (val === pin) { out.textContent = "MATCH — pasted hash equals the pinned hash (client-side compare)."; out.className = "hashok"; }
-        else { out.textContent = "MISMATCH — pasted hash differs from the pinned hash (client-side compare)."; out.className = "hashbad"; }
+        if (!val) { out.textContent = "Paste a code to compare with the pinned value."; out.className = ""; return; }
+        if (val === pin) { out.textContent = "MATCH — pasted code equals the pinned code (compared in your browser)."; out.className = "hashok"; }
+        else { out.textContent = "MISMATCH — pasted code differs from the pinned code (compared in your browser)."; out.className = "hashbad"; }
       }
       input.addEventListener("input", check);
       check();
@@ -255,14 +255,14 @@
       ctx.strokeRect(x, y, w, h);
       ctx.fillStyle = "#8b949e";
       ctx.font = "10px sans-serif";
-      ctx.fillText("box" + i + " r=" + (0.5 + rnd() * 0.5).toFixed(2), x, y - 3);
+      ctx.fillText("box" + i + " score " + (0.5 + rnd() * 0.5).toFixed(2), x, y - 3);
     }
     ctx.fillStyle = "#0e1116";
     ctx.fillRect(0, H - 56, W, 56);
     ctx.fillStyle = "#f0c674";
     ctx.font = "11px sans-serif";
-    ctx.fillText("routed crops: box1, box3 -> VLM (synthetic mock)", 12, H - 34);
+    ctx.fillText("top cut-outs: box1, box3 -> paid vision (drawn mock)", 12, H - 34);
     ctx.fillStyle = "#8b949e";
-    ctx.fillText("full frame never sent (concept diagram)", 12, H - 18);
+    ctx.fillText("full screen never sent (concept diagram)", 12, H - 18);
   })();
 })();

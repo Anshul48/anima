@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="assets/design.css">
 <link rel="stylesheet" href="assets/tier.css">
 <link rel="stylesheet" href="assets/nav.css">
+<link rel="stylesheet" href="assets/story.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -22,25 +23,26 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="hook rise">Reflexes before reasoning: sense structurally, spend vision only where confused. <span class="tchip tchip-vision">*seed* · hypotheses, not commitments</span></p>
+<p class="hook rise">Reflex is the Act stop: reflexes before reasoning — cheap eyes first, costly vision only where confused, every click verified. <span class="tchip tchip-vision">Early seed · ambition drawn, not shipped</span></p>
+<p class="analogy">Like catching a falling glass before you think: sense fast, spend attention only on the confusing part, confirm the catch. That is the whole design — today it is an early build with one real chip and big drawn plans.</p>
 
-<svg class="mech" viewBox="0 0 640 190" role="img" aria-label="Looping mechanism: the escalation ladder climbs from DOM to targeted VLM crops while the full frame is fenced off.">
-<title>Escalation ladder loop</title>
+<svg class="mech" viewBox="0 0 640 190" role="img" aria-label="Looping mechanism: checks climb from free page structure to paid vision on small crops only; the full screen is fenced off.">
+<title>Cheap-eyes-first ladder</title>
 <g font-family="inherit" font-size="12" text-anchor="middle" fill="currentColor">
 <rect x="20" y="20" width="170" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="105" y="47">L0/L1 · DOM/cache</text>
+<text x="105" y="47">free · page structure</text>
 <rect x="20" y="72" width="170" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="105" y="99">L2 · YOLO + OCR</text>
+<text x="105" y="99">cheap · boxes + text</text>
 <rect x="20" y="124" width="170" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="105" y="151">L3 · grounding</text>
+<text x="105" y="151">cheap · pick targets</text>
 <rect x="230" y="72" width="180" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2.5" class="m-pulse"/>
-<text x="320" y="99">L4 · targeted VLM crop</text>
+<text x="320" y="99">paid · small crops only</text>
 <rect x="450" y="72" width="170" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4" class="m-blink"/>
-<text x="535" y="92">full frame</text><text x="535" y="108" font-size="11" opacity="0.7">NEVER to VLM</text>
+<text x="535" y="92">full screen</text><text x="535" y="108" font-size="11" opacity="0.7">NEVER to paid vision</text>
 <line x1="190" y1="94" x2="230" y2="94" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" class="m-dash"/>
 <line x1="470" y1="72" x2="600" y2="116" stroke="currentColor" stroke-width="2"/>
 <line x1="470" y1="116" x2="600" y2="72" stroke="currentColor" stroke-width="2"/>
-<text x="320" y="182" font-size="11" opacity="0.7">spend ≈$0.00 · visible failure kept (the Do film shows it)</text>
+<text x="320" y="182" font-size="11" opacity="0.7">vision bill ≈$0.00 · the Do film keeps its visible failure</text>
 </g>
 </svg>
 
@@ -50,7 +52,7 @@
 <track kind="captions" srclang="en" label="English" src="assets/reflex-how.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>How (76 s): the L0–L4 ladder — full-frame never to VLM, latency and spend counters honest. <span class="tchip tchip-vision">*seed*</span> Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>How (76 s): cheap eyes first — the full screen never reaches paid vision; cost and speed stay honest. <span class="tchip tchip-vision">Early seed</span> Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-synth">SYNTHETIC</span></div>
 </figure>
 
@@ -60,44 +62,43 @@ Sorry, your browser cannot play this video.
 <track kind="captions" srclang="en" label="English" src="assets/reflex-do.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>Do (58 s): honest seed — mis-ground, surprise, halt, re-ground, verify; failure kept. <span class="tchip tchip-vision">*seed*</span> Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>Do (58 s): honest seed — wrong click, surprise, stop, re-aim, verify; the failure stays in. <span class="tchip tchip-vision">Early seed</span> Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-synth">SYNTHETIC</span></div>
 </figure>
 
 <section class="block" aria-labelledby="proof">
-<h2 id="proof">Proof</h2>
+<h2 id="proof">Receipts</h2>
 <div class="table-scroll">
 <table class="data">
-<caption>One real chip; everything else visual is illustrated. Source: TEST-REPORT.md row 11.</caption>
+<caption>One real chip; everything visual is drawn. Source: TEST-REPORT.md row 11.</caption>
 <tr><th>Check</th><th>Result</th></tr>
-<tr><td>Privacy redactor</td><td><code>tests/test_privacy_redactor.py</code> → 14 passed + 11 subtests <span class="chip chip-real">REAL-REPLAY</span></td></tr>
-<tr><td>Latency figures</td><td>aspirational hypotheses, not measurements <span class="chip chip-illus">ILLUSTRATED</span></td></tr>
-<tr><td>Routing traces</td><td>none shipped in this tree <span class="chip chip-illus">ILLUSTRATED</span></td></tr>
-<tr><td>Screen images</td><td>synthetic canvas mock only; no real-screen PNGs <span class="chip chip-synth">SYNTHETIC</span></td></tr>
+<tr><td>Privacy scrubber</td><td>passed <span class="chip chip-real">REAL-REPLAY</span></td></tr>
+<tr><td>Speed figures</td><td>hopes to measure, not measurements <span class="chip chip-illus">ILLUSTRATED</span></td></tr>
+<tr><td>Recorded seeing-and-clicking</td><td>none shipped in this tree <span class="chip chip-illus">ILLUSTRATED</span></td></tr>
+<tr><td>Screen pictures</td><td>drawn mock only; no real screenshots <span class="chip chip-synth">SYNTHETIC</span></td></tr>
 </table>
 </div>
 </section>
 
 <section class="block" aria-labelledby="hero">
-<h2 id="hero">Reflex arc <span class="chip chip-illus">ILLUSTRATED</span> vision-fenced</h2>
+<h2 id="hero">How the eyes would work <span class="chip chip-illus">ILLUSTRATED</span> drawn, not built</h2>
 <div class="hero rise">
-<p>Concept from <code>REFLEX-AMBITION.md</code>: fast detectors propose boxes, a cheap relevance filter
-scores them, and only small high-resolution crops (<code>CropPacket</code>) route to heavy VLMs.
-Ladders describe direction, not delivered capability — hypotheses to measure.</p>
+<p>The idea from <code>REFLEX-AMBITION.md</code>: fast detectors box what is on screen, a cheap filter scores the boxes, and only small cut-outs go to the costly vision model.
+The rungs describe direction, not delivered capability — hopes to measure.</p>
 </div>
 <canvas class="viz" id="synthetic-screen" width="640" height="300" role="img"
-aria-label="Synthetic illustration: abstract boxes with relevance scores; two routed crops highlighted"></canvas>
-<noscript><p class="fine">No-JS: detectors propose boxes, filter scores relevance, only top crops (box1, box3) route to the VLM; full frame is never sent.</p></noscript>
-<pre>full frame → detect boxes → relevance filter → route top crops → VLM answer
-  (synthetic boxes)   (cheap scores)    (CropPacket: box1, box3)  (grounded)</pre>
+aria-label="Drawn illustration: abstract boxes with scores; two cut-outs highlighted"></canvas>
+<noscript><p class="fine">No-JS: detectors propose boxes, the filter scores them, only top cut-outs reach vision; the full screen is never sent.</p></noscript>
+<pre>full screen → find boxes → score cheaply → send top cut-outs → grounded answer
+  (drawn boxes)    (cheap scores)    (two cut-outs)          (verified)</pre>
 <div class="table-scroll">
 <table class="data">
-<caption>Escalation ladder (REFLEX-AMBITION.md). Label: ILLUSTRATED / vision-fenced.</caption>
-<tr><th>Rung</th><th>Stage</th><th>Note</th></tr>
-<tr><td>L0/L1</td><td>DOM / cache</td><td>cheapest; grounded when available</td></tr>
-<tr><td>L2</td><td>YOLO + OCR</td><td>box proposals (hypothesis)</td></tr>
-<tr><td>L3</td><td>Feature grounding</td><td>relevance filter (hypothesis)</td></tr>
-<tr><td>L4/L5</td><td>Targeted VLM</td><td>small crops only; full frame never sent</td></tr>
+<caption>The cheap-eyes-first ladder (REFLEX-AMBITION.md). Label: ILLUSTRATED.</caption>
+<tr><th>Rung</th><th>Step</th><th>Note</th></tr>
+<tr><td>free</td><td>page structure</td><td>cheapest; grounded when available</td></tr>
+<tr><td>cheap</td><td>boxes + text</td><td>proposals (hope to measure)</td></tr>
+<tr><td>cheap</td><td>pick targets</td><td>relevance filter (hope to measure)</td></tr>
+<tr><td>paid</td><td>small cut-outs only</td><td>full screen never sent</td></tr>
 </table>
 </div>
 </section>
@@ -105,9 +106,9 @@ aria-label="Synthetic illustration: abstract boxes with relevance scores; two ro
 <section class="block" aria-labelledby="try">
 <h2 id="try">Try it</h2>
 <ol>
-<li>Run the redactor: <code>tests/test_privacy_redactor.py</code> → 14 passed + 11 subtests.</li>
-<li>Start offline: <code>main.py --mock --demo</code> (Jarvis console; no installed console script).</li>
-<li>Read the ambition: <code>REFLEX-AMBITION.md</code> ladder + O(N) crop routing.</li>
+<li>Run the scrubber: <code>tests/test_privacy_redactor.py</code> — the one real chip.</li>
+<li>Start offline: <code>main.py --mock --demo</code> (practice console; nothing installed).</li>
+<li>Read the ambition: <code>REFLEX-AMBITION.md</code> — the ladder and the cheap-eyes bet.</li>
 </ol>
 <p class="fine">Scroll-typed, real command + recorded output (the one real chip):</p>
 <pre class="typed" data-typed>$ pytest tests/test_privacy_redactor.py
@@ -118,10 +119,18 @@ aria-label="Synthetic illustration: abstract boxes with relevance scores; two ro
 <h2 id="limits">Limits</h2>
 <div class="limits">
 <ul>
-<li>No shipped screenshots, crops, routing traces, or generated-code samples in this tree.</li>
-<li>Entry point is <code>main.py</code> (Jarvis console; <code>--mock --demo</code> for offline); no installed console script.</li>
-<li>Status (verbatim, component README limits): “Research/seed stage: model names, latency figures, and complexity claims in its ARCHITECTURE.md are hypotheses to measure, not release commitments.”</li>
+<li>No shipped screenshots, cut-outs, seeing traces, or generated samples in this tree.</li>
+<li>Starts from <code>main.py</code> (practice console); nothing installs as a command.</li>
+<li>Speed and cost figures are hopes to measure — the component README says so verbatim.</li>
 </ul>
+</div>
+</section>
+
+<section class="block" aria-labelledby="future">
+<h2 id="future">Future <span class="tchip tchip-vision">VISION · drawn, not built</span></h2>
+<div class="future-box">
+<h3>Verified reflexes at reflex speed</h3>
+<p>One day: sense, aim, confirm — every click verified, costly vision spent almost nowhere, risky moves always asking a human first. Today: an early seed with real code and unproven loops.</p>
 </div>
 </section>
 
@@ -129,8 +138,8 @@ aria-label="Synthetic illustration: abstract boxes with relevance scores; two ro
 <section class="next-strip" aria-label="What is next">
 <h2>Next</h2>
 <ol>
-<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
-<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 check questions — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
+<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 sealed boxes on disk, waiting on their inventory list — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
 <li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
 </ol>
 </section>

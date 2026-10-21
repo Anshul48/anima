@@ -3,64 +3,59 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ANIMA — Research Preview</title>
+<title>ANIMA — The Map of a Mind</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/design.css">
 <link rel="stylesheet" href="assets/tier.css">
 <link rel="stylesheet" href="assets/nav.css">
+<link rel="stylesheet" href="assets/story.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="topnav" aria-label="Site"><div class="wrap">
   <a class="brand" href="index.html">ANIMA</a>
     <a class="nav" href="index.html" aria-current="page">Home</a>
-    <a class="nav" href="#anima-how">Watch</a>
-    <a class="nav" href="#modules">Explore</a>
+    <a class="nav" href="#watch">Watch</a>
+    <a class="nav" href="#story">Explore</a>
     <a class="nav" href="https://anshul48.github.io/trace/future/">Future</a>
     <a class="nav" href="#go-deeper">Deep dive</a>
   <a class="cta" href="https://anshul48.github.io/trace/play/">Replay receipt #1</a>
 </div></nav>
 <main id="main" class="wrap">
 
-<div class="parallax-wrap">
-<div class="parallax-bg" data-parallax aria-hidden="true"></div>
-<h1>ANIMA — the map of a mind</h1>
-<p class="hook rise">The map of a mind that persists, argues, builds, remembers, sees — the lit parts already run, and TRACE is the first receipt.</p>
-<p class="claim">ANIMA is the map + the workspace — not a runtime, not a monorepo, not evidence anything proposed is implemented (<code>ANIMA/README.md:5</code>). Brightness below is true status: TRACE burns lit, four capabilities half-lit, Reflex a seed spark.</p>
-<p class="cta-row"><a class="btn" href="#constellation">Open the constellation</a> <a class="btn secondary" href="https://anshul48.github.io/trace/play/">Replay receipt #1</a></p>
+<div class="story-hero">
+<p class="story-kicker">A guided story in five stops</p>
+<h1 class="story-title">ANIMA — the map of a mind</h1>
+<p class="hook rise">One wrong total. One morning to fix it. Five helpers — and every step keeps its receipt.</p>
+<p class="claim">ANIMA is a map, not a machine: it shows how five working parts fit together, and it is honest about what runs and what is still drawn. <span class="gloss">(The map itself runs nothing — that honesty is the point.)</span></p>
+<canvas id="story-canvas" width="640" height="320" role="img" aria-label="Animated journey: one fix travels Remember, Argue, Build, Check, Act."></canvas>
+<p class="story-cap" id="story-cap" aria-live="polite"><strong>Now: Remember.</strong> The memory map replays how the total was built.</p>
+<noscript><p class="fine">Without JavaScript: the fix travels Remember → Argue → Build → Check → Act (a seed, drawn not built).</p></noscript>
+<p class="cta-row"><a class="btn" href="#watch">Watch the story (2 films)</a> <a class="btn secondary" href="https://anshul48.github.io/trace/play/">See the memory map work</a></p>
 </div>
 
-<section class="block" aria-labelledby="constellation">
-<h2 id="constellation">Constellation <span class="tchip tchip-vision">VISION map · TRUE status brightness</span></h2>
-<svg class="constel" data-constel="#constel-detail" viewBox="0 0 640 340" role="img" aria-label="Seven-node constellation: ANIMA center, TRACE lit, four capabilities half-lit, Reflex a seed.">
-<title>ANIMA constellation</title>
-<line class="edge" x1="320" y1="170" x2="140" y2="100"/>
-<line class="edge" x1="320" y1="170" x2="320" y2="70"/>
-<line class="edge" x1="320" y1="170" x2="500" y2="100"/>
-<line class="edge" x1="320" y1="170" x2="500" y2="240"/>
-<line class="edge" x1="320" y1="170" x2="320" y2="270"/>
-<line class="edge" x1="320" y1="170" x2="140" y2="240"/>
-<a href="https://anshul48.github.io/trace/"><g class="node n-lit" data-name="TRACE" data-status="lit · receipt #1" data-detail="10,003,381 tokens · guided 0.7367/0.4883 (seam12a o94) · click to open the live map"><circle class="disc" cx="140" cy="100" r="16"/><text x="140" y="104" style="fill:#fff">T</text><text class="sub" x="140" y="128">TRACE · lit</text></g></a>
-<a href="substrate.html"><g class="node n-half" data-name="Substrate" data-status="capability · alpha 0.1.1" data-detail="kill-resume + fuse, filmed now · next milestone: owner-pending"><circle class="disc" cx="320" cy="70" r="12"/><text class="sub" x="320" y="46">Substrate</text></g></a>
-<a href="stc.html"><g class="node n-half" data-name="STC" data-status="capability · receipt pipeline" data-detail="37-schema smoke re-verified · next milestone: owner-pending"><circle class="disc" cx="500" cy="100" r="12"/><text class="sub" x="500" y="76">STC</text></g></a>
-<a href="sst.html"><g class="node n-half" data-name="SST" data-status="capability · TEST-bound" data-detail="161 passed (pin df78f428) · live-model needs key · next milestone: owner-pending"><circle class="disc" cx="500" cy="240" r="12"/><text class="sub" x="500" y="266">SST</text></g></a>
-<a href="entorhinal.html"><g class="node n-half" data-name="Entorhinal" data-status="capability · advisory" data-detail="9 passed fact identity · zero mutation authority · next milestone: owner-pending"><circle class="disc" cx="320" cy="270" r="12"/><text class="sub" x="320" y="296">Entorhinal</text></g></a>
-<a href="reflex.html"><g class="node n-seed" data-name="Reflex" data-status="*seed*" data-detail="ladder + O(N) routing are hypotheses to measure · next milestone: owner-pending"><circle class="disc" cx="140" cy="240" r="10"/><text class="sub" x="140" y="266">Reflex · seed</text></g></a>
-<g class="node n-map" data-name="ANIMA" data-status="the map, not a runtime" data-detail="holds shared context + proposals between independently owned projects · ANIMA/START-HERE.md:3"><circle class="disc" cx="320" cy="170" r="18"/><text x="320" y="174" style="fill:#fff">A</text><text class="sub" x="320" y="202">ANIMA · the map</text></g>
-</svg>
-<p class="constel-detail" id="constel-detail" aria-live="polite"><strong>TRACE — lit · receipt #1.</strong> 10,003,381 tokens · guided 0.7367/0.4883 (seam12a o94) · click to open the live map</p>
+<section class="block" aria-labelledby="story">
+<h2 id="story">The Wrong Total</h2>
+<p>Maya runs a neighborhood bakery. One morning the online shop rings a $14 order up as $41. She has until noon. Here is how the fix travels the map — each stop is one helper, <a href="#modules"> explored below</a>.</p>
+<div class="chapters five">
+<div class="chapter"><h3>1 · Remember</h3><p>The memory map replays how the total was built; the whispering librarian warns Maya she tried this shortcut before.</p><p class="go"><a href="entorhinal.html">Meet the librarian</a></p></div>
+<div class="chapter"><h3>2 · Argue</h3><p>Two candidate fixes debate against strict checks. The weaker one loses in the open; the survivor becomes the fix.</p><p class="go"><a href="sst.html">Watch them argue</a></p></div>
+<div class="chapter"><h3>3 · Build</h3><p>The work lives in a saved workspace. The laptop dies mid-fix — reopen, every byte intact — then merge with a teammate.</p><p class="go"><a href="substrate.html">Survive the crash</a></p></div>
+<div class="chapter"><h3>4 · Check</h3><p>Four automatic checks pass and a signed proof is issued. One tampered byte, and the inspector seals it off.</p><p class="go"><a href="stc.html">Demand the receipt</a></p></div>
+<div class="chapter"><h3>5 · Act <span class="tchip tchip-vision">VISION</span></h3><p>One day, the fix clicks through the shop itself and verifies the total. Drawn, not built — an early seed today.</p><p class="go"><a href="reflex.html">See the seed</a></p></div>
+</div>
 </section>
 
-<div class="ticker" aria-label="Module receipt pins"><span class="ticker-track" data-ticker>SST pin df78f428 · STC rcpt_aa33e8504162 · TRACE seam12a 8d3bbb6b · Substrate quickstart OK · Entorhinal 9 passed · Reflex redactor 14 passed ·&nbsp;</span></div>
-
+<section class="block" aria-labelledby="watch">
+<h2 id="watch">Watch</h2>
 <figure class="videoframe rise" id="anima-how" aria-label="ANIMA How film (73 seconds)">
 <video controls preload="none" poster="assets/anima-how-poster.jpg">
 <source src="assets/anima-how.mp4" type="video/mp4">
 <track kind="captions" srclang="en" label="English" src="assets/anima-how.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>How (73 s): a task-token travels persists&rarr;argues&rarr;builds&rarr;remembers&rarr;sees; TRACE pulses as receipt #1. Voice: synthetic (Kokoro TTS).</figcaption>
-<div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-receipt">RECEIPT</span> <span class="chip chip-real">REAL-REPLAY</span></div>
+<figcaption>How (73 s): Maya's wrong total travels the five stops — one idea per scene, plain words throughout. Voice: synthetic (Kokoro TTS).</figcaption>
+<div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-receipt">RECEIPT</span></div>
 </figure>
 
 <figure class="videoframe rise" id="anima-do" aria-label="ANIMA Do film (59 seconds)">
@@ -69,20 +64,42 @@ Sorry, your browser cannot play this video.
 <track kind="captions" srclang="en" label="English" src="assets/anima-do.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>Do (59 s): the constellation at true brightness, pushing into each node's next milestone — dated, or owner-pending. Voice: synthetic (Kokoro TTS).</figcaption>
-<div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-receipt">RECEIPT</span> <span class="chip chip-real">REAL-REPLAY</span></div>
+<figcaption>Do (59 s): the same map lit by truth — bright means it runs, the spark means seed — ending where you can touch it. Voice: synthetic (Kokoro TTS).</figcaption>
+<div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-receipt">RECEIPT</span></div>
 </figure>
+</section>
 
-<section class="block" aria-labelledby="hero">
-<h2 id="hero">TRACE — receipt #1</h2>
+<section class="block" aria-labelledby="constellation">
+<h2 id="constellation">The map <span class="tchip tchip-vision">VISION map · TRUE brightness</span></h2>
+<p class="gloss">A constellation is a map of glowing dots — one dot per part. Bright means it runs today; the spark means early seed. Click any dot.</p>
+<svg class="constel" data-constel="#constel-detail" viewBox="0 0 640 340" role="img" aria-label="Seven glowing dots: ANIMA center, TRACE lit, four helpers half-lit, Reflex a seed spark.">
+<title>ANIMA constellation</title>
+<line class="edge" x1="320" y1="170" x2="140" y2="100"/>
+<line class="edge" x1="320" y1="170" x2="320" y2="70"/>
+<line class="edge" x1="320" y1="170" x2="500" y2="100"/>
+<line class="edge" x1="320" y1="170" x2="500" y2="240"/>
+<line class="edge" x1="320" y1="170" x2="320" y2="270"/>
+<line class="edge" x1="320" y1="170" x2="140" y2="240"/>
+<a href="https://anshul48.github.io/trace/"><g class="node n-lit" data-name="TRACE" data-status="lit · the memory map" data-detail="ten million filed memories, every path replayable · click to open the live map"><circle class="disc" cx="140" cy="100" r="16"/><text x="140" y="104" style="fill:#fff">T</text><text class="sub" x="140" y="128">TRACE · lit</text></g></a>
+<a href="substrate.html"><g class="node n-half" data-name="Substrate" data-status="helper · workspaces that survive crashes" data-detail="the Build stop: force-quit, reopen, every byte intact"><circle class="disc" cx="320" cy="70" r="12"/><text class="sub" x="320" y="46">Substrate</text></g></a>
+<a href="stc.html"><g class="node n-half" data-name="STC" data-status="helper · the inspector" data-detail="the Check stop: four checks pass, signed proof issued"><circle class="disc" cx="500" cy="100" r="12"/><text class="sub" x="500" y="76">STC</text></g></a>
+<a href="sst.html"><g class="node n-half" data-name="SST" data-status="helper · the debate club" data-detail="the Argue stop: two fixes debate, the loser stays visible"><circle class="disc" cx="500" cy="240" r="12"/><text class="sub" x="500" y="266">SST</text></g></a>
+<a href="entorhinal.html"><g class="node n-half" data-name="Entorhinal" data-status="helper · the whispering librarian" data-detail="the Remember stop: briefs you, touches nothing, shreds the note"><circle class="disc" cx="320" cy="270" r="12"/><text class="sub" x="320" y="296">Entorhinal</text></g></a>
+<a href="reflex.html"><g class="node n-seed" data-name="Reflex" data-status="early seed · cheap eyes first" data-detail="the Act stop: ambition drawn, not shipped"><circle class="disc" cx="140" cy="240" r="10"/><text class="sub" x="140" y="266">Reflex · seed</text></g></a>
+<g class="node n-map" data-name="ANIMA" data-status="the map, not a machine" data-detail="holds the shared picture between independently owned projects"><circle class="disc" cx="320" cy="170" r="18"/><text x="320" y="174" style="fill:#fff">A</text><text class="sub" x="320" y="202">ANIMA · the map</text></g>
+</svg>
+<p class="constel-detail" id="constel-detail" aria-live="polite"><strong>TRACE — lit · the memory map.</strong> ten million filed memories, every path replayable · click to open the live map</p>
+</section>
+
+<div class="ticker" aria-label="Helpers at a glance"><span class="ticker-track" data-ticker>Memory map: ten million filed · Debate club: losers stay visible · Inspector: no signature, no merge · Librarian: whispers, never touches · Reflex: early seed ·&nbsp;</span></div>
+
+<section class="block" aria-labelledby="receipt">
+<h2 id="receipt">The receipt beside the ambition</h2>
 <div class="hero rise">
-<p><span class="chip chip-receipt">RECEIPT</span> Frozen build
-<strong>seam12a</strong>: <strong>10,003,381 tokens</strong> into
-<strong>63,441 atoms</strong>, guided recall@10
-<strong>0.7367</strong> / <strong>0.4883</strong> (leave-source-out).
-<a href="https://anshul48.github.io/trace/play/">Replay the 120 comets</a> ·
-<a href="https://anshul48.github.io/trace/explorer/">explorer</a> ·
-<a href="https://anshul48.github.io/trace/recording/">films</a>.</p>
+<p><span class="chip chip-receipt">RECEIPT — a measured replay</span> The memory map filed <strong>ten million memories</strong> and finds the right answer about <strong>3 times in 4</strong> across 120 check questions.
+<a href="https://anshul48.github.io/trace/play/">Watch all 120 replay</a> ·
+<a href="https://anshul48.github.io/trace/explorer/">open the map</a>.
+<span class="gloss">Exact scores live with the receipt: probe-vector guided recall@10, 0.7367 (leave-source-out 0.4883). Tokens are small pieces of text.</span></p>
 </div>
 </section>
 
@@ -90,63 +107,61 @@ Sorry, your browser cannot play this video.
 <h2 id="try">Try it</h2>
 <div class="table-scroll">
 <table class="data try-it">
-<caption>Five one-line starts, one per module.</caption>
+<caption>Five one-line starts, one per helper.</caption>
 <tr><th>#</th><th>Try</th><th>Where</th></tr>
 <tr><td>1</td><td><code>python examples/quickstart.py</code> — ends with <code>ANIMA quickstart OK</code></td><td><a href="substrate.html">Substrate</a></td></tr>
-<tr><td>2</td><td><code>uv run sst run --goal "..." --max-iterations 5</code> — bounded dialectic search</td><td><a href="sst.html">SST</a></td></tr>
-<tr><td>3</td><td><code>uv run stc health</code> — system diagnostics and gate info</td><td><a href="stc.html">STC</a></td></tr>
-<tr><td>4</td><td><code>entorhinal status</code> — advisory context, changes nothing</td><td><a href="entorhinal.html">Entorhinal</a></td></tr>
-<tr><td>5</td><td><code>python components/reflex/main.py --help</code> — console entry, no install</td><td><a href="reflex.html">Reflex</a></td></tr>
+<tr><td>2</td><td><code>uv run sst run --goal "..." --max-iterations 5</code> — a small bounded debate</td><td><a href="sst.html">SST</a></td></tr>
+<tr><td>3</td><td><code>uv run stc health</code> — the inspector reports for duty</td><td><a href="stc.html">STC</a></td></tr>
+<tr><td>4</td><td><code>entorhinal status</code> — advice only; it changes nothing</td><td><a href="entorhinal.html">Entorhinal</a></td></tr>
+<tr><td>5</td><td><code>python components/reflex/main.py --help</code> — the seed says hello</td><td><a href="reflex.html">Reflex</a></td></tr>
 </table>
 </div>
 </section>
 
 <section class="block" aria-labelledby="modules">
-<h2 id="modules">Modules</h2>
-<p class="fine">Legend: <span class="chip chip-real">REAL-REPLAY</span> runnable artifact · <span class="chip chip-receipt">RECEIPT</span> quoted generated artifact, dated · <span class="chip chip-illus">ILLUSTRATED</span> concept, no runnable trace · <span class="chip chip-synth">SYNTHETIC</span> placeholder for private material. Full definitions in <a href="#limits">Limits</a>.</p>
+<h2 id="modules">The five helpers</h2>
+<p class="fine">Every helper page follows one grammar: what it does, one analogy, one demonstration, one future idea. Legend: <span class="chip chip-real">REAL-REPLAY</span> you can re-run it · <span class="chip chip-receipt">RECEIPT</span> measured and dated · <span class="chip chip-illus">ILLUSTRATED</span> drawn concept · <span class="chip chip-synth">SYNTHETIC</span> stand-in for private material.</p>
 <div class="grid layout-grid grid-balance">
 <div class="card">
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span></div>
-<h3>Substrate</h3>
-<p class="status-quote">Alpha research artifact; stdlib-only; suite 207 passed.</p>
-<p><a href="substrate.html">Deep page: journey + byte-identity proofs</a></p>
+<h3>Substrate — the Build stop</h3>
+<p class="status-quote">A notebook that survives a house fire: force-quit everything, reopen, every word intact.</p>
+<p><a href="substrate.html">Deep page: the crash, the diff, the merge</a></p>
 </div>
 <div class="card">
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-receipt">RECEIPT</span></div>
-<h3>SST</h3>
-<p class="status-quote">Dialectic-MCTS search; repo check 161 passed.</p>
-<p><a href="sst.html">Deep page: search + failure leg</a></p>
+<h3>SST — the Argue stop</h3>
+<p class="status-quote">A debate club where the loser stays on stage — you trust the winner because you watched.</p>
+<p><a href="sst.html">Deep page: the debate, the corpse, the winner</a></p>
 </div>
 <div class="card">
 <div class="chiprow"><span class="chip chip-receipt">RECEIPT</span></div>
-<h3>STC</h3>
-<p class="status-quote">Receipt pipeline; schemas smoke re-verified (37 passed).</p>
-<p><a href="stc.html">Deep page: gates + receipt + smoke</a></p>
+<h3>STC — the Check stop</h3>
+<p class="status-quote">A building inspector who signs only what passes. No signature, no merge.</p>
+<p><a href="stc.html">Deep page: the gates, the proof, the seal-break</a></p>
 </div>
 <div class="card">
 <div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span></div>
-<h3>Entorhinal</h3>
-<p class="status-quote">Advisory-only context; zero mutation authority; 9 passed.</p>
-<p><a href="entorhinal.html">Deep page: CLI + shadow report</a></p>
+<h3>Entorhinal — the Remember stop</h3>
+<p class="status-quote">A librarian who whispers, never touches: briefs you, then shreds the note.</p>
+<p><a href="entorhinal.html">Deep page: the warning, the shredding, the audit</a></p>
 </div>
 <div class="card">
 <div class="chiprow"><span class="chip chip-illus">ILLUSTRATED-ONLY</span></div>
-<h3>Reflex</h3>
-<p class="status-quote">Seed stage: architecture claims are hypotheses to measure.</p>
-<p><a href="reflex.html">Deep page: concept + redactor</a></p>
+<h3>Reflex — the Act stop (seed)</h3>
+<p class="status-quote">A reflex, not an essay: catch the glass before you think. Early build — ambition drawn, not shipped.</p>
+<p><a href="reflex.html">Deep page: the ladder, the real chip, the future</a></p>
 </div>
 </div>
 </section>
 
 <section class="block" aria-labelledby="limits">
-<h2 id="limits">Limits</h2>
+<h2 id="limits">Honest limits</h2>
 <div class="limits">
 <ul>
-<li><span class="chip chip-real">REAL-REPLAY</span> replays a runnable artifact from this repo (command + file cited).</li>
-<li><span class="chip chip-receipt">RECEIPT</span> quotes a generated artifact (log/receipt/pin JSON) with its date; not re-run by this site.</li>
-<li><span class="chip chip-illus">ILLUSTRATED</span> draws the concept because no runnable trace ships; no measured numbers.</li>
-<li><span class="chip chip-synth">SYNTHETIC</span> placeholder data standing in for private material that is never published.</li>
-<li>No keys, real-screen images, consented-trace content, session logs, or author emails appear on any page.</li>
+<li>This map runs nothing itself — each helper is a separate project you install and run.</li>
+<li>Ambition is always labeled <span class="tchip tchip-vision">VISION</span> (drawn, not built); measurements carry <span class="chip chip-receipt">RECEIPT</span> (re-check them yourself).</li>
+<li>No private data appears here: demonstrations use rehearsal stand-ins, never real user traces.</li>
 </ul>
 </div>
 </section>
@@ -155,8 +170,8 @@ Sorry, your browser cannot play this video.
 <section class="next-strip" aria-label="What is next">
 <h2>Next</h2>
 <ol>
-<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
-<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 check questions — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
+<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 sealed boxes on disk, waiting on their inventory list — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
 <li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
 </ol>
 </section>
@@ -164,8 +179,8 @@ Sorry, your browser cannot play this video.
 <section class="block" aria-labelledby="go-deeper">
 <h2 id="go-deeper">Go deeper</h2>
 <ul>
-<li><a href="substrate.html">Substrate journey</a> · <a href="sst.html">SST search</a> · <a href="stc.html">STC gates</a> · <a href="entorhinal.html">Entorhinal memory</a> · <a href="reflex.html">Reflex concept</a></li>
-<li><a href="https://github.com/Anshul48/anima/blob/main/README.md">Root README</a> · <a href="https://github.com/Anshul48/anima/blob/main/TEST-REPORT.md">TEST-REPORT.md</a></li>
+<li><a href="substrate.html">Substrate journey</a> · <a href="sst.html">SST debate</a> · <a href="stc.html">STC gates</a> · <a href="entorhinal.html">Entorhinal memory</a> · <a href="reflex.html">Reflex concept</a></li>
+<li><a href="https://github.com/Anshul48/anima/blob/main/README.md">Root README</a> · <a href="https://github.com/Anshul48/anima/blob/main/TEST-REPORT.md">TEST-REPORT.md</a> (every suite count lives here)</li>
 <li>TRACE: <a href="https://anshul48.github.io/trace/recording/">films + benchmarks + evidence cast</a> · <a href="https://anshul48.github.io/trace/play/">120-comet replay</a> <span class="chip chip-receipt">RECORDED</span></li>
 </ul>
 <!-- ws6: external links (papers, explorer deep-links, PyPI) attach here -->
@@ -177,5 +192,6 @@ ANIMA research preview · <a href="index.html">Index</a> · License Apache-2.0.
 </div></footer>
 <script src="assets/motion.js"></script>
 <script src="assets/always.js"></script>
+<script src="assets/story.js"></script>
 </body>
 </html>
