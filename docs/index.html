@@ -7,17 +7,18 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/design.css">
 <link rel="stylesheet" href="assets/tier.css">
+<link rel="stylesheet" href="assets/nav.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<nav class="site-nav" aria-label="Site"><div class="wrap">
-  <span class="brand">ANIMA</span>
-  <a class="nav" href="index.html">Index</a>
-  <a class="nav" href="substrate.html">Substrate</a>
-  <a class="nav" href="sst.html">SST</a>
-  <a class="nav" href="stc.html">STC</a>
-  <a class="nav" href="entorhinal.html">Entorhinal</a>
-  <a class="nav" href="reflex.html">Reflex</a>
+<nav class="topnav" aria-label="Site"><div class="wrap">
+  <a class="brand" href="index.html">ANIMA</a>
+    <a class="nav" href="index.html" aria-current="page">Home</a>
+    <a class="nav" href="#anima-how">Watch</a>
+    <a class="nav" href="#modules">Explore</a>
+    <a class="nav" href="https://anshul48.github.io/trace/future/">Future</a>
+    <a class="nav" href="#go-deeper">Deep dive</a>
+  <a class="cta" href="https://anshul48.github.io/trace/play/">Replay receipt #1</a>
 </div></nav>
 <main id="main" class="wrap">
 
@@ -26,7 +27,7 @@
 <h1>ANIMA — the map of a mind</h1>
 <p class="hook rise">The map of a mind that persists, argues, builds, remembers, sees — the lit parts already run, and TRACE is the first receipt.</p>
 <p class="claim">ANIMA is the map + the workspace — not a runtime, not a monorepo, not evidence anything proposed is implemented (<code>ANIMA/README.md:5</code>). Brightness below is true status: TRACE burns lit, four capabilities half-lit, Reflex a seed spark.</p>
-<p class="cta-row"><a class="btn" href="#constellation">Open the constellation</a> <a class="btn secondary" href="https://anshul48.github.io/trace/play/#p=7">Replay receipt #1</a></p>
+<p class="cta-row"><a class="btn" href="#constellation">Open the constellation</a> <a class="btn secondary" href="https://anshul48.github.io/trace/play/">Replay receipt #1</a></p>
 </div>
 
 <section class="block" aria-labelledby="constellation">
@@ -72,31 +73,16 @@ Sorry, your browser cannot play this video.
 <div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-receipt">RECEIPT</span> <span class="chip chip-real">REAL-REPLAY</span></div>
 </figure>
 
-<section class="block" aria-labelledby="proof">
-<h2 id="proof">Proof</h2>
-<div class="table-scroll">
-<table class="data">
-<caption>Scaffold receipts. TRACE memory numbers live in the callout below.</caption>
-<tr><th>Module</th><th>Result</th></tr>
-<tr><td>SST</td><td>161 passed (pin receipt df78f428, 2026-10-04) <span class="chip chip-receipt">RECEIPT</span></td></tr>
-<tr><td>STC</td><td>37-schema smoke re-verified (TEST-REPORT); 209-suite badge-only, not re-run <span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-badge">BADGE-ONLY</span></td></tr>
-</table>
-</div>
-</section>
-
 <section class="block" aria-labelledby="hero">
-<h2 id="hero">TRACE — the memory layer</h2>
+<h2 id="hero">TRACE — receipt #1</h2>
 <div class="hero rise">
-<p><span class="chip chip-receipt">RECEIPT</span> ANIMA's memory story is TRACE: frozen build
-<strong>seam12a</strong> organizing <strong>10,003,381 tokens</strong> into
-<strong>13,081 docs</strong> and <strong>63,441 atoms</strong>, guided recall@10
-<strong>0.7367</strong> (all) / <strong>0.4883</strong> (leave-source-out).
-Self-repair 5,847 to 0 over 6 iterations; wall 9,494.9 s; peak RAM ~8.5 GB.
-Freeze sha256 <code>8d3bbb6b…28dbf64</code>. Explore it live:
+<p><span class="chip chip-receipt">RECEIPT</span> Frozen build
+<strong>seam12a</strong>: <strong>10,003,381 tokens</strong> into
+<strong>63,441 atoms</strong>, guided recall@10
+<strong>0.7367</strong> / <strong>0.4883</strong> (leave-source-out).
+<a href="https://anshul48.github.io/trace/play/">Replay the 120 comets</a> ·
 <a href="https://anshul48.github.io/trace/explorer/">explorer</a> ·
-<a href="https://anshul48.github.io/trace/recording/">guided demo</a> ·
-<a href="https://anshul48.github.io/trace/play/">play</a>
-<span class="chip chip-receipt">RECORDED</span>.</p>
+<a href="https://anshul48.github.io/trace/recording/">films</a>.</p>
 </div>
 </section>
 
@@ -122,31 +108,31 @@ Freeze sha256 <code>8d3bbb6b…28dbf64</code>. Explore it live:
 <div class="card">
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span></div>
 <h3>Substrate</h3>
-<p class="status-quote">“Alpha research artifact, not a production runtime; stdlib-only; suite 207 passed, 11 skipped” — root README module table.</p>
+<p class="status-quote">Alpha research artifact; stdlib-only; suite 207 passed.</p>
 <p><a href="substrate.html">Deep page: journey + byte-identity proofs</a></p>
 </div>
 <div class="card">
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-receipt">RECEIPT</span></div>
 <h3>SST</h3>
-<p class="status-quote">“Heuristic dialectic-MCTS search; repo check 161 passed, exact parity with the CUT1 pin record; model rollouts need caller-configured backends” — root README module table.</p>
+<p class="status-quote">Dialectic-MCTS search; repo check 161 passed.</p>
 <p><a href="sst.html">Deep page: search + failure leg</a></p>
 </div>
 <div class="card">
 <div class="chiprow"><span class="chip chip-receipt">RECEIPT</span></div>
 <h3>STC</h3>
-<p class="status-quote">“Component description: production-grade, distributed autonomous engineering engine; badges 209 tests passing and Mutmut kill rate &gt;= 85%; repo re-verified the schemas smoke (37 passed), full suite not re-run” — root README module table.</p>
+<p class="status-quote">Receipt pipeline; schemas smoke re-verified (37 passed).</p>
 <p><a href="stc.html">Deep page: gates + receipt + smoke</a></p>
 </div>
 <div class="card">
 <div class="chiprow"><span class="chip chip-illus">ILLUSTRATED</span></div>
 <h3>Entorhinal</h3>
-<p class="status-quote">“Local-first advisory temporal context under strictly advisory authority (zero autonomous mutation authority); smoke test_fact_identity.py 9 passed” — root README module table.</p>
+<p class="status-quote">Advisory-only context; zero mutation authority; 9 passed.</p>
 <p><a href="entorhinal.html">Deep page: CLI + shadow report</a></p>
 </div>
 <div class="card">
 <div class="chiprow"><span class="chip chip-illus">ILLUSTRATED-ONLY</span></div>
 <h3>Reflex</h3>
-<p class="status-quote">“Research/seed stage: model names, latency figures, and complexity claims in its ARCHITECTURE.md are hypotheses to measure, not release commitments; smoke test_privacy_redactor.py 14 passed; four upstream pass-only test files excluded, not claimed as passing” — root README module table.</p>
+<p class="status-quote">Seed stage: architecture claims are hypotheses to measure.</p>
 <p><a href="reflex.html">Deep page: concept + redactor</a></p>
 </div>
 </div>
@@ -169,7 +155,7 @@ Freeze sha256 <code>8d3bbb6b…28dbf64</code>. Explore it live:
 <section class="next-strip" aria-label="What is next">
 <h2>Next</h2>
 <ol>
-<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/#p=7">open the theater</a>.</li>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
 <li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
 <li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
 </ol>
@@ -179,8 +165,8 @@ Freeze sha256 <code>8d3bbb6b…28dbf64</code>. Explore it live:
 <h2 id="go-deeper">Go deeper</h2>
 <ul>
 <li><a href="substrate.html">Substrate journey</a> · <a href="sst.html">SST search</a> · <a href="stc.html">STC gates</a> · <a href="entorhinal.html">Entorhinal memory</a> · <a href="reflex.html">Reflex concept</a></li>
-<li><a href="../README.md">Root README</a> · <a href="../TEST-REPORT.md">TEST-REPORT.md</a></li>
-<li>TRACE demo suite: <a href="https://anshul48.github.io/trace/recording/">feel + guided demo + evidence cast</a> · <a href="https://anshul48.github.io/trace/play/">sample-data interface</a> <span class="chip chip-receipt">RECORDED</span> <span class="chip chip-illus">ILLUSTRATED</span></li>
+<li><a href="https://github.com/Anshul48/anima/blob/main/README.md">Root README</a> · <a href="https://github.com/Anshul48/anima/blob/main/TEST-REPORT.md">TEST-REPORT.md</a></li>
+<li>TRACE: <a href="https://anshul48.github.io/trace/recording/">films + benchmarks + evidence cast</a> · <a href="https://anshul48.github.io/trace/play/">120-comet replay</a> <span class="chip chip-receipt">RECORDED</span></li>
 </ul>
 <!-- ws6: external links (papers, explorer deep-links, PyPI) attach here -->
 </section>
