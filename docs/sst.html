@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="assets/design.css">
 <link rel="stylesheet" href="assets/tier.css">
 <link rel="stylesheet" href="assets/nav.css">
+<link rel="stylesheet" href="assets/story.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -22,13 +23,14 @@
 </div></nav>
 <main id="main" class="wrap">
 
-<p class="hook rise">Don't trust one draft — watch candidates argue, verify, merge; every loss kept.</p>
+<p class="hook rise">SST is the Argue stop: never trust one draft — candidate fixes debate against strict checks, losers stay visible, the survivor becomes the fix.</p>
+<p class="analogy">Like a debate club where the loser stays on stage: you trust the winner because you watched the loser lose.</p>
 
-<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: two candidates diverge, one dies at the gate, critique scores the survivor, synthesis crowns a champion.">
-<title>Dialectic search loop</title>
+<svg class="mech" viewBox="0 0 640 170" role="img" aria-label="Looping mechanism: two drafts branch off, one fails the check and stays visible, the survivor is scored and crowned.">
+<title>Debate loop</title>
 <g font-family="inherit" font-size="13" text-anchor="middle" fill="currentColor">
 <circle cx="60" cy="85" r="26" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="60" y="89">root</text>
+<text x="60" y="89">task</text>
 <circle cx="200" cy="45" r="24" fill="none" stroke="currentColor" stroke-width="2"/>
 <text x="200" y="49">A</text>
 <circle cx="200" cy="125" r="24" fill="none" stroke="currentColor" stroke-width="2" class="m-blink"/>
@@ -36,12 +38,12 @@
 <line x1="82" y1="72" x2="178" y2="52" stroke="currentColor" stroke-width="2"/>
 <line x1="82" y1="98" x2="178" y2="118" stroke="currentColor" stroke-width="2"/>
 <rect x="300" y="60" width="110" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-<text x="355" y="82">critique</text><text x="355" y="99" font-size="11" opacity="0.7">scores</text>
+<text x="355" y="82">judging</text><text x="355" y="99" font-size="11" opacity="0.7">scores</text>
 <line x1="224" y1="45" x2="300" y2="72" stroke="currentColor" stroke-width="2"/>
 <rect x="460" y="60" width="120" height="50" rx="10" fill="none" stroke="currentColor" stroke-width="2.5" class="m-pulse"/>
-<text x="520" y="82">champion</text><text x="520" y="99" font-size="11" opacity="0.7">promoted</text>
+<text x="520" y="82">winner</text><text x="520" y="99" font-size="11" opacity="0.7">approved</text>
 <line x1="410" y1="85" x2="460" y2="85" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" class="m-dash"/>
-<text x="200" y="162" font-size="11" opacity="0.7">the dead branch stays on screen</text>
+<text x="200" y="162" font-size="11" opacity="0.7">the losing draft stays on screen</text>
 </g>
 </svg>
 
@@ -51,7 +53,7 @@
 <track kind="captions" srclang="en" label="English" src="assets/sst-how.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>How (62 s): diverge, refine, gate — one branch dies visibly — critique, synthesize, champion. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>How (62 s): two drafts, strict checks — one loses in the open — judging, merging, one winner. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-illus">ILLUSTRATED</span> <span class="chip chip-receipt">RECEIPT</span></div>
 </figure>
 
@@ -61,59 +63,52 @@ Sorry, your browser cannot play this video.
 <track kind="captions" srclang="en" label="English" src="assets/sst-do.en.vtt">
 Sorry, your browser cannot play this video.
 </video>
-<figcaption>Do (50 s): a live TEST run — binding printed, no champion, failure retained, promote refuses. Voice: synthetic (Kokoro TTS).</figcaption>
+<figcaption>Do (50 s): a live rehearsal run — stand-ins announced, no winner, failure kept, approval refused. Voice: synthetic (Kokoro TTS).</figcaption>
 <div class="chiprow"><span class="chip chip-real">REAL-REPLAY</span> <span class="chip chip-receipt">RECEIPT</span></div>
 </figure>
 
 <section class="block" aria-labelledby="proof">
-<h2 id="proof">Proof</h2>
+<h2 id="proof">Receipts</h2>
 <div class="table-scroll">
 <table class="data">
-<caption>Pin df78f428 (2026-10-04); CUT1 approval 2026-10-13.</caption>
+<caption>Measured on a frozen copy (2026-10-04). Counts live in TEST-REPORT.md.</caption>
 <tr><th>Check</th><th>Result</th></tr>
-<tr><td>Suite on pin checkout</td><td><span data-count="161">161</span> passed in 43.15s — exact parity with CUT1 pin record <span class="chip chip-receipt">RECEIPT</span></td></tr>
-<tr><td>STC consumption-path rerun</td><td>81 passed, 4 failed (classified environmental, log kept) <span class="chip chip-receipt">RECEIPT</span></td></tr>
-<tr><td>UI journey suite</td><td>real-backend browser journey green <span class="chip chip-real">REAL-REPLAY</span></td></tr>
-<tr><td>Live-model qualification attempt 1</td><td><code>no_candidate</code> — kept failure, 7,574 real tokens, 74.4s <span class="chip chip-receipt">RECEIPT</span></td></tr>
+<tr><td>Full check suite</td><td>green, exact match with the frozen record <span class="chip chip-receipt">RECEIPT</span></td></tr>
+<tr><td>Honest failure drill</td><td>a run that found no winner — kept, exit code 2 <span class="chip chip-receipt">RECEIPT</span></td></tr>
+<tr><td>Live-model attempt</td><td>no usable drafts; failure kept with its evidence <span class="chip chip-receipt">RECEIPT</span></td></tr>
 </table>
 </div>
 </section>
 
 <section class="block" aria-labelledby="hero">
-<h2 id="hero">Search-tree growth <span class="chip chip-real">REAL-REPLAY</span> shape, <span class="chip chip-illus">ILLUSTRATED</span> node text</h2>
+<h2 id="hero">The debate, live <span class="chip chip-real">REAL-REPLAY</span> shape, <span class="chip chip-illus">ILLUSTRATED</span> words</h2>
 <div class="hero rise">
-<p>Growth pattern replays the real controller shape (diverge → critique → synthesize → champion, pruned
-branches kept visible); node labels are schematic, not a logged run.</p>
+<p>The growth pattern replays the real shape (draft → judge → merge → winner, losers kept visible); the draft words are illustrative, not a logged run.</p>
 </div>
 <div class="stage" data-tree>
 <div class="controls">
 <button type="button" data-play>Play growth</button>
 <button type="button" class="ghost" data-reset>Reset</button>
 </div>
-<div class="treenode" data-branch="root">task root: fix <code>mul</code> in <code>math_mod.py</code></div>
-<div class="treenode" data-branch="diverge">candidate A (temp 1.2) — checks pass, rank 0.8</div>
-<div class="treenode" data-branch="diverge">candidate B (temp 0.1) — checks pass, rank 0.6</div>
-<div class="treenode" data-branch="prune">candidate C (temp 0.3) — <code>CRITIQUE_FAILED</code>, rank 0.5, kept visible</div>
-<div class="treenode" data-branch="synth">synthesis of A+B — unified candidate</div>
-<div class="treenode" data-branch="champion">champion — promoted through integrity + snapshot + freshness gates</div>
+<div class="treenode" data-branch="root">task: fix the shop total</div>
+<div class="treenode" data-branch="diverge">draft A — checks pass, ranked higher</div>
+<div class="treenode" data-branch="diverge">draft B — checks pass, ranked lower</div>
+<div class="treenode" data-branch="prune">draft C — failed judging, kept visible</div>
+<div class="treenode" data-branch="synth">merge of A+B — one combined draft</div>
+<div class="treenode" data-branch="champion">winner — approved through every check</div>
 <noscript><p>The full node list above is the complete content without JavaScript.</p></noscript>
 </div>
-<h3>Failure leg — live qualification <span class="chip chip-receipt">RECEIPT</span> LIVE-QUAL 2026-10-04</h3>
-<p>Real run, model <code>deepseek-ai/DeepSeek-V4.1-Flash</code> (probe 38 prompt / 31 completion tokens,
-HTTP 200 <code>PROBE-OK</code>): attempt 1 returned <code>content: null</code> on a reasoning model,
-stringified into a literal <code>"None"</code> patch — all 3 candidates failed acceptance honestly
-(<code>ImportError</code>, exit 1). Observed 7,574 real tokens, 0 provider errors, 74.4s wall.
-(Source: <a href="https://github.com/Anshul48/anima/blob/main/components/sst/docs/LIVE-QUALIFICATION-2026-10-04.md">LIVE-QUALIFICATION-2026-10-04.md</a>.)</p>
+<h3>The kept failure <span class="chip chip-receipt">RECEIPT</span> dated 2026-10-04</h3>
+<p>A real run that returned no usable drafts — every candidate failed its checks honestly, and the log was kept instead of hidden. (Source: <a href="https://github.com/Anshul48/anima/blob/main/components/sst/docs/LIVE-QUALIFICATION-2026-10-04.md">LIVE-QUALIFICATION-2026-10-04.md</a>.)</p>
 </section>
 
 <section class="block" aria-labelledby="try">
 <h2 id="try">Try it</h2>
 <ol>
-<li>Open the UI journey: <code>.venv/bin/python -m sst.ui.app --project PATH --port 8501</code>, then <code>http://127.0.0.1:8501</code>.</li>
-<li>Run the CLI: <code>sst run/status/promote/visualize/ui --json</code> (exit codes 0/2/3/4/130).</li>
-<li>Install the pin: package <code>sst-engine</code> 0.1.0.</li>
+<li>Run a small bounded debate: <code>sst run --goal "..." --max-iterations 5</code>.</li>
+<li>Watch it live in your browser: the search map serves on port 8501.</li>
 </ol>
-<p class="fine">Scroll-typed, real command + recorded output (recorded 2026-10-20 · TEST provider):</p>
+<p class="fine">Scroll-typed, real command + recorded output (recorded 2026-10-20 · rehearsal stand-ins):</p>
 <pre class="typed" data-typed>$ sst run --goal "thread-safe ring buffer" --max-iterations 4 --json
 "termination_reason": "no_candidate", "champion": null
 exit code: 2 (no verified candidate)</pre>
@@ -123,12 +118,18 @@ exit code: 2 (no verified candidate)</pre>
 <h2 id="limits">Limits</h2>
 <div class="limits">
 <ul>
-<li>SST cand-02 blessing unconfirmed (exclusion carried per FREEZE-PLAN cut packet 1).</li>
-<li>STC adoption + live caller qualification open at pin (owner window needed; TRACE deferred).</li>
-<li>USD caps require priced profiles (<code>UnpricedCostBudgetError</code> otherwise); <code>max_cost_usd</code> default None (unbounded); SAIL-run dollar cost unclaimed.</li>
-<li>Promote integrity binding is unkeyed tamper-evidence (HMAC future).</li>
-<li>See <code>docs/RECOVERY-LIMITS.md</code> for what the event log can and cannot reconstruct.</li>
+<li>Demonstrations use rehearsal stand-ins, not the real model — the label is always printed.</li>
+<li>No live-model debate has produced usable drafts yet; that qualification is still open.</li>
+<li>No memory loop with TRACE yet — the handoff is a plan, not wiring.</li>
 </ul>
+</div>
+</section>
+
+<section class="block" aria-labelledby="future">
+<h2 id="future">Future <span class="tchip tchip-vision">VISION · drawn, not built</span></h2>
+<div class="future-box">
+<h3>Debates that learn</h3>
+<p>One day, past failures could flow back into the memory map, and winners could hand off to the inspector automatically. Today: honest debates with rehearsal stand-ins.</p>
 </div>
 </section>
 
@@ -136,8 +137,8 @@ exit code: 2 (no verified candidate)</pre>
 <section class="next-strip" aria-label="What is next">
 <h2>Next</h2>
 <ol>
-<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
-<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 check questions — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
+<li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 sealed boxes on disk, waiting on their inventory list — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
 <li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
 </ol>
 </section>

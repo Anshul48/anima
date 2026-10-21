@@ -1,0 +1,33 @@
+/* R5 ANIMA plain-language story layer. One guided visual story ("The Wrong Total").
+   One dominant motion per viewport (the traveling token). Reduced-motion safe:
+   canvas renders its final state; captions stay in DOM. Taste bans respected:
+   solid token colors, no gradients, no glow, no glassmorphism, no emoji. */
+.story-hero { margin: 1.5rem 0 0.5rem; }
+.story-kicker { color: var(--muted); font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.25rem; }
+.story-title { margin: 0.1rem 0 0.4rem; }
+#story-canvas { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1;
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--radius-l); }
+.story-cap { color: var(--muted); font-size: 0.95rem; margin: 0.5rem 0 0;
+  min-height: 3.2em; }
+.story-cap strong { color: var(--ink); }
+.chapters { display: grid; gap: 1rem; margin: 1rem 0; }
+@media (min-width: 55rem) {
+  .chapters.five { grid-template-columns: repeat(5, 1fr); }
+  .chapters.three { grid-template-columns: repeat(3, 1fr); }
+}
+.chapter { background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--radius-m); padding: 0.9rem 1rem; }
+.chapter h3 { margin: 0 0 0.3rem; font-size: 1.05rem; }
+.chapter p { margin: 0.3rem 0; font-size: 0.95rem; }
+.chapter .go { font-size: 0.9rem; }
+.analogy { border-left: 3px solid var(--accent); padding-left: 0.7rem;
+  color: var(--muted); font-size: 0.95rem; }
+.future-box { border: 2px dashed var(--warn-ink); border-radius: var(--radius-m);
+  padding: 0.9rem 1rem; background: var(--warn-bg); }
+.future-box h3 { margin-top: 0; }
+.gloss { color: var(--muted); font-size: 0.9rem; }
+@media (max-width: 40rem) {
+  .story-cap { min-height: 4.6em; }
+}
