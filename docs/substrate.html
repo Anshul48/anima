@@ -7,17 +7,18 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/design.css">
 <link rel="stylesheet" href="assets/tier.css">
+<link rel="stylesheet" href="assets/nav.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<nav class="site-nav" aria-label="Site"><div class="wrap">
-  <span class="brand">ANIMA</span>
-  <a class="nav" href="index.html">Index</a>
-  <a class="nav" href="substrate.html">Substrate</a>
-  <a class="nav" href="sst.html">SST</a>
-  <a class="nav" href="stc.html">STC</a>
-  <a class="nav" href="entorhinal.html">Entorhinal</a>
-  <a class="nav" href="reflex.html">Reflex</a>
+<nav class="topnav" aria-label="Site"><div class="wrap">
+  <a class="brand" href="index.html">ANIMA</a>
+    <a class="nav" href="index.html">Home</a>
+    <a class="nav" href="index.html#anima-how">Watch</a>
+    <a class="nav" href="index.html#modules">Explore</a>
+    <a class="nav" href="https://anshul48.github.io/trace/future/">Future</a>
+    <a class="nav" href="#go-deeper">Deep dive</a>
+  <a class="cta" href="https://anshul48.github.io/trace/play/">Replay receipt #1</a>
 </div></nav>
 <main id="main" class="wrap">
 
@@ -80,25 +81,9 @@ Sorry, your browser cannot play this video.
 <section class="block" aria-labelledby="hero">
 <h2 id="hero">The [1/7]–[7/7] journey <span class="chip chip-real">REAL-REPLAY</span></h2>
 <div class="hero rise">
-<p>Each step replays one print line of
-<a href="../components/substrate/examples/quickstart.py"><code>examples/quickstart.py</code></a>.
-Press Play to replay the sequence — the film above shows the same journey.</p>
-</div>
-<div class="stage stage-pinned" data-replay data-pinned>
-<div class="controls">
-<button type="button" data-play>Play replay</button>
-<button type="button" class="ghost" data-reset>Reset</button>
-</div>
-<ol class="steps">
-<li><span class="stepid">[1/7]</span> work dir: fresh temp dir <code>anima-quickstart-*</code> — nothing written elsewhere.</li>
-<li><span class="stepid">[2/7]</span> release tree: 2 files pinned (<code>app.py</code>, <code>data/seed.txt</code>) with sha256 into <code>pins.json</code>.</li>
-<li><span class="stepid">[3/7]</span> run root initialized at <code>&lt;work&gt;/state</code> via <code>api.init_run</code>.</li>
-<li><span class="stepid">[4/7]</span> relcheck run: <code>valid=True</code>, identity checked, measured cost recorded.</li>
-<li><span class="stepid">[5/7]</span> close/reopen: org snapshot byte-identical — <code class="hashok">before == after</code>.</li>
-<li><span class="stepid">[6/7]</span> recover: lifecycle <code>active</code>, conservation ok.</li>
-<li><span class="stepid">[7/7]</span> settle: terminals settled, <code>stranded=0</code> — prints <code>quickstart OK</code>.</li>
-</ol>
-<noscript><p>The full step list above is the complete content without JavaScript.</p></noscript>
+<p>Seven steps, one print line each, in
+<a href="https://github.com/Anshul48/anima/blob/main/components/substrate/examples/quickstart.py"><code>examples/quickstart.py</code></a>
+— the Do film above walks the same journey on camera.</p>
 </div>
 <h3>Byte-identity diff-scan <span class="chip chip-real">REAL-REPLAY</span></h3>
 <pre>diff &lt;(org_snapshot before) &lt;(org_snapshot after)
@@ -147,7 +132,7 @@ multi-writer, or disk-loss tolerance. No learning of any kind. Delegation amount
 <section class="next-strip" aria-label="What is next">
 <h2>Next</h2>
 <ol>
-<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/#p=7">open the theater</a>.</li>
+<li class="n-proof"><span class="tchip tchip-proof">PROOF &middot; staged 10M</span> TRACE is receipt #1: replay any of 120 probes — <a href="https://anshul48.github.io/trace/play/">open the comets</a>.</li>
 <li class="n-exists"><span class="tchip tchip-exists">EXISTS &middot; not mapped</span> 596 int8 shards on disk, blocked on the stage ledger — <a href="https://anshul48.github.io/trace/future/">read the audit</a>.</li>
 <li class="n-vision"><span class="tchip tchip-vision">VISION &middot; not built</span> 100M tile + sleep dreaming, drawn not built — <a href="https://anshul48.github.io/trace/future/">see /future</a>.</li>
 </ol>
@@ -156,9 +141,9 @@ multi-writer, or disk-loss tolerance. No learning of any kind. Delegation amount
 <section class="block" aria-labelledby="go-deeper">
 <h2 id="go-deeper">Go deeper</h2>
 <ul>
-<li><a href="../components/substrate/README.md">Component README</a> ·
-<a href="../components/substrate/REPRODUCE-ALL.md">REPRODUCE-ALL.md</a> ·
-<a href="../components/substrate/BUILDER-LOG.md">BUILDER-LOG.md</a> ·
+<li><a href="https://github.com/Anshul48/anima/blob/main/components/substrate/README.md">Component README</a> ·
+<a href="https://github.com/Anshul48/anima/blob/main/components/substrate/REPRODUCE-ALL.md">REPRODUCE-ALL.md</a> ·
+<a href="https://github.com/Anshul48/anima/blob/main/components/substrate/BUILDER-LOG.md">BUILDER-LOG.md</a> ·
 <a href="index.html">Index</a></li>
 </ul>
 <!-- ws6: external links (papers, explorer deep-links, PyPI) attach here -->
